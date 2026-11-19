@@ -32,6 +32,7 @@ Ce workflow s'appuie sur des compétences publiques, installées à part. Aucune
 /plugin install superviser-ses-sessions@zerogravity
 /plugin install consultant-ia@zerogravity
 /plugin install cowork-plugin-management@knowledge-work-plugins
+/plugin install engineering@knowledge-work-plugins
 /plugin install example-skills@anthropic-agent-skills
 /plugin install logfire@pydantic-skills
 /plugin install make-skills@make-marketplace
@@ -39,10 +40,13 @@ Ce workflow s'appuie sur des compétences publiques, installées à part. Aucune
 /plugin install n8n-skills@n8n-io
 /plugin install operations@knowledge-work-plugins
 /plugin install plugin-dev@claude-plugins-official
+/plugin install product-management@knowledge-work-plugins
+/plugin install project-artifact@claude-plugins-official
 /plugin install skill-creator@claude-plugins-official
 /plugin install small-business@knowledge-work-plugins
 /plugin install superpowers@claude-plugins-official
 npx skills add bmad-code-org/BMAD-METHOD --skill bmad-architecture -a claude-code
+npx skills add ericrisco/rsc-harness --skill automation-strategy -a claude-code
 ```
 
 La commande `npx skills add` (CLI Vercel `skills`) demande Node.js 22.20 ou plus (vérifié le 06/11/2026, https://github.com/vercel-labs/skills). Claude Code installé avec l'installeur natif n'en a pas besoin.

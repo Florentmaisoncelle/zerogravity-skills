@@ -15,7 +15,23 @@
       "titre": "Poser le problème",
       "rend": "La carte du problème et le critère réel : pour qui, quel résultat continu, ce qui n'est pas le problème.",
       "regle": "Avant la première étape, l'étape 0 tranche le chemin en une phrase (pour soi, pour un client, ou un système qui existe) et regarde ce qui existe déjà : le registre des systèmes, les compétences (par skill-finder), le centre « Créer des agents et des systèmes IA », les sessions qui ont déjà travaillé le sujet, les notes et documents déjà écrits sur le sujet. Le travail passé se reprend, il ne se refait pas. Pour soi : le cadrage d'un chantier, première étape (`/cadrer-un-chantier:cadrer-un-chantier`). Pour un client : la mission se mène avec `/implementer-l-ia-en-entreprise:implementer-l-ia-en-entreprise` (cadrer-besoin, decouvrir-cas-usage quand le besoin n'est pas connu, auditer son processus) ; ce workflow-ci garde les choix propres à l'agent. Pour un système qui existe : cette compétence, puis la passe de cible et de diagnostic de entretenir-son-systeme:optimise-systeme, qui agit sur les règles, les compétences et les documents d'un dépôt Claude Code.",
-      "manque": "aucune compétence publique pour ce geste : il se fait à la main, avec la règle de l'étape."
+      "competences": [
+        {
+          "nom": "agent-skills:interview-me",
+          "role": "par défaut",
+          "pourquoi": "Elle pose les questions une à une jusqu'à ce que le besoin soit clair, avant toute solution."
+        },
+        {
+          "nom": "agent-skills:idea-refine",
+          "role": "l'idée floue",
+          "pourquoi": "Quand le besoin est encore une idée : elle l'élargit puis la resserre en un problème net."
+        },
+        {
+          "nom": "superpowers:brainstorming",
+          "role": "le dialogue",
+          "pourquoi": "Quand on préfère explorer l'intention et les contraintes en conversation, une question à la fois, puis valider un court document de conception."
+        }
+      ]
     },
     {
       "n": 2,
@@ -25,10 +41,25 @@
       "regle": "Ne poser que ce que les sources ne disent pas. Tout ce qui est mécanique se tranche sans demander ; seuls le goût produit, l'irréversible et les comptes de la personne lui reviennent. Le raisonnement cher va là où l'ambiguïté compte, le contrôle mécanique reste en code. Pour un client : auditer-processus, rediger-cahier-des-charges (exigences) et chiffrer-rentabilite, avec `/implementer-l-ia-en-entreprise:implementer-l-ia-en-entreprise`. Pour un système qui existe : la mesure et la couverture de entretenir-son-systeme:optimise-systeme.",
       "competences": [
         {
+          "nom": "agent-skills:spec-driven-development",
+          "role": "par défaut",
+          "pourquoi": "Elle écrit la spécification avant le code : objectifs, périmètre, critères d'acceptation, ce que l'agent ne fait pas."
+        },
+        {
+          "nom": "product-management:write-spec",
+          "role": "la fiche produit",
+          "pourquoi": "Le cahier des charges produit d'Anthropic : problème, utilisateurs, exigences, mesures de succès."
+        },
+        {
+          "nom": "product-management:brainstorm",
+          "role": "le contradicteur",
+          "pourquoi": "Un partenaire de réflexion produit qui éprouve les hypothèses avant de converger."
+        },
+        {
           "nom": "cadrer-un-chantier",
           "workflow": true,
-          "role": "workflow frère",
-          "pourquoi": "Il tient les sept sorties du mode objectif vers système, dont la table d'autonomie à quatre niveaux qui dit le dernier clic humain, la chaîne produit et la fiche de cadrage d'un écran validée une seule fois : le workflow d'agents emprunte ces sections et ne les récrit pas."
+          "role": "workflow frère : comble un vide",
+          "pourquoi": "Comble un vide : enchaîne tout le cadrage (problème, méthode, plan, attaque, validation unique) quand le chantier dépasse un seul agent. Il tient les sept sorties du mode objectif vers système, dont la table d'autonomie à quatre niveaux qui dit le dernier clic humain, la chaîne produit et la fiche de cadrage d'un écran validée une seule fois : le workflow d'agents emprunte ces sections et ne les récrit pas."
         }
       ]
     },
@@ -40,9 +71,9 @@
       "regle": "Le type se choisit d'abord, par trois questions : qu'est-ce qui le réveille, qui s'en sert et à quelle heure, quelle part demande du jugement. Le local tourne sur un poste allumé, avec l'abonnement de son propriétaire. Dès qu'un client, un visiteur ou un outil doit le réveiller à toute heure, il passe en cloud. Un chemin connu d'avance reste un scénario avec une étape IA, souvent sur n8n ou Make, plutôt qu'un agent. Un agent qui échange avec des personnes dans l'Union européenne leur dit dès le premier message qu'il est une IA, sauf si c'est évident : article 50 du règlement (UE) 2024/1689, applicable depuis le 2 août 2026 (vérifié le 06/11/2026, détail dans `references/types-d-agents.md`). Le kit de la compétence de système suffit pour un système ordinaire, et `agent-skills:context-engineering` dit ce que chaque agent lit à chaque tour. Pour un choix dur : `/reflechir-a-fond:reflechir-a-fond` ou `bmad-architecture`. Pour un client : concevoir-solution et rediger-cahier-des-charges (spécification), avec `/implementer-l-ia-en-entreprise:implementer-l-ia-en-entreprise`. Pour un système qui existe : entretenir-son-systeme:optimise-systeme (trouver, arbitrer, concevoir). Un agent chef qui lance d'autres agents ne tourne qu'en tête de session : une sous-tâche ne peut pas en lancer une autre. Il doit avoir l'outil de lancement (nommé Agent) dans sa liste d'outils, et Claude Code limite par défaut l'imbrication à trois niveaux de sous-agents (vérifié le 06/11/2026, https://code.claude.com/docs/en/sub-agents). Il écrit d'abord son plan de travail dans un fichier, ce qui permet de reprendre si on le lance ailleurs.",
       "competences": [
         {
-          "nom": "creer-un-agent-ia:systeme-ia",
-          "role": "le kit d'un système",
-          "pourquoi": "Elle dit ce qu'un système doit avoir (son dossier, sa carte et ses priorités, sa compétence opératrice, ses routines, son cockpit), appelle les compétences qui font chaque pièce et tient le registre des systèmes : le workflow d'agents lui confie l'architecture et la construction plutôt que de les récrire."
+          "nom": "engineering:system-design",
+          "role": "par défaut",
+          "pourquoi": "Le dessin du système : composants (agents, tâches planifiées, mémoire, outils), flux et points de rupture."
         },
         {
           "nom": "agent-skills:context-engineering",
@@ -50,15 +81,14 @@
           "pourquoi": "Elle range ce que chaque agent lit, du plus stable au plus passager : les règles toujours chargées, les spécifications de la session, les fichiers de la tâche, puis la conversation qu'on résume. Elle dit aussi ce qu'une session laisse écrit pour que la suivante reprenne sans rien deviner."
         },
         {
-          "nom": "reflechir-a-fond",
-          "workflow": true,
-          "role": "workflow frère : un choix dur",
-          "pourquoi": "Pour un choix d'architecture difficile à défaire : la cause prouvée, la carte du système, au moins trois options et une décision réfutée avant d'engager."
-        },
-        {
           "nom": "bmad-architecture",
           "role": "un choix dur, en alternative",
           "pourquoi": "Une colonne vertébrale d'invariants que tout ce qui est construit ensuite respecte."
+        },
+        {
+          "nom": "creer-un-agent-ia:systeme-ia",
+          "role": "comble un vide",
+          "pourquoi": "Comble un vide : aucune compétence publique ne pose « un système = une compétence qui l'opère » ni le kit d'un système d'agents (registre, contrat, preuves). Elle dit ce qu'un système doit avoir (son dossier, sa carte et ses priorités, sa compétence opératrice, ses routines, son cockpit), appelle les compétences qui font chaque pièce et tient le registre des systèmes : le workflow d'agents lui confie l'architecture et la construction plutôt que de les récrire."
         }
       ],
       "taches": [
@@ -67,8 +97,14 @@
           "titre": "Trancher : un agent ou une automatisation",
           "competences": [
             {
+              "nom": "automation-strategy",
+              "role": "par défaut",
+              "pourquoi": "Elle décide si un processus vaut d'être automatisé, chiffre le retour et choisit la plateforme avant de construire."
+            },
+            {
               "nom": "creer-un-agent-ia:choisir-agent-ou-automatisation",
-              "pourquoi": "Pose la part déterministe (une règle écrite) et la part humaine (une validation) avant de choisir : une règle écrite n'a pas besoin d'un agent."
+              "pourquoi": "Comble un vide : la grille qui sépare la part déterministe (une règle écrite suffit) de la part de jugement (un agent), avec le coût par résolution. Pose la part déterministe (une règle écrite) et la part humaine (une validation) avant de choisir : une règle écrite n'a pas besoin d'un agent.",
+              "role": "comble un vide"
             }
           ]
         }
@@ -103,9 +139,14 @@
           "titre": "Construire la solution d'un client en environnement d'essai",
           "competences": [
             {
-              "nom": "consultant-ia:construire-solution",
+              "nom": "agent-skills:incremental-implementation",
               "role": "par défaut",
-              "pourquoi": "Elle cherche d'abord un modèle existant, construit par tranches avec les garde-fous de la spécification dès la première tranche qui agit (simulation des envois, dédoublonnage, journal, reprise, secrets), et rend une version gelée."
+              "pourquoi": "Elle construit par tranches fines, chacune testée et vérifiée avant la suivante."
+            },
+            {
+              "nom": "consultant-ia:construire-solution",
+              "role": "comble un vide",
+              "pourquoi": "Comble un vide : les garde-fous d'une solution bâtie chez un client (simulation des envois, dédoublonnage, journal, reprise, secrets) et la version gelée rendue. Elle cherche d'abord un modèle existant, construit par tranches avec les garde-fous de la spécification dès la première tranche qui agit (simulation des envois, dédoublonnage, journal, reprise, secrets), et rend une version gelée."
             }
           ]
         },
@@ -130,7 +171,6 @@
             "plugin-dev:plugin-structure",
             "small-business:build-agent",
             "small-business:build-connector",
-            "superpowers:writing-skills",
             "plugin-dev:skill-development"
           ]
         },
@@ -140,7 +180,8 @@
           "competences": [
             {
               "nom": "creer-un-agent-ia:agents-cloud",
-              "pourquoi": "Quand il tourne chez ZEROGRAVITY : modèles, budget, traces et déploiement."
+              "pourquoi": "Comble un vide : la mise en production d'un agent cloud de bout en bout (budget plafonné, traces, clé côté serveur, essai réel) n'est décrite par aucune compétence publique. Quand il tourne chez ZEROGRAVITY : modèles, budget, traces et déploiement.",
+              "role": "comble un vide"
             }
           ]
         },
@@ -250,14 +291,19 @@
           "pourquoi": "Chaque affirmation qui compte passe devant un relecteur qui n'a pas vu le travail et cherche à la réfuter. Chaque objection est corrigée, acceptée par écrit ou écartée avec sa raison, et au bout de trois tours sans accord la décision revient à un humain."
         },
         {
-          "nom": "entretenir-son-systeme:skill-quality-guard",
-          "role": "la compétence prête",
-          "pourquoi": "Avant de dire une compétence prête : sa structure, ses déclencheurs, sa porte d'entrée, ses tests et la resynchronisation de ses copies publiées. Elle passe après la création de la compétence."
+          "nom": "engineering:testing-strategy",
+          "role": "le plan de test",
+          "pourquoi": "La stratégie de test d'Anthropic : quoi tester, à quel niveau, avec quels cas limites."
         },
         {
           "nom": "consultant-ia:tester-solution",
-          "role": "la recette d'un client",
-          "pourquoi": "Elle sépare la recette (déterministe, critère par critère, sabotage des tests qui comptent) de l'évaluation de l'IA (cas courants, difficiles, injections, abstentions) et dit dans quel environnement chaque résultat a été obtenu."
+          "role": "comble un vide",
+          "pourquoi": "Comble un vide : la recette d'une solution chez un client sur ses cas réels, avec le procès-verbal qu'il signe. Elle sépare la recette (déterministe, critère par critère, sabotage des tests qui comptent) de l'évaluation de l'IA (cas courants, difficiles, injections, abstentions) et dit dans quel environnement chaque résultat a été obtenu."
+        },
+        {
+          "nom": "entretenir-son-systeme:skill-quality-guard",
+          "role": "comble un vide",
+          "pourquoi": "Comble un vide : le contrôle final d'une compétence avant de la dire prête (structure, déclencheurs, preuves). Avant de dire une compétence prête : sa structure, ses déclencheurs, sa porte d'entrée, ses tests et la resynchronisation de ses copies publiées. Elle passe après la création de la compétence."
         }
       ],
       "taches": [
@@ -291,14 +337,24 @@
       "regle": "Après une recette au verdict prêt (85-recette). Le retour arrière existe avant chaque action sur un outil réel, et la bascule se décide par écrit ; une solution que personne n'utilise n'est pas en service. Pour un client : consultant-ia:piloter-mise-en-service écrit 90-mise-en-service dans le même dossier de mission ; une fois validée au journal, la mesure (95) repart au pack conseil avec mesurer-gains. Pour son propre système : la mise en service se résume à brancher l'agent sur son vrai environnement, avec son retour arrière.",
       "competences": [
         {
-          "nom": "consultant-ia:piloter-mise-en-service",
-          "role": "la mise en service d'un client",
-          "pourquoi": "Elle ne fait une action sur un outil réel qu'après la validation de cette action précise, conduit le pilote sous surveillance renforcée, fait décider la bascule par écrit, mène l'adoption et transfère à un exploitant avec un mode opératoire essayé par un tiers."
+          "nom": "agent-skills:shipping-and-launch",
+          "role": "par défaut",
+          "pourquoi": "La mise en service par paliers : liste de contrôle avant lancement, surveillance, retour arrière prêt."
+        },
+        {
+          "nom": "engineering:deploy-checklist",
+          "role": "la liste de contrôle",
+          "pourquoi": "La liste de contrôle de déploiement d'Anthropic, à cocher avant d'ouvrir l'agent aux vrais utilisateurs."
         },
         {
           "nom": "operations:runbook",
           "role": "le mode opératoire",
           "pourquoi": "Écrit le mode opératoire d'exploitation, commande par commande, avec le dépannage : ce que l'exploitant suivra seul."
+        },
+        {
+          "nom": "consultant-ia:piloter-mise-en-service",
+          "role": "comble un vide",
+          "pourquoi": "Comble un vide : chez un client, chaque action sur un outil réel est validée par lui, avec son retour arrière, avant de passer à la suivante. Elle ne fait une action sur un outil réel qu'après la validation de cette action précise, conduit le pilote sous surveillance renforcée, fait décider la bascule par écrit, mène l'adoption et transfère à un exploitant avec un mode opératoire essayé par un tiers."
         }
       ]
     },
@@ -314,9 +370,14 @@
           "titre": "Publier une page du hub interne",
           "competences": [
             {
+              "nom": "project-artifact:project-artifact",
+              "role": "par défaut",
+              "pourquoi": "Elle publie une page de projet partageable, tenue à jour au fil du travail."
+            },
+            {
               "nom": "creer-un-agent-ia:dashboards-hub-master",
-              "role": "le cockpit",
-              "pourquoi": "Elle crée, publie et déploie les tableaux de bord du hub interne : le cockpit du système y affiche le chiffre du but et son point de départ, avec son lien rendu."
+              "role": "comble un vide",
+              "pourquoi": "Comble un vide : ranger la page dans un hub interne (un sujet = une page), la publier et vérifier ce qui est servi en ligne. Elle crée, publie et déploie les tableaux de bord du hub interne : le cockpit du système y affiche le chiffre du but et son point de départ, avec son lien rendu."
             }
           ]
         },
@@ -346,19 +407,37 @@
       "regle": "Même un passage sans correction le dit en une ligne. Une correction propre à la tâche reste avec elle, une réutilisable entre dans la méthode, une vérifiable devient un contrôle. On promeut avec prudence : une fois une observation, deux fois un motif, répétée une règle candidate, confirmée une règle, une compétence, un test ou de la mémoire. La même erreur corrigée deux fois change la méthode, pas seulement la sortie. Chaque échec instructif garde sa tâche, sa mauvaise sortie et l'attendu, rejoués à chaque changement du système. Pour un client : le journal de mission du pack, puis creer-un-agent-ia:router-capitalisation. La mesure du flywheel (acceptation du premier coup, erreurs qui reviennent, temps de relecture, coût par résultat accepté) n'est pas encore faite : il faut une trentaine de passages.",
       "competences": [
         {
+          "nom": "agent-skills:documentation-and-adrs",
+          "role": "par défaut",
+          "pourquoi": "Elle écrit les décisions prises (options, choix, conséquences) pour que le passage suivant ne les redécouvre pas."
+        },
+        {
+          "nom": "superpowers:writing-skills",
+          "role": "la leçon devient compétence",
+          "pourquoi": "Elle transforme une méthode qui a marché en compétence testée, réutilisable au passage suivant."
+        },
+        {
           "nom": "creer-un-agent-ia:router-capitalisation",
-          "role": "le tri du flywheel",
-          "pourquoi": "Elle dit ce qui vient de devenir faux ailleurs, corrige la ligne qui ment et route le reste vers son propriétaire (règle, compétence, document, contrôle, mémoire) : c'est déjà le tri dont le flywheel a besoin, donc pas de compétence « flywheel » à part."
+          "role": "comble un vide",
+          "pourquoi": "Comble un vide : aiguiller chaque leçon vers sa bonne place (règle toujours chargée, compétence, référence, contrôle automatique, ou rien). Elle dit ce qui vient de devenir faux ailleurs, corrige la ligne qui ment et route le reste vers son propriétaire (règle, compétence, document, contrôle, mémoire) : c'est déjà le tri dont le flywheel a besoin, donc pas de compétence « flywheel » à part."
         },
         {
           "nom": "entretenir-son-systeme:capitaliser",
-          "role": "une compétence",
-          "pourquoi": "Elle entretient une compétence comme unité de savoir durable : trouve son propriétaire, range faits, décisions, méthodes, pièges et preuves au bon niveau, et prouve que rien n'est perdu."
-        },
+          "role": "comble un vide",
+          "pourquoi": "Comble un vide : aucune compétence publique ne prouve qu'une leçon rangée n'a rien fait perdre. Elle entretient une compétence comme unité de savoir durable : trouve son propriétaire, range faits, décisions, méthodes, pièges et preuves au bon niveau, et prouve que rien n'est perdu."
+        }
+      ],
+      "taches": [
         {
-          "nom": "entretenir-son-systeme:clean-rules-cleanup",
-          "role": "une règle",
-          "pourquoi": "Elle crée ou modifie une règle avec son registre des motifs : pourquoi elle a été inscrite et si cette raison tient encore."
+          "slug": "alleger-les-regles",
+          "titre": "Ranger une leçon dans les règles toujours chargées",
+          "competences": [
+            {
+              "nom": "entretenir-son-systeme:clean-rules-cleanup",
+              "role": "comble un vide",
+              "pourquoi": "Comble un vide : aucune compétence publique ne tient les règles toujours chargées d'un agent (ajouter, alléger, retirer sur preuve). Elle crée ou modifie une règle avec son registre des motifs : pourquoi elle a été inscrite et si cette raison tient encore."
+            }
+          ]
         }
       ]
     }

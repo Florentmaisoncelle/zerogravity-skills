@@ -93,6 +93,12 @@
               "pourquoi": "Le parcours d'inscription, champ par champ."
             }
           ]
+        },
+        {
+          "slug": "identifier-les-entreprises-visiteuses",
+          "titre": "Identifier les entreprises qui visitent le site",
+          "competences": [],
+          "manque": "aucune compétence : GojiBerry le fait par son signal « visiteurs du site » (guide Román, GojiBerry). À retenir : une visite désigne une entreprise, jamais la personne ; script de suivi relu pour la vie privée et le consentement ; plafond mensuel d'entreprises ; jamais « j'ai vu que vous avez visité notre site » en ouverture. La suite (messages LinkedIn, séquence) relève du système d'acquisition."
         }
       ]
     },

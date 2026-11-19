@@ -107,6 +107,23 @@
               "role": "comble un vide"
             }
           ]
+        },
+        {
+          "slug": "choix-dur-a-defaire",
+          "titre": "Trancher un choix d'architecture difficile à défaire",
+          "competences": [
+            {
+              "nom": "engineering:architecture",
+              "role": "par défaut",
+              "pourquoi": "Elle écrit la décision d'architecture : le contexte, les options comparées, le choix et ses conséquences."
+            },
+            {
+              "nom": "reflechir-a-fond",
+              "role": "workflow frère : comble un vide",
+              "pourquoi": "Comble un vide : la cause prouvée, la carte du système, au moins trois options et une décision réfutée avant d'engager un choix qu'on ne défait pas.",
+              "workflow": true
+            }
+          ]
         }
       ]
     },

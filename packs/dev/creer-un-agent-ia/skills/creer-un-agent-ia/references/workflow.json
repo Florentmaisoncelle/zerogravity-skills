@@ -2,7 +2,7 @@
   "format": "workflow-v1",
   "slug": "creer-un-agent-ia",
   "titre": "Créer un agent ou un système IA, du problème au flywheel",
-  "resume": "Huit étapes dans l'ordre pour un agent ou un système IA qui marche : poser le problème, répondre aux questions produit, choisir le type d'agent et dessiner l'architecture, construire, tester, mesurer, puis claude-code-system-pack:capitaliser pour que le passage suivant parte plus fort. L'agent peut tourner en local, sur votre poste, ou en cloud, à toute heure : en code, ou sur n8n et Make. Trois chemins sur la même table : son propre système (celui modélisé ici), celui d'un client (Pack Consultant IA) ou un système qui existe (optimisation). Une étape 0 tranche le chemin et regarde l'existant avant la première.",
+  "resume": "Huit étapes dans l'ordre pour un agent ou un système IA qui marche : poser le problème, répondre aux questions produit, choisir le type d'agent et dessiner l'architecture, construire, tester, mettre en service, mesurer, puis garder la leçon pour que le passage suivant parte plus fort. L'agent peut tourner en local, sur votre poste, ou en cloud, à toute heure : en code, ou sur n8n et Make. Trois chemins sur la même table : son propre système (celui modélisé ici), celui d'un client (Pack Consultant IA) ou un système qui existe (optimisation). Une étape 0 tranche le chemin et regarde l'existant avant la première.",
   "metiers": [
     "dev"
   ],

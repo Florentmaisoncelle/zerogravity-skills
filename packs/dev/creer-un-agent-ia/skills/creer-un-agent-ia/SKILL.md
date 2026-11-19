@@ -58,8 +58,6 @@ Ce workflow s'appuie sur des compétences publiques, installées à part. Aucune
 
 ```text
 /plugin marketplace add Gremelinn0/zerogravity-skills
-/plugin marketplace add Gremelinn0/zerogravity-skills
-/plugin marketplace add Gremelinn0/zerogravity-skills
 /plugin marketplace add addyosmani/agent-skills
 /plugin marketplace add anthropics/knowledge-work-plugins
 /plugin marketplace add anthropics/skills

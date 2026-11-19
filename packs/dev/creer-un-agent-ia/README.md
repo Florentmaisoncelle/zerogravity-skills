@@ -1,6 +1,6 @@
 # Créer un agent ou un système IA, du problème au flywheel
 
-Huit étapes dans l'ordre pour un agent ou un système IA qui marche : poser le problème, répondre aux questions produit, choisir le type d'agent et dessiner l'architecture, construire, tester, mesurer, puis claude-code-system-pack:capitaliser pour que le passage suivant parte plus fort. L'agent peut tourner en local, sur votre poste, ou en cloud, à toute heure : en code, ou sur n8n et Make. Trois chemins sur la même table : son propre système (celui modélisé ici), celui d'un client (Pack Consultant IA) ou un système qui existe (optimisation). Une étape 0 tranche le chemin et regarde l'existant avant la première.
+Huit étapes dans l'ordre pour un agent ou un système IA qui marche : poser le problème, répondre aux questions produit, choisir le type d'agent et dessiner l'architecture, construire, tester, mettre en service, mesurer, puis garder la leçon pour que le passage suivant parte plus fort. L'agent peut tourner en local, sur votre poste, ou en cloud, à toute heure : en code, ou sur n8n et Make. Trois chemins sur la même table : son propre système (celui modélisé ici), celui d'un client (Pack Consultant IA) ou un système qui existe (optimisation). Une étape 0 tranche le chemin et regarde l'existant avant la première.
 
 ## Installer
 
@@ -18,8 +18,6 @@ Dans Claude Code : `/creer-un-agent-ia:creer-un-agent-ia`, ou décrire simplemen
 Ce workflow s'appuie sur des compétences publiques, installées à part. Aucune n'est indispensable : si l'une manque, le workflow le dit et fait l'étape à la main. Faire l'étape à la main veut dire suivre sa règle de choix, écrire ce qu'elle doit rendre (dans le fichier de l'étape, ou dans la réponse quand le workflow n'a pas de dossier) et dire ce qui reste à la charge de la personne.
 
 ```text
-/plugin marketplace add Gremelinn0/zerogravity-skills
-/plugin marketplace add Gremelinn0/zerogravity-skills
 /plugin marketplace add Gremelinn0/zerogravity-skills
 /plugin marketplace add addyosmani/agent-skills
 /plugin marketplace add anthropics/knowledge-work-plugins

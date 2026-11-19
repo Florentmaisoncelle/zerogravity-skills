@@ -1,0 +1,130 @@
+{
+  "format": "workflow-v1",
+  "slug": "convertir-les-visiteurs",
+  "titre": "Convertir les visiteurs : la page, le test, la ressource gratuite",
+  "resume": "Transformer le trafic en inscrits : le diagnostic de la page, le test d'une variante, la capture d'adresse et une ressource gratuite.",
+  "metiers": [
+    "marketing"
+  ],
+  "commande": "/convertir-les-visiteurs:convertir-les-visiteurs",
+  "dossier_etat": "conversion/<page>/",
+  "etapes": [
+    {
+      "n": 1,
+      "slug": "diagnostic",
+      "titre": "Diagnostiquer la page qui convertit mal",
+      "rend": "La liste des freins de la page, classés par impact. Pour une page : son objectif et son taux de conversion de départ, la liste des freins classés par impact, et l'hypothèse à tester en premier.",
+      "fichier": "01-diagnostic.md",
+      "regle": "Une hypothèse à la fois, mesurée avant d'être généralisée. Le consentement se contrôle avant de servir une variante ; les biais et la confidentialité se relisent par une personne. Une page à la fois, regardée d'abord sur téléphone. On note le taux de départ (visiteurs, actions, taux sur les quatre dernières semaines) avant de changer quoi que ce soit. Les freins se classent par impact et par effort ; une seule hypothèse sort du classement.",
+      "taches": [
+        {
+          "slug": "diagnostiquer-la-page",
+          "titre": "Diagnostiquer la page",
+          "competences": [
+            {
+              "nom": "marketing-skills:cro",
+              "pourquoi": "Les pages et les formulaires qui perdent des visiteurs, et les expériences à tenter."
+            },
+            {
+              "nom": "marketing-skills:marketing-psychology",
+              "pourquoi": "Utiliser les réflexes d'achat pour qu'une page convainque davantage."
+            }
+          ],
+          "reserve": [
+            "design:ux-copy"
+          ]
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "slug": "tester",
+      "titre": "Tester une variante",
+      "rend": "Un test avec son hypothèse, sa variable, sa taille d'échantillon, sa durée et sa règle de décision, écrites avant le lancement, puis le résultat.",
+      "fichier": "02-tester.md",
+      "regle": "Une seule variable par test ; on décide sur la règle écrite avant, pas sur l'impression. La taille d'échantillon et la règle de décision s'écrivent avant le lancement ; on ne s'arrête pas avant de l'avoir atteinte, et on ne l'allonge pas pour un résultat qui déplaît. Trop peu de visiteurs pour tester : changer la page puis comparer quatre semaines avant et après, en le disant. Résultat peu net : on garde la version actuelle.",
+      "taches": [
+        {
+          "slug": "tester-une-variante",
+          "titre": "Tester une variante",
+          "competences": [
+            {
+              "nom": "marketing-skills:ab-testing",
+              "pourquoi": "Conçoit le test et dit quand il a assez de visiteurs pour conclure."
+            }
+          ]
+        },
+        {
+          "slug": "mesurer-un-test-avec-peu-de-volume",
+          "titre": "Mesurer un test avec peu de volume",
+          "competences": [
+            {
+              "nom": "convertir-les-visiteurs:marketing-mesurer-un-test",
+              "pourquoi": "Dit honnêtement si une variante gagne vraiment, sans conclure trop tôt ni promouvoir seul le gagnant."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "slug": "capter",
+      "titre": "Capter l'adresse du visiteur",
+      "rend": "Une fenêtre ou un formulaire qui capte sans gêner, et la mesure de son effet sur la page.",
+      "fichier": "03-capter.md",
+      "regle": "Une seule action par écran ; la fenêtre ne bloque jamais la lecture sur téléphone et n'apparaît pas dès l'arrivée. Case de consentement non pré-cochée. Mesure : adresses captées par visiteur exposé, et effet sur l'action principale de la page. Si l'action principale baisse, on retire la fenêtre.",
+      "taches": [
+        {
+          "slug": "capter-l-adresse",
+          "titre": "Poser une fenêtre de capture",
+          "competences": [
+            {
+              "nom": "marketing-skills:popups",
+              "pourquoi": "Fenêtres, bannières et messages par source de trafic, avec une règle de consentement claire, sans case pré-cochée."
+            }
+          ]
+        },
+        {
+          "slug": "inscription",
+          "titre": "Simplifier l'inscription",
+          "competences": [
+            {
+              "nom": "marketing-skills:signup",
+              "pourquoi": "Le parcours d'inscription, champ par champ."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "slug": "ressource-gratuite",
+      "titre": "Offrir une ressource contre une adresse",
+      "rend": "La promesse de la ressource, la ressource elle-même relue, la page et la livraison, le consentement contrôlé, puis la mesure.",
+      "fichier": "04-ressource-gratuite.md",
+      "regle": "La ressource se débloque tout de suite ; l'inscription aux emails est un choix à part. lead-magnets par défaut, free-tools pour un outil. Décision à trente jours, fixée avant la mise en ligne : on garde la ressource si elle capte plus d'adresses que le formulaire d'avant, sinon on change la promesse avant le format.",
+      "taches": [
+        {
+          "slug": "ressource-contre-adresse",
+          "titre": "Créer une ressource contre une adresse",
+          "competences": [
+            {
+              "nom": "marketing-skills:lead-magnets",
+              "pourquoi": "Le type de ressource par étape d'achat, ce qu'on demande en échange, la page, la livraison, la promotion et la mesure."
+            }
+          ]
+        },
+        {
+          "slug": "outil-gratuit",
+          "titre": "Construire un outil gratuit",
+          "competences": [
+            {
+              "nom": "marketing-skills:free-tools",
+              "pourquoi": "Quand la ressource est un calculateur ou un évaluateur, qui attire aussi par la recherche."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

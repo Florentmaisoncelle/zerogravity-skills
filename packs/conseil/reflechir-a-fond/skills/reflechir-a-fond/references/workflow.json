@@ -1,0 +1,140 @@
+{
+  "format": "workflow-v1",
+  "slug": "reflechir-a-fond",
+  "titre": "Réfléchir à fond avant d'agir sur un chantier complexe",
+  "resume": "Neuf étapes pour transformer un chantier complexe, transversal ou difficile à défaire en décision solide avant d'exécuter : verrouiller le mandat, poser le problème en entier, mesurer l'état réel, cartographier le système, trouver la cause structurelle, ouvrir au moins trois options, formuler une thèse qui peut échouer, la réfuter, puis rendre la décision. Le workflow ne remplace aucune méthode : il choisit la compétence d'analyse que le signal appelle.",
+  "metiers": [
+    "conseil"
+  ],
+  "commande": "/reflechir-a-fond:reflechir-a-fond",
+  "dossier_etat": null,
+  "etapes": [
+    {
+      "n": 1,
+      "slug": "verrouiller",
+      "titre": "Verrouiller l'exécution",
+      "rend": "Le mandat annoncé (réflexion seule, ou analyse puis exécution déléguée), la demande actuelle, les décisions déjà validées, le travail en cours et les exclusions.",
+      "regle": "Une demande d'audit ou de réflexion seule ne change rien. Sous un mandat « analyse puis exécute » (par exemple un travail confié à loop-creator sur le même objectif), la revue d'un agent remplace les validations humaines de routine et on ne redemande pas d'accord une fois le plan écrit ; une décision produit réservée, un gel ou une action sensible non autorisée ne bloquent que leur seule branche. La profondeur se choisit tôt : ciblé (D1), structurel (D2) ou critique (D3) ; une invocation explicite vaut au moins D2, et une tâche triviale, réversible et déjà spécifiée n'appelle pas ce workflow. Sous « analyse puis exécution », que le demandeur a écrit expressément dans sa demande, la relecture par un autre agent remplace ses validations de routine et on ne redemande pas d'accord une fois le plan écrit ; une décision qu'il s'est réservée, un gel ou une action sensible non autorisée ne bloquent que leur seule branche.",
+      "manque": "aucune compétence publique pour ce geste : il se fait à la main, avec la règle de l'étape."
+    },
+    {
+      "n": 2,
+      "slug": "poser-le-probleme",
+      "titre": "Poser le problème en entier",
+      "rend": "La table des objets en jeu, confrontée aux sources et à une critique, puis cinq lignes : le symptôme, le résultat que cherche vraiment le demandeur, le système capable de le produire, la décision à prendre maintenant, ce qui prouverait que c'est mieux.",
+      "regle": "Obligatoire. Si la cinquième ligne (la preuve que c'est mieux) ne s'écrit pas, le chantier n'est pas encore cadré. Sous mandat autonome (« analyse puis exécution »), le pilote tranche lui-même les ambiguïtés réversibles.",
+      "manque": "aucune compétence publique pour ce geste : il se fait à la main, avec la règle de l'étape."
+    },
+    {
+      "n": 3,
+      "slug": "reconstituer",
+      "titre": "Reconstituer la réalité",
+      "rend": "Les sources canoniques lues avant les synthèses, une baseline mesurée et reproductible, et chaque énoncé rangé : fait, hypothèse, contradiction, inconnu ou décision.",
+      "regle": "On cherche le vivant (le code qui tourne, ses consommateurs, ses responsables réels) plutôt que la documentation. Un zéro ne compte qu'avec un témoin positif. Si une preuve exige une modification, on ne la fabrique pas pendant la réflexion : on déclare la preuve manquante et on l'ajoute au plan.",
+      "manque": "aucune compétence publique ne mesure l'usage réel d'un système quelconque (invocations, coûts, ce qu'on n'appelle plus, sur l'historique des sessions) : la baseline se mesure à la main, de façon reproductible.",
+      "taches": [
+        {
+          "slug": "chercher-dans-toutes-les-sources",
+          "titre": "Chercher dans toutes les sources",
+          "competences": [
+            {
+              "nom": "enterprise-search:knowledge-synthesis",
+              "pourquoi": "Fusionner les résultats de plusieurs sources en une réponse sourcée. Compétence d'appui de la recherche."
+            },
+            {
+              "nom": "enterprise-search:search",
+              "pourquoi": "Retrouver une information dispersée dans les outils connectés à Claude (messagerie, documents, suivi de projet, chat) en une requête. Sans outil connecté, elle ne trouve rien."
+            },
+            {
+              "nom": "enterprise-search:search-strategy",
+              "pourquoi": "Découper une question floue en recherches ciblées sur chaque source ; compétence d'appui de la recherche."
+            }
+          ],
+          "manque": "aucune compétence par défaut pour chercher dans des dossiers sans outil connecté : on cherche alors à la main (voir la réserve).",
+          "reserve": [
+            "enterprise-search:digest",
+            "bmad-agent-analyst"
+          ]
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "slug": "cartographier",
+      "titre": "Cartographier le système",
+      "rend": "La chaîne de bout en bout (entrée, mécanismes, responsables, sources de vérité, exécution, preuve, décision), avec ses frontières, ses dépendances, ses boucles de rétroaction, ses états cachés et les endroits où l'information est copiée, perdue ou transformée.",
+      "regle": "On travaille par tranche de capacité, pas par dossier ni par type de fichier.",
+      "manque": "aucune compétence ne trace cette carte : le workflow la dessine lui-même."
+    },
+    {
+      "n": 5,
+      "slug": "descendre",
+      "titre": "Descendre jusqu'à la structure",
+      "rend": "La cause structurelle qui rend la récidive possible (mauvais responsable, contrôle absent, signal infiable, unité de travail erronée, autorité dupliquée, déclencheur muet, boucle sans rappel, validation non indépendante), et non « le document est faux » ou « l'agent oublie ».",
+      "regle": "Le signal dominant choisit la compétence, et la chaîne la plus courte qui couvre le problème : un défaut qui revient se traque à la main, en prouvant le flux de bout en bout et en nommant la cause structurelle ; le propre dispositif Claude Code de la personne (règles, compétences, documents) va à claude-code-system-pack:optimise-systeme ; un responsable ou un outil inconnu se cherche d'abord dans ce qui est installé, puis dans les annuaires publics. Un arbitrage produit va au responsable produit du projet, un arbitrage sur une offre à /decider-une-strategie:decider-une-strategie (sauf si c'est lui qui nous a appelé), un risque de sécurité, de droit ou d'argent à la compétence experte du domaine ou à un professionnel. On cite sa conclusion sans recopier sa méthode. Une compétence absente de l'hôte n'est jamais simulée ni déclarée invoquée : on poursuit avec la meilleure méthode disponible en annonçant la limite.",
+      "competences": [
+        {
+          "nom": "claude-code-system-pack:optimise-systeme",
+          "role": "un système de règles, de compétences, de documents",
+          "pourquoi": "Pour l'ensemble de règles, de compétences, de documents et de cartes qui pilotent son propre Claude Code : elle mesure l'ensemble avant de le juger, fait agir les responsables, puis re-mesure sans perte, au lieu de corriger fichier par fichier. Elle ne sert pas à enquêter sur une entreprise, une application ou un processus."
+        }
+      ],
+      "manque": "aucune compétence publique ne traque la cause d'un défaut qui revient : on la cherche à la main."
+    },
+    {
+      "n": 6,
+      "slug": "ouvrir",
+      "titre": "Ouvrir avant de converger",
+      "rend": "Au moins trois options vraiment distinctes en D2 et D3 (rester comme on est ou réduire, améliorer au minimum, corriger la structure), chacune avec son bénéfice, son coût, son rayon d'effet, sa réversibilité, sa dette restante et son signal de succès ; les options faibles écartées par écrit pour qu'elles ne reviennent pas sous un autre nom.",
+      "regle": "Trois options au moins quand l'enjeu est structurel ou critique ; une idée unique qu'on raffine ne compte pas. L'ouverture se fait avant de choisir, jamais après.",
+      "competences": [
+        {
+          "nom": "product-management:brainstorm",
+          "role": "une seule idée sur la table",
+          "pourquoi": "Un partenaire de réflexion qui ouvre des options réellement concurrentes quand on ne fait que raffiner la première idée, avant qu'on converge. Un partenaire de réflexion tenace, pensé pour les sujets de produit mais utilisable pour tout espace de solutions trop étroit : il challenge, apporte des angles inattendus et ouvre des options réellement concurrentes avant qu'on converge."
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "slug": "these",
+      "titre": "Construire une thèse qui peut échouer",
+      "rend": "Le plan recommandé sous la forme « en changeant X dans le système Y, nous obtiendrons Z, mesuré par M, sans perdre N », avec ses hypothèses, ses inconnues, ses préconditions, les consommateurs à recâbler, son retour arrière et ses critères PASS/ABORT.",
+      "regle": "Un plan qui ne peut pas échouer dans sa formulation n'est pas testable.",
+      "manque": "aucune compétence n'écrit cette thèse : le workflow la formule lui-même."
+    },
+    {
+      "n": 8,
+      "slug": "refuter",
+      "titre": "Réfuter avant d'engager",
+      "rend": "Les bloquants concrets, les mitigations à ajouter au plan, le bruit écarté, et un verdict : pivoter, durcir ou engager.",
+      "regle": "On l'applique à la version du plan qui sera réellement proposée, jamais à une première idée qu'il ne ferait que bénir, et on ne donne jamais au relecteur le verdict attendu. Un bloquant concret impose de pivoter ; une mitigation entre dans le plan avant d'engager.",
+      "competences": [
+        {
+          "nom": "agent-skills:doubt-driven-development",
+          "role": "relecteur au contexte neuf",
+          "pourquoi": "Fait relire une décision non triviale par un relecteur au contexte neuf, chargé de la réfuter. Écrit pour du code, mais la méthode vaut pour toute décision ; sans lui, la réfutation se fait à la main."
+        }
+      ]
+    },
+    {
+      "n": 9,
+      "slug": "rendre",
+      "titre": "Rendre la décision au bon responsable",
+      "rend": "Le dossier de décision enregistré dans reflexion/<sujet>.md (autorisation, vrai problème, profondeur, compétences activées, faits mesurés, inconnus, carte, racine, options, réfutation, recommandation, critères PASS et ABORT, plan par petites vagues finies), avec la relecture d'ensemble nommée dans le plan, en dernier sur le cumul.",
+      "regle": "Le dossier est suffisant seulement si une autre tâche, sans la conversation, peut comprendre le problème, retrouver les faits, voir pourquoi les alternatives sont écartées, réfuter la recommandation avec les mêmes critères, exécuter sans inventer de décision et savoir quand s'arrêter. Le workflow ne code pas, ne documente pas le produit et ne rend pas de verdict de test. La relecture d'ensemble dépend du travail : code remis par une pull request, code-review:code-review ; code sans pull request, relecture par une autre personne ou un agent au contexte neuf ; hors code, relecture du résultat contre les critères PASS et ABORT par quelqu'un qui ne l'a pas produit.",
+      "taches": [
+        {
+          "slug": "relecture-d-ensemble",
+          "titre": "Prévoir la relecture d'ensemble d'un code remis par pull request",
+          "competences": [
+            {
+              "nom": "code-review:code-review",
+              "pourquoi": "Relit une pull request GitHub avec plusieurs agents spécialisés. Elle ne s'applique qu'à du code remis par pull request ; hors code, la relecture se fait à la main."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

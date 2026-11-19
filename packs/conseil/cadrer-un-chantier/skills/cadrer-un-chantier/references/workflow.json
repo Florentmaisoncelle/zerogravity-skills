@@ -1,0 +1,164 @@
+{
+  "format": "workflow-v1",
+  "slug": "cadrer-un-chantier",
+  "titre": "Cadrer un chantier avant de le lancer",
+  "resume": "Une stratégie, une méthode, un système ou un produit de zéro : poser le problème, choisir la bonne méthode de réflexion, écrire le plan, l'attaquer, le faire valider une fois, puis lancer.",
+  "metiers": [
+    "conseil"
+  ],
+  "commande": "/cadrer-un-chantier:cadrer-un-chantier",
+  "dossier_etat": null,
+  "etapes": [
+    {
+      "n": 1,
+      "slug": "poser-le-probleme",
+      "titre": "Poser le problème",
+      "fichier": "cadrage/01-probleme.md",
+      "rend": "La carte : les objets en jeu, ce que chacun ne fait pas, ce qui est déjà tranché et mesuré, le critère réel.",
+      "regle": "Toujours d'abord, sauf pour un travail simple d'un seul objet.",
+      "taches": [
+        {
+          "slug": "faire-dire-ce-que-l-on-veut",
+          "titre": "Faire dire ce que l'on veut vraiment",
+          "competences": [
+            {
+              "nom": "agent-skills:interview-me",
+              "pourquoi": "Quand il faut faire dire ce que la personne veut vraiment : un entretien d'une question à la fois, avant tout plan."
+            }
+          ]
+        }
+      ],
+      "manque": "aucune compétence publique ne dresse la carte du problème (objets en jeu, ce que chacun ne fait pas, ce qui est tranché et mesuré, critère réel) : on la dresse à la main."
+    },
+    {
+      "n": 2,
+      "slug": "choisir-la-methode",
+      "titre": "Choisir la méthode de réflexion",
+      "fichier": "cadrage/02-methode-choisie.md",
+      "rend": "La méthode qui convient à la nature de la question, et une seule à la fois.",
+      "regle": "Une décision d'affaires par /decider-une-strategie:decider-une-strategie ; un système ou une cause par /reflechir-a-fond:reflechir-a-fond ; une façon de faire étape par étape par l'étape 5 ; un produit de zéro par les étapes 3 et 4 ; un outil ou une compétence à trouver en cherchant d'abord ce qui est déjà installé, puis dans les annuaires publics.",
+      "competences": [
+        {
+          "nom": "decider-une-strategie",
+          "workflow": true,
+          "role": "workflow frère",
+          "pourquoi": "Pour une décision d'affaires (marché, offre, priorités, argent) : des options, les hypothèses porteuses, une recommandation et ce qui la renverserait."
+        },
+        {
+          "nom": "reflechir-a-fond",
+          "workflow": true,
+          "role": "workflow frère",
+          "pourquoi": "Pour un système, une cause, une architecture ou un défaut qui revient : la cause prouvée, la carte du système, une décision."
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "slug": "elargir",
+      "titre": "Élargir les idées",
+      "optionnelle": "pour un produit de zéro",
+      "fichier": "cadrage/03-idees.md",
+      "rend": "Au moins trois pistes vraiment différentes avant d'en choisir une.",
+      "regle": "Élargir avant de choisir ; on garde les trois pistes dans la fiche, la retenue et pourquoi.",
+      "competences": [
+        {
+          "nom": "bmad-brainstorming",
+          "role": "par défaut",
+          "pourquoi": "Des techniques de créativité variées, menées en séance, qui empêchent de retenir la première idée."
+        }
+      ],
+      "taches": [
+        {
+          "slug": "durcir-une-idee",
+          "titre": "Durcir une idée avant de s'y engager",
+          "competences": [
+            {
+              "nom": "agent-skills:idea-refine",
+              "pourquoi": "Quand une idée brute doit devenir un concept net et actionnable."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "slug": "etudier",
+      "titre": "Étudier le marché",
+      "optionnelle": "pour un produit de zéro",
+      "fichier": "cadrage/04-etude.md",
+      "rend": "Le marché, les concurrents et le domaine, sources citées.",
+      "regle": "Avant la fiche produit ; une étude qui ne cite pas ses sources ne compte pas.",
+      "taches": [
+        {
+          "slug": "profiler-les-concurrents",
+          "titre": "Profiler les concurrents",
+          "competences": [
+            {
+              "nom": "marketing-skills:competitor-profiling",
+              "pourquoi": "À partir de la liste des adresses de sites concurrents, une fiche structurée par concurrent."
+            }
+          ]
+        },
+        {
+          "slug": "comprendre-les-clients",
+          "titre": "Comprendre les clients",
+          "competences": [
+            {
+              "nom": "marketing-skills:customer-research",
+              "pourquoi": "Tirer des enseignements d'entretiens, d'avis, de questionnaires ou de messages de clients."
+            }
+          ]
+        }
+      ],
+      "manque": "aucune compétence publique ne chiffre la taille du marché ni ses tendances : cette partie se fait à la main, avec des sources ouvertes et datées."
+    },
+    {
+      "n": 5,
+      "slug": "ecrire-le-plan",
+      "titre": "Écrire la méthode et le plan",
+      "fichier": "cadrage/05-methode-et-plan.md",
+      "rend": "La méthode, étape par étape (déclencheur, exécutant, contrôle, mesure), puis le plan d'exécution en trois à six étapes vérifiables. Pour un objectif confié en quelques lignes, les sept sorties du mode « objectif vers système », une par fichier dans cadrage/sorties/.",
+      "regle": "Seulement quand la stratégie et la méthode sont claires. Pour un objectif confié en quelques lignes, la méthode rend les sept sorties du mode « objectif → système ».",
+      "manque": "aucune compétence publique pour ce geste : il se fait à la main, avec la règle de l'étape."
+    },
+    {
+      "n": 6,
+      "slug": "attaquer",
+      "titre": "Attaquer le plan",
+      "fichier": "cadrage/06-attaque.md",
+      "rend": "Les objections réelles, triées : ce qui bloque, ce qui se mitige, ce qu'on écarte ; puis le plan durci.",
+      "regle": "Toujours avant la fiche ; un seul bloquant réel fait pivoter. L'attaque suit la méthode du pré-mortem : on suppose que le plan a échoué et on cherche pourquoi.",
+      "competences": [
+        {
+          "nom": "agent-skills:doubt-driven-development",
+          "role": "relecteur au contexte neuf",
+          "pourquoi": "Fait relire une décision non triviale par un relecteur au contexte neuf, chargé de la réfuter. Écrit pour du code, mais la méthode vaut pour toute décision ; sans lui, l'attaque se fait à la main."
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "slug": "fiche-de-cadrage",
+      "titre": "Faire valider la fiche de cadrage",
+      "fichier": "cadrage/07-fiche-de-cadrage.md",
+      "rend": "Une fiche d'un écran, sept cases remplies, validée une fois.",
+      "regle": "Rien ne se lance tant que les sept cases ne sont pas remplies et validées. C'est ici que tombe la seule validation obligatoire du workflow.",
+      "manque": "aucune compétence publique pour ce geste : il se fait à la main, avec la règle de l'étape."
+    },
+    {
+      "n": 8,
+      "slug": "lancer",
+      "titre": "Lancer",
+      "fichier": "cadrage/08-lancement.md",
+      "rend": "Le travail qui démarre, avec sa cadence et sa reprise, noté dans le dossier.",
+      "regle": "Une tâche longue ou répétée, ou une mission de bout en bout, se règle avec claude-session-supervisor:loop-creator ; un travail court s'exécute tout de suite.",
+      "competences": [
+        {
+          "nom": "claude-session-supervisor:loop-creator",
+          "role": "la cadence et la continuité",
+          "pourquoi": "Arme et répare la boucle d'une tâche longue à partir du contrat complet, sans boucle qui tourne à vide ; pilote aussi une mission de bout en bout (mesure, révise la stratégie, relance l'exécution dans le mandat). Conçoit, lance et relance une tâche répétée avec la commande loop : objectif mesurable, conditions d'arrêt, cadence, reprise d'une boucle arrêtée. Une boucle expire après 7 jours et ne vit que tant que la session reste ouverte."
+        }
+      ]
+    }
+  ]
+}

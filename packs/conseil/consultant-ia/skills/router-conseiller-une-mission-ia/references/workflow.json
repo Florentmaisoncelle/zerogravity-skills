@@ -1,0 +1,542 @@
+{
+  "format": "workflow-v1",
+  "slug": "conseiller-une-mission-ia",
+  "titre": "Conseiller une mission IA, de la découverte au plan de déploiement",
+  "resume": "Neuf étapes de conseil pour une mission d'IA ou d'automatisation chez un client : trouver où l'IA aide, cadrer, diagnostiquer le travail réel et en écrire les exigences, optimiser le processus, choisir la stratégie, concevoir, chiffrer, puis spécifier et planifier, et, une fois la solution en service, mesurer le gain. Deux portes d'entrée : un besoin déjà nommé, ou aucun besoin et on découvre d'abord. C'est la porte du pack consultant IA : il tient l'état de la mission et le journal des décisions. En ligne, un agent mène ces étapes par écrit avec la personne ; le consultant relit le chiffrage, la spécification et le plan. Construire, tester et mettre en service passent au workflow « Implémenter l'IA en entreprise ».",
+  "commande": "/router-conseiller-une-mission-ia",
+  "routeur": "router-conseiller-une-mission-ia",
+  "metiers": [
+    "conseil"
+  ],
+  "moment": "demarrer",
+  "dossier_etat": "mission/",
+  "mis_a_jour": "2026-11-10",
+  "methode": {
+    "titre": "Pack consultant IA",
+    "auteur": "Zero Gravity AI",
+    "lien": "https://github.com/Gremelinn0/zerogravity-skills/tree/main/packs/conseil/consultant-ia",
+    "note": "Le pack tient la méthode (onze compétences et un routeur), avec son entretien guidé par IA, son module CRM et son module de déploiement d'un assistant IA ; les compétences d'autres éditeurs qu'il cite comme compagnons entrent à l'étape qui les appelle, une fois installées."
+  },
+  "etapes": [
+    {
+      "n": 1,
+      "slug": "decouvrir",
+      "titre": "Découvrir où l'IA peut aider",
+      "optionnelle": "si aucun besoin n'est encore nommé",
+      "rend": "Le contexte de l'entreprise, la cartographie des tâches réelles, le tri en cinq issues (éliminer, simplifier d'abord, automatiser, déléguer à l'IA, garder) et un portefeuille de cas d'usage classés, avec la décision : quels cas creuser. Sur proposition, deux livrables facultatifs suivent : un ordre de grandeur des gains et des coûts des cas à creuser, puis une feuille de route du portefeuille.",
+      "fichier": "02-portefeuille.md",
+      "competences": [
+        {
+          "nom": "consultant-ia:decouvrir-cas-usage",
+          "role": "par défaut",
+          "pourquoi": "C'est l'étape propriétaire de la porte découverte du pack : elle part du travail réel des équipes et rend un portefeuille classé, pas une liste d'idées d'IA."
+        }
+      ],
+      "regle": "Deux portes d'entrée, un seul test : si le processus se nomme en une phrase, on saute cette étape (elle s'inscrit « sans objet » au journal) et chaque besoin entre par le cadrage ; sinon on découvre d'abord, puis chaque cas retenu repart par le cadrage. En cas de doute, la découverte commence court et rend la main dès qu'un cas clair apparaît. Le fichier de l'étape est 02-portefeuille.md, écrit après 00-contexte.md et 01-cartographie-taches.md. Sur proposition, deux fichiers facultatifs le suivent : 03-chiffrage.md, l'ordre de grandeur des seuls cas à creuser (compétence de l'étape 7), et 04-feuille-de-route.md, la feuille de route du portefeuille (compétence de l'étape 8). Sans consultant dans la conversation, la découverte finit par dix cas au plus, classés par rentabilité, ceux qu'un workflow existant couvre déjà et ceux qui sont propres à l'entreprise, puis trois propositions : la personne en choisit un, et ce cas ne commence qu'une fois l'accès ouvert.",
+      "cas": [
+        "identifier-et-prioriser-les-cas-d-automatisation-utiles"
+      ],
+      "taches": [
+        {
+          "slug": "trouver-des-modeles-d-automatisation",
+          "titre": "Trouver des modèles d'automatisation",
+          "competences": [
+            {
+              "nom": "hunting-automation-resources",
+              "pourquoi": "Pour chercher de bons modèles d'automatisations et de consignes dans des sources sûres.",
+              "projet": "marketplace"
+            }
+          ],
+          "reserve": []
+        },
+        {
+          "slug": "comprendre-l-entreprise-vite",
+          "titre": "Comprendre l'entreprise avant de cartographier",
+          "competences": [
+            {
+              "nom": "mckinsey-bcg-consulting:mckinsey-research-methodology",
+              "role": "autre choix",
+              "pourquoi": "Pour comprendre une entreprise vite : lire ses documents publics d'un oeil critique, repérer les chiffres qui détonnent, chercher les meilleures pratiques de son secteur. Écrite en chinois, tirée d'un livre.",
+              "source": "MichaelRochonnn, MichaelRochonnn/mckinsey-bcg-consulting"
+            }
+          ],
+          "reserve": []
+        },
+        {
+          "slug": "trouver-et-ordonner-les-cas-en-seance",
+          "titre": "Trouver et ordonner les cas d'usage en séance",
+          "competences": [
+            {
+              "nom": "bmad-brainstorming",
+              "role": "autre choix",
+              "pourquoi": "Des techniques de créativité menées en séance, pour faire sortir des cas d'usage auxquels l'équipe n'aurait pas pensé.",
+              "maison": "cadrer-un-chantier"
+            },
+            {
+              "nom": "mckinsey-bcg-consulting:impact-speed-prioritization-matrix",
+              "role": "autre choix",
+              "pourquoi": "Pour ordonner les cas retenus sur une grille impact contre rapidité : les gains rapides d'abord, les gros chantiers ensuite, quand les moyens du client sont limités.",
+              "source": "MichaelRochonnn, MichaelRochonnn/mckinsey-bcg-consulting"
+            }
+          ],
+          "reserve": []
+        }
+      ],
+      "departement": "Trouver"
+    },
+    {
+      "n": 2,
+      "slug": "cadrer",
+      "titre": "Cadrer le besoin",
+      "rend": "Une fiche besoin courte et validée : le vrai problème, la décision à prendre, le périmètre, les contraintes, les critères de succès, et le nom du dossier du cas.",
+      "fichier": "10-besoin.md",
+      "competences": [
+        {
+          "nom": "consultant-ia:cadrer-besoin",
+          "role": "par défaut",
+          "pourquoi": "Elle reformule une demande qui arrive en solution (« on veut un chatbot ») en problème, vérifie que c'est le bon, et fixe le nom unique du dossier que toutes les étapes suivantes reprennent."
+        }
+      ],
+      "regle": "On ne cherche pas de solution avant que le demandeur ait validé la fiche. Un cas porte un seul nom, fixé ici une fois (le dossier `mission/cas-<nom>/`). Les questions sortent de la base du pack : on lit d'abord ce qui existe, on ne pose que ce qui manque, et le consultant y range ensuite ce qui manquait. Un objectif qui relève d'un sujet de la base se prépare avec les questions de ce seul sujet.",
+      "cas": [],
+      "taches": [
+        {
+          "slug": "mener-l-entretien",
+          "titre": "Mener l'entretien par écrit, sans le consultant",
+          "competences": [
+            {
+              "nom": "consultant-ia:mener-entretien-ia",
+              "pourquoi": "Quand la personne répond seule : une IA mène l'entretien par écrit, avec les questions de la base, et rend une note au format du pack, que le consultant relit."
+            },
+            {
+              "nom": "mckinsey-bcg-consulting:expert-interviewing-mckinsey",
+              "role": "autre choix",
+              "pourquoi": "Pour un entretien mené en direct avec quelqu'un qui répond « je ne sais pas » : le faire soutenir par son supérieur, venir à deux, écouter sans guider.",
+              "source": "MichaelRochonnn, MichaelRochonnn/mckinsey-bcg-consulting"
+            }
+          ],
+          "reserve": []
+        },
+        {
+          "slug": "structurer-le-probleme",
+          "titre": "Structurer le problème",
+          "competences": [
+            {
+              "nom": "mckinsey-bcg-consulting:mckinsey-problem-solving-methodology",
+              "role": "autre choix",
+              "pourquoi": "Quand la demande est floue ou que le client s'est déjà fait son diagnostic : suspendre l'action, valider ou redéfinir le problème, partir des faits plutôt que d'une conviction. Écrite en chinois.",
+              "source": "MichaelRochonnn, MichaelRochonnn/mckinsey-bcg-consulting"
+            },
+            {
+              "nom": "management-consulting",
+              "role": "autre choix",
+              "pourquoi": "Quand le besoin est plus stratégique que d'un seul processus : trois niveaux d'effort (réfléchir à voix haute, cas complet, livrable pour un comité), quarante-deux cadres et la règle de ne pas en appliquer un par réflexe.",
+              "source": "gcamilo, gcamilo/management-consulting"
+            }
+          ],
+          "reserve": []
+        }
+      ],
+      "departement": "Comprendre"
+    },
+    {
+      "n": 3,
+      "slug": "diagnostiquer",
+      "titre": "Diagnostiquer le travail réel, puis écrire les exigences",
+      "rend": "Le processus actuel décrit et mesuré, ses goulets, ses causes sur lesquelles on peut agir, sa stabilité, et ce qu'on simplifie ou standardise avant toute automatisation. Puis les exigences : ce que le dispositif doit faire, numérotées, classées et testables, sans nommer de solution.",
+      "fichier": "20-diagnostic.md",
+      "competences": [
+        {
+          "nom": "consultant-ia:auditer-processus",
+          "role": "par défaut",
+          "pourquoi": "Elle décrit comment le travail se fait vraiment, le mesure, trie chaque étape (éliminer, simplifier d'abord, automatiser, déléguer à l'IA, garder) et empêche d'automatiser une mauvaise habitude."
+        },
+        {
+          "nom": "consultant-ia:rediger-cahier-des-charges",
+          "role": "les exigences",
+          "pourquoi": "Une fois le diagnostic validé, elle écrit les exigences sans nommer de solution, pour comparer les options sur un même énoncé (son mode exigences). La même compétence écrit plus loin, à l'étape 8, la spécification de l'option retenue."
+        },
+        {
+          "nom": "operations:process-doc",
+          "role": "le mode opératoire",
+          "pourquoi": "Rédige le processus cible avec ses rôles, ses exceptions et ses variantes une fois l'audit fait ; elle vit à l'étape d'arrivée et de procédures du workflow « Recruter un collaborateur ».",
+          "maison": "recruter"
+        }
+      ],
+      "regle": "On mesure avant de décrire la cible, et un processus instable se stabilise avant de s'automatiser. Si le processus passe par un outil lisible, on lit d'abord ses traces, en lecture seule et sur une période nommée : l'entretien confirme ce qu'elles montrent et cherche le reste. Sans consultant dans la conversation, l'agent ne se connecte à aucun outil : il lit les documents que la personne joint. Le diagnostic validé, les exigences s'écrivent dans 30-exigences.md, sans nommer de solution avant de comparer des options : c'est le mode exigences de la compétence de rédaction, dont le mode spécification est repris à l'étape 8. L'étape n'est faite que quand les deux fichiers existent.",
+      "cas": [],
+      "taches": [
+        {
+          "slug": "auditer-un-crm",
+          "titre": "Auditer un CRM",
+          "competences": [
+            {
+              "nom": "consultant-ia:auditer-crm",
+              "pourquoi": "Quand le cas touche à un CRM : un audit en lecture seule sur quatre volets, un bilan priorisé en annexe du diagnostic, puis les annexes du cahier des charges pour une mise en place ou une refonte."
+            }
+          ],
+          "reserve": []
+        },
+        {
+          "slug": "chercher-les-causes-qui-comptent",
+          "titre": "Chercher les causes qui comptent",
+          "competences": [
+            {
+              "nom": "mckinsey-bcg-consulting:hypothesis-driven-data-analysis",
+              "role": "autre choix",
+              "pourquoi": "Pour lire les relevés sans se fier aux corrélations : partir d'une hypothèse, vérifier le pourquoi avant d'agir sur ce que les données montrent. En anglais, avec exemples.",
+              "source": "MichaelRochonnn, MichaelRochonnn/mckinsey-bcg-consulting"
+            },
+            {
+              "nom": "mckinsey-bcg-consulting:key-driver-analysis",
+              "role": "autre choix",
+              "pourquoi": "Quand les facteurs possibles sont trop nombreux : garder les quelques facteurs qui pèsent vraiment et n'analyser que ceux-là. Écrite en chinois.",
+              "source": "MichaelRochonnn, MichaelRochonnn/mckinsey-bcg-consulting"
+            }
+          ],
+          "reserve": []
+        }
+      ],
+      "departement": "Comprendre"
+    },
+    {
+      "n": 4,
+      "slug": "optimiser-le-processus",
+      "titre": "Optimiser le processus",
+      "rend": "Le processus simplifié avant toute spécification : les pertes repérées (attentes, reprises, étapes sans valeur, tâches manuelles), ce qu'on supprime, regroupe ou standardise, l'état cible et le gain chiffré par cycle.",
+      "fichier": "35-optimisation.md",
+      "competences": [
+        {
+          "nom": "operations:process-optimization",
+          "role": "par défaut",
+          "pourquoi": "Elle part du processus décrit à l'étape 3, repère les pertes (attentes, reprises, étapes sans valeur, tâches manuelles), dessine l'état cible et chiffre le gain par cycle : on automatise le processus simplifié, pas une mauvaise habitude. Très courte (1 Ko, sans références) : le gros du tri est déjà fait par l'audit de l'étape 3.",
+          "maison": "ameliorer-le-parcours-client"
+        }
+      ],
+      "regle": "On optimise avant de spécifier : supprimer ce qui ne sert à rien, regrouper, standardiser, et seulement ensuite choisir ce qu'on automatise. On part du diagnostic et des relevés de l'étape 3 ; un gain chiffré dit s'il est relevé ou estimé. Si l'optimisation change le processus, les exigences de 30-exigences.md se relisent avant de comparer des options. Le résultat s'écrit dans 35-optimisation.md et sert de base aux options de l'étape 6.",
+      "cas": [],
+      "departement": "Comprendre",
+      "taches": [
+        {
+          "slug": "reperer-les-pertes-et-standardiser",
+          "titre": "Repérer les pertes et standardiser",
+          "competences": [
+            {
+              "nom": "mckinsey-bcg-consulting:process-standardization-for-leverage",
+              "role": "autre choix",
+              "pourquoi": "Avant d'automatiser ou de déléguer : écrire ce qui dépend du savoir-faire d'une personne pour que d'autres, ou un agent, puissent le faire.",
+              "source": "MichaelRochonnn, MichaelRochonnn/mckinsey-bcg-consulting"
+            }
+          ],
+          "reserve": []
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "slug": "strategie-d-automatisation",
+      "titre": "Choisir la stratégie d'automatisation",
+      "rend": "Le verdict sur le fond (faut-il automatiser, standardiser d'abord, assister l'humain ou ne rien construire), le type de solution et la plateforme, avec le contre-argument et la condition d'arrêt.",
+      "fichier": "40-solutions.md",
+      "competences": [
+        {
+          "nom": "consultant-ia:concevoir-solution",
+          "role": "par défaut",
+          "pourquoi": "Elle pose d'abord la stratégie d'automatisation (faire ou non, quel type de solution, sur quelle plateforme) avant de comparer des options, et recommande avec le contre-argument, la condition d'arrêt et un repli."
+        }
+      ],
+      "regle": "Ne rien construire est une option à part entière, et la plus simple qui tienne gagne. Une solution part de l'automatisation : les règles stables d'abord, l'IA là où il faut comprendre, classer ou rédiger. L'IA augmente l'automatisation et l'humain, et un geste à risque garde une validation humaine. Prix et capacités des plateformes se revérifient le jour même. Cette étape ne pose que les trois décisions de stratégie dans 40-strategie.md (faire ou non, type de solution, plateforme) ; l'étape 6 déroule le reste de la compétence et écrit 40-solutions.md, où la stratégie est reprise en tête.",
+      "cas": [],
+      "taches": [
+        {
+          "slug": "arbitrer-la-plateforme",
+          "titre": "Arbitrer la plateforme",
+          "competences": [
+            {
+              "nom": "automation-strategy",
+              "role": "autre choix",
+              "pourquoi": "Pour approfondir le choix d'automatiser ou non, d'acheter ou de construire, la plateforme et le coût de maintien. Capacités et prix se revérifient le jour même."
+            }
+          ],
+          "reserve": []
+        },
+        {
+          "slug": "verifier-que-la-solution-est-a-portee",
+          "titre": "Vérifier que la solution est à la portée du client",
+          "competences": [
+            {
+              "nom": "mckinsey-bcg-consulting:solution-feasibility-assessment",
+              "role": "autre choix",
+              "pourquoi": "Avant de recommander : vérifier que la solution est à la portée du client (ses forces, ses limites, ses blocages internes), quitte à choisir moins ambitieux. Écrite en chinois.",
+              "source": "MichaelRochonnn, MichaelRochonnn/mckinsey-bcg-consulting"
+            }
+          ],
+          "reserve": []
+        }
+      ],
+      "departement": "Décider"
+    },
+    {
+      "n": 6,
+      "slug": "concevoir",
+      "titre": "Concevoir la solution et comparer les options",
+      "reprend": 5,
+      "rend": "Des options réellement différentes comparées sur une matrice (couverture des exigences, coûts, fiabilité, données, dépendance, délai), une recommandation et, si un logiciel du marché entre en jeu, ses risques et sa réversibilité.",
+      "fichier": "40-solutions.md",
+      "competences": [
+        {
+          "nom": "operations:vendor-review",
+          "role": "le fournisseur",
+          "pourquoi": "Compare des fournisseurs sur le coût complet, les risques, la continuité et la sortie : ce qu'il faut quand une option repose sur un logiciel du marché."
+        }
+      ],
+      "regle": "On reprend la compétence de l'étape 5 pour la partie options : au moins une option sans construction et les outils déjà en place. La revue du fournisseur ne s'ouvre que si une option en dépend. Le résultat s'écrit dans 40-solutions.md.",
+      "cas": [
+        "definir-un-systeme-ia-deployable-et-gouverne"
+      ],
+      "ressources": [
+        {
+          "nom": "The Claude Operations Team, sept agents du premier email à la facture payée",
+          "auteur": "Anthony Whitaker",
+          "lien": "https://impartial-money-fa9.notion.site/The-Claude-Operations-Team-Seven-Agents-From-First-Email-to-Paid-Invoice-3eb9112c6a1f803da383dd9c8a821363",
+          "apporte": "Sept agents Claude autour d'un cerveau commun de fichiers (boîte partagée, devis, factures, relances) : un exemple concret d'équipe d'agents à comparer aux options.",
+          "recue_le": "2026-10-17",
+          "source": "SRC-034",
+          "publie": false
+        }
+      ],
+      "departement": "Décider",
+      "taches": [
+        {
+          "slug": "fixer-l-architecture-et-les-roles",
+          "titre": "Fixer l'architecture et les rôles",
+          "competences": [
+            {
+              "nom": "bmad-architecture",
+              "role": "autre choix",
+              "pourquoi": "Quand l'option est un système de plusieurs pièces : le court document des règles qui doivent rester vraies pour tout ce qu'on construira ensuite.",
+              "maison": "creer-une-app"
+            },
+            {
+              "nom": "engineering:architecture",
+              "role": "autre choix",
+              "pourquoi": "Quand un seul choix d'architecture se pose : une décision courte, écrite avec ses options et sa raison, à garder au journal de la mission.",
+              "maison": "creer-une-app"
+            },
+            {
+              "nom": "strategy-skills-for-claude:operating-model-design",
+              "role": "autre choix",
+              "pourquoi": "Pour dire qui fait quoi une fois la solution en place : rôles, droits de décision, validations humaines, rythme de travail. Courte : un canevas, pas un guide.",
+              "source": "aapersh, aapersh/strategy-skills-for-claude"
+            }
+          ],
+          "reserve": []
+        },
+        {
+          "slug": "presenter-la-recommandation",
+          "titre": "Présenter la recommandation",
+          "competences": [
+            {
+              "nom": "mckinsey-bcg-consulting:consulting-proposal-structures",
+              "role": "autre choix",
+              "pourquoi": "Pour présenter la recommandation : choisir entre le plan « conclusion d'abord » et le plan « histoire » selon le public et le temps dont on dispose. En anglais, avec exemples.",
+              "source": "MichaelRochonnn, MichaelRochonnn/mckinsey-bcg-consulting"
+            }
+          ],
+          "reserve": []
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "slug": "chiffrer",
+      "titre": "Chiffrer la rentabilité",
+      "rend": "Le business case en trois scénarios : gains, coûts, maintenance, délai de retour, hypothèses visibles.",
+      "fichier": "50-rentabilite.md",
+      "competences": [
+        {
+          "nom": "consultant-ia:chiffrer-rentabilite",
+          "role": "par défaut",
+          "pourquoi": "Elle chiffre avec des hypothèses visibles, maintenance comprise, selon le critère d'investissement de l'entreprise ; son ordre de grandeur sert aussi à classer un portefeuille."
+        }
+      ],
+      "regle": "Un gain ne se promet pas sans mesure de départ. Les hypothèses sont écrites et chaque chiffre dit s'il est estimé ou relevé. Sans consultant dans la conversation, un consultant relit ce chiffrage avant que la personne le valide.",
+      "cas": [
+        "evaluer-le-benefice-les-couts-et-les-risques-d-un-scenario-ia"
+      ],
+      "ecartees": [
+        {
+          "nom": "rentabilite-ciblage",
+          "raison": "Elle chiffre une mission de ciblage B2B (crédits de données, TJM, commission), pas un projet d'IA : le business case d'une solution se chiffre avec consultant-ia:chiffrer-rentabilite."
+        }
+      ],
+      "departement": "Décider",
+      "taches": [
+        {
+          "slug": "tester-les-hypotheses-du-gain",
+          "titre": "Tester les hypothèses du gain",
+          "competences": [
+            {
+              "nom": "strategy-skills-for-claude:assumption-audit",
+              "role": "autre choix",
+              "pourquoi": "Pour repérer les hypothèses qui portent le gain, noter la solidité de la preuve de chacune et transformer les plus fragiles en vérifications. Courte.",
+              "source": "aapersh, aapersh/strategy-skills-for-claude"
+            }
+          ],
+          "reserve": []
+        },
+        {
+          "slug": "montrer-le-gain-en-cascade",
+          "titre": "Montrer le gain en cascade",
+          "competences": [
+            {
+              "nom": "mckinsey-bcg-consulting:waterfall-chart-visualization",
+              "role": "autre choix",
+              "pourquoi": "Pour montrer le gain en cascade, du coût actuel au coût cible, terme par terme. Écrite en chinois.",
+              "source": "MichaelRochonnn, MichaelRochonnn/mckinsey-bcg-consulting"
+            }
+          ],
+          "reserve": []
+        }
+      ]
+    },
+    {
+      "n": 8,
+      "slug": "specifier-et-planifier",
+      "titre": "Spécifier et planifier",
+      "reprend": 3,
+      "rend": "La spécification de l'option retenue (étapes, données, erreurs, tests, porte et pilote, indicateurs), et le plan de déploiement soumis à un pré-mortem.",
+      "fichier": "60-specification.md",
+      "competences": [
+        {
+          "nom": "consultant-ia:planifier-deploiement",
+          "role": "le plan",
+          "pourquoi": "Elle ordonne en lots courts avec porte, pilote, adoption et mesure, puis soumet le plan à un pré-mortem avant de s'engager ; en début de mission, elle ordonne aussi le portefeuille en feuille de route."
+        },
+        {
+          "nom": "bmad-prd",
+          "role": "la spécification produit",
+          "pourquoi": "Quand la solution devient un produit logiciel suivi : un cahier des charges produit pensé avec le décideur (pour qui, quel enjeu), relu avant de le figer. Il vit à l'étape d'écriture du produit du workflow « Créer une app » (`/router-creer-une-app`).",
+          "maison": "creer-une-app"
+        }
+      ],
+      "regle": "On reprend la compétence de rédaction de l'étape 3, en mode spécification, pour l'option retenue (60-specification.md), après le chiffrage ; le plan de déploiement suit dans 70-plan.md et s'écrit avant toute construction. La spécification dit les cas de panne, les contrats d'entrée et de sortie et les cas de refus. Sans consultant dans la conversation, un consultant relit la spécification et le plan avant que la personne les valide, et le parcours s'arrête ici : construire, tester, mettre en service et mesurer ne se font pas dans ce mode. L'étape n'est faite que quand les deux fichiers existent.",
+      "cas": [
+        "formaliser-un-besoin-produit-en-specifications-testables"
+      ],
+      "taches": [
+        {
+          "slug": "evaluer-les-risques",
+          "titre": "Évaluer les risques",
+          "competences": [
+            {
+              "nom": "operations:risk-assessment",
+              "role": "autre choix",
+              "pourquoi": "Repérer les risques d'un projet et prévoir comment les réduire."
+            }
+          ],
+          "reserve": []
+        },
+        {
+          "slug": "preparer-l-adoption",
+          "titre": "Préparer l'adoption",
+          "competences": [
+            {
+              "nom": "operations:change-request",
+              "role": "autre choix",
+              "pourquoi": "Pour le volet adoption du plan : la demande de changement avec ses impacts, ses approbations, la formation et le retour arrière.",
+              "maison": "organiser-sa-force-de-vente"
+            }
+          ],
+          "reserve": []
+        },
+        {
+          "slug": "decouper-en-lots-pour-construire",
+          "titre": "Découper en lots pour construire",
+          "competences": [
+            {
+              "nom": "bmad-create-epics-and-stories",
+              "role": "autre choix",
+              "pourquoi": "Quand la solution est un logiciel à écrire : découper les besoins en lots et en histoires prêtes à construire.",
+              "maison": "construire"
+            }
+          ],
+          "reserve": []
+        }
+      ],
+      "departement": "Décider"
+    },
+    {
+      "n": 9,
+      "slug": "mesurer-le-gain",
+      "titre": "Mesurer le gain",
+      "rend": "Le gain observé sur relevés réels (jamais déclaré avant), comparé à la mesure de départ et au business case ; les coûts réels, l'adoption active, les incidents et de vrais cas lus ; puis la décision (continuer, corriger, étendre ou arrêter) et ce que la mesure change pour le portefeuille.",
+      "fichier": "95-mesure.md",
+      "competences": [
+        {
+          "nom": "consultant-ia:mesurer-gains",
+          "role": "par défaut",
+          "pourquoi": "C'est le seul endroit où un gain devient un fait : elle compare des relevés réels à la mesure de départ et au business case, lit de vrais cas (les échecs silencieux comptent) et dit ce qui n'est pas encore observé."
+        }
+      ],
+      "humaine": "Le client dépose ses relevés et le décideur tranche entre continuer, corriger, étendre et arrêter ; la compétence propose, elle ne décide pas à sa place.",
+      "regle": "La mesure s'ouvre quand `90-mise-en-service.md` est validé au journal et la bascule inscrite ; sans lui, la solution n'est pas en service. La première version est la demande de relevés : le pack ne collecte rien et n'installe aucun compteur, donc rien n'est observé sans un relevé daté du client. Ensuite vient une version par revue. On compare des périodes comparables, avec le temps humain complet et les coûts réels : les traces d'un outil disent que ça tourne, pas que ça rapporte. L'estimation de `50-rentabilite.md` reste intacte, le réel s'écrit à côté, dans `95-mesure.md`. En parcours court d'un assistant IA, la mesure de départ et les indicateurs sont en rubrique 8 de `90-mise-en-service/assistant-ia.md`. La décision est l'une de : continuer, corriger, étendre, arrêter. Avec « corriger », le cas reste ouvert et la revue suivante est datée au journal ; le cas se clôt à la décision en régime établi, sur un arrêt, ou si le client renonce aux relevés. La mesure remonte au portefeuille. Une correction, une extension ou un retrait sur un outil réel passe par la mise en service du pack Créer un agent IA.",
+      "cas": [],
+      "taches": [
+        {
+          "slug": "choisir-les-indicateurs",
+          "titre": "Compléter les indicateurs à suivre",
+          "competences": [
+            {
+              "nom": "strategy-skills-for-claude:kpi-architect",
+              "role": "autre choix",
+              "pourquoi": "Quand les indicateurs de la spécification (60, rubrique 14) sont trop maigres pour suivre la décision : avancés et retardés, un responsable chacun, un rythme de revue. Un seuil ajouté se corrige dans 60, par version datée. Courte : un canevas, pas un guide.",
+              "source": "aapersh, aapersh/strategy-skills-for-claude"
+            }
+          ],
+          "reserve": []
+        },
+        {
+          "slug": "faire-les-releves",
+          "titre": "Faire les relevés",
+          "competences": [
+            {
+              "nom": "querying-posthog-data",
+              "pourquoi": "Quand l'entreprise suit son produit dans PostHog : calcule usages et métriques pour les relevés de la mesure."
+            },
+            {
+              "nom": "logfire-query",
+              "pourquoi": "Quand l'agent est suivi par Logfire : lit erreurs, coûts, durées et tendances."
+            }
+          ],
+          "reserve": []
+        },
+        {
+          "slug": "reperer-les-echecs-silencieux",
+          "titre": "Repérer les échecs silencieux",
+          "competences": [
+            {
+              "nom": "exploring-ai-failures",
+              "pourquoi": "Repère dans les traces de PostHog les réponses d'IA qui échouent sans déclencher d'alerte."
+            }
+          ],
+          "reserve": []
+        },
+        {
+          "slug": "faire-tenir-le-gain",
+          "titre": "Faire tenir le gain dans la durée",
+          "competences": [
+            {
+              "nom": "strategy-skills-for-claude:value-realization",
+              "role": "autre choix",
+              "pourquoi": "Pour que le gain tienne : qui le suit, comment il se mesure, comment on le capte après la mise en service. Courte.",
+              "source": "aapersh, aapersh/strategy-skills-for-claude"
+            }
+          ],
+          "reserve": []
+        }
+      ],
+      "departement": "Mesurer"
+    }
+  ]
+}

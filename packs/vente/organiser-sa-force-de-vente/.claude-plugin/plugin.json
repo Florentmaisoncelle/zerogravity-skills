@@ -1,0 +1,16 @@
+{
+  "name": "organiser-sa-force-de-vente",
+  "description": "Le plan commercial de l'année : l'objectif de revenu et la capacité qu'il demande, les rôles de l'équipe, le plan d'incitation, les partenaires qui apportent des affaires, puis l'adoption du nouveau fonctionnement. Deux étapes restent sans bonne compétence, et la page le dit.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Zero Gravity AI"
+  },
+  "homepage": "https://zerogravity.builders",
+  "repository": "",
+  "license": "MIT",
+  "keywords": [
+    "sales",
+    "workflow",
+    "claude-code"
+  ]
+}

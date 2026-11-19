@@ -1,0 +1,16 @@
+{
+  "name": "cadrer-un-chantier",
+  "description": "Une stratégie, une méthode, un système ou un produit de zéro : poser le problème, choisir la bonne méthode de réflexion, écrire le plan, l'attaquer, le faire valider une fois, puis lancer.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Zero Gravity AI"
+  },
+  "homepage": "https://zerogravity.builders",
+  "repository": "",
+  "license": "MIT",
+  "keywords": [
+    "consulting",
+    "workflow",
+    "claude-code"
+  ]
+}

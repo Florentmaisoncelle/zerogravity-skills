@@ -1,0 +1,249 @@
+{
+  "format": "workflow-v1",
+  "slug": "referencer-son-site",
+  "titre": "Référencer son site : être trouvé dans Google et cité par les IA",
+  "resume": "Le référencement qui tourne : l'audit et les priorités, les requêtes qui achètent, la technique et l'indexation, les pages optimisées, les articles qui se classent, le maillage, les liens, la visibilité dans les réponses des IA, et le suivi qui dit quoi faire ensuite. Méthode d'Éric Djavid (32 agents SEO) adaptée aux outils gratuits.",
+  "metiers": [
+    "marketing"
+  ],
+  "commande": "/referencer-son-site:referencer-son-site",
+  "dossier_etat": "seo/AAAA-Sww/",
+  "etapes": [
+    {
+      "n": 1,
+      "slug": "audit-et-priorites",
+      "titre": "Faire l'état des lieux et trier les priorités",
+      "rend": "L'audit daté (trafic, pages qui portent, requêtes, concurrents qui se classent vraiment) et un backlog trié par impact et effort, avec la prochaine action.",
+      "fichier": "01-audit-et-priorites.md",
+      "regle": "Un audit par passage, daté, dans le dossier de la semaine, comparé à celui du passage précédent quand il existe : on ne reporte que le neuf dans le backlog. Un passage par semaine au plus. Les concurrents se prennent dans les résultats réels de la requête, jamais de mémoire.",
+      "taches": [
+        {
+          "slug": "auditer-le-site",
+          "titre": "Auditer le référencement du site",
+          "competences": [
+            {
+              "nom": "marketing-skills:seo-audit",
+              "pourquoi": "L'audit technique et éditorial complet, pour un spécialiste."
+            },
+            {
+              "nom": "marketing:seo-audit",
+              "pourquoi": "L'audit complet en une passe : mots-clés, page par page, contenus manquants, technique et comparaison aux concurrents, rendu en plan d'action priorisé ; l'éditeur est Anthropic."
+            }
+          ]
+        },
+        {
+          "slug": "mesurer-la-visibilite",
+          "titre": "Mesurer la visibilité dans Google et dans les IA",
+          "competences": [
+            {
+              "nom": "small-business:seo-ai-visibility",
+              "pourquoi": "Un seul audit, sans connecteur, des deux moitiés de la visibilité ; il corrige les fichiers, teste les vraies questions posées aux assistants et refuse de promettre un classement."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "slug": "requetes",
+      "titre": "Trouver les requêtes qui achètent et les ranger en sujets",
+      "rend": "Les requêtes classées par intention (information, comparaison, achat), les questions de longue traîne, et les sujets : une page pilier et ses pages satellites.",
+      "fichier": "02-requetes.md",
+      "regle": "Une requête ne vaut que par l'intention de qui la tape : on commence par celles des gens prêts à acheter, jamais par le volume seul.",
+      "taches": [
+        {
+          "slug": "ranger-les-requetes",
+          "titre": "Ranger les requêtes en sujets",
+          "competences": [
+            {
+              "nom": "marketing-skills:content-strategy",
+              "pourquoi": "Piliers et grappes de sujets, mots-clés par étape d'achat, notation des sujets, et une règle utile : ne pas écrire ce qui n'apporte rien de plus que les premiers résultats."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "slug": "technique",
+      "titre": "Rendre le site indexable, rapide et ouvert aux robots des IA",
+      "rend": "Les pages importantes indexées, les erreurs de crawl corrigées (404, redirections, canoniques), le sitemap juste, les robots de ChatGPT, Claude, Perplexity et Gemini autorisés, et les Core Web Vitals des pages qui comptent.",
+      "fichier": "03-technique.md",
+      "regle": "On mesure ce que le moteur voit sans exécuter de JavaScript, sur la surface réellement servie ; un chiffre se croit après le témoin positif et le témoin négatif de l'outil.",
+      "taches": [
+        {
+          "slug": "rendre-indexable",
+          "titre": "Rendre le site indexable",
+          "competences": [
+            {
+              "nom": "web-quality-skills:seo",
+              "pourquoi": "La technique du référencement sur le code du site : balises, sitemap, robots, données structurées."
+            }
+          ]
+        },
+        {
+          "slug": "rendre-rapide",
+          "titre": "Rendre le site rapide",
+          "competences": [
+            {
+              "nom": "web-quality-skills:core-web-vitals",
+              "role": "la vitesse",
+              "pourquoi": "Mesure et corrige LCP, INP et CLS à partir des données réelles ; elle vit à l'étape vitesse du workflow « Créer un site web »."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "slug": "pages",
+      "titre": "Optimiser les pages qui sont presque en tête",
+      "rend": "Pour chaque page en position 4 à 15 : un titre et une description qui font cliquer, une structure de titres qui répond aux questions, les données structurées qui manquent, les images et le chemin vers la conversion.",
+      "fichier": "04-pages.md",
+      "regle": "On commence par les gains rapides : les pages déjà vues mais peu cliquées. Aucune page en tête ne se réécrit sans raison mesurée.",
+      "taches": [
+        {
+          "slug": "optimiser-une-page",
+          "titre": "Optimiser une page en page 2",
+          "competences": [],
+          "manque": "pas encore de compétence publique dédiée. Pas de compétence publique dédiée : on le fait à la main, page par page, avec la règle de l'étape et ce que l'étape doit rendre."
+        },
+        {
+          "slug": "donnees-structurees",
+          "titre": "Poser les données structurées",
+          "competences": [
+            {
+              "nom": "marketing-skills:schema",
+              "pourquoi": "Pose le JSON-LD qui manque (organisation, article, FAQ, produit) et le valide."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "slug": "articles",
+      "titre": "Écrire et tenir à jour les pages qui se classent",
+      "rend": "Pour chaque sujet : le brief (plan, angle, questions), la page rédigée à partir de sources primaires, la relecture d'expert (faits, sources, expérience), puis la mise à jour des contenus qui perdent des clics.",
+      "fichier": "05-articles.md",
+      "regle": "Pas de page sans demande vérifiée ni sans source primaire ; chaque chiffre porte son auteur, son année et son lien. Une page produite en série doit apporter une valeur propre à chaque page : Google traite comme du spam les pages produites en masse pour manipuler le classement, qu'elles viennent d'une IA ou d'une personne. Un texte qui sort au nom de l'entreprise passe par la relecture anti-IA : il se relit pour sonner humain avant d'être montré.",
+      "taches": [
+        {
+          "slug": "pages-en-serie",
+          "titre": "Produire des pages en série",
+          "competences": [
+            {
+              "nom": "marketing-skills:programmatic-seo",
+              "pourquoi": "Douze modèles de pages produites depuis des données (villes, comparaisons, intégrations) et leurs contrôles de qualité. Attention : produire beaucoup de pages sans apport propre à chacune expose à la règle de Google contre les contenus produits en masse (https://developers.google.com/search/docs/essentials/spam-policies, vérifié le 06/11/2026) ; on publie peu de pages utiles plutôt que beaucoup de pages semblables."
+            }
+          ]
+        },
+        {
+          "slug": "page-comparatif",
+          "titre": "Écrire une page comparatif",
+          "competences": [
+            {
+              "nom": "marketing-skills:competitors",
+              "pourquoi": "Les pages « alternative à » et « l'un contre l'autre », chaque affirmation revérifiée et datée."
+            }
+          ]
+        }
+      ],
+      "manque": "Aucune compétence publique pour rédiger un article original et vérifiable : on l'écrit à la main, brief d'abord, à partir de sources primaires, puis relecture d'expert."
+    },
+    {
+      "n": 6,
+      "slug": "maillage",
+      "titre": "Relier les pages entre elles",
+      "rend": "La carte des liens internes, les pages orphelines rattachées, les pages qui se disputent la même requête arbitrées (fusionner, différencier, rediriger), et la liste exacte des liens à poser.",
+      "fichier": "06-maillage.md",
+      "regle": "Chaque page satellite pointe vers sa page pilier ; deux pages sur la même requête ne restent pas toutes les deux.",
+      "taches": [
+        {
+          "slug": "relier-les-pages",
+          "titre": "Relier les pages entre elles",
+          "competences": [
+            {
+              "nom": "marketing-skills:site-architecture",
+              "role": "par défaut",
+              "pourquoi": "La hiérarchie des pages, les adresses et le maillage interne ; elle vit à l'étape des pages du workflow « Créer un site web »."
+            }
+          ],
+          "manque": "pas de compétence publique pour trouver les liens à poser : on relève à la main les pages qui devraient se pointer et on dresse la liste exacte."
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "slug": "liens",
+      "titre": "Obtenir des liens d'autres sites",
+      "rend": "Le profil de liens comparé aux concurrents, les sites qui les citent et pas vous, les annuaires utiles, et les angles qui méritent d'être repris par la presse.",
+      "fichier": "07-liens.md",
+      "regle": "Un lien se gagne par une raison d'être cité (une donnée, une page utile), jamais par un achat. link-building choisit les tactiques ; les annuaires et la presse se font dans « Lancer un produit ».",
+      "taches": [
+        {
+          "slug": "obtenir-des-liens",
+          "titre": "Obtenir des liens d'autres sites",
+          "competences": [
+            {
+              "nom": "marketing-skills:link-building",
+              "pourquoi": "Vérifie d'abord que les liens freinent vraiment le classement, puis classe les tactiques par effort et par qualité (mentions sans lien, pages partenaires, listes des meilleurs, pages ressources), chaque lien jugé pour Google et pour les citations des IA."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 8,
+      "slug": "cite-par-les-ia",
+      "titre": "Être cité dans les réponses des IA",
+      "rend": "Les questions d'achat suivies, ce que ChatGPT, Claude, Gemini et Perplexity répondent et qui ils citent, les sources à gagner et les contenus à rafraîchir.",
+      "fichier": "08-cite-par-les-ia.md",
+      "regle": "On mesure les réponses réelles des IA sur des questions d'achat fixées à l'avance, avant et après chaque changement ; aucune promesse de citation.",
+      "taches": [
+        {
+          "slug": "se-faire-citer",
+          "titre": "Se faire citer par les IA",
+          "competences": [
+            {
+              "nom": "marketing-skills:ai-seo",
+              "pourquoi": "Le portefeuille de questions, le registre d'exactitude des réponses et la mesure du trafic venu des IA."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 9,
+      "slug": "suivi",
+      "titre": "Suivre les résultats et réagir à une baisse",
+      "rend": "Le rapport de la semaine (clics, impressions, taux de clic, position, par page), les gains rapides repérés, et, sur une vraie baisse, le diagnostic avant de toucher à quoi que ce soit.",
+      "fichier": "09-suivi.md",
+      "regle": "Une baisse ne se diagnostique qu'au-dessus d'un plancher de volume et sur deux périodes comparables ; sans alerte, aucun diagnostic inventé.",
+      "taches": [
+        {
+          "slug": "suivre-les-resultats",
+          "titre": "Suivre les positions et le trafic",
+          "competences": [
+            {
+              "nom": "marketing-skills:analytics",
+              "role": "les chiffres",
+              "pourquoi": "Pose le suivi et lit les chiffres sans les déformer ; elle vit à l'étape mesure du workflow « Créer un site web »."
+            }
+          ],
+          "manque": "la lecture des positions reste à outiller : on la fait à la main, à partir des chiffres de la console de recherche du moteur."
+        },
+        {
+          "slug": "lire-search-console",
+          "titre": "Trouver les mots-clés proches et les pages en baisse",
+          "competences": [
+            {
+              "nom": "referencer-son-site:seo-search-console",
+              "pourquoi": "Lit Search Console en lecture seule : les requêtes en position 4 à 20 et les pages qui perdent du trafic, avec un jeton local jamais commité."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

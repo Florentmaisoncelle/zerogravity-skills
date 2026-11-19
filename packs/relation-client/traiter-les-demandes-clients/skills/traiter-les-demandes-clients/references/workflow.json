@@ -1,0 +1,122 @@
+{
+  "format": "workflow-v1",
+  "slug": "traiter-les-demandes-clients",
+  "titre": "Traiter les demandes clients, du premier message à la réponse",
+  "resume": "Six étapes dans l'ordre : trier et affecter chaque demande, répondre sur une commande, répondre sur une facture ou un abonnement, résoudre ou escalader une demande technique, écrire la réponse et la faire valider, puis transformer les questions qui reviennent en articles d'aide. La meilleure compétence à chaque étape ; quand une étape n'a pas encore la sienne, sa fiche le dit.",
+  "metiers": [
+    "relation-client"
+  ],
+  "commande": "/traiter-les-demandes-clients:traiter-les-demandes-clients",
+  "dossier_etat": "demandes/",
+  "etapes": [
+    {
+      "n": 1,
+      "slug": "tri",
+      "titre": "Trier et affecter chaque demande",
+      "rend": "Chaque demande classée (ce qu'elle est, son urgence, le délai à tenir), affectée à une personne ou à une file, avec le contexte du client attaché ; la demande sensible (litige, situation critique) signalée et laissée à une personne.",
+      "fichier": "01-tri.md",
+      "regle": "small-business:inbox-manager trie la boîte ; sales:account-context attache le contexte du client avant toute réponse ; customer-support:ticket-triage donne la catégorie et la priorité de P1 à P4. Le résultat s'écrit dans un tableau en tête du fichier de l'étape (code, catégorie, priorité, personne ou file, statut). Un litige, un client en colère, une demande de remboursement hors règle, un sujet de sécurité ou de données personnelles se signale à une personne et ne reçoit aucune réponse automatique. Une demande qui est en réalité un prospect (devis, rendez-vous) part vers /conclure-une-vente:conclure-une-vente. Le dossier d'état ne porte aucun nom, aucune adresse ni aucun numéro de carte de client : des codes (D01, D02, etc.) ; la personne garde la correspondance dans sa boîte mail ou son outil de tickets. Si `demandes/regles.md` n'existe pas, on commence par l'écrire avec le dirigeant (politique de retour et de remboursement, délais promis, règles de tri) et on la fait valider : c'est l'unique validation du workflow, elle tombe ici, à l'étape 1 de la première semaine.",
+      "competences": [
+        {
+          "nom": "small-business:inbox-manager",
+          "role": "trier la boîte",
+          "pourquoi": "Transforme une boîte pleine en liste courte : « vous concerne », « réponse prête », « traité ». Classe par conséquence et non par heure d'arrivée, sort de chaque fil la demande exacte, la date et ce qui a déjà été promis, et passe une facture, une demande entrante ou un rendez-vous à la compétence qui en a la charge. Fonctionne sur des e-mails collés ou transférés quand aucune boîte n'est connectée. Plugin small-business d'Anthropic."
+        },
+        {
+          "nom": "sales:account-context",
+          "role": "le contexte du compte",
+          "pourquoi": "Réunit en une page ce que l'on sait d'un client existant : fiche CRM, derniers e-mails, documents, appels, échanges internes dont les escalades de support passées, et signale les trous (« aucune activité depuis 30 jours »). C'est « attacher le contexte » de la demande. Écrite pour un commercial avec CRM, mais chaque source est facultative et un tableur de clients suffit. Plugin sales d'Anthropic."
+        }
+      ],
+      "taches": [
+        {
+          "slug": "trier-une-demande",
+          "titre": "Trier une demande",
+          "competences": [
+            {
+              "nom": "customer-support:ticket-triage",
+              "pourquoi": "Classer une demande et lui donner une priorité dès son arrivée. Classer une demande par catégorie (bug, comment faire, facturation, demande de fonctionnalité, sécurité), lui donner une priorité de P1 à P4, l'aiguiller vers la bonne équipe et repérer les doublons et les incidents connus. Plugin customer-support d'Anthropic."
+            }
+          ]
+        }
+      ],
+      "manque": "le classement par catégorie (bug, comment faire, facturation, demande de fonctionnalité, sécurité), la priorité de P1 à P4, les règles d'aiguillage par équipe et la détection des doublons et des incidents connus : la compétence ticket-triage du plugin customer-support d'Anthropic (dépôt anthropics/knowledge-work-plugins) le fait, mais elle n'est pas installée. Commande : claude plugin install customer-support@knowledge-work-plugins. Une fois installée, elle se loge ici pour le classement, et inbox-manager garde le tri de la boîte."
+    },
+    {
+      "n": 2,
+      "slug": "commande",
+      "titre": "Répondre sur une commande, un suivi ou un retour",
+      "rend": "La réponse au client appuyée sur l'état réel de la commande et de son paiement, dans le respect de la politique de retour ; ou le dossier remonté à une personne quand il s'agit d'un remboursement, d'une fraude ou d'une exception ; la demande journalisée.",
+      "fichier": "02-commande.md",
+      "regle": "ticket-deflector répond à toute demande qui touche une commande ou un paiement. La politique de retour s'écrit avant : aucune connexion ne la lit, la compétence la demande et refuse d'accorder ce qu'elle n'offre pas. En France, le droit de rétractation de 14 jours pour une vente à distance (Code de la consommation, L221-18) et la garantie légale de conformité s'ajoutent à la politique du dirigeant. Un remboursement, une contestation de paiement, un soupçon de fraude et une exception commerciale restent à une personne : la compétence les prépare, elle ne les exécute jamais seule. Pour un consommateur qui achète à distance en France ou dans l'UE, le droit de rétractation est de 14 jours (Code de la consommation, article L221-18, https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000032226842/ ; page grand public : https://www.service-public.gouv.fr/particuliers/vosdroits/F10485 ; vérifié le 06/11/2026). Il ne vaut pas, en principe, entre professionnels (l'article L221-3 l'étend à certains contrats conclus hors établissement avec un professionnel de moins de cinq salariés, hors de son activité principale). Il a des exceptions (article L221-28, https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000032226820, vérifié le 06/11/2026) : par exemple un service pleinement exécuté avant la fin du délai quand le consommateur l'a demandé et a reconnu perdre ce droit, un bien fabriqué sur mesure ou nettement personnalisé, un bien périssable, un contenu numérique sans support dont l'exécution a commencé avec son accord exprès ; lire la liste complète dans l'article. La garantie légale de conformité s'ajoute pour un bien vendu par un professionnel à un consommateur (défaut apparu dans les deux ans suivant la délivrance, https://www.service-public.gouv.fr/particuliers/vosdroits/F11094, vérifié le 06/11/2026). Depuis le 19/06/2026, la directive (UE) 2023/2673 impose aux vendeurs qui concluent des contrats à distance par une interface en ligne une fonction de rétractation « renoncer au contrat ici » (https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX:32023L2673) : sa transposition en droit français et son périmètre exact sont à vérifier. Hors France et UE, ces règles ne s'appliquent pas telles quelles : à vérifier.",
+      "competences": [
+        {
+          "nom": "small-business:ticket-deflector",
+          "role": "par défaut",
+          "pourquoi": "La seule qui tient toute la chaîne d'une demande sur une commande : elle lit le message, retrouve la commande et le paiement (Stripe, PayPal, Square ou Shopify), le client dans le CRM et ses tickets ouverts, lit la politique de retour avant d'écrire, rédige la réponse dans la voix du dirigeant et prépare le remboursement sans l'émettre sans un oui explicite. Elle refuse de rembourser une contestation de paiement en cours, de promettre ce que la politique n'offre pas et d'inventer un statut de commande. Avec Shopify, elle repère aussi les commandes qui vont devenir des réclamations (en retard, paiement refusé, remboursement en attente). 17 Ko, deux exemples rédigés. Plugin small-business d'Anthropic. Elle n'est pas faite pour le droit d'un pays précis, dont le droit français de la vente à distance : voir la règle."
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "slug": "facture",
+      "titre": "Répondre sur une facture ou un abonnement",
+      "rend": "La réponse documentée sur une facture, un paiement, une échéance, une pause, un renouvellement ou une résiliation, après vérification de l'identité et des droits du demandeur ; la décision (remboursement, modification, exception) transmise à la personne qui l'approuve ; le résultat enregistré.",
+      "fichier": "03-facture.md",
+      "regle": "ticket-deflector (étape 2) lit la facture, le paiement et ce qui a déjà été remboursé, et rédige la réponse. L'identité et le droit du demandeur à agir sur le compte se vérifient avant de lire ou de changer quoi que ce soit. Une règle tarifaire ne s'invente pas dans la conversation. Aucun débit, aucun remboursement et aucune modification comptable sans l'accord d'une personne. Un désaccord sur une facture remonte au dirigeant avec la pièce.",
+      "manque": "L'état d'un abonnement (échéance, pause, renouvellement, résiliation, paiement échoué) : ticket-deflector lit les paiements et les remboursements, pas l'abonnement lui-même. La compétence customer-billing-ops du dépôt ECC (affaan-m/ECC, auteur reconnu) le fait avec Stripe : abonnements, remboursements limités aux prélèvements concernés, relance d'un paiement échoué, rétablissement du portail de facturation, vérification du contrat avant toute résiliation. Elle n'est pas dans la bibliothèque : à rapatrier dans ~/.claude/skills/customer-billing-ops (copie du dossier skills/customer-billing-ops du dépôt), puis à loger ici. En attendant, aucune compétence publique ne le lit : l'état de l'abonnement se lit dans l'outil de facturation et se colle dans la demande, un remboursement se limite aux prélèvements concernés, et le contrat se vérifie avant toute résiliation."
+    },
+    {
+      "n": 4,
+      "slug": "technique",
+      "titre": "Résoudre ou escalader une demande technique",
+      "rend": "Une résolution vérifiée par une action permise, ou une escalade qualifiée : symptômes, version, compte, ce qui a déjà été essayé, impact sur le client et ce qu'on attend de l'équipe technique.",
+      "fichier": "04-technique.md",
+      "regle": "Résoudre quand une procédure écrite et une action autorisée existent ; escalader dès qu'il n'y en a pas, qu'un autre client signale la même chose, que le délai promis est dépassé ou que la sécurité est en jeu. Une escalade porte toujours le contexte du compte (étape 1) et ce qui a déjà été essayé. Ne jamais promettre une date de correction que l'équipe technique n'a pas donnée. customer-support:customer-escalation prépare l'escalade.",
+      "manque": "diagnostiquer, retrouver la procédure ou l'incident connu, puis empaqueter l'escalade : trois compétences du plugin customer-support d'Anthropic le font. customer-research cherche dans toutes les sources avec un niveau de confiance par réponse ; customer-escalation fixe les niveaux d'escalade, rédige les étapes pour reproduire, chiffre l'impact et règle la cadence de suivi ; ticket-triage repère les doublons et les incidents connus. Le plugin n'est pas installé. Commande : claude plugin install customer-support@knowledge-work-plugins. Aucune compétence publique chargée aujourd'hui ne diagnostique une demande ni ne retrouve la procédure écrite : la recherche se fait à la main, le contexte du compte vient de sales:account-context (étape 1). Seule l'escalade est outillée.",
+      "taches": [
+        {
+          "slug": "escalader-une-demande",
+          "titre": "Escalader une demande",
+          "competences": [
+            {
+              "nom": "customer-support:customer-escalation",
+              "pourquoi": "Passer un problème bloquant à l'équipe technique avec tout le contexte : niveaux d'escalade, étapes pour reproduire, impact chiffré et cadence de suivi. Plugin customer-support d'Anthropic."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "slug": "reponse",
+      "titre": "Écrire la réponse et la faire valider",
+      "rend": "Le brouillon de chaque réponse, message ou courrier, vérifié sur les faits, les destinataires, la confidentialité et le ton, puis soumis à validation. Rien n'est envoyé sans le oui de la personne.",
+      "fichier": "05-reponse.md",
+      "regle": "inbox-manager (étape 1) écrit les brouillons dans la voix du dirigeant ; ticket-deflector (étape 2) écrit ceux qui touchent une commande ou un paiement. Les faits viennent du dossier des étapes qui précèdent. Jamais un prix, une date ni un engagement que le dirigeant n'a pas pris. Rien ne part sans validation : l'envoi reste un clic de la personne. L'emailing marketing en volume n'est pas ici : /envoyer-des-e-mails:envoyer-des-e-mails.",
+      "manque": "les situations délicates (annoncer un retard ou un refus, répondre à une panne, relancer après un silence, calmer un client mécontent) ont des modèles et une grille de ton dans draft-response, du plugin customer-support d'Anthropic ; le plugin n'est pas installé (commande à l'étape 1). Aucune autre compétence chargée ne les couvre : on écrit le brouillon à la main avec les deux compétences de la règle, et la personne le relit avant l'envoi."
+    },
+    {
+      "n": 6,
+      "slug": "aide",
+      "titre": "Transformer les demandes résolues en articles d'aide",
+      "optionnelle": "quand la même question revient",
+      "rend": "Un article d'aide prêt à publier (symptômes, cause, solution, prévention), écrit pour être trouvé par la question telle que le client la pose, et la liste des questions qui reviennent.",
+      "fichier": "06-aide.md",
+      "regle": "Un article par question qui revient, écrit d'après la solution qui a vraiment résolu la demande et non d'après la solution espérée. Aucune donnée d'un client précis dans l'article.",
+      "taches": [
+        {
+          "slug": "ecrire-un-article-d-aide",
+          "titre": "Écrire un article d'aide",
+          "competences": [
+            {
+              "nom": "customer-support:kb-article",
+              "pourquoi": "Transformer une demande résolue (comment faire, dépannage, questions fréquentes, incident connu) en article d'aide structuré pour la recherche. Plugin customer-support d'Anthropic."
+            }
+          ]
+        }
+      ],
+      "manque": "la compétence kb-article du plugin customer-support d'Anthropic écrit l'article d'aide à partir d'une demande résolue (comment faire, dépannage, questions fréquentes, incident connu) et le structure pour la recherche ; le plugin n'est pas installé (commande à l'étape 1). Aucune autre compétence chargée ne le fait. Aucun cas d'usage n'est encore rédigé pour cette étape."
+    }
+  ]
+}

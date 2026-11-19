@@ -1,0 +1,96 @@
+{
+  "format": "workflow-v1",
+  "slug": "mettre-en-ligne",
+  "titre": "Mettre en ligne et garder la main",
+  "resume": "Une sortie préparée (paliers, seuils, retour arrière écrit d'avance), le déploiement, puis l'app vérifiée en ligne sur ordinateur et sur téléphone.",
+  "metiers": [
+    "dev"
+  ],
+  "commande": "/mettre-en-ligne:mettre-en-ligne",
+  "dossier_etat": "mise-en-ligne/",
+  "etapes": [
+    {
+      "n": 1,
+      "slug": "preparer",
+      "titre": "Préparer la sortie",
+      "rend": "La liste avant sortie, les paliers d'ouverture, les seuils qui déclenchent le retour arrière et le plan de retour écrit d'avance.",
+      "fichier": "01-plan.md",
+      "regle": "Le plan de retour arrière s'écrit avant de déployer, pas après la panne. Si l'app collecte des données personnelles, les mentions légales et la politique de confidentialité s'écrivent aussi avant la sortie, à la main.",
+      "competences": [
+        {
+          "nom": "agent-skills:shipping-and-launch",
+          "role": "par défaut",
+          "pourquoi": "Addy Osmani : liste avant sortie, interrupteurs de fonctionnalité, ouverture par paliers, seuils de retour arrière, suivi après la sortie. 336 lignes, contre 78 pour la liste qu'elle remplace."
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "slug": "deployer",
+      "titre": "Déployer",
+      "rend": "La version en ligne, sur le bon projet, à son adresse officielle.",
+      "fichier": "02-deploiement.md",
+      "regle": "Toujours le projet existant, jamais un nouveau sans qu'on le demande ; le brouillon d'abord. Jamais la voie de secours sans connexion de `deploy-to-vercel` (vercel deploy --temporary) : elle envoie le projet vers un projet temporaire anonyme chez Vercel, hors de tous les comptes de la personne. Quand le dépôt a déjà sa voie de mise en ligne (tâche planifiée, intégration continue), c'est elle qui déploie. Pour l'app d'un client, l'ouverture au public est son geste : si l'app est faite pour un tiers, c'est lui qui décide de l'ouvrir.",
+      "competences": [
+        {
+          "nom": "deploy-to-vercel",
+          "role": "par défaut",
+          "pourquoi": "Vercel (vercel-labs/agent-skills) : un brouillon par défaut, la production seulement sur demande ; relie le projet existant au lieu d'en créer un."
+        }
+      ],
+      "taches": [
+        {
+          "slug": "automatiser-la-mise-en-ligne",
+          "titre": "Automatiser la mise en ligne",
+          "competences": [
+            {
+              "nom": "agent-skills:ci-cd-and-automation",
+              "pourquoi": "Quand la construction et le déploiement doivent s'enchaîner automatiquement."
+            }
+          ]
+        },
+        {
+          "slug": "provisionner-les-services",
+          "titre": "Ouvrir les services dont l'app a besoin",
+          "competences": [
+            {
+              "nom": "stripe:stripe-projects",
+              "pourquoi": "Ouvrir les services dont l'app a besoin avec Stripe Projects."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "slug": "verifier-en-ligne",
+      "titre": "Vérifier en ligne",
+      "rend": "L'adresse officielle vérifiée sur ordinateur et sur téléphone, le parcours principal rejoué, la console et le réseau sans erreur, et le verdict sur la version en ligne.",
+      "fichier": "03-verification.md",
+      "regle": "L'adresse officielle, pas l'adresse technique du déploiement. Dans une fenêtre privée, on rejoue le parcours principal sur ordinateur puis sur téléphone, on lit la console et le réseau, on contrôle ce qui ne se voit pas en développement (adresses de retour de la connexion, variables de production, e-mails) et les seuils du plan. Un écart déclenche le retour arrière de l'étape 1.",
+      "taches": [
+        {
+          "slug": "lire-console-et-reseau",
+          "titre": "Lire la console et le réseau du site en ligne",
+          "competences": [
+            {
+              "nom": "agent-skills:browser-testing-with-devtools",
+              "pourquoi": "Lit les erreurs de la console et les requêtes réseau d'une page ouverte dans un vrai navigateur (demande le serveur MCP Chrome DevTools)."
+            }
+          ]
+        },
+        {
+          "slug": "gerer-un-incident",
+          "titre": "Gérer un incident",
+          "competences": [
+            {
+              "nom": "engineering:incident-response",
+              "pourquoi": "Gérer une panne en ligne : alerter, réparer, écrire le bilan."
+            }
+          ]
+        }
+      ],
+      "manque": "aucune compétence ne parcourt le site en ligne à votre place : la console et le réseau se lisent avec agent-skills:browser-testing-with-devtools si le serveur MCP Chrome DevTools est branché, le reste se fait à la main (méthode dans le SKILL.md, section « Vérifier en ligne »)."
+    }
+  ]
+}

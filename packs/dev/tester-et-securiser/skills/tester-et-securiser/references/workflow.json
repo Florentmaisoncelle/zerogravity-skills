@@ -1,0 +1,158 @@
+{
+  "format": "workflow-v1",
+  "slug": "tester-et-securiser",
+  "titre": "Tester et sécuriser",
+  "resume": "Le code relu, la sécurité vérifiée à chaque lot puis en profondeur avant la mise en ligne, l'app lancée et parcourue dans le navigateur jusqu'à un verdict : on met en ligne, ou pas.",
+  "metiers": [
+    "dev"
+  ],
+  "commande": "/tester-et-securiser:tester-et-securiser",
+  "dossier_etat": "tests/",
+  "etapes": [
+    {
+      "n": 1,
+      "slug": "relire",
+      "titre": "Relire le code",
+      "rend": "Les défauts confirmés du diff entier, chacun avec sa ligne et sa correction.",
+      "fichier": "tests-relecture.md",
+      "regle": "Sur le diff entier, une fois la construction finie, avec une seule compétence : la compétence par défaut, ou à sa place l'une des deux autres si elle n'est pas installée. Chaque défaut confirmé se corrige avant l'étape suivante.",
+      "competences": [
+        {
+          "nom": "code-review:code-review",
+          "role": "par défaut",
+          "pourquoi": "Relit le diff entier avec plusieurs relecteurs en parallèle, puis ne garde que les défauts vérifiés."
+        }
+      ],
+      "taches": [
+        {
+          "slug": "relire-le-code",
+          "titre": "Relire le code",
+          "competences": [
+            {
+              "nom": "caveman:caveman-review",
+              "pourquoi": "Obtenir des remarques de relecture courtes, une ligne chacune."
+            },
+            {
+              "nom": "engineering:code-review",
+              "pourquoi": "Relire des changements de code avant de les valider."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "slug": "securite",
+      "titre": "Vérifier la sécurité",
+      "rend": "Les failles trouvées, vérifiées une à une, avec leur correctif.",
+      "fichier": "tests-securite.md",
+      "regle": "security-review sur chaque lot ; claude-security en profondeur avant la première mise en ligne, puis à chaque changement de la connexion, du paiement ou des données d'un client. Les comptes et jetons que demandent les compétences 42Crunch et ai-plugins sont à vérifier dans leur README avant de compter dessus (voir le SKILL.md).",
+      "manque": "la conformité (RGPD, accès aux boîtes mail des clients) : aucune compétence ; la question se pose au cadrage et se vérifie ici. la conformité aux règles sur les données personnelles (par exemple le RGPD pour des personnes dans l'Union européenne) : aucune compétence ; la question se pose au cadrage et se vérifie ici avec six questions à la main.",
+      "competences": [
+        {
+          "nom": "security-review",
+          "role": "à chaque lot",
+          "pourquoi": "Cherche ce qu'un attaquant ferait des changements du lot."
+        },
+        {
+          "nom": "claude-security:claude-security",
+          "role": "avant la première mise en ligne",
+          "pourquoi": "Plugin officiel d'Anthropic : carte de l'architecture, modèle de menace, chasse composant par composant, chaque trouvaille vérifiée à part, correctifs proposés. Coûteux en jetons : son coût n'est pas mesuré ici, on prévient la personne avant le scan."
+        }
+      ],
+      "taches": [
+        {
+          "slug": "tester-la-securite-d-une-api",
+          "titre": "Tester la sécurité d'une API",
+          "competences": [
+            {
+              "nom": "42crunch-api-security-testing:42crunch-api-security-testing",
+              "pourquoi": "Quand une API doit passer l'audit et le test réel d'un seul coup."
+            },
+            {
+              "nom": "42crunch-api-security-testing:42crunch-audit",
+              "pourquoi": "Quand la spécification d'une API doit être auditée et corrigée."
+            },
+            {
+              "nom": "42crunch-api-security-testing:42crunch-scan",
+              "pourquoi": "Quand une API en marche doit être testée en conditions réelles."
+            }
+          ],
+          "reserve": [
+            "42crunch-api-security-testing:42crunch-setup",
+            "42crunch-api-security-testing:code-to-oas"
+          ]
+        },
+        {
+          "slug": "surveiller-les-dependances",
+          "titre": "Surveiller les failles des dépendances",
+          "competences": [
+            {
+              "nom": "ai-plugins:ai-sast-remediation",
+              "pourquoi": "Quand des failles repérées dans le code doivent être triées et corrigées."
+            },
+            {
+              "nom": "ai-plugins:dependency-reviewer",
+              "pourquoi": "Quand un paquet ou une dépendance doit être vérifié avant usage."
+            },
+            {
+              "nom": "ai-plugins:sca-remediation",
+              "pourquoi": "Quand des dépendances vulnérables doivent être corrigées."
+            },
+            {
+              "nom": "ai-plugins:vulnerability-explainer",
+              "pourquoi": "Quand une faille connue doit être expliquée pour votre projet."
+            }
+          ],
+          "reserve": [
+            "ai-plugins:cicd-posture",
+            "ai-plugins:configuration-automation",
+            "ai-plugins:endor-agent-kit-setup",
+            "ai-plugins:findings-browser",
+            "ai-plugins:malware-responder",
+            "ai-plugins:oss-upgrade-investigator",
+            "ai-plugins:remediation-planning",
+            "ai-plugins:troubleshooting"
+          ]
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "slug": "parcourir",
+      "titre": "Lancer l'app et la parcourir",
+      "rend": "L'app vue en train de marcher, les parcours clés passés, et le verdict : on met en ligne, ou pas.",
+      "fichier": "tests-parcours.md",
+      "regle": "On lance l'app soi-même (aucune compétence publique : à la main) ; agent-skills:browser-testing-with-devtools pour la parcourir dans un vrai navigateur et rendre le verdict avant chaque mise en ligne ; playwright-cli quand un parcours doit être rejoué à chaque version. Un verdict « on ne met pas en ligne » arrête le workflow, et il se rend de nouveau après correction.",
+      "competences": [
+        {
+          "nom": "playwright-cli",
+          "role": "les tests écrits",
+          "pourquoi": "Écrit et rejoue les parcours de bout en bout en ligne de commande ; Microsoft le recommande à un agent de code : d'après son dépôt (vérifié le 06/11/2026), c'est plus économe en jetons que passer par un serveur MCP, qu'il réserve aux boucles ayant besoin d'un état persistant."
+        }
+      ],
+      "taches": [
+        {
+          "slug": "ecrire-les-tests-de-bout-en-bout",
+          "titre": "Écrire les tests de bout en bout",
+          "competences": [
+            {
+              "nom": "bmad-qa-generate-e2e-tests",
+              "pourquoi": "Quand une fonctionnalité existante manque de tests qui parcourent tout le chemin."
+            }
+          ]
+        },
+        {
+          "slug": "parcourir-l-app-dans-un-navigateur",
+          "titre": "Parcourir l'app dans un vrai navigateur",
+          "competences": [
+            {
+              "nom": "agent-skills:browser-testing-with-devtools",
+              "pourquoi": "Quand un écran doit être testé dans un vrai navigateur."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

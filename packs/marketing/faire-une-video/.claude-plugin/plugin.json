@@ -1,0 +1,16 @@
+{
+  "name": "faire-une-video",
+  "description": "Une vidéo de bout en bout : la méthode choisie selon son coût, le script validé, le tournage ou l'avatar, les plans animés, le montage et les sous-titres, puis la publication.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Zero Gravity AI"
+  },
+  "homepage": "https://zerogravity.builders",
+  "repository": "",
+  "license": "MIT",
+  "keywords": [
+    "marketing",
+    "workflow",
+    "claude-code"
+  ]
+}

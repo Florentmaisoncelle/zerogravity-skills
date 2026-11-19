@@ -1,0 +1,127 @@
+{
+  "format": "workflow-v1",
+  "slug": "organiser-sa-force-de-vente",
+  "titre": "Organiser sa force de vente : objectif, équipe, incitation, partenaires",
+  "resume": "Le plan commercial de l'année : l'objectif de revenu et la capacité qu'il demande, les rôles de l'équipe, le plan d'incitation, les partenaires qui apportent des affaires, puis l'adoption du nouveau fonctionnement. Deux étapes restent sans bonne compétence, et la page le dit.",
+  "metiers": [
+    "vente"
+  ],
+  "commande": "/organiser-sa-force-de-vente:organiser-sa-force-de-vente",
+  "dossier_etat": "plan-commercial/",
+  "etapes": [
+    {
+      "n": 1,
+      "slug": "objectif",
+      "titre": "Fixer l'objectif de revenu et la capacité",
+      "rend": "L'objectif de revenu, la capacité commerciale qu'il demande et la couverture du pipeline, en scénarios comparés.",
+      "fichier": "01-objectif.md",
+      "regle": "Partir du terrain (les conversions réelles), puis des objectifs du dirigeant ; comparer les scénarios avec la direction commerciale et la finance (la personne qui suit les ventes et celle qui tient les comptes), et versionner le plan approuvé. operations:capacity-plan donne la capacité, sales:pipeline-review la couverture.",
+      "manque": "aucune compétence ne construit un plan de revenus par quota, montée en puissance et territoire : à fabriquer. En attendant, la capacité et la couverture se calculent séparément.",
+      "competences": [
+        {
+          "nom": "operations:capacity-plan",
+          "role": "la capacité",
+          "pourquoi": "La charge et la disponibilité de l'équipe, en scénarios."
+        },
+        {
+          "nom": "sales:pipeline-review",
+          "role": "la couverture",
+          "pourquoi": "La couverture de l'objectif et les conversions réelles des deux derniers trimestres."
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "slug": "roles",
+      "titre": "Répartir les rôles de l'équipe",
+      "rend": "Qui décide, qui fait et qui est informé à chaque étape de la vente, les escalades et le rythme des points d'équipe.",
+      "fichier": "02-roles.md",
+      "regle": "process-doc pour les rôles et les escalades ; org-planning quand plusieurs organisations se comparent ; status-report pour le point récurrent. La direction arbitre. Le dirigeant arbitre.",
+      "competences": [
+        {
+          "nom": "operations:process-doc",
+          "role": "par défaut",
+          "pourquoi": "La procédure, la matrice des responsabilités, les exceptions et les indicateurs."
+        },
+        {
+          "nom": "human-resources:org-planning",
+          "role": "comparer des organisations",
+          "pourquoi": "Des repères d'organisation (nombre de personnes par responsable) et un organigramme à comparer ; courte, mais la seule sur ce point."
+        },
+        {
+          "nom": "operations:status-report",
+          "role": "le suivi récurrent",
+          "pourquoi": "Le point d'avancement vert, orange, rouge, les risques et les décisions à prendre, pour un rituel qui revient."
+        }
+      ],
+      "taches": [
+        {
+          "slug": "preparer-un-point-individuel",
+          "titre": "Préparer un point individuel avec un commercial",
+          "competences": [
+            {
+              "nom": "sales:rep-context",
+              "pourquoi": "Préparer un point avec un commercial : pipeline, activité, blocages."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "slug": "incitation",
+      "titre": "Écrire le plan d'incitation",
+      "rend": "Les comportements récompensés, les règles de calcul, les cas limites simulés et le suivi des exceptions.",
+      "fichier": "03-incitation.md",
+      "regle": "Des règles simples à vérifier, simulées sur les cas limites avant d'être annoncées. Le plan se valide avec les ressources humaines, la paie et un juriste avant toute annonce.",
+      "manque": "aucune compétence publique ne conçoit des règles de commission, ne simule les cas limites ni ne suit les exceptions ; aucune compétence de la liste ne couvre le droit du travail ni la paie en France : à faire à la main, avec un juriste et la personne qui tient la paie, en attendant de fabriquer cette compétence."
+    },
+    {
+      "n": 4,
+      "slug": "partenaires",
+      "titre": "Trouver les partenaires qui apportent des affaires",
+      "rend": "Les partenaires choisis, le rôle de chacun, l'accord (partage des affaires, rémunération) et la mesure de ce qu'ils apportent.",
+      "fichier": "04-partenaires.md",
+      "regle": "co-marketing pour choisir et cadrer ; referrals pour la rémunération d'un apporteur. L'accord et le partage de données se valident par une personne.",
+      "competences": [
+        {
+          "nom": "marketing-skills:co-marketing",
+          "role": "choisir et cadrer",
+          "pourquoi": "Les critères de choix des partenaires, les types de partenariat, l'approche et le plan d'accord."
+        },
+        {
+          "nom": "marketing-skills:referrals",
+          "role": "rémunérer un apporteur",
+          "pourquoi": "Le programme d'apport d'affaires : l'incitation, sa mesure, le lancement."
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "slug": "adoption",
+      "titre": "Faire adopter le nouveau fonctionnement",
+      "rend": "L'impact du changement, les critères d'adoption, la communication et la formation, un pilote, puis la mesure des usages et des résistances.",
+      "fichier": "05-adoption.md",
+      "regle": "Un pilote avant la généralisation ; la mesure des usages décide de la suite, avec les responsables et les vendeurs concernés. operations:change-request cadre le changement, product-management:stakeholder-update tient les personnes concernées informées.",
+      "competences": [
+        {
+          "nom": "operations:change-request",
+          "role": "par défaut",
+          "pourquoi": "La plus proche : impact, risques, plan de communication, formation et retour arrière ; pensée pour un changement d'outil, sa partie adoption reste courte."
+        }
+      ],
+      "taches": [
+        {
+          "slug": "tenir-les-parties-prenantes-informees",
+          "titre": "Tenir les parties prenantes informées",
+          "competences": [
+            {
+              "nom": "product-management:stakeholder-update",
+              "pourquoi": "Écrire un point d'avancement adapté à chaque destinataire."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

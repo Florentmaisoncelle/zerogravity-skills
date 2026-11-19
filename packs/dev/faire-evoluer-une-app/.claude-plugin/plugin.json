@@ -1,0 +1,16 @@
+{
+  "name": "faire-evoluer-une-app",
+  "description": "Six étapes pour une app qui existe déjà, à deux entrées : partir de la demande (la fonctionnalité écrite, ou le défaut reproduit et sa cause prouvée), comprendre le code qui l'accueille, construire test d'abord, tester, mettre en ligne, documenter.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Zero Gravity AI"
+  },
+  "homepage": "https://zerogravity.builders",
+  "repository": "",
+  "license": "MIT",
+  "keywords": [
+    "development",
+    "workflow",
+    "claude-code"
+  ]
+}

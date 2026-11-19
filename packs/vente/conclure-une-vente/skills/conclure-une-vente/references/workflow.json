@@ -1,0 +1,230 @@
+{
+  "format": "workflow-v1",
+  "slug": "conclure-une-vente",
+  "titre": "Conclure une vente, du premier rendez-vous à la signature",
+  "resume": "Après le rendez-vous, tout ce qui mène à la signature : la préparation, le compte rendu et le CRM, l'offre, la proposition chiffrée, les objections et le plan jusqu'au oui. Chaque engagement reste celui de la personne qui vend.",
+  "metiers": [
+    "vente"
+  ],
+  "commande": "/conclure-une-vente:conclure-une-vente",
+  "dossier_etat": "affaires/<affaire>/",
+  "etapes": [
+    {
+      "n": 1,
+      "slug": "demande-entrante",
+      "titre": "Accueillir une demande entrante",
+      "optionnelle": "quand le prospect vient de lui-même (formulaire, email, appel)",
+      "rend": "La demande qualifiée et priorisée, une réponse prête avec de vrais créneaux, le bon vendeur prévenu, le tout tracé.",
+      "fichier": "01-demande.md",
+      "regle": "speed-to-lead tient la demande de bout en bout ; la priorité se lit dans la grille de lead-triage ; route-lead seulement quand plusieurs personnes vendent. Le consentement de la personne qui écrit se vérifie avant toute relance.",
+      "taches": [
+        {
+          "slug": "repartir-les-leads",
+          "titre": "Répartir les leads",
+          "competences": [
+            {
+              "nom": "sales:route-lead",
+              "role": "plusieurs vendeurs",
+              "pourquoi": "Choisit le propriétaire par des règles écrites, puis une note de passation que le vendeur accepte ou corrige."
+            }
+          ]
+        },
+        {
+          "slug": "demande-entrante",
+          "titre": "Accueillir une demande entrante",
+          "competences": [
+            {
+              "nom": "small-business:speed-to-lead",
+              "role": "par défaut",
+              "pourquoi": "La seule qui tient toute la chaîne de la demande : elle repère, classe, rédige la réponse avec de vrais créneaux, alerte une personne sur une demande chaude et journalise, sans jamais envoyer seule."
+            },
+            {
+              "nom": "sales:lead-triage",
+              "role": "la grille de priorité",
+              "pourquoi": "Croise l'ajustement à la cible et l'intention pour donner une priorité (P0 à P2, ou hors cible), le délai de réponse et la première action."
+            },
+            {
+              "nom": "sales:schedule-meeting",
+              "role": "le rendez-vous",
+              "pourquoi": "Propose deux ou trois créneaux réels dans l'agenda, annonce l'invitation avant de l'envoyer et la consigne dans le CRM."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "slug": "preparer",
+      "titre": "Préparer le rendez-vous",
+      "rend": "La fiche du rendez-vous : participants et rôles, historique du compte, affaire en cours, questions de découverte.",
+      "fichier": "02-preparation.md",
+      "regle": "Une fiche par rendez-vous, depuis le CRM et les échanges passés ; un fait sans source s'écrit « non vérifié ». Pour la semaine entière, on refait la fiche pour chaque rendez-vous, dans l'ordre de l'agenda.",
+      "competences": [
+        {
+          "nom": "sales:call-prep",
+          "role": "par défaut",
+          "pourquoi": "Rassemble les participants, l'historique du compte, les échanges passés et l'état de l'affaire, puis propose les questions de découverte."
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "slug": "compte-rendu",
+      "titre": "Tirer du rendez-vous les décisions et les actions",
+      "rend": "Les décisions, les engagements des deux côtés, les objections, la prochaine réunion, l'email de suivi et les mises à jour du CRM proposées avec leur source.",
+      "fichier": "03-compte-rendu.md",
+      "regle": "Le compte rendu d'abord, puis l'écriture du CRM après accord. Aucun engagement inventé : ce qui n'a pas été dit ne s'écrit pas. Enregistrer un appel suppose l'accord des participants : on informe chaque interlocuteur dès le début de l'appel (France, voir « Les règles à connaître » du SKILL.md). Le transcript se récupère là où il vit (Granola, Google Meet, Notion, un enregistrement transcrit sur le poste) ; la collecte du pack propale-auto le range pour la proposition de l'étape 6.",
+      "competences": [
+        {
+          "nom": "sales:call-summary",
+          "role": "par défaut",
+          "pourquoi": "Traite la transcription comme une donnée à vérifier, n'écrit jamais un suivi d'après le seul titre de la réunion, et propose chaque écriture du CRM avec la phrase qui la fonde."
+        },
+        {
+          "nom": "sales:log-activity",
+          "role": "l'écriture dans le CRM",
+          "pourquoi": "Enregistre l'échange dans le CRM, à sa vraie date, après accord."
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "slug": "recommander",
+      "titre": "Recommander la bonne solution",
+      "optionnelle": "quand plusieurs produits ou formules peuvent répondre",
+      "rend": "La solution recommandée, comparée aux autres sur les critères du prospect, avec ses contraintes et sa justification.",
+      "fichier": "04-recommandation.md",
+      "regle": "Les critères viennent du compte rendu ; un produit sensible ou un engagement commercial se fait valider avant d'être proposé.",
+      "manque": "aucune compétence publique ne confronte les critères d'un prospect à un catalogue de produits ou de formules pour justifier un choix : à fabriquer. En attendant, la comparaison se fait à la main depuis le compte rendu de l'étape 3."
+    },
+    {
+      "n": 5,
+      "slug": "offre",
+      "titre": "Construire l'offre",
+      "rend": "L'offre : le résultat promis, le périmètre et les livrables, les options, la garantie, les conditions et le prix.",
+      "fichier": "05-offre.md",
+      "regle": "offers pour la structure de l'offre ; pricing seulement si le prix ou les paliers sont à décider. Le dirigeant valide les promesses, les conditions et le prix avant la proposition : c'est la validation de fond du workflow.",
+      "competences": [
+        {
+          "nom": "marketing-skills:offers",
+          "role": "par défaut",
+          "pourquoi": "Construit l'offre élément par élément (livrable, garantie, urgence réelle, prix et paiement) et refuse les urgences factices ; elle connaît le service à forte valeur entre entreprises."
+        },
+        {
+          "nom": "marketing-skills:pricing",
+          "role": "le prix",
+          "pourquoi": "Les paliers et la mesure de la valeur, quand le prix lui-même se pose."
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "slug": "proposition",
+      "titre": "Écrire la proposition ou le devis",
+      "rend": "La proposition chiffrée au gabarit de l'entreprise (ce qui est inclus et ce qui ne l'est pas), en Word et en PDF, et un support propre au compte si besoin.",
+      "fichier": "06-proposition.md",
+      "regle": "propale-redaction monte la proposition depuis le transcript du rendez-vous et le modèle de l'entreprise ; proposal-builder fixe le prix d'après les prix réellement pratiqués, un blanc plutôt qu'un tarif inventé ; create-an-asset seulement quand le client attend un support à faire circuler. Sans transcript, pas de proposition : la fiche et les questions pour l'appel. Les mentions légales françaises (SIRET, TVA, pénalités de retard) vivent dans le gabarit de l'entreprise. Envoyer reste le geste de la personne qui vend. La proposition se monte à la main depuis le compte rendu de l'étape 3 et le modèle de l'entreprise : contexte du client, besoin exprimé, solution, ce qui est inclus et ce qui ne l'est pas, délais, conditions, prix. small-business:proposal-builder fixe le prix d'après les prix réellement pratiqués, un blanc plutôt qu'un tarif inventé ; sales:create-an-asset seulement quand le client attend un support à faire circuler. Les mentions à prévoir (délai de paiement, pénalités de retard, indemnité de recouvrement de 40 € pour un client professionnel, mention de franchise de TVA le cas échéant) sont listées dans « Les règles à connaître » du SKILL.md.",
+      "competences": [
+        {
+          "nom": "small-business:proposal-builder",
+          "role": "le prix",
+          "pourquoi": "La seule qui chiffre d'après les prix réellement pratiqués (grille, devis passés), laisse un blanc plutôt qu'un tarif inventé, exige une section « non inclus » et garde les marges hors du document du client."
+        },
+        {
+          "nom": "sales:create-an-asset",
+          "role": "un support pour le compte",
+          "pourquoi": "Une présentation ou une page laissée au client, chaque affirmation tracée jusqu'à sa source, « non vérifié » sinon."
+        }
+      ],
+      "manque": "aucune compétence publique ne monte le document complet à partir du rendez-vous et du modèle de l'entreprise : on l'assemble à la main, avec la règle ci-dessus."
+    },
+    {
+      "n": 7,
+      "slug": "objections",
+      "titre": "Répondre aux objections",
+      "rend": "La réponse à chaque objection, fondée sur des preuves défendables, et la bibliothèque de supports qui la sert la fois suivante.",
+      "fichier": "07-objections.md",
+      "regle": "handle-objection pour l'objection d'aujourd'hui ; sales:competitive-intelligence quand l'objection cite un concurrent ; sales-enablement pour construire ou compléter la bibliothèque d'une vente complexe, une fois. Une allégation juridique ou chiffrée se fait valider avant de servir.",
+      "taches": [
+        {
+          "slug": "repondre-aux-objections",
+          "titre": "Répondre aux objections",
+          "competences": [
+            {
+              "nom": "sales:handle-objection",
+              "role": "une affaire en cours",
+              "pourquoi": "La réponse à une objection vivante, tirée des affaires gagnées et perdues et des mots des clients."
+            },
+            {
+              "nom": "sales:competitive-intelligence",
+              "pourquoi": "les preuves gagné/perdu et les fiches face à un concurrent"
+            },
+            {
+              "nom": "marketing-skills:sales-enablement",
+              "role": "la bibliothèque",
+              "pourquoi": "Livre la bibliothèque entière d'une vente complexe : présentation, pages par cible, réponses aux objections, scripts de démonstration, fiches concurrents et affirmations que l'on sait défendre."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 8,
+      "slug": "signature",
+      "titre": "Mener jusqu'à la signature",
+      "rend": "Le plan d'action commun, daté, jusqu'à la signature ; chaque email et courrier relu ; le contrat du client relu avant de signer.",
+      "fichier": "08-signature.md",
+      "regle": "close-plan dès qu'une date de décision existe ; inbox-manager pour chaque message, relu avant envoi ; contract-review sur tout contrat reçu. Signer reste le geste du dirigeant.",
+      "competences": [
+        {
+          "nom": "sales:close-plan",
+          "role": "par défaut",
+          "pourquoi": "Écrit pourquoi acheter et pourquoi maintenant, puis le chemin daté jusqu'à la signature, partagé avec le client."
+        },
+        {
+          "nom": "small-business:inbox-manager",
+          "role": "les emails et courriers",
+          "pourquoi": "Rédige les réponses dans la voix du dirigeant et n'avance jamais un prix, une date ou un engagement qu'il n'a pas pris ; rien ne part sans son oui."
+        },
+        {
+          "nom": "small-business:contract-review",
+          "role": "le contrat du client",
+          "pourquoi": "Relit le contrat ou les conditions que le client envoie, avant la signature."
+        }
+      ],
+      "taches": [
+        {
+          "slug": "relire-le-contrat",
+          "titre": "Relire un contrat avant de signer",
+          "competences": [],
+          "reserve": [
+            "legal:review-contract",
+            "legal:triage-nda"
+          ],
+          "manque": "aucune compétence par défaut encore : voir la réserve. Pas de compétence par défaut en plus de la relecture de contrat : la revue juridique et le tri des accords de confidentialité restent en réserve pour un contrat ou un accord de confidentialité."
+        },
+        {
+          "slug": "faire-signer",
+          "titre": "Faire signer",
+          "competences": [
+            {
+              "nom": "legal:signature-request",
+              "pourquoi": "Préparer et envoyer un document à signer, dans le bon ordre."
+            }
+          ]
+        }
+      ],
+      "manque": "aucune compétence publique ne rédige le contrat ou l'accord de confidentialité de l'entreprise : on le prépare à la main, avec un juriste."
+    },
+    {
+      "n": 9,
+      "slug": "commande",
+      "titre": "Confirmer la commande",
+      "optionnelle": "quand la vente se conclut par une commande (références, quantités)",
+      "rend": "Le récapitulatif à confirmer (références, quantités, disponibilités, conditions), puis la commande confirmée et sa référence.",
+      "fichier": "09-commande.md",
+      "regle": "Rien n'est engagé avant la confirmation écrite du client.",
+      "manque": "aucune compétence publique ne transforme une demande en récapitulatif à confirmer avec sa référence de commande : à fabriquer."
+    }
+  ]
+}

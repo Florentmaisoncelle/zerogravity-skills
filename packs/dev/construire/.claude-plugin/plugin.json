@@ -1,0 +1,16 @@
+{
+  "name": "construire",
+  "description": "Le plan découpé en petites tâches vérifiables, chacune construite test d'abord par un sous-agent, relue avant la suivante, et prouvée avant d'être annoncée finie.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Zero Gravity AI"
+  },
+  "homepage": "https://zerogravity.builders",
+  "repository": "",
+  "license": "MIT",
+  "keywords": [
+    "development",
+    "workflow",
+    "claude-code"
+  ]
+}

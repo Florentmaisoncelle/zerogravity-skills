@@ -1,0 +1,142 @@
+# Claude Code System Pack
+
+**Cinq compétences propriétaires et un routeur pour entretenir le système d'un agent** — ses règles,
+ses compétences, sa documentation — au lieu de le laisser gonfler.
+
+---
+
+## Le problème
+
+Un agent qu'on utilise sérieusement finit par accumuler des instructions. Une règle par correction,
+une compétence par sujet, un document par décision. Rien de tout ça n'est mauvais pris isolément, et
+c'est exactement ce qui rend le problème invisible.
+
+Trois symptômes, et ils arrivent toujours dans cet ordre :
+
+1. **L'agent supporte le désordre — toi, non.** Il lit trois mille lignes de règles sans se
+   plaindre. Toi, tu ne sais plus ce que tu lui as demandé, ni où c'est écrit.
+2. **L'entretien prend plus de temps que le travail.** Chaque compétence qu'on touche oblige à
+   vérifier ce qu'elle rend faux ailleurs — et on le fait à la main, à chaque fois.
+3. **On répète sans arrêt les mêmes instructions.** Parce qu'une leçon apprise en session ne va
+   nulle part : elle meurt avec la conversation.
+
+Ce pack n'ajoute pas d'instructions. Il donne les **gestes qui entretiennent** celles que tu as
+déjà.
+
+---
+
+## La porte du pack — `/router-entretenir-son-systeme`
+
+Le routeur [`router-entretenir-son-systeme`](skills/router-entretenir-son-systeme/SKILL.md) identifie le
+**symptôme**, choisit l'une des cinq compétences ci-dessous et transmet son contexte.
+Il ne fusionne pas leurs méthodes et n'exécute pas lui-même les changements.
+
+| Tu observes… | Première compétence |
+|---|---|
+| L'agent refait une erreur déjà corrigée | `/capitaliser` |
+| Des règles gonflent ou s'entassent | `/clean-rules-cleanup` |
+| Des compétences se contredisent ; tu veux mesurer avant d'optimiser | `/optimise-systeme` |
+| Une compétence créée ou modifiée doit être validée | `/skill-quality-guard` |
+| Une page ou une carte humaine décrit encore l'ancien système | `/propage-systeme` |
+
+Invoquer `/router-entretenir-son-systeme` pour une demande transversale ou directement
+la compétence dédiée quand son propriétaire est connu. En cas de plusieurs gestes,
+le routeur appelle les propriétaires dans l'ordre, puis rapporte ce qui a
+**réellement été vérifié**, sans inventer de mesure.
+
+---
+
+## Les cinq compétences
+
+| | Compétence | Le geste |
+|---|---|---|
+| 1 | **`capitaliser`** | un travail vient de finir : range le **fait** et le **pourquoi** chez leur propriétaire, pour qu'on ne redemande pas la même chose la fois d'après |
+| 2 | **`optimise-systeme`** | mesure le système entier — règles, compétences, documents — avant de le juger, puis l'améliore dans l'ordre |
+| 3 | **`clean-rules-cleanup`** | écrire, alléger ou déplacer une règle, décider à quel niveau elle vit — et rendre, après un ménage, le rapport qui dit ce qui est parti, où et pourquoi |
+| 4 | **`skill-quality-guard`** | le contrôle final : sept axes avant de dire qu'une compétence est prête |
+| 5 | **`propage-systeme`** | une règle a changé : corrige **toutes** les surfaces qui disaient l'inverse — et quand elle doit vivre en tête de plusieurs fichiers, la **dérive** au lieu de la recopier |
+
+**Elles forment une boucle**, et c'est le vrai contenu du pack : une leçon devient une règle (3) →
+la règle trouve son niveau (3) → elle se propage partout (5) → le système se re-mesure (2) → ce
+qu'on a appris en route se range chez son propriétaire (1) → la prochaine compétence écrite passe
+le contrôle (4).
+
+Prises une par une, ce sont cinq outils. Prises ensemble, c'est un cycle de vie.
+
+---
+
+## Installation
+
+```bash
+/plugin marketplace add Gremelinn0/zerogravity-skills
+```
+
+```bash
+/plugin install claude-code-system-pack
+```
+
+Pour une demande transversale, commence par **`/router-entretenir-son-systeme`**. Les cinq propriétaires
+restent disponibles par leur nom : `/capitaliser`, `/optimise-systeme`, `/clean-rules-cleanup`,
+`/skill-quality-guard`, `/propage-systeme`.
+
+Chacune se déclenche aussi toute seule sur ce que tu écris — « le système est en bordel »,
+« ajoute cette règle », « on répète toujours la même chose ». C'est le rôle de leur `description:`,
+et c'est pour ça que le pack en soigne la rédaction plutôt que la longueur.
+
+> **Version 0.4.0** — ajout de `router-entretenir-son-systeme` : porte d'aiguillage sans copie des cinq
+> méthodes. **Migration 0.3.0** — `dev-capitaliser` s'appelle désormais **`capitaliser`**. Le geste public
+> est volontairement transversal : il adapte sa preuve et sa destination à l'environnement au lieu
+> de supposer un projet de développement.
+
+---
+
+## 🌍 Portabilité
+
+Ces compétences décrivent des **méthodes**, pas une configuration. Elles ne supposent ni ton
+système d'exploitation, ni ton arborescence, ni tes autres compétences. Voici tout de même ce qu'il
+faut savoir avant de les lancer.
+
+| | Ce que c'est | Ce que tu dois savoir |
+|---|---|---|
+| **Prérequis** | Claude Code, et un dossier de compétences (`~/.claude/skills/` ou `.claude/skills/` dans ton projet) | rien à installer de plus |
+| **Le code fourni** | un extrait Python dans `optimise-systeme` (lisibilité des `description:`, nécessite `pyyaml`) et deux scripts en bibliothèque standard : `clean-rules-cleanup/scripts/registre.py` (le registre des motifs) et `propage-systeme/scripts/derive_bloc.py` (une règle vit une fois, ses copies sont dérivées et contrôlées) | chacun a son `--self-test` ; tout le reste marche sans |
+| **Chemins** | `skills/*/SKILL.md` et `~/.claude/skills/*/SKILL.md` | ce sont les emplacements standards ; adapte si tu ranges ailleurs |
+| **Système** | testé sous Windows, écrit sans dépendance système | l'extrait Python utilise `expanduser`, donc il marche aussi sous macOS et Linux |
+| **Tes propres contrôles** | les compétences te disent **quoi** outiller, jamais avec quel outil | à toi d'écrire les tests dans ton langage et ton harnais |
+
+**Ce qui n'est pas fourni, et c'est délibéré** : aucun crochet, aucun test branché sur ton
+harnais. Ces compétences décrivent les contrôles qui valent la peine d'exister chez toi ; elles
+n'imposent pas la forme qu'ils prennent. Un contrôle copié d'un autre projet mesure l'autre projet.
+
+---
+
+## Ce que ce pack ne fait pas
+
+- **Il ne pose pas de garde-fous mécaniques.** Pour l'étage « contrôles qui bloquent », il faut
+  un pack de garde-fous mécaniques (des hooks), à installer à part. Ce
+  pack ne les recopie pas — les deux se complètent : celui-ci décide **ce qu'il faut** contrôler,
+  l'autre **fait** le contrôle.
+- **Il ne range pas tes compétences à ta place.** Il te dit comment décider, pas quoi décider.
+- **Il ne remplace pas la compétence officielle de création de compétences.** `skill-quality-guard`
+  est un **contrôle final**, pas un générateur.
+
+---
+
+## Une idée qui traverse les cinq
+
+**Une règle utile porte son contrôle.**
+
+*« Sois rigoureux »* n'est pas une règle, c'est un vœu — personne ne peut savoir en la lisant s'il
+est en train de la violer. *« Avant d'écrire un chiffre d'état : ai-je lancé l'instrument dans cette
+passe ? »* en est une, parce qu'elle se répond **en une seconde, sans interprétation**.
+
+Et la ligne de partage qui suit : ce qui est **décidable** (un lieu, une présence, un format, un
+compte) peut bloquer ; ce qui relève du **jugement** (la qualité, la pertinence, le ton) se montre
+sans trancher. Un contrôle de jugement qui bloque crie au loup, finit désactivé, et emporte les
+décidables avec lui.
+
+---
+
+## Licence
+
+MIT.

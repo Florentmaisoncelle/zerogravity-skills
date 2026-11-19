@@ -1,0 +1,16 @@
+{
+  "name": "conclure-une-vente",
+  "description": "Après le rendez-vous, tout ce qui mène à la signature : la préparation, le compte rendu et le CRM, l'offre, la proposition chiffrée, les objections et le plan jusqu'au oui. Chaque engagement reste celui de la personne qui vend.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Zero Gravity AI"
+  },
+  "homepage": "https://zerogravity.builders",
+  "repository": "",
+  "license": "MIT",
+  "keywords": [
+    "sales",
+    "workflow",
+    "claude-code"
+  ]
+}

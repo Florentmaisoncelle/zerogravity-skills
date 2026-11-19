@@ -1,0 +1,16 @@
+{
+  "name": "envoyer-des-e-mails",
+  "description": "Les e-mails qui accompagnent les inscrits : les parcours automatiques (accueil, relances, résiliation), la newsletter avec le consentement, la délivrabilité, et les SMS.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Zero Gravity AI"
+  },
+  "homepage": "https://zerogravity.builders",
+  "repository": "",
+  "license": "MIT",
+  "keywords": [
+    "marketing",
+    "workflow",
+    "claude-code"
+  ]
+}

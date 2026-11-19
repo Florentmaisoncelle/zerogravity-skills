@@ -1,0 +1,16 @@
+{
+  "name": "deleguer-entre-ia",
+  "description": "Délégation IA complète pour Claude Code : un chapeau qui choisit le bon cerveau (ChatGPT dans Chrome, Codex, une autre session, Claude Desktop, un autre onglet) et cinq compétences de transport qui prouvent l'envoi, relisent le livrable et gardent le jugement chez Claude.",
+  "version": "0.2.0",
+  "author": {
+    "name": "Zero Gravity AI"
+  },
+  "homepage": "https://zerogravity.builders",
+  "repository": "",
+  "license": "MIT",
+  "keywords": [
+    "development",
+    "workflow",
+    "claude-code"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "mettre-en-ligne",
+  "description": "Une sortie préparée (paliers, seuils, retour arrière écrit d'avance), le déploiement, puis l'app vérifiée en ligne sur ordinateur et sur téléphone.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Zero Gravity AI"
+  },
+  "homepage": "https://zerogravity.builders",
+  "repository": "",
+  "license": "MIT",
+  "keywords": [
+    "development",
+    "workflow",
+    "claude-code"
+  ]
+}

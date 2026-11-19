@@ -1,0 +1,110 @@
+{
+  "format": "workflow-v1",
+  "slug": "ameliorer-le-parcours-client",
+  "titre": "Améliorer le parcours client : satisfaction, clients à risque, retours, parcours",
+  "resume": "Cinq étapes dans l'ordre : transformer la satisfaction en actions suivies, repérer les clients à risque et préparer leur rétention, transformer les retours en priorités produit, cartographier le parcours et corriger ses frictions, et, quand les données sont sensibles, cadrer les autorisations avant toute automatisation. Chaque étape finit par une action, avec un responsable.",
+  "metiers": [
+    "relation-client"
+  ],
+  "commande": "/ameliorer-le-parcours-client:ameliorer-le-parcours-client",
+  "dossier_etat": "parcours/",
+  "etapes": [
+    {
+      "n": 1,
+      "slug": "satisfaction",
+      "titre": "Transformer la satisfaction en actions suivies",
+      "rend": "Chaque réponse d'enquête (NPS, CSAT), chaque avis et chaque signal de départ classé, affecté à un responsable et suivi jusqu'à sa clôture ; les thèmes qui reviennent, avec les mots exacts des clients.",
+      "fichier": "01-satisfaction.md",
+      "regle": "review-reputation lit et classe (thèmes, citations, réponses prêtes). Un retour sans responsable ni date n'est pas traité : l'étape finit quand chaque ligne a un nom, une action et une date de clôture. Une réclamation sensible et toute décision de rétention restent à une personne ; les réponses aux avis publics se valident avant publication. Avant tout, la personne valide le périmètre du cycle : quels retours, quelle période, quels clients, et si le parcours manipule des données sensibles (c'est l'unique validation du workflow). Le tableau de suivi (code, thème, responsable, action, date de clôture, statut ouvert ou clos) est écrit en tête du fichier de l'étape.",
+      "manque": "L'affectation d'un responsable à chaque retour et le contrôle de clôture : aucune compétence publique ne tient ce suivi ; il se tient dans l'outil du dirigeant (CRM, tableau de tâches).",
+      "competences": [
+        {
+          "nom": "small-business:review-reputation",
+          "role": "par défaut",
+          "pourquoi": "Rassemble avis publics, litiges, tickets et e-mails en trois à cinq thèmes classés par nombre de signaux, chacun avec des citations exactes et leur source (jamais une paraphrase), prépare la réponse à chaque avis pour validation et repère les clients qui se taisent. Accepte des avis collés ou exportés. Plugin small-business d'Anthropic."
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "slug": "risques",
+      "titre": "Repérer les clients à risque et préparer leur rétention",
+      "rend": "La liste des clients à risque classés par ce qu'ils valent, le signal derrière chacun (usage en baisse, échéance proche, demandes sans suite, silence), le plan de contact et l'action affectée à une personne, puis la mesure du résultat.",
+      "fichier": "02-risques.md",
+      "regle": "customer-health pour un compte nommé sous contrat, reactivate pour une base de clients qui achètent à leur rythme (boutique, service récurrent) ; renewal-radar dit quand. Le premier contact reconnaît l'écart sans rien vendre. Les décisions commerciales (remise, geste, renégociation) restent au dirigeant. Le parcours d'annulation, les offres de rétention et la relance des paiements échoués sont dans /fideliser-et-faire-recommander:fideliser-et-faire-recommander (étape 3).",
+      "competences": [
+        {
+          "nom": "sales:customer-health",
+          "role": "le signal d'un compte nommé",
+          "pourquoi": "Note la santé d'un compte sur cinq dimensions (relation, tendance des échanges, commercial, support, valeur délivrée) en citant la preuve de chacune, et marque « non visible » ce qu'elle ne peut pas lire plutôt que de deviner. Prépare aussi la revue trimestrielle du compte."
+        },
+        {
+          "nom": "sales:renewal-radar",
+          "role": "les échéances",
+          "pourquoi": "Les renouvellements à venir, leur risque et leur marge de hausse."
+        },
+        {
+          "nom": "small-business:reactivate",
+          "role": "une base de clients qui se taisent",
+          "pourquoi": "Trouve les clients dont le silence dépasse leur propre rythme d'achat, les classe par ce que la relation valait, écrit un message de reprise par client dans la voix du dirigeant (le premier reconnaît l'écart sans rien vendre), s'arrête sur une plainte et n'envoie ni ne journalise que ce que le dirigeant approuve. Pour les boutiques et les services à nombreux clients, là où customer-health suppose un CRM de comptes nommés. 11 Ko. Plugin small-business d'Anthropic."
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "slug": "retours",
+      "titre": "Transformer les retours des clients en priorités produit",
+      "rend": "La synthèse des retours (tickets, enquêtes, avis, appels) : thèmes classés par fréquence et par impact, preuves vérifiées avec les citations exactes, segments touchés, et les demandes qui entrent dans la feuille de route avec leur priorité.",
+      "fichier": "03-retours.md",
+      "regle": "synthesize-research fait la synthèse ; customer-voice donne la parole exacte des clients quand les appels ou les e-mails sont lisibles ; roadmap-update seulement pour ce qui entre dans la feuille de route. Une demande sans preuve vérifiée n'entre pas. L'arbitrage produit reste humain.",
+      "competences": [
+        {
+          "nom": "product-management:synthesize-research",
+          "role": "par défaut",
+          "pourquoi": "Prend des tickets, des réponses d'enquête, des notes d'entretien et des avis en vrac et les ramène à cinq à huit constats classés par fréquence et par impact, chacun avec ses preuves, son niveau de confiance et sa source, puis des pistes pour la feuille de route. 15 Ko, avec sa méthode (analyse thématique, regroupement, triangulation). Plugin product-management d'Anthropic."
+        },
+        {
+          "nom": "sales:customer-voice",
+          "role": "les citations exactes",
+          "pourquoi": "Cite le client mot pour mot avec qui, quand et dans quel appel ou e-mail, refuse la paraphrase, et traite un compte sans source comme un trou à dire plutôt que comme une absence de sujet. À prendre quand des appels ou des e-mails sont lisibles."
+        },
+        {
+          "nom": "product-management:roadmap-update",
+          "role": "la feuille de route",
+          "pourquoi": "Insère les demandes retenues dans la feuille de route (maintenant, ensuite, plus tard) et dit ce qui doit bouger pour leur faire de la place."
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "slug": "parcours",
+      "titre": "Cartographier le parcours et corriger ses frictions",
+      "rend": "La carte du parcours (étapes, canaux, points de contact, responsables), le registre des frictions avec leurs causes, les améliorations classées et la mesure qui dira si elles ont marché.",
+      "fichier": "04-parcours.md",
+      "regle": "Les retours viennent des étapes 1 et 3, les frictions chiffrées de la mesure (site, support) ; process-optimization cherche les pertes et propose l'état cible, process-doc dessine la carte. Le service client, le marketing et le produit valident la carte et sa mesure avant toute automatisation.",
+      "manque": "aucune compétence publique ne cartographie un parcours client de bout en bout (moments, canaux, émotions, mesures, propriétaires) : la carte se dessine avec process-doc, les retours viennent des étapes 1 et 3. Même trou déclaré à l'étape « Cartographier le parcours client » de « Poser sa stratégie marketing ».",
+      "competences": [
+        {
+          "nom": "operations:process-optimization",
+          "role": "par défaut",
+          "pourquoi": "Cartographie l'état actuel (étapes, décisions, passages de relais, délais), repère les pertes (attentes, reprises, étapes sans valeur, tâches manuelles), dessine l'état cible et chiffre le gain par cycle. Très courte (1 Ko, sans références) : elle optimise un processus, elle ne recueille pas le vécu du client."
+        },
+        {
+          "nom": "operations:process-doc",
+          "role": "dessiner la carte",
+          "pourquoi": "Le diagramme des étapes et des responsabilités, faute de compétence de parcours dédiée."
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "slug": "sensible",
+      "titre": "Cartographier un parcours sensible et ses autorisations",
+      "optionnelle": "quand le parcours manipule des données sensibles (santé, données personnelles à protéger)",
+      "rend": "La carte du parcours avec, pour chaque point de contact, les données utilisées, leur base légale, le consentement requis, les escalades et les conditions d'arrêt ; la liste des points à faire valider par un spécialiste avant toute automatisation.",
+      "fichier": "05-sensible.md",
+      "regle": "Même méthode que l'étape 4, mais les catégories de données, la base légale et les consentements passent avant les points de contact, et rien ne s'automatise avant la validation du spécialiste (juriste, délégué à la protection des données, professionnel du métier concerné). Le fichier décrit la structure du parcours, jamais le cas d'une personne : aucune donnée personnelle dans le dossier d'état.",
+      "manque": "aucune compétence publique ne fixe la base légale d'un traitement de données ni ne contrôle un parcours qui traite des données sensibles (de santé par exemple, comme un parcours de patient) : on le fait à la main, avec la règle de l'étape, et un spécialiste valide."
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "publier-sur-linkedin",
+  "description": "Un post par jour, du choix de l'idée au commentaire : la matière trouvée, le post et son accroche écrits, le visuel, la relecture, la programmation, la publication, la déclinaison sur les autres réseaux, puis les commentaires et le profil.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Zero Gravity AI"
+  },
+  "homepage": "https://zerogravity.builders",
+  "repository": "",
+  "license": "MIT",
+  "keywords": [
+    "marketing",
+    "workflow",
+    "claude-code"
+  ]
+}

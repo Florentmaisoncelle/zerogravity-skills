@@ -1,0 +1,16 @@
+{
+  "name": "creer-une-app",
+  "description": "De l'idée aux premiers clients : onze étapes dans l'ordre, la meilleure compétence à chacune, et les grosses étapes (le site, la construction, les tests, la mise en ligne) sur leur propre page.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Zero Gravity AI"
+  },
+  "homepage": "https://zerogravity.builders",
+  "repository": "",
+  "license": "MIT",
+  "keywords": [
+    "development",
+    "workflow",
+    "claude-code"
+  ]
+}

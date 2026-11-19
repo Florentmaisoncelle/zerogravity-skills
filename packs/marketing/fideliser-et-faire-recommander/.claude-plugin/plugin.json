@@ -1,0 +1,16 @@
+{
+  "name": "fideliser-et-faire-recommander",
+  "description": "Faire travailler les clients satisfaits : un programme de recommandation avec ses règles et sa mesure, des témoignages autorisés, les clients qui partent retenus, et un programme de fidélité quand il se justifie.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Zero Gravity AI"
+  },
+  "homepage": "https://zerogravity.builders",
+  "repository": "",
+  "license": "MIT",
+  "keywords": [
+    "marketing",
+    "workflow",
+    "claude-code"
+  ]
+}

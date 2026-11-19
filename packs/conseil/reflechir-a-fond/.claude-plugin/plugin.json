@@ -1,0 +1,16 @@
+{
+  "name": "reflechir-a-fond",
+  "description": "Neuf étapes pour transformer un chantier complexe, transversal ou difficile à défaire en décision solide avant d'exécuter : verrouiller le mandat, poser le problème en entier, mesurer l'état réel, cartographier le système, trouver la cause structurelle, ouvrir au moins trois options, formuler une thèse qui peut échouer, la réfuter, puis rendre la décision. Le workflow ne remplace aucune méthode : il choisit la compétence d'analyse que le signal appelle.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Zero Gravity AI"
+  },
+  "homepage": "https://zerogravity.builders",
+  "repository": "",
+  "license": "MIT",
+  "keywords": [
+    "consulting",
+    "workflow",
+    "claude-code"
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "format": "workflow-v1",
+  "slug": "recruter",
+  "titre": "Recruter un collaborateur, de la fiche de poste à son arrivée",
+  "resume": "Cinq étapes dans l'ordre : décider d'embaucher, écrire le paquet de recrutement, trier et répondre à tous les candidats, faire l'offre, préparer l'arrivée. La meilleure compétence à chaque étape, et ce qui manque dit franchement.",
+  "metiers": [
+    "rh"
+  ],
+  "commande": "/recruter:recruter",
+  "dossier_etat": "projet-recrutement/",
+  "etapes": [
+    {
+      "n": 1,
+      "slug": "besoin",
+      "titre": "Décider d'embaucher",
+      "optionnelle": "seulement si le besoin n'est pas déjà tranché",
+      "rend": "La décision d'embaucher chiffrée (charge, disponibilité, budget, date d'arrivée voulue) et la place du poste dans l'équipe.",
+      "fichier": "01-besoin.md",
+      "regle": "Les chiffres d'abord : on ne rédige pas d'annonce pour un besoin qui n'a passé ni la charge, ni le budget, ni la date d'arrivée voulue. La place du poste dans l'équipe (qui décide, qui est prévenu, qui remplace) s'écrit en quelques lignes dans le fichier de l'étape ; le tableau détaillé des responsabilités se fait à l'étape 5 avec operations:process-doc. Si le besoin est déjà tranché, le journal note l'étape comme sans objet dès le premier passage.",
+      "competences": [
+        {
+          "nom": "operations:capacity-plan",
+          "role": "par défaut",
+          "pourquoi": "La seule qui nomme la décision d'embaucher : elle répond « faut-il recruter ? » avec la charge, les personnes disponibles et le calendrier. Courte (3,5 Ko, sans références) : elle chiffre la charge, elle ne dessine pas l'organisation."
+        }
+      ],
+      "manque": "le tableau des responsabilités du poste dans l'équipe (qui décide, qui est prévenu, qui remplace) : process-doc sait le faire, mais il est logé à l'étape 5."
+    },
+    {
+      "n": 2,
+      "slug": "paquet",
+      "titre": "Écrire le paquet de recrutement",
+      "rend": "La fiche de poste prête à publier, le guide d'entretien par étape avec sa grille, la grille de tri sur CV, le modèle de lettre d'offre.",
+      "fichier": "02-paquet.md",
+      "regle": "Une seule compétence pour tout le paquet, y compris le modèle de lettre d'offre et le brouillon de signature, qui servent à l'étape 4. Publier l'annonce reste le geste du recruteur. Le modèle de lettre est écrit pour le droit américain : ses clauses se remplacent par celles du droit français. C'est ici que tombe l'unique validation du workflow : la personne valide le paquet (annonce, guide d'entretien, grille) avant que quoi que ce soit se publie, et sa validation s'écrit en tête du fichier de l'étape ; tant qu'elle manque, l'étape est en attente.",
+      "manque": "diffuser l'annonce (France Travail, Welcome to the Jungle, Indeed, LinkedIn) : la compétence ne publie jamais, et aucune autre ne le fait.",
+      "competences": [
+        {
+          "nom": "small-business:job-post-builder",
+          "role": "par défaut",
+          "pourquoi": "Six phases et huit fichiers de référence : recueil du poste, annonces comparables, annonce, guide d'entretien avec grille 1/3/5, modèle de lettre d'offre. Exige que chaque exigence se vérifie sur un CV, et sa grille de tri est lue telle quelle par la compétence de l'étape 3. Plugin d'Anthropic, mis à jour le 02/10/2026."
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "slug": "trier",
+      "titre": "Trier, répondre, convoquer",
+      "rend": "La liste classée avec la ligne de CV qui justifie chaque note, une réponse prête pour chaque candidat (convocation, attente, refus) et les entretiens placés au calendrier.",
+      "fichier": "03-tri.md",
+      "regle": "Rien ne se note hors de la grille de l'étape 2. Un fait manquant place le candidat dans « à clarifier », il ne l'écarte pas. Aucun refus n'est décidé par un score. À lire avec les critères interdits du droit français (Code du travail, article L1132-1, https://code.travail.gouv.fr/code-du-travail/l1132-1, vérifié le 06/11/2026). Les noms des candidats restent hors du dossier d'état : le tri s'écrit avec des codes (C01, C02, etc.) dans un tableau en tête du fichier de l'étape (code, reçu le, note par critère, statut parmi : à trier, à clarifier, convoqué, refus rédigé, refus envoyé, retenu) ; le workflow donne le code suivant à chaque CV qu'on lui montre, la personne le note dans son outil et garde la correspondance, que ce workflow ne lit jamais. Les candidatures n'arrivent qu'après la publication de l'annonce : sans candidature reçue, l'étape est en attente et le workflow n'invente aucun candidat ; elle l'est aussi tant que des refus rédigés ne sont pas envoyés ou que des candidats restent à clarifier.",
+      "manque": "relancer par délai : la compétence rédige les réponses mais ne repère pas un candidat resté trop longtemps à une étape ; elle propose seulement un tableau de suivi (Trello). Pas d'import depuis un outil de suivi des candidatures. On relit le tableau à chaque passage.",
+      "competences": [
+        {
+          "nom": "small-business:hiring-screener",
+          "role": "par défaut",
+          "pourquoi": "Ne note que sur la grille de l'étape 2, retire noms et photos avant de noter, cite la ligne du CV derrière chaque note, garde une bande « à clarifier » plutôt que d'écarter un fait manquant, répond à tous, ne décide pas l'embauche et n'envoie rien sans validation. Cinq fichiers de référence. Plugin d'Anthropic, mis à jour le 02/10/2026."
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "slug": "offre",
+      "titre": "Faire l'offre et signer",
+      "rend": "La lettre d'offre remplie et relue, en brouillon de signature, une fois les entretiens menés et la décision prise par le recruteur.",
+      "fichier": "04-offre.md",
+      "regle": "draft-offer chiffre le paquet, écrit la lettre et prépare la négociation ; le modèle de lettre de l'étape 2, s'il est déjà rempli, en donne la forme ; contract-review relit le texte final. Les entretiens se mènent avec le guide de l'étape 2 ; la décision revient au recruteur ; la lettre part en brouillon de signature et l'envoi reste un clic du dirigeant. Le fichier de l'étape s'ouvre sur la décision du recruteur : code du candidat retenu et raisons tirées de la grille, sans nom. Les entretiens se mènent avec le guide de l'étape 2 ; les notes d'entretien se prennent sur la grille et se rangent par code, sans nom, dans une section « Entretiens » du fichier de l'étape : avec la grille, elles sont la source de la décision, qui revient au recruteur ; avant de chiffrer, le fichier note la fourchette de rémunération retenue et la convention collective de l'entreprise (ou « aucune »), qui peut imposer des minimums : à vérifier avec le cabinet comptable ; la lettre part en brouillon de signature et l'envoi reste un clic du dirigeant.",
+      "manque": "le contrat de travail français (CDI, CDD, période d'essai, convention collective) : aucune compétence ne l'écrit. À faire avec le cabinet comptable ou un juriste.",
+      "competences": [
+        {
+          "nom": "human-resources:draft-offer",
+          "role": "chiffrer et écrire l'offre",
+          "pourquoi": "La seule compétence reconnue dédiée à l'offre : elle assemble le paquet (fixe, variable, prime d'arrivée), les conditions, le texte de la lettre et des notes de négociation pour le recruteur (Anthropic, plugin human-resources). Son modèle est américain (dollars, « exempt », actions) : on le remplit en euros, en brut annuel, avec la convention collective."
+        },
+        {
+          "nom": "small-business:contract-review",
+          "role": "relecture avant signature",
+          "pourquoi": "Relit le texte final et signale les clauses hors norme, avec une version annotée. Pensée pour les contrats commerciaux, pas pour le droit du travail : une relecture de clauses, pas un avis juridique."
+        }
+      ],
+      "taches": [
+        {
+          "slug": "fixer-la-remuneration",
+          "titre": "Fixer la rémunération",
+          "competences": [
+            {
+              "nom": "human-resources:comp-analysis",
+              "pourquoi": "Fixer un salaire en comparant le marché et la grille interne."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "slug": "arrivee",
+      "titre": "Préparer l'arrivée et les trente premiers jours",
+      "rend": "Le dossier d'arrivée : papiers, accès, matériel, formations, points à une semaine, deux semaines et un mois, et les procédures écrites à lire la première semaine.",
+      "fichier": "05-arrivee.md",
+      "regle": "human-resources:onboarding fait le plan d'arrivée, avec sa liste d'avant le premier jour (comptes, matériel, parrain) ; la checklist d'arrivée de l'étape 3 (papiers, paie, accès, matériel) le complète. On y ajoute les points français : papiers, déclaration préalable à l'embauche (obligatoire avant toute embauche, envoyée à l'Urssaf au plus tôt 8 jours avant et avant la mise au travail effective, https://www.service-public.gouv.fr/entreprendre/vosdroits/R57098, vérifié le 06/11/2026), mutuelle (à vérifier), paie. operations:process-doc écrit les procédures qui manquent. On vérifie la veille que les accès marchent. Les accès sensibles et la validation du manager restent des gestes humains.",
+      "manque": "la partie française de l'embauche : déclaration préalable à l'embauche, mutuelle, visite d'information et de prévention, paie. Elle se fait avec le cabinet comptable ou l'outil de paie ; la mutuelle est à vérifier.",
+      "competences": [
+        {
+          "nom": "human-resources:onboarding",
+          "role": "par défaut",
+          "pourquoi": "La seule compétence reconnue dédiée à l'arrivée d'un salarié : ce qu'il faut avant le premier jour (accueil, comptes, matériel, parrain), le premier jour heure par heure, la première semaine, les objectifs à 30, 60 et 90 jours, les contacts et les accès (Anthropic, plugin human-resources). Courte, sans la partie française."
+        },
+        {
+          "nom": "operations:process-doc",
+          "role": "les procédures manquantes",
+          "pourquoi": "Écrit les procédures qui n'existent nulle part et le tableau des responsabilités, que le plan d'arrivée renvoie à lire la première semaine."
+        }
+      ]
+    }
+  ]
+}

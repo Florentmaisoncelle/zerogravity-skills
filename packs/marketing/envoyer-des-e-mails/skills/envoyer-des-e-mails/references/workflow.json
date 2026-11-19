@@ -1,0 +1,95 @@
+{
+  "format": "workflow-v1",
+  "slug": "envoyer-des-e-mails",
+  "titre": "Envoyer des e-mails : les parcours automatiques, la newsletter, les SMS",
+  "resume": "Les e-mails qui accompagnent les inscrits : les parcours automatiques (accueil, relances, résiliation), la newsletter avec le consentement, la délivrabilité, et les SMS.",
+  "metiers": [
+    "marketing"
+  ],
+  "commande": "/envoyer-des-e-mails:envoyer-des-e-mails",
+  "dossier_etat": "emails/<parcours>/",
+  "etapes": [
+    {
+      "n": 1,
+      "slug": "parcours",
+      "titre": "Écrire les parcours automatiques",
+      "rend": "Pour ce parcours : la base légale de chaque liste et la façon de se désinscrire, puis les séquences à construire (bienvenue, nurturing, relance), leurs messages, leurs délais, leurs sorties et règles de suppression, et leur mesure.",
+      "fichier": "01-parcours.md",
+      "regle": "emails pour le programme, les textes et les sorties de chaque séquence. Le consentement et la désinscription se posent avant le premier message : personne n'entre dans une séquence sans une base légale écrite pour sa liste (consentement pour un particulier, intérêt légitime avec information et opposition pour un professionnel, selon la CNIL en France ; hors de France, à vérifier). La fréquence se fixe avant le premier envoi.",
+      "taches": [
+        {
+          "slug": "parcours",
+          "titre": "Écrire les parcours automatiques",
+          "competences": [
+            {
+              "nom": "marketing-skills:emails",
+              "pourquoi": "Décide quelles séquences construire et écrit les messages : longueur, délais, objets, segments et conditions de sortie."
+            }
+          ],
+          "reserve": [
+            "marketing:email-sequence"
+          ]
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "slug": "newsletter",
+      "titre": "Tenir la newsletter",
+      "rend": "La newsletter de la semaine. Une promesse, un rythme, un format fixe et les quatre prochains numéros planifiés, puis la newsletter de la semaine.",
+      "fichier": "02-newsletter.md",
+      "regle": "Personne ne reçoit la newsletter sans consentement, et la fréquence se fixe avant le premier envoi. Une newsletter n'est envoyée qu'aux personnes de la liste posée à l'étape 1, avec le lien de désinscription dans chaque numéro. Le rythme se fixe avant le premier envoi et ne change qu'après quatre numéros mesurés. Sans newsletter dans ce parcours, l'étape est sans objet.",
+      "taches": [
+        {
+          "slug": "newsletter",
+          "titre": "Écrire la newsletter",
+          "competences": [],
+          "manque": "pas encore de méthode publique pour la newsletter. Pas de compétence publique : la méthode est dans le SKILL.md (promesse, rythme, format fixe, mesure sur quatre numéros)."
+        },
+        {
+          "slug": "consentement",
+          "titre": "Recueillir le consentement",
+          "competences": [],
+          "manque": "pas encore de méthode pour le consentement des e-mails."
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "slug": "delivrabilite",
+      "titre": "Soigner la délivrabilité",
+      "rend": "Des e-mails qui arrivent et qu'on ouvre. Un domaine d'envoi authentifié (SPF, DKIM, DMARC) et testé, un plan de montée en volume, une liste nettoyée et un test d'objet.",
+      "fichier": "03-delivrabilite.md",
+      "regle": "On teste l'objet et on nettoie la liste avant un gros envoi. Aucun gros envoi tant que SPF, DKIM et DMARC ne répondent pas « pass » sur un message de test. Un domaine neuf monte en volume par paliers. La liste de suppression (désinscrits, plaintes, adresses en échec définitif) ne se réimporte jamais.",
+      "taches": [
+        {
+          "slug": "delivrabilite",
+          "titre": "Tester les objets et nettoyer la liste",
+          "competences": [],
+          "manque": "pas encore de compétence publique pour la délivrabilité."
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "slug": "sms",
+      "titre": "Envoyer des SMS",
+      "optionnelle": "quand les inscrits ont donné leur numéro et leur accord",
+      "rend": "Les SMS de relance. Les SMS de relance, avec un accord propre au SMS, le nom de l'expéditeur, un moyen de refuser dans le message et des heures d'envoi de jour.",
+      "fichier": "04-sms.md",
+      "regle": "Le SMS se réserve aux messages urgents, avec consentement. Un accord distinct de celui de l'e-mail, l'expéditeur nommé et la mention pour refuser (« STOP ») dans chaque message, des heures de jour (pas de nuit, de dimanche ni de jour férié, plages exactes à vérifier auprès de la plateforme d'envoi). Les messages urgents ou utiles d'abord ; la compétence est écrite surtout pour les États-Unis, donc ses règles de droit ne s'appliquent pas telles quelles en France.",
+      "taches": [
+        {
+          "slug": "sms",
+          "titre": "Écrire les SMS",
+          "competences": [
+            {
+              "nom": "marketing-skills:sms",
+              "pourquoi": "Écrit les messages SMS de relance et d'annonce, avec consentement, et les parcours qui les relient (panier, après achat, retour d'un client), et compare le SMS à l'e-mail."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,251 @@
+{
+  "format": "workflow-v1",
+  "slug": "creer-un-site-web",
+  "titre": "Créer le site web",
+  "resume": "Neuf étapes dans l'ordre : la carte des pages, le texte, la direction artistique, les composants, le référencement, la vitesse, l'accessibilité, la mesure et la conversion. La vitesse et l'accessibilité se mesurent, elles ne se jugent pas à l'œil.",
+  "metiers": [
+    "design"
+  ],
+  "commande": "/creer-un-site-web:creer-un-site-web",
+  "dossier_etat": "projet-site/",
+  "etapes": [
+    {
+      "n": 1,
+      "slug": "pages",
+      "titre": "La carte des pages",
+      "rend": "Les pages, la navigation, les adresses et les liens entre les pages ; pour une app, les écrans et leurs états (vide, erreur, sans droit).",
+      "fichier": "01-pages.md",
+      "regle": "site-architecture pour un site ; bmad-ux en plus dès qu'il y a des écrans d'app, avant tout design. C'est la seule validation du workflow.",
+      "taches": [
+        {
+          "slug": "pages",
+          "titre": "La carte des pages",
+          "competences": [
+            {
+              "nom": "marketing-skills:site-architecture",
+              "role": "par défaut",
+              "pourquoi": "La seule compétence dédiée à la carte d'un site : pages, navigation, adresses, fil d'Ariane, liens internes (Corey Haines, Conversion Factory)."
+            },
+            {
+              "nom": "bmad-ux",
+              "role": "pour une app",
+              "pourquoi": "BMAD : écrit EXPERIENCE.md (navigation, états vides, erreurs, permissions, interactions) et DESIGN.md, le contrat que lisent les étapes suivantes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "slug": "texte",
+      "titre": "Le texte",
+      "rend": "Le texte de chaque page, écrit puis relu.",
+      "fichier": "02-texte.md",
+      "regle": "Le texte avant le design : une maquette remplie de faux texte se refait toujours.",
+      "taches": [
+        {
+          "slug": "texte-d-une-page",
+          "titre": "Écrire le texte d'une page",
+          "competences": [
+            {
+              "nom": "marketing-skills:copywriting",
+              "pourquoi": "une page hors site public (pub, landing ponctuelle). Le texte d'une page de vente ou d'accueil, à partir de ce que vit le lecteur."
+            },
+            {
+              "nom": "marketing-skills:copy-editing",
+              "role": "relire",
+              "pourquoi": "Relit un texte existant passe par passe : clarté, preuve, appel à agir."
+            }
+          ],
+          "reserve": [
+            "marketing-skills:copy-editing"
+          ]
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "slug": "direction-artistique",
+      "titre": "La direction artistique",
+      "rend": "Le contrat de design (couleurs, typographie, espacements, ton) et les écrans construits, critiqués puis polis.",
+      "fichier": "03-design.md",
+      "regle": "impeccable:impeccable : d'abord sa commande shape (le plan de l'expérience avant tout code), puis la construction des écrans, puis critique et polish, et animate pour les transitions ; le contrat DESIGN.md vaut pour toutes les pages.",
+      "taches": [
+        {
+          "slug": "charte-et-design",
+          "titre": "Tenir la charte et le design",
+          "competences": [
+            {
+              "nom": "design:design-system",
+              "pourquoi": "la charte et le design du produit"
+            },
+            {
+              "nom": "impeccable:impeccable",
+              "role": "par défaut",
+              "pourquoi": "Paul Bakaus : 24 commandes (shape, craft, critique, audit, polish, animate), 61 règles de détection sans modèle, DESIGN.md et PRODUCT.md comme contrat."
+            },
+            {
+              "nom": "frontend-design:frontend-design",
+              "pourquoi": "créer un écran neuf qui sort du lot"
+            }
+          ],
+          "reserve": [
+            "design:design-critique",
+            "design:design-system",
+            "design:design-handoff",
+            "design:accessibility-review"
+          ]
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "slug": "composants",
+      "titre": "Les composants",
+      "rend": "Des composants qui utilisent le web d'aujourd'hui, réutilisables, finis jusqu'aux animations et à leurs transitions.",
+      "fichier": "04-composants.md",
+      "regle": "modern-web-guidance:modern-web-guidance d'abord pour tout HTML, CSS et JavaScript du navigateur, avec DISABLE_TELEMETRY=1 ; react-best-practices et composition-patterns (les deux règles de Vercel) seulement pour React ou Next ; emil-design-eng pour les animations et les détails. Les transitions se règlent avec la commande animate de impeccable:impeccable.",
+      "competences": [
+        {
+          "nom": "modern-web-guidance:modern-web-guidance",
+          "role": "par défaut",
+          "pourquoi": "Google Chrome : les composants natifs du web d'aujourd'hui (dialogues, popovers, ancrage, formulaires), avec leur compatibilité, au lieu de motifs périmés. En aperçu."
+        },
+        {
+          "nom": "react-best-practices",
+          "role": "si React ou Next",
+          "pourquoi": "Vercel : des règles de performance React classées par impact."
+        },
+        {
+          "nom": "composition-patterns",
+          "role": "si React, composants réutilisables",
+          "pourquoi": "Vercel : composants composés plutôt que des options qui se multiplient."
+        }
+      ],
+      "taches": [
+        {
+          "slug": "construire-un-ecran",
+          "titre": "Construire un écran",
+          "competences": [
+            {
+              "nom": "agent-skills:frontend-ui-engineering",
+              "pourquoi": "Quand il faut construire un écran propre, accessible et adapté au mobile."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "slug": "referencement",
+      "titre": "Le référencement",
+      "rend": "Un site trouvé par Google et cité par les IA : diagnostic, données structurées, mesure.",
+      "fichier": "05-referencement.md",
+      "regle": "Le référencement a son propre workflow : on le lance une fois le site en ligne, puis il tourne chaque semaine. Cette étape écrit une note qui dit où vit son dossier.",
+      "competences": [
+        {
+          "nom": "referencer-son-site",
+          "workflow": true,
+          "role": "workflow frère",
+          "pourquoi": "Le référencement a son propre workflow : audit, requêtes, pages, citations par les IA."
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "slug": "vitesse",
+      "titre": "La vitesse",
+      "rend": "Les Core Web Vitals mesurés sur une trace réelle, avant et après chaque correction.",
+      "fichier": "06-vitesse.md",
+      "regle": "Mesurer avant et après chaque correction, sur le site en ligne ; un chiffre sans trace n'est pas une preuve, et une maquette n'a rien à mesurer.",
+      "competences": [
+        {
+          "nom": "web-quality-skills:core-web-vitals",
+          "role": "les trois mesures de Google",
+          "pourquoi": "Addy Osmani : affichage, réactivité et stabilité mesurés par Chrome DevTools, chiffres de terrain et de laboratoire séparés."
+        },
+        {
+          "nom": "web-quality-skills:performance",
+          "role": "le reste de la vitesse",
+          "pourquoi": "Poids des pages, images, polices, scripts : une trace et un audit Lighthouse, pas un avis."
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "slug": "accessibilite",
+      "titre": "L'accessibilité",
+      "rend": "Les critères WCAG 2.2 vérifiés en direct, le code revu, les écarts corrigés.",
+      "fichier": "07-accessibilite.md",
+      "regle": "La mesure en direct, puis la revue du code ; un défaut trouvé par l'un se vérifie par l'autre après correction.",
+      "manque": "un test au lecteur d'écran : une passe automatique ne couvre que 30 à 40 % des critères WCAG. un test au lecteur d'écran. Le W3C dit qu'aucun outil seul ne peut établir la conformité et qu'une évaluation humaine est nécessaire (https://www.w3.org/WAI/test-evaluate/, vérifié le 06/11/2026). Aucune compétence ne le fait ; on prépare les parcours à passer et une personne les joue avec NVDA sous Windows ou VoiceOver sur Mac et iPhone.",
+      "competences": [
+        {
+          "nom": "web-quality-skills:accessibility",
+          "role": "par défaut",
+          "pourquoi": "Addy Osmani : WCAG 2.2 vérifié en direct par Lighthouse (464 lignes)."
+        },
+        {
+          "nom": "web-design-guidelines",
+          "role": "la revue du code",
+          "pourquoi": "Vercel : plus de cent règles d'interface vérifiées dans le code (accessibilité, focus, formulaires, contrastes)."
+        }
+      ]
+    },
+    {
+      "n": 8,
+      "slug": "mesure",
+      "titre": "La mesure",
+      "rend": "Le plan de suivi (événements, conversions, liens de campagne) et, quand le trafic le permet, les tests A/B.",
+      "fichier": "08-mesure.md",
+      "regle": "Le plan de suivi avant la mise en ligne, donc sans attendre les étapes en ligne ; les tests A/B se font dans /convertir-les-visiteurs:convertir-les-visiteurs.",
+      "competences": [
+        {
+          "nom": "marketing-skills:analytics",
+          "role": "par défaut",
+          "pourquoi": "Le plan de suivi : événements, conversions, GA4, Tag Manager, liens de campagne."
+        }
+      ]
+    },
+    {
+      "n": 9,
+      "slug": "conversion",
+      "titre": "Les formulaires et la conversion",
+      "rend": "Des pages et des formulaires qui convertissent : inscription, contact, prise de rendez-vous.",
+      "fichier": "09-conversion.md",
+      "regle": "La conversion a son propre workflow : le diagnostic de la page, le test, la capture, la ressource gratuite. Cette étape écrit une note qui dit où vit son dossier.",
+      "competences": [
+        {
+          "nom": "convertir-les-visiteurs",
+          "workflow": true,
+          "role": "workflow frère",
+          "pourquoi": "La conversion a son propre workflow : diagnostic, test, capture, ressource gratuite."
+        }
+      ]
+    },
+    {
+      "n": 10,
+      "slug": "amelioration-continue",
+      "titre": "Améliorer le site en continu",
+      "rend": "Une boucle qui relit le site, corrige un écran à la fois et prouve le rendu (triple PASS) avant de passer au suivant.",
+      "fichier": "10-amelioration-continue.md",
+      "regle": "La compétence par défaut de chaque tâche d'abord ; les autres selon le cas qu'elles disent. Un écran à la fois, rendu prouvé avant le suivant.",
+      "taches": [
+        {
+          "slug": "ameliorer-le-site",
+          "titre": "Améliorer le site en continu",
+          "competences": [
+            {
+              "nom": "web-quality-skills:best-practices",
+              "pourquoi": "Appliquer les bonnes pratiques de sécurité et de qualité du code web."
+            }
+          ],
+          "reserve": [
+            "web-quality-skills:web-quality-audit"
+          ]
+        }
+      ],
+      "manque": "aucune compétence publique pour la boucle elle-même : on relit les mesures de vitesse, d'accessibilité et de conversion, on choisit l'écran le plus faible, on le corrige, on refait la même mesure et on note l'écart avant de passer au suivant."
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "ameliorer-le-parcours-client",
+  "description": "Cinq étapes dans l'ordre : transformer la satisfaction en actions suivies, repérer les clients à risque et préparer leur rétention, transformer les retours en priorités produit, cartographier le parcours et corriger ses frictions, et, quand les données sont sensibles, cadrer les autorisations avant toute automatisation. Chaque étape finit par une action, avec un responsable.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Zero Gravity AI"
+  },
+  "homepage": "https://zerogravity.builders",
+  "repository": "",
+  "license": "MIT",
+  "keywords": [
+    "customer-success",
+    "workflow",
+    "claude-code"
+  ]
+}

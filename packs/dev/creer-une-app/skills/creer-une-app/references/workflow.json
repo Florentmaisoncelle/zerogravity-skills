@@ -1,0 +1,308 @@
+{
+  "format": "workflow-v1",
+  "slug": "creer-une-app",
+  "titre": "Créer une web app ou une plateforme agentique",
+  "resume": "De l'idée aux premiers clients : onze étapes dans l'ordre, la meilleure compétence à chacune, et les grosses étapes (le site, la construction, les tests, la mise en ligne) sur leur propre page.",
+  "metiers": [
+    "dev"
+  ],
+  "commande": "/creer-une-app:creer-une-app",
+  "dossier_etat": "projet-app/",
+  "etapes": [
+    {
+      "n": 1,
+      "slug": "cadrer",
+      "titre": "Cadrer l'idée",
+      "rend": "La carte du problème, trois pistes vraiment différentes, l'étude du marché et la fiche produit (le nom et le domaine y sont choisis).",
+      "fichier": "01-cadrage.md",
+      "regle": "Par /cadrer-un-chantier:cadrer-un-chantier, arrêté à la fiche produit : il pose le problème, élargit, étudie le marché, attaque le plan. La fiche tranche aussi le dépôt de l'app, si elle est agentique (étape 6) et payante (étape 7) ; c'est la seule validation.",
+      "competences": [
+        {
+          "nom": "cadrer-un-chantier",
+          "workflow": true,
+          "role": "workflow frère",
+          "pourquoi": "Il tient le cadrage entier (poser le problème, idées, étude, plan, pré-mortem, fiche validée une fois) : sa page détaille ses huit étapes."
+        }
+      ],
+      "taches": [
+        {
+          "slug": "cadrer-l-idee-du-produit",
+          "titre": "Cadrer l'idée du produit",
+          "competences": [
+            {
+              "nom": "bmad-prfaq",
+              "pourquoi": "Quand une idée de produit doit être éprouvée en partant du client."
+            },
+            {
+              "nom": "bmad-product-brief",
+              "pourquoi": "Quand une idée de produit doit tenir sur une note de cadrage claire."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "slug": "specifier",
+      "titre": "Écrire le produit",
+      "rend": "Le document produit : pour qui, les parcours, les fonctionnalités numérotées, les critères d'acceptation, ce qui n'en est pas.",
+      "fichier": "02-specification.md",
+      "regle": "bmad-prd, après bmad setup dans le dépôt de l'app (première action de l'étape) ; product-management:write-spec seulement si BMAD ne peut pas s'y installer.",
+      "competences": [
+        {
+          "nom": "bmad-prd",
+          "role": "par défaut",
+          "pourquoi": "La seule qui pense le produit (pour qui, quel enjeu, quelle rigueur) avant d'écrire, puis fait relire le document par plusieurs relecteurs ; modes créer, mettre à jour, valider. BMAD, v6.12. Méthode BMAD."
+        },
+        {
+          "nom": "product-management:write-spec",
+          "role": "repli",
+          "pourquoi": "Un PRD en une passe, sans installation, quand bmad-prd n'est pas installée ou que le projet ne peut pas recevoir BMAD."
+        }
+      ],
+      "taches": [
+        {
+          "slug": "ecrire-le-produit",
+          "titre": "Écrire ce que le produit doit faire",
+          "competences": [
+            {
+              "nom": "agent-skills:spec-driven-development",
+              "pourquoi": "Quand on démarre un projet : écrire la spécification avant de coder."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "slug": "architecture",
+      "titre": "L'architecture et les données",
+      "rend": "Les invariants, le modèle de données, le découpage en lots.",
+      "fichier": "03-architecture.md",
+      "regle": "bmad-architecture pour l'ensemble, en mode sans dialogue ; pour une plateforme agentique, elle prévoit d'emblée l'accès aux outils, la mémoire et l'isolation des données de chaque client. engineering:architecture pour une seule décision.",
+      "competences": [
+        {
+          "nom": "bmad-architecture",
+          "role": "par défaut",
+          "pourquoi": "Une colonne vertébrale d'invariants que tout ce qui est construit ensuite respecte."
+        },
+        {
+          "nom": "engineering:architecture",
+          "role": "une décision isolée",
+          "pourquoi": "Écrit une décision d'architecture courte quand un seul choix se pose."
+        }
+      ],
+      "taches": [
+        {
+          "slug": "dessiner-l-api",
+          "titre": "Dessiner l'interface d'une API",
+          "competences": [
+            {
+              "nom": "agent-skills:api-and-interface-design",
+              "pourquoi": "Quand on conçoit une API ou la frontière entre deux modules."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "slug": "site-web",
+      "titre": "Le site web",
+      "rend": "Le site préparé hors ligne : carte des pages et des écrans, texte, design, composants et plan de suivi. La note dit où vit le dossier du site (projet-site/).",
+      "fichier": "04-site-web.md",
+      "regle": "Par /creer-un-site-web:creer-un-site-web, arrêté à ses étapes hors ligne (1 à 4 et 8) ; pour une app, la carte des pages inclut les écrans et leurs états (bmad-ux). Pas de trace de vitesse sur une maquette : les étapes du site qui mesurent un site en ligne se rejouent après la mise en ligne, au début de l'étape 11. Le code de l'app s'écrit à l'étape 8.",
+      "competences": [
+        {
+          "nom": "creer-un-site-web",
+          "workflow": true,
+          "role": "workflow frère",
+          "pourquoi": "Le site en neuf étapes, de la carte des pages à la conversion, sur sa propre page ; ici, seulement sa partie hors ligne, le reste se rejoue après la mise en ligne."
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "slug": "back-end",
+      "titre": "Le back-end : données, connexion, sécurité",
+      "rend": "La base, la connexion des utilisateurs, les règles qui gardent les données de chacun.",
+      "fichier": "05-back-end.md",
+      "regle": "Le plugin officiel de Supabase ; la connexion par Supabase, sauf exigence d'entreprise.",
+      "competences": [
+        {
+          "nom": "supabase:supabase",
+          "role": "par défaut",
+          "pourquoi": "Le plugin officiel : base, connexion, règles d'accès, fonctions serveur."
+        },
+        {
+          "nom": "supabase:supabase-postgres-best-practices",
+          "role": "le schéma et les requêtes",
+          "pourquoi": "Les règles de Postgres, par l'éditeur de Supabase."
+        }
+      ],
+      "taches": [
+        {
+          "slug": "ajouter-la-connexion-des-utilisateurs",
+          "titre": "Ajouter la connexion des utilisateurs",
+          "competences": [
+            {
+              "nom": "auth0:auth0",
+              "pourquoi": "Quand il faut ajouter ou réparer la connexion des utilisateurs."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "slug": "agents",
+      "titre": "Les agents IA",
+      "optionnelle": "seulement pour une plateforme agentique",
+      "rend": "Les agents, leurs outils, leur mémoire et le dernier clic humain.",
+      "fichier": "06-agents.md",
+      "regle": "Les agents par /creer-un-agent-ia:creer-un-agent-ia, repris à sa construction : le cadrage et l'architecture sont déjà faits, pas de seconde validation. Le code qui appelle Claude par claude-api:claude-api.",
+      "competences": [
+        {
+          "nom": "creer-un-agent-ia",
+          "workflow": true,
+          "role": "workflow frère",
+          "pourquoi": "La méthode complète pour créer un agent, étape par étape, en sept étapes, déjà écrite."
+        },
+        {
+          "nom": "claude-api:claude-api",
+          "role": "l'appel au modèle",
+          "pourquoi": "Modèles, prix, outils et cache de l'API Claude, à jour."
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "slug": "paiement",
+      "titre": "Le paiement",
+      "optionnelle": "seulement si l'app est payante",
+      "rend": "Le prix, les offres et le paiement branché en mode test.",
+      "fichier": "07-paiement.md",
+      "regle": "Le prix d'abord ; Stripe ensuite, avec les clés de test du propriétaire de l'app, jamais de clé réelle. Passer en réel reste son geste.",
+      "competences": [
+        {
+          "nom": "marketing-skills:pricing",
+          "role": "le prix",
+          "pourquoi": "Le prix et les offres avant le code."
+        },
+        {
+          "nom": "stripe:stripe-best-practices",
+          "role": "le branchement",
+          "pourquoi": "Le plugin officiel de Stripe : paiement, abonnements, webhooks, sécurité."
+        }
+      ],
+      "taches": [
+        {
+          "slug": "ecran-d-abonnement",
+          "titre": "Écran d'abonnement",
+          "competences": [
+            {
+              "nom": "marketing-skills:paywalls",
+              "pourquoi": "Concevoir l'écran qui pousse à passer à l'offre payante."
+            }
+          ]
+        },
+        {
+          "slug": "brancher-stripe",
+          "titre": "Brancher les paiements Stripe",
+          "competences": [
+            {
+              "nom": "stripe:connect-recommend",
+              "pourquoi": "Choisir la bonne configuration Stripe Connect pour une plateforme."
+            },
+            {
+              "nom": "stripe:connect-required-verification-information",
+              "pourquoi": "Savoir quelles informations demander aux vendeurs connectés."
+            },
+            {
+              "nom": "stripe:metronome",
+              "pourquoi": "Facturer à l'usage avec Metronome."
+            },
+            {
+              "nom": "stripe:upgrade-stripe",
+              "pourquoi": "Passer à la dernière version de Stripe sans casser le paiement."
+            }
+          ],
+          "reserve": [
+            "stripe:stripe-apps",
+            "stripe:stripe-docs"
+          ]
+        }
+      ]
+    },
+    {
+      "n": 8,
+      "slug": "construire",
+      "titre": "Construire",
+      "rend": "L'app construite tâche par tâche, test d'abord, chaque tâche relue et prouvée. La note dit où vit le dossier de la construction (construction/) et porte la vérification faite avant de construire.",
+      "fichier": "08-construction.md",
+      "regle": "Par /construire:construire, sur le document produit et l'architecture ; le site, le back-end, les agents et le paiement se construisent dans cette boucle, lot par lot.",
+      "competences": [
+        {
+          "nom": "construire",
+          "workflow": true,
+          "role": "workflow frère",
+          "pourquoi": "La boucle de construction : plan de tâches, test d'abord, relecture entre deux tâches, preuve avant d'annoncer."
+        }
+      ]
+    },
+    {
+      "n": 9,
+      "slug": "tester",
+      "titre": "Tester et sécuriser",
+      "rend": "Le code relu, la sécurité vérifiée en profondeur, l'app parcourue jusqu'au verdict. La note donne le verdict et dit où vit le dossier des tests (tests/).",
+      "fichier": "09-tests.md",
+      "regle": "Par /tester-et-securiser:tester-et-securiser ; avant la première mise en ligne, le scan de sécurité en profondeur est obligatoire. Avec le verdict « on ne met pas en ligne », on corrige (retour à l'étape 8) ou on arrête là.",
+      "competences": [
+        {
+          "nom": "tester-et-securiser",
+          "workflow": true,
+          "role": "workflow frère",
+          "pourquoi": "La relecture du diff, la sécurité et le parcours dans le navigateur, jusqu'au verdict."
+        }
+      ]
+    },
+    {
+      "n": 10,
+      "slug": "mise-en-ligne",
+      "titre": "Mettre en ligne",
+      "rend": "L'app en ligne, vérifiée sur ordinateur et téléphone, avec son retour arrière. La note donne l'adresse officielle et dit où vit le dossier de la mise en ligne (mise-en-ligne/).",
+      "fichier": "10-mise-en-ligne.md",
+      "regle": "Par /mettre-en-ligne:mettre-en-ligne ; pour l'app d'un client, l'ouverture au public est son geste. Si l'app est faite pour un tiers, c'est lui qui décide de l'ouvrir au public : on s'arrête au brouillon vérifié et on lui remet la main.",
+      "competences": [
+        {
+          "nom": "mettre-en-ligne",
+          "workflow": true,
+          "role": "workflow frère",
+          "pourquoi": "La sortie préparée, le déploiement et la vérification en ligne."
+        }
+      ]
+    },
+    {
+      "n": 11,
+      "slug": "lancer",
+      "titre": "Lancer et trouver ses clients",
+      "rend": "Le site mesuré en ligne, le lancement et les premiers prospects.",
+      "fichier": "11-lancement.md",
+      "regle": "Le lancement par /lancer-un-produit:lancer-un-produit, à partir de son étape 2 ; les prospects par /trouver-ses-prochains-clients:trouver-ses-prochains-clients quand la cible est une entreprise joignable sur LinkedIn, où rien ne part sans validation. Pour un autre public, les canaux du plan de campagne. Le référencement est fait à l'étape 4. Commencer par le site en ligne : relancer /creer-un-site-web:creer-un-site-web, qui propose alors ses étapes marquées « sur le site en ligne » (référencement, vitesse, accessibilité, conversion, amélioration continue) ; la note dit où il en est.",
+      "competences": [
+        {
+          "nom": "lancer-un-produit",
+          "workflow": true,
+          "role": "workflow frère",
+          "pourquoi": "Le lancement et la campagne, canal par canal, de leur plan à leur mesure, sur leur propre page."
+        },
+        {
+          "nom": "trouver-ses-prochains-clients",
+          "workflow": true,
+          "role": "workflow frère",
+          "pourquoi": "Le système d'acquisition déjà complet : la cible, les signaux, les messages validés, jusqu'au rendez-vous, sur sa propre page."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "format": "workflow-v1",
+  "slug": "publier-sur-linkedin",
+  "titre": "Publier sur LinkedIn : choisir, écrire, illustrer, programmer, poster, commenter",
+  "resume": "Un post par jour, du choix de l'idée au commentaire : la matière trouvée, le post et son accroche écrits, le visuel, la relecture, la programmation, la publication, la déclinaison sur les autres réseaux, puis les commentaires et le profil.",
+  "metiers": [
+    "marketing"
+  ],
+  "commande": "/publier-sur-linkedin:publier-sur-linkedin",
+  "dossier_etat": "contenu/",
+  "etapes": [
+    {
+      "n": 1,
+      "slug": "choisir",
+      "titre": "Choisir quoi publier",
+      "rend": "Une banque d'idées notées et les posts de la semaine choisis dedans.",
+      "fichier": "01-choisir.md",
+      "regle": "On note chaque idée de la banque, puis on prend les meilleures plutôt que d'en inventer : une idée par post, court par défaut. Sans ligne éditoriale, small-business:content-strategy en pose une. La personne valide les posts retenus : c'est la première des deux validations du workflow. Seul un texte validé par un humain part : sa validation déclenche la publication programmée.",
+      "taches": [
+        {
+          "slug": "trouver-la-matiere",
+          "titre": "Trouver la matière du post",
+          "competences": [
+            {
+              "nom": "marketing-skills:content-strategy",
+              "pourquoi": "Des sources d'idées concrètes (appels clients, questions reçues, forums, concurrents) et une grille pour noter chaque idée."
+            }
+          ]
+        },
+        {
+          "slug": "choisir-les-posts",
+          "titre": "Choisir les posts de la semaine",
+          "competences": [
+            {
+              "nom": "small-business:content-strategy",
+              "pourquoi": "Poser une ligne éditoriale quand on part de zéro."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "slug": "ecrire",
+      "titre": "Écrire le post",
+      "rend": "Chaque post écrit avec son accroche, relu, en une section par post.",
+      "fichier": "02-ecrire.md",
+      "regle": "Une idée par post, court par défaut, une section par post dans le fichier ; seul un texte validé par un humain part, et sa validation déclenche la publication programmée. marketing-skills:social écrit le post : accroches, modèles de post, carrousels (posts en plusieurs pages à faire défiler) et liste des tics d'écriture qui font « texte généré ». La personne valide le texte de chaque post avant toute programmation : c'est la deuxième validation du workflow.",
+      "manque": "aucune compétence publique pour ce geste : il se fait à la main, avec la règle de l'étape."
+    },
+    {
+      "n": 3,
+      "slug": "illustrer",
+      "titre": "Illustrer le post",
+      "rend": "Le visuel et, si utile, le sondage.",
+      "fichier": "03-illustrer.md",
+      "regle": "La charte se fixe une fois avec small-business:brand-style, puis marketing-skills:image produit les visuels ; les visuels d'annonce se font avec la campagne, dans /lancer-un-produit:lancer-un-produit. Les droits à l'image et les marques déposées se vérifient à la main : aucune compétence ne le fait.",
+      "taches": [
+        {
+          "slug": "faire-le-visuel",
+          "titre": "Faire le visuel du post",
+          "competences": [
+            {
+              "nom": "marketing-skills:image",
+              "pourquoi": "Les images de marque, de la bannière au visuel de réseau, par génération ou outil de design, puis optimisées."
+            },
+            {
+              "nom": "small-business:canva-creator",
+              "pourquoi": "Fabriquer le visuel dans Canva."
+            }
+          ]
+        },
+        {
+          "slug": "fixer-la-charte",
+          "titre": "Fixer la charte graphique",
+          "competences": [
+            {
+              "nom": "small-business:brand-style",
+              "pourquoi": "Capte la marque depuis le site ou quelques mots et la range pour que tout ce qui suit la respecte."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "slug": "programmer",
+      "titre": "Programmer le post",
+      "rend": "Chaque post prêt et programmé (ou placé en brouillon) au bon créneau.",
+      "fichier": "04-programmer.md",
+      "regle": "Une idée par post, court par défaut ; seul un texte validé par un humain est programmé, et sa validation déclenche la publication programmée. marketing-skills:social dit quoi programmer et quoi poster en direct, garde une file de une à deux semaines et crée les posts en brouillon d'abord ; elle ne publie jamais sans accord.",
+      "manque": "aucune compétence ne programme seule : il faut un outil de programmation (celui de LinkedIn, à vérifier sur votre compte, ou un outil tiers avec une API ou un serveur MCP). Le workflow prépare le texte, le visuel et le créneau."
+    },
+    {
+      "n": 5,
+      "slug": "poster",
+      "titre": "Poster",
+      "rend": "Le post en ligne, son lien relevé.",
+      "fichier": "05-poster.md",
+      "regle": "Une idée par post, court par défaut ; seul un texte validé par un humain part, et sa validation déclenche la publication programmée. Le post part par la programmation de l'étape d'avant, ou à la main. Le lien du post publié se relève dans le fichier de l'étape et le journal.",
+      "manque": "le dernier clic de publication reste à la personne : aucune compétence ne publie à sa place.",
+      "taches": [
+        {
+          "slug": "poster",
+          "titre": "Poster le post",
+          "competences": [],
+          "manque": "pas de compétence publique pour ce geste : le post part à la main, ou par la programmation de l'étape d'avant."
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "slug": "decliner",
+      "titre": "Décliner sur les autres réseaux",
+      "optionnelle": "quand l'entreprise publie ailleurs que sur LinkedIn",
+      "rend": "Les idées extraites d'un contenu source, adaptées à chaque réseau, un calendrier de la semaine et la file de programmation.",
+      "fichier": "06-decliner.md",
+      "regle": "social par défaut ; social-content-engine quand l'entreprise travaille déjà dans Canva et HubSpot. La source d'origine se cite ; la publication reste validée. Instagram, TikTok, X et Reddit n'ont pas encore de méthode propre. marketing-skills:social par défaut : elle détaille LinkedIn, X, Instagram, TikTok, Facebook et Telegram (format, rythme, ce qui marche) ; pour Reddit elle ne couvre que le repérage de conversations.",
+      "taches": [
+        {
+          "slug": "decliner",
+          "titre": "Décliner le post sur les autres réseaux",
+          "competences": [
+            {
+              "nom": "marketing-skills:social",
+              "pourquoi": "Part de toute source (article, podcast, webinaire, lettre d'information), en tire cinq à dix idées, les adapte par réseau et tient le calendrier."
+            },
+            {
+              "nom": "small-business:social-content-engine",
+              "pourquoi": "Calendrier, légendes dans la voix du dirigeant, visuels Canva et mise en file, sans jamais publier seul."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "slug": "commenter",
+      "titre": "Commenter et animer",
+      "rend": "Les commentaires posés, la communauté suivie.",
+      "fichier": "07-commenter.md",
+      "regle": "marketing-skills:social pour commenter : une routine quotidienne courte, des commentaires qui apportent quelque chose, et un tri des posts à commenter (une liste de dix notée). marketing-skills:community-marketing pour le plan et l'animation, seulement si l'entreprise anime sa propre communauté (groupe, forum, Slack, Discord). Les créateurs se travaillent dans le workflow « Lancer un produit » (/lancer-un-produit:lancer-un-produit). Les règles de modération et d'escalade s'écrivent avant l'ouverture d'une communauté : la compétence n'en dit que deux lignes.",
+      "taches": [
+        {
+          "slug": "animer",
+          "titre": "Animer la communauté",
+          "competences": [
+            {
+              "nom": "marketing-skills:community-marketing",
+              "pourquoi": "Les plans de communauté, le choix de la plateforme, les programmes d'ambassadeurs et les indicateurs de santé."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 8,
+      "slug": "profil",
+      "titre": "Soigner son profil",
+      "optionnelle": "quand l'offre ou le positionnement change",
+      "rend": "Le titre, le résumé et la bannière du profil.",
+      "fichier": "08-profil.md",
+      "regle": "Le profil se refait quand l'offre change, pas à chaque post. marketing-skills:image fait la bannière aux bonnes dimensions ; le texte du profil s'écrit à la main avec la méthode du SKILL.md.",
+      "manque": "aucune compétence ne rédige le titre et le résumé d'un profil LinkedIn : on les écrit à la main, d'après l'offre et le positionnement du moment.",
+      "taches": [
+        {
+          "slug": "soigner-le-profil",
+          "titre": "Écrire et auditer son profil",
+          "competences": [],
+          "manque": "pas encore de compétence publique pour écrire un profil. Aucune compétence ne rédige un profil : on écrit à la main le titre et le résumé, d'après l'offre et le positionnement du moment."
+        },
+        {
+          "slug": "banniere",
+          "titre": "Faire la bannière du profil",
+          "competences": [],
+          "manque": "pas encore de compétence publique dédiée ; celle des visuels de l'étape 3 fait aussi les bannières."
+        }
+      ]
+    }
+  ]
+}

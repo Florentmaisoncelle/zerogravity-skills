@@ -1,0 +1,217 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "zerogravity",
+  "owner": {
+    "name": "Zero Gravity AI"
+  },
+  "metadata": {
+    "description": "Des workflows prêts à lancer dans Claude Code pour gérer une petite entreprise : conseil, vente, marketing, relation client, recrutement, développement. Un pack par workflow du site.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "consultant-ia",
+      "source": "./packs/conseil/consultant-ia",
+      "description": "Le pack du consultant IA et automatisation, décider, puis mesurer : neuf compétences, plus un routeur de stratégie, un module CRM (audit, bilan priorisé et cahier des charges, avec son agent d'audit), un module de déploiement d'un assistant IA dans une équipe (plan, charte, dossier de conformité, pilotage) et un entretien guidé par IA (l'IA mène l'entretien par écrit quand le consultant n'est pas là, y compris en ligne devant un visiteur, et rend la note au format du pack), et deux portes d'entrée. On part d'un besoin, et le pack enchaîne cadrage, audit du processus, exigences, solutions comparées, rentabilité, spécification, plan ; la construction, la recette et la mise en service sont au pack Créer un agent IA, puis le pack mesure le gain réel. Ou l'on part d'aucun besoin : il cartographie les tâches de l'entreprise, les trie et rend un portefeuille de cas d'usage chiffrés. Chaque nombre porte son statut, l'humain tranche à chaque étape, et rien ne touche un outil réel sans la validation de l'action précise.",
+      "category": "consulting"
+    },
+    {
+      "name": "cadrer-un-chantier",
+      "source": "./packs/conseil/cadrer-un-chantier",
+      "description": "Une stratégie, une méthode, un système ou un produit de zéro : poser le problème, choisir la bonne méthode de réflexion, écrire le plan, l'attaquer, le faire valider une fois, puis lancer.",
+      "category": "consulting"
+    },
+    {
+      "name": "decider-une-strategie",
+      "source": "./packs/conseil/decider-une-strategie",
+      "description": "Huit étapes de conseil en stratégie pour une décision d'affaires floue (marché, offre, produit, investissement, priorités) : poser la décision, la structurer, séparer les faits des hypothèses, comparer de vraies options, éprouver le contre-cas, puis recommander d'abord. C'est une discipline de raisonnement : presque toutes les étapes sont menées par le workflow lui-même, et chaque étape sans compétence à appeler le dit.",
+      "category": "consulting"
+    },
+    {
+      "name": "reflechir-a-fond",
+      "source": "./packs/conseil/reflechir-a-fond",
+      "description": "Neuf étapes pour transformer un chantier complexe, transversal ou difficile à défaire en décision solide avant d'exécuter : verrouiller le mandat, poser le problème en entier, mesurer l'état réel, cartographier le système, trouver la cause structurelle, ouvrir au moins trois options, formuler une thèse qui peut échouer, la réfuter, puis rendre la décision. Le workflow ne remplace aucune méthode : il choisit la compétence d'analyse que le signal appelle.",
+      "category": "consulting"
+    },
+    {
+      "name": "hubspot-crm-toolkit",
+      "source": "./packs/crm/hubspot-crm-toolkit",
+      "description": "Boîte à outils HubSpot CRM : auditer, diagnostiquer et piloter un portail HubSpot au moindre coût de jetons, en déléguant d'abord au cerveau le moins cher (Breeze, l'IA native de HubSpot) avant de tout faire soi-même.",
+      "category": "sales"
+    },
+    {
+      "name": "trouver-ses-prochains-clients",
+      "source": "./packs/vente/trouver-ses-prochains-clients",
+      "description": "La prospection B2B en sept étapes : la cible, les signaux, les comptes de la semaine, le bon contact, le message, la séquence et les réponses, jusqu'au rendez-vous. Rien ne part sans validation.",
+      "category": "sales"
+    },
+    {
+      "name": "conclure-une-vente",
+      "source": "./packs/vente/conclure-une-vente",
+      "description": "Après le rendez-vous, tout ce qui mène à la signature : la préparation, le compte rendu et le CRM, l'offre, la proposition chiffrée, les objections et le plan jusqu'au oui. Chaque engagement reste celui de la personne qui vend.",
+      "category": "sales"
+    },
+    {
+      "name": "piloter-le-pipeline",
+      "source": "./packs/vente/piloter-le-pipeline",
+      "description": "La revue commerciale de la semaine : un CRM propre, le pipeline revu, les affaires débloquées ou relancées, la prévision chiffrée, les leçons des affaires gagnées et perdues, et les extensions chez les clients en place.",
+      "category": "sales"
+    },
+    {
+      "name": "organiser-sa-force-de-vente",
+      "source": "./packs/vente/organiser-sa-force-de-vente",
+      "description": "Le plan commercial de l'année : l'objectif de revenu et la capacité qu'il demande, les rôles de l'équipe, le plan d'incitation, les partenaires qui apportent des affaires, puis l'adoption du nouveau fonctionnement. Deux étapes restent sans bonne compétence, et la page le dit.",
+      "category": "sales"
+    },
+    {
+      "name": "leadlint",
+      "source": "./packs/vente/leadlint",
+      "description": "Un contrôleur de listes de prospects B2B pensé pour les agents IA : range les intitulés de poste par persona (département, séniorité, rôle d'achat) et revalide un export de prospection selon les règles d'une mission (cible, poste, e-mail et mobile professionnels, liste d'exclusion, doublons), avec un contrôle préalable, un classeur de contrôle qualité et un bilan numéroté. Un script Python local : aucune donnée ne quitte la machine.",
+      "category": "sales"
+    },
+    {
+      "name": "poser-sa-strategie-marketing",
+      "source": "./packs/marketing/poser-sa-strategie-marketing",
+      "description": "Avant de produire quoi que ce soit : le marché et les publics étudiés, les concurrents surveillés, le positionnement et les messages écrits, l'offre et le prix, le parcours client, puis le plan marketing présenté pour décision.",
+      "category": "marketing"
+    },
+    {
+      "name": "convertir-les-visiteurs",
+      "source": "./packs/marketing/convertir-les-visiteurs",
+      "description": "Transformer le trafic en inscrits : le diagnostic de la page, le test d'une variante, la capture d'adresse et une ressource gratuite.",
+      "category": "marketing"
+    },
+    {
+      "name": "envoyer-des-e-mails",
+      "source": "./packs/marketing/envoyer-des-e-mails",
+      "description": "Les e-mails qui accompagnent les inscrits : les parcours automatiques (accueil, relances, résiliation), la newsletter avec le consentement, la délivrabilité, et les SMS.",
+      "category": "marketing"
+    },
+    {
+      "name": "faire-une-video",
+      "source": "./packs/marketing/faire-une-video",
+      "description": "Une vidéo de bout en bout : la méthode choisie selon son coût, le script validé, le tournage ou l'avatar, les plans animés, le montage et les sous-titres, puis la publication.",
+      "category": "marketing"
+    },
+    {
+      "name": "fideliser-et-faire-recommander",
+      "source": "./packs/marketing/fideliser-et-faire-recommander",
+      "description": "Faire travailler les clients satisfaits : un programme de recommandation avec ses règles et sa mesure, des témoignages autorisés, les clients qui partent retenus, et un programme de fidélité quand il se justifie.",
+      "category": "marketing"
+    },
+    {
+      "name": "lancer-un-produit",
+      "source": "./packs/marketing/lancer-un-produit",
+      "description": "Un lancement de bout en bout : le plan, l'annonce et Product Hunt, les messages contrôlés, les annuaires et les fiches des stores, la traduction, la presse, les partenaires et les événements.",
+      "category": "marketing"
+    },
+    {
+      "name": "publicite-payante",
+      "source": "./packs/marketing/publicite-payante",
+      "description": "La publicité de bout en bout : les visuels et les textes de la pub, la pub vidéo, puis les campagnes lancées et pilotées sur Meta et Google.",
+      "category": "marketing"
+    },
+    {
+      "name": "publier-sur-linkedin",
+      "source": "./packs/marketing/publier-sur-linkedin",
+      "description": "Un post par jour, du choix de l'idée au commentaire : la matière trouvée, le post et son accroche écrits, le visuel, la relecture, la programmation, la publication, la déclinaison sur les autres réseaux, puis les commentaires et le profil.",
+      "category": "marketing"
+    },
+    {
+      "name": "referencer-son-site",
+      "source": "./packs/marketing/referencer-son-site",
+      "description": "Le référencement qui tourne : l'audit et les priorités, les requêtes qui achètent, la technique et l'indexation, les pages optimisées, les articles qui se classent, le maillage, les liens, la visibilité dans les réponses des IA, et le suivi qui dit quoi faire ensuite. Méthode d'Éric Djavid (32 agents SEO) adaptée aux outils gratuits.",
+      "category": "marketing"
+    },
+    {
+      "name": "accueillir-un-nouveau-client",
+      "source": "./packs/relation-client/accueillir-un-nouveau-client",
+      "description": "Quatre étapes dans l'ordre : définir la première réussite du client et la checklist d'accueil, ouvrir le parcours et préparer les accès, écrire le message de bienvenue, contrôler l'activation à une semaine et à un mois. La meilleure compétence à chaque étape ; les accès et la mise en service se font à la main.",
+      "category": "customer-success"
+    },
+    {
+      "name": "ameliorer-le-parcours-client",
+      "source": "./packs/relation-client/ameliorer-le-parcours-client",
+      "description": "Cinq étapes dans l'ordre : transformer la satisfaction en actions suivies, repérer les clients à risque et préparer leur rétention, transformer les retours en priorités produit, cartographier le parcours et corriger ses frictions, et, quand les données sont sensibles, cadrer les autorisations avant toute automatisation. Chaque étape finit par une action, avec un responsable.",
+      "category": "customer-success"
+    },
+    {
+      "name": "traiter-les-demandes-clients",
+      "source": "./packs/relation-client/traiter-les-demandes-clients",
+      "description": "Six étapes dans l'ordre : trier et affecter chaque demande, répondre sur une commande, répondre sur une facture ou un abonnement, résoudre ou escalader une demande technique, écrire la réponse et la faire valider, puis transformer les questions qui reviennent en articles d'aide. La meilleure compétence à chaque étape ; quand une étape n'a pas encore la sienne, sa fiche le dit.",
+      "category": "customer-success"
+    },
+    {
+      "name": "recruter",
+      "source": "./packs/rh/recruter",
+      "description": "Cinq étapes dans l'ordre : décider d'embaucher, écrire le paquet de recrutement, trier et répondre à tous les candidats, faire l'offre, préparer l'arrivée. La meilleure compétence à chaque étape, et ce qui manque dit franchement.",
+      "category": "human-resources"
+    },
+    {
+      "name": "creer-un-site-web",
+      "source": "./packs/design/creer-un-site-web",
+      "description": "Neuf étapes dans l'ordre : la carte des pages, le texte, la direction artistique, les composants, le référencement, la vitesse, l'accessibilité, la mesure et la conversion. La vitesse et l'accessibilité se mesurent, elles ne se jugent pas à l'œil.",
+      "category": "design"
+    },
+    {
+      "name": "creer-un-agent-ia",
+      "source": "./packs/dev/creer-un-agent-ia",
+      "description": "Huit étapes dans l'ordre pour un agent ou un système IA qui marche : poser le problème, répondre aux questions produit, choisir le type d'agent et dessiner l'architecture, construire, tester, mesurer, puis claude-code-system-pack:capitaliser pour que le passage suivant parte plus fort. L'agent peut tourner en local, sur votre poste, ou en cloud, à toute heure : en code, ou sur n8n et Make. Trois chemins sur la même table : son propre système (celui modélisé ici), celui d'un client (Pack Consultant IA) ou un système qui existe (optimisation). Une étape 0 tranche le chemin et regarde l'existant avant la première.",
+      "category": "development"
+    },
+    {
+      "name": "creer-une-app",
+      "source": "./packs/dev/creer-une-app",
+      "description": "De l'idée aux premiers clients : onze étapes dans l'ordre, la meilleure compétence à chacune, et les grosses étapes (le site, la construction, les tests, la mise en ligne) sur leur propre page.",
+      "category": "development"
+    },
+    {
+      "name": "faire-evoluer-une-app",
+      "source": "./packs/dev/faire-evoluer-une-app",
+      "description": "Six étapes pour une app qui existe déjà, à deux entrées : partir de la demande (la fonctionnalité écrite, ou le défaut reproduit et sa cause prouvée), comprendre le code qui l'accueille, construire test d'abord, tester, mettre en ligne, documenter.",
+      "category": "development"
+    },
+    {
+      "name": "construire",
+      "source": "./packs/dev/construire",
+      "description": "Le plan découpé en petites tâches vérifiables, chacune construite test d'abord par un sous-agent, relue avant la suivante, et prouvée avant d'être annoncée finie.",
+      "category": "development"
+    },
+    {
+      "name": "tester-et-securiser",
+      "source": "./packs/dev/tester-et-securiser",
+      "description": "Le code relu, la sécurité vérifiée à chaque lot puis en profondeur avant la mise en ligne, l'app lancée et parcourue dans le navigateur jusqu'à un verdict : on met en ligne, ou pas.",
+      "category": "development"
+    },
+    {
+      "name": "mettre-en-ligne",
+      "source": "./packs/dev/mettre-en-ligne",
+      "description": "Une sortie préparée (paliers, seuils, retour arrière écrit d'avance), le déploiement, puis l'app vérifiée en ligne sur ordinateur et sur téléphone.",
+      "category": "development"
+    },
+    {
+      "name": "entretenir-son-systeme",
+      "source": "./packs/dev/entretenir-son-systeme",
+      "description": "Cinq compétences propriétaires avec router-entretenir-son-systeme en porte d'entrée : capitaliser les leçons, mesurer avant d'optimiser, nettoyer les règles, auditer la qualité des compétences et propager les décisions dans les surfaces réellement lues. Le routeur choisit l'ordre sans fusionner leurs méthodes.",
+      "category": "development"
+    },
+    {
+      "name": "deleguer-entre-ia",
+      "source": "./packs/dev/deleguer-entre-ia",
+      "description": "Délégation IA complète pour Claude Code : un chapeau qui choisit le bon cerveau (ChatGPT dans Chrome, Codex, une autre session, Claude Desktop, un autre onglet) et cinq compétences de transport qui prouvent l'envoi, relisent le livrable et gardent le jugement chez Claude.",
+      "category": "development"
+    },
+    {
+      "name": "transporter-ses-sessions",
+      "source": "./packs/dev/transporter-ses-sessions",
+      "description": "Retrouve et relance une session Claude Code perdue (autre compte, sidebar vide, session morte) sans jamais devoir ré-exporter au préalable, transporte des sessions entre deux PC via un bundle exportable (un zip par session, avec son prompt de reprise), ou par git pour un petit dépôt. Un seul skill, trois gestes. Zéro compte actif requis, zéro token consommé : tout est déjà en local sur le disque, ce plugin sait juste où chercher.",
+      "category": "development"
+    },
+    {
+      "name": "superviser-ses-sessions",
+      "source": "./packs/dev/superviser-ses-sessions",
+      "description": "Deux skills pour travailler à plusieurs sessions et en autonomie. (1) Supervise un parc de sessions Claude Code au lieu de les suivre une par une : lit leurs transcripts pour savoir où elles en sont sans les déranger, relance celles qui sont à l'arrêt avec du travail restant, et rend un seul compte-rendu. Pensé pour le moment où le goulot d'étranglement n'est plus la machine mais ton attention — une session qui attend ta réponse ne redémarre jamais toute seule. (2) Conçoit, lance et relance des boucles `/loop` qui avancent jusqu'à un objectif mesurable, s'arrêtent au bon moment et ne tournent jamais dans le vide.",
+      "category": "development"
+    }
+  ]
+}

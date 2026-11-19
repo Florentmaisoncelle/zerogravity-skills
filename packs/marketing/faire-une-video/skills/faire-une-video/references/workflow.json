@@ -1,0 +1,196 @@
+{
+  "format": "workflow-v1",
+  "slug": "faire-une-video",
+  "titre": "Faire une vidéo : choisir la méthode, écrire, tourner ou générer, monter, publier",
+  "resume": "Une vidéo de bout en bout : la méthode choisie selon son coût, le script validé, le tournage ou l'avatar, les plans animés, le montage et les sous-titres, puis la publication.",
+  "metiers": [
+    "marketing"
+  ],
+  "commande": "/faire-une-video:faire-une-video",
+  "dossier_etat": "video/",
+  "etapes": [
+    {
+      "n": 1,
+      "slug": "choisir",
+      "titre": "Choisir comment la fabriquer",
+      "rend": "Les deux choix posés (qui apparaît et qui parle ; comment on monte), la méthode retenue et son coût.",
+      "fichier": "01-choisir.md",
+      "regle": "Aucune option n'est imposée : on pose les deux choix à la personne, avec les deux options expliquées (voir le SKILL.md). Le premier : tourner soi-même, utiliser un avatar IA, ou faire parler une voix de synthèse sur des plans animés. Le second : monter dans un logiciel de montage, ou monter par code. marketing-skills:video compare les approches ; la méthode se choisit ensuite par son coût et son verdict daté, et par l'effet voulu ; par défaut, on tourne soi-même.",
+      "taches": [
+        {
+          "slug": "choisir-la-methode",
+          "titre": "Choisir la méthode",
+          "competences": [
+            {
+              "nom": "marketing-skills:video",
+              "pourquoi": "Compare les approches (code, génération, montage) pour une démonstration, un explicatif ou une série de clips. Compare les approches (vidéo programmée, génération par IA, avatar, montage de prises) et dit quand un avatar convient ou non, par exemple pour du contenu récurrent ou en plusieurs langues, mais pas pour un témoignage de fondateur."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "slug": "script",
+      "titre": "Écrire le script",
+      "rend": "Le script validé. Le script, écrit pour être dit à voix haute, puis validé par la personne qui le dira.",
+      "fichier": "02-script.md",
+      "regle": "Un script écrit pour l'oral, validé par la personne qui le dira avant tout tournage ou toute génération. Pour une vidéo courte, marketing-skills:social donne les structures et l'accroche ; pour les autres formats, la méthode du SKILL.md.",
+      "taches": [
+        {
+          "slug": "trouver-l-idee-du-short",
+          "titre": "Trouver l'idée du short",
+          "competences": [
+            {
+              "nom": "faire-une-video:video-idee-de-short",
+              "pourquoi": "Part du travail réel du créateur et classe les idées selon la preuve qu'il peut montrer, plutôt que d'après une inspiration du moment."
+            }
+          ]
+        },
+        {
+          "slug": "ecrire-le-script",
+          "titre": "Écrire le script",
+          "competences": [
+            {
+              "nom": "marketing-skills:social",
+              "pourquoi": "Pour une vidéo courte : l'accroche de trois secondes (image, parole et texte à l'écran ensemble), des structures prêtes (problème et solution, liste, tutoriel) et des formules d'accroche."
+            }
+          ]
+        }
+      ],
+      "manque": "aucune compétence ne couvre un script long (explicatif de plusieurs minutes, interview) : la méthode du SKILL.md tient lieu de guide."
+    },
+    {
+      "n": 3,
+      "slug": "tourner",
+      "titre": "Tourner ou générer les plans",
+      "rend": "Les prises tournées, ou les plans animés générés, ou la vidéo d'avatar produite.",
+      "fichier": "03-tourner.md",
+      "regle": "Par défaut, on tourne soi-même ; l'avatar seulement quand on le choisit. Le travail suit le choix de l'étape 1 : prises tournées par la personne (liste de contrôle du SKILL.md), plans animés, avatar. Un avatar ou une voix de synthèse ne s'utilisent qu'avec l'accord de la personne dont on reproduit le visage ou la voix, et leur signalement se prépare (voir le SKILL.md).",
+      "taches": [
+        {
+          "slug": "plans-animes",
+          "titre": "Générer des plans animés",
+          "competences": [
+            {
+              "nom": "hyperframes:hyperframes",
+              "pourquoi": "Des plans animés écrits en HTML, rendus en vidéo."
+            }
+          ],
+          "reserve": [
+            "hyperframes:hyperframes-core",
+            "hyperframes:hyperframes-cli",
+            "hyperframes:hyperframes-studio",
+            "hyperframes:hyperframes-animation",
+            "hyperframes:hyperframes-keyframes",
+            "hyperframes:hyperframes-creative",
+            "hyperframes:hyperframes-audio",
+            "hyperframes:hyperframes-registry",
+            "hyperframes:media-use",
+            "hyperframes:figma",
+            "hyperframes:general-video",
+            "hyperframes:faceless-explainer",
+            "hyperframes:music-to-video",
+            "hyperframes:pr-to-video",
+            "hyperframes:remotion-to-hyperframes",
+            "hyperframes:slideshow",
+            "hyperframes:motion-graphics"
+          ]
+        },
+        {
+          "slug": "video-de-lancement",
+          "titre": "Faire la vidéo de lancement d'un site",
+          "competences": [
+            {
+              "nom": "hyperframes:product-launch-video",
+              "pourquoi": "Un film de lancement plus long, à partir de l'adresse du site du produit ou d'un script collé, avec une voix off et une musique générées, ou sans voix si on le demande."
+            }
+          ]
+        }
+      ],
+      "manque": "aucune compétence ne guide le tournage lui-même (son, lumière, cadrage) : la liste de contrôle du SKILL.md tient lieu de méthode."
+    },
+    {
+      "n": 4,
+      "slug": "monter",
+      "titre": "Monter la vidéo",
+      "rend": "La vidéo montée et sous-titrée.",
+      "fichier": "04-monter.md",
+      "regle": "Le montage suit le choix de l'étape 1 : logiciel de montage, ou montage par code avec les compétences Hyperframes (sans logiciel à piloter). Les droits de la musique et des images se vérifient à la main.",
+      "taches": [
+        {
+          "slug": "monter",
+          "titre": "Monter la vidéo",
+          "competences": [
+            {
+              "nom": "hyperframes:talking-head-recut",
+              "pourquoi": "Recouper une vidéo face caméra."
+            }
+          ]
+        },
+        {
+          "slug": "sous-titrer",
+          "titre": "Sous-titrer",
+          "competences": [
+            {
+              "nom": "hyperframes:embedded-captions",
+              "pourquoi": "Les sous-titres incrustés dans une prise face caméra, simples ou animés, sans toucher à l'image."
+            }
+          ]
+        },
+        {
+          "slug": "tester-trois-ouvertures",
+          "titre": "Tester trois ouvertures",
+          "competences": [
+            {
+              "nom": "faire-une-video:video-tester-trois-ouvertures",
+              "pourquoi": "Choisit l'entrée d'un short sur trois cartes comparables avant de tout monter, puis relit le short sur une liste de défauts connus."
+            }
+          ]
+        }
+      ],
+      "manque": "aucune compétence ne coupe les silences et les ratés d'une prise : hyperframes:talking-head-recut ajoute des habillages graphiques mais laisse la prise intacte, donc la découpe se fait dans un logiciel de montage ou à la main."
+    },
+    {
+      "n": 5,
+      "slug": "publier",
+      "titre": "Publier la vidéo",
+      "rend": "La vidéo en ligne avec son titre, sa description et ses réglages, sur chaque plateforme voulue.",
+      "fichier": "05-publier.md",
+      "regle": "Rien ne part sans le dernier clic. On prépare ce que chaque plateforme demande (voir le tableau du SKILL.md), on vérifie les droits de la musique et des images, puis la personne fait le dernier clic. Rien ne part sans lui.",
+      "taches": [
+        {
+          "slug": "titre-et-miniature",
+          "titre": "Faire le titre et la miniature",
+          "competences": [
+            {
+              "nom": "faire-une-video:video-titre-et-miniature",
+              "pourquoi": "Le titre et la miniature promettent chacun autre chose (verdict, preuve, utilité) sans dépasser ce que la vidéo tient, avec des marges contrôlées par script et le choix laissé au créateur."
+            }
+          ]
+        },
+        {
+          "slug": "inventorier-les-moments",
+          "titre": "Inventorier les moments",
+          "competences": [
+            {
+              "nom": "faire-une-video:video-declinaison-des-moments",
+              "pourquoi": "Une fois la vidéo sortie : tire d'une vidéo tournée les contenus qui se justifient, sans quota, et vérifie qu'aucune coupe ne tombe au milieu d'une idée."
+            }
+          ]
+        },
+        {
+          "slug": "publier-en-format-court",
+          "titre": "Publier en format court (LinkedIn, Instagram, TikTok, Shorts)",
+          "competences": [
+            {
+              "nom": "marketing-skills:social",
+              "pourquoi": "Les formats, les durées et les accroches de la vidéo courte par plateforme, les sous-titres, et une légende qui tient seule."
+            }
+          ]
+        }
+      ],
+      "manque": "aucune compétence ne guide la publication sur YouTube : la méthode du SKILL.md tient lieu de guide ; pour un post LinkedIn qui présente la vidéo, voir /publier-sur-linkedin:publier-sur-linkedin."
+    }
+  ]
+}

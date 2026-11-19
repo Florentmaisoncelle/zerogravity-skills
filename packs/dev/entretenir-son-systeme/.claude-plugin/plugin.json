@@ -1,0 +1,16 @@
+{
+  "name": "entretenir-son-systeme",
+  "description": "Cinq compétences propriétaires avec router-entretenir-son-systeme en porte d'entrée : capitaliser les leçons, mesurer avant d'optimiser, nettoyer les règles, auditer la qualité des compétences et propager les décisions dans les surfaces réellement lues. Le routeur choisit l'ordre sans fusionner leurs méthodes.",
+  "version": "0.4.0",
+  "author": {
+    "name": "Zero Gravity AI"
+  },
+  "homepage": "https://zerogravity.builders",
+  "repository": "",
+  "license": "MIT",
+  "keywords": [
+    "development",
+    "workflow",
+    "claude-code"
+  ]
+}

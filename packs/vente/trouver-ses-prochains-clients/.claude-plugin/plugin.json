@@ -1,0 +1,16 @@
+{
+  "name": "trouver-ses-prochains-clients",
+  "description": "La prospection B2B en sept étapes : la cible, les signaux, les comptes de la semaine, le bon contact, le message, la séquence et les réponses, jusqu'au rendez-vous. Rien ne part sans validation.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Zero Gravity AI"
+  },
+  "homepage": "https://zerogravity.builders",
+  "repository": "",
+  "license": "MIT",
+  "keywords": [
+    "sales",
+    "workflow",
+    "claude-code"
+  ]
+}

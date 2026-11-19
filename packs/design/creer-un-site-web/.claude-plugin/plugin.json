@@ -1,0 +1,16 @@
+{
+  "name": "creer-un-site-web",
+  "description": "Neuf étapes dans l'ordre : la carte des pages, le texte, la direction artistique, les composants, le référencement, la vitesse, l'accessibilité, la mesure et la conversion. La vitesse et l'accessibilité se mesurent, elles ne se jugent pas à l'œil.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Zero Gravity AI"
+  },
+  "homepage": "https://zerogravity.builders",
+  "repository": "",
+  "license": "MIT",
+  "keywords": [
+    "design",
+    "workflow",
+    "claude-code"
+  ]
+}

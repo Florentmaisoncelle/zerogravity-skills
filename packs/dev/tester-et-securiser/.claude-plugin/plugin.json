@@ -1,0 +1,16 @@
+{
+  "name": "tester-et-securiser",
+  "description": "Le code relu, la sécurité vérifiée à chaque lot puis en profondeur avant la mise en ligne, l'app lancée et parcourue dans le navigateur jusqu'à un verdict : on met en ligne, ou pas.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Zero Gravity AI"
+  },
+  "homepage": "https://zerogravity.builders",
+  "repository": "",
+  "license": "MIT",
+  "keywords": [
+    "development",
+    "workflow",
+    "claude-code"
+  ]
+}

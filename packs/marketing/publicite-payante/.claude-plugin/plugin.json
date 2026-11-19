@@ -1,0 +1,16 @@
+{
+  "name": "publicite-payante",
+  "description": "La publicité de bout en bout : les visuels et les textes de la pub, la pub vidéo, puis les campagnes lancées et pilotées sur Meta et Google.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Zero Gravity AI"
+  },
+  "homepage": "https://zerogravity.builders",
+  "repository": "",
+  "license": "MIT",
+  "keywords": [
+    "marketing",
+    "workflow",
+    "claude-code"
+  ]
+}

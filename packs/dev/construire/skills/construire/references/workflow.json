@@ -1,0 +1,169 @@
+{
+  "format": "workflow-v1",
+  "slug": "construire",
+  "titre": "Construire, tâche par tâche, test d'abord",
+  "resume": "Le plan découpé en petites tâches vérifiables, chacune construite test d'abord par un sous-agent, relue avant la suivante, et prouvée avant d'être annoncée finie.",
+  "metiers": [
+    "dev"
+  ],
+  "commande": "/construire:construire",
+  "dossier_etat": "construction/",
+  "etapes": [
+    {
+      "n": 1,
+      "slug": "decouper",
+      "titre": "Découper en tâches",
+      "rend": "Le plan : des tâches de quelques minutes, chacune avec ses fichiers, le code attendu et la commande qui la vérifie.",
+      "fichier": "construction-plan.md",
+      "regle": "writing-plans sur la spécification et l'architecture déjà écrites. Le plan s'écrit dans le dossier du projet, dans `construction/construction-plan.md`, une case à cocher par tâche. Une tâche qui ne se vérifie pas seule se redécoupe.",
+      "competences": [
+        {
+          "nom": "superpowers:writing-plans",
+          "role": "par défaut",
+          "pourquoi": "Découpe la spécification en tâches de deux à cinq minutes, avec les chemins, le code attendu et la vérification de chacune : une tâche se prouve seule. Même auteur que la boucle d'exécution de l'étape 2 (obra/superpowers, listé au marketplace officiel d'Anthropic)."
+        }
+      ],
+      "taches": [
+        {
+          "slug": "planifier-un-sprint",
+          "titre": "Planifier un sprint",
+          "competences": [
+            {
+              "nom": "product-management:sprint-planning",
+              "pourquoi": "Choisir le travail d'un sprint selon la capacité de l'équipe."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "slug": "construire",
+      "titre": "Construire chaque tâche, test d'abord",
+      "rend": "Chaque tâche faite : un test qui échoue, le code qui le fait passer, la tâche cochée dans le plan.",
+      "fichier": "construction-taches.md",
+      "regle": "Une tâche à la fois, par un sous-agent, test d'abord ; elle n'est cochée que si son test passe. executing-plans seulement là où les sous-agents manquent. Jamais d'arbre de travail ni de branche nouvelle. Si une compétence propose de créer une branche ou une copie de travail du dépôt, on suit le choix posé à la personne au début.",
+      "competences": [
+        {
+          "nom": "superpowers:subagent-driven-development",
+          "role": "par défaut",
+          "pourquoi": "Un sous-agent neuf par tâche, puis deux relectures (conforme au plan, puis propre) avant la suivante : le fil principal garde un contexte léger et chaque tâche est jugée sur pièce."
+        },
+        {
+          "nom": "superpowers:test-driven-development",
+          "role": "dans chaque tâche",
+          "pourquoi": "Le test d'abord, le voir échouer, puis le code minimal qui le fait passer ; un code écrit avant son test est jeté. 330 lignes, avec les excuses habituelles pour sauter le test réfutées une par une."
+        },
+        {
+          "nom": "superpowers:executing-plans",
+          "role": "sans sous-agents",
+          "pourquoi": "La même boucle dans une seule session, par lots avec points de contrôle, quand l'hôte ne lance pas de sous-agents."
+        }
+      ],
+      "taches": [
+        {
+          "slug": "coder-une-tache",
+          "titre": "Coder une tâche",
+          "competences": [
+            {
+              "nom": "agent-skills:source-driven-development",
+              "pourquoi": "Quand chaque choix de code doit s'appuyer sur la documentation officielle."
+            }
+          ],
+          "reserve": [
+            "agent-skills:git-workflow-and-versioning"
+          ]
+        },
+        {
+          "slug": "construire-une-tache",
+          "titre": "Construire une tâche en restant dans le cadre",
+          "competences": [
+            {
+              "nom": "caveman:lean-build",
+              "pourquoi": "Construire une fonctionnalité sans en faire trop, avec un point d'arrêt."
+            }
+          ]
+        },
+        {
+          "slug": "travailler-en-parallele",
+          "titre": "Lancer plusieurs tâches en parallèle",
+          "competences": [
+            {
+              "nom": "superpowers:dispatching-parallel-agents",
+              "pourquoi": "Lancer plusieurs tâches indépendantes en même temps."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "slug": "relire",
+      "titre": "Relire entre deux tâches",
+      "rend": "Chaque lot relu contre le plan ; chaque retour vérifié, puis corrigé ou refusé avec sa raison.",
+      "fichier": "construction-relectures.md",
+      "regle": "Une relecture par lot, pendant la construction, avant la tâche suivante. La relecture du diff entier se fait ensuite, dans la brique Tester et sécuriser.",
+      "competences": [
+        {
+          "nom": "superpowers:requesting-code-review",
+          "role": "demander",
+          "pourquoi": "Envoie le lot à un relecteur avec le plan et le diff exacts, avant qu'une erreur ne se propage aux tâches suivantes."
+        },
+        {
+          "nom": "superpowers:receiving-code-review",
+          "role": "recevoir",
+          "pourquoi": "Vérifie chaque retour avant de l'appliquer : ni acquiescement automatique, ni correction qui casse autre chose."
+        }
+      ],
+      "taches": [
+        {
+          "slug": "simplifier-le-code",
+          "titre": "Simplifier le code sans changer son comportement",
+          "competences": [
+            {
+              "nom": "agent-skills:code-simplification",
+              "pourquoi": "Quand du code doit devenir plus clair sans changer ce qu'il fait."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "slug": "verifier",
+      "titre": "Prouver avant de dire fini",
+      "rend": "La preuve : la commande de vérification lancée et sa sortie lue, avant toute annonce.",
+      "fichier": "construction-verification.md",
+      "regle": "Rien n'est annoncé fait sans la sortie de sa vérification ; un échec s'écrit tel quel, avec la sortie.",
+      "competences": [
+        {
+          "nom": "superpowers:verification-before-completion",
+          "role": "par défaut",
+          "pourquoi": "Interdit d'annoncer « fini » ou « ça marche » sans avoir lancé la vérification et lu sa sortie : la règle « prouver avant de conclure », outillée."
+        }
+      ],
+      "taches": [
+        {
+          "slug": "verifier-avant-de-dire-fini",
+          "titre": "Vérifier avant de dire fini",
+          "competences": [
+            {
+              "nom": "agent-skills:constraint-driven-development",
+              "pourquoi": "Quand le niveau de qualité doit être écrit et jamais abaissé en douce."
+            }
+          ]
+        },
+        {
+          "slug": "prouver-que-c-est-fini",
+          "titre": "Prouver que c'est fini",
+          "competences": [
+            {
+              "nom": "caveman:verify-and-stop",
+              "pourquoi": "Vérifier qu'un travail respecte les critères, sans rien ajouter."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

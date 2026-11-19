@@ -1,0 +1,23 @@
+{
+  "name": "leadlint",
+  "description": "Un contrôleur de listes de prospects B2B pensé pour les agents IA : range les intitulés de poste par persona (département, séniorité, rôle d'achat) et revalide un export de prospection selon les règles d'une mission (cible, poste, e-mail et mobile professionnels, liste d'exclusion, doublons), avec un contrôle préalable, un classeur de contrôle qualité et un bilan numéroté. Un script Python local : aucune donnée ne quitte la machine.",
+  "version": "1.6.0",
+  "author": {
+    "name": "Zero Gravity AI"
+  },
+  "homepage": "https://zerogravity.builders",
+  "repository": "",
+  "license": "MIT",
+  "keywords": [
+    "sales",
+    "prospecting",
+    "b2b",
+    "lead-qualification",
+    "data-cleaning",
+    "exclusion-list",
+    "deduplication",
+    "personas",
+    "outbound",
+    "ai-agents"
+  ]
+}

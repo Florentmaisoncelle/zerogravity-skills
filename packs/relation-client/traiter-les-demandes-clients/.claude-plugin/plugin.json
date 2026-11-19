@@ -1,0 +1,16 @@
+{
+  "name": "traiter-les-demandes-clients",
+  "description": "Six étapes dans l'ordre : trier et affecter chaque demande, répondre sur une commande, répondre sur une facture ou un abonnement, résoudre ou escalader une demande technique, écrire la réponse et la faire valider, puis transformer les questions qui reviennent en articles d'aide. La meilleure compétence à chaque étape ; quand une étape n'a pas encore la sienne, sa fiche le dit.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Zero Gravity AI"
+  },
+  "homepage": "https://zerogravity.builders",
+  "repository": "",
+  "license": "MIT",
+  "keywords": [
+    "customer-success",
+    "workflow",
+    "claude-code"
+  ]
+}

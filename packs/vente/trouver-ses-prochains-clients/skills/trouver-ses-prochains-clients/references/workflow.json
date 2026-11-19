@@ -1,0 +1,188 @@
+{
+  "format": "workflow-v1",
+  "slug": "trouver-ses-prochains-clients",
+  "titre": "Trouver ses prochains clients, du signal au rendez-vous",
+  "resume": "La prospection B2B en sept étapes : la cible, les signaux, les comptes de la semaine, le bon contact, le message, la séquence et les réponses, jusqu'au rendez-vous. Rien ne part sans validation.",
+  "metiers": [
+    "vente"
+  ],
+  "commande": "/trouver-ses-prochains-clients:trouver-ses-prochains-clients",
+  "dossier_etat": "prospection/<cible>/",
+  "etapes": [
+    {
+      "n": 1,
+      "slug": "cible",
+      "titre": "Définir la cible",
+      "rend": "La fiche de l'entreprise puis, pour chaque type de client visé, sa cible stricte, ses exclusions, ses signaux et ses angles. La fiche de la cible : une phrase qui dit qui on vise, ses critères d'inclusion, ses exclusions, un ou deux angles, l'offre, le problème qu'elle résout et les preuves réelles, et l'état de la liste de contacts déjà en main.",
+      "fichier": "01-cible.md",
+      "regle": "La préparation d'abord, une fois par installation ; elle appelle la cible stricte pour chaque type de client. Les réglages se montrent au dirigeant, qui les corrige : c'est la validation du cadrage. La cible avant la liste : un type de client à la fois, avec ses exclusions écrites. Une liste de contacts se nettoie avant d'être utilisée.",
+      "taches": [
+        {
+          "slug": "nettoyer-exclusions-et-doublons",
+          "titre": "Nettoyer exclusions et doublons",
+          "competences": [
+            {
+              "nom": "leadlint:leadlint",
+              "pourquoi": "Pour nettoyer et requalifier une liste de contacts avant de l'utiliser."
+            }
+          ],
+          "manque": "pas encore de compétence dédiée : les exclusions s'écrivent avec la cible, à la tâche « Définir la cible »."
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "slug": "signaux",
+      "titre": "Repérer les signaux et lister les entreprises",
+      "rend": "Les entreprises qui montrent un signal d'achat (recrutement, nouveau dirigeant, site à refaire, publication sur le sujet, réactions sur LinkedIn), chacune avec un code, sa preuve datée et la force du signal.",
+      "fichier": "02-signaux.md",
+      "regle": "Les capteurs publics du système d'abord, sans abonnement : registre des entreprises, annonces légales, marchés publics, offres d'emploi, actualités, site et pages LinkedIn publiques. GojiBerry seulement pour ce que seul un compte connecté voit. Un signal sans preuve datée ne compte pas. Deux signaux concordants valent mieux qu'un seul fort.",
+      "taches": [
+        {
+          "slug": "croiser-les-signaux",
+          "titre": "Croiser les signaux",
+          "competences": [
+            {
+              "nom": "sales:account-tiering",
+              "pourquoi": "noter séparément l'ajustement à la cible et l'engagement pour prioriser"
+            }
+          ]
+        },
+        {
+          "slug": "lister-les-entreprises",
+          "titre": "Lister les entreprises",
+          "competences": [
+            {
+              "nom": "marketing-skills:prospecting",
+              "pourquoi": "la découverte multi-source (SaaS, B2B, local) et la validation croisée"
+            }
+          ],
+          "reserve": [
+            "small-business:grow-pipeline",
+            "small-business:lead-finder"
+          ]
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "slug": "selection",
+      "titre": "Choisir les comptes de la semaine",
+      "rend": "La sélection de la semaine sur une page : les comptes retenus avec leur angle et leur signal daté, les comptes écartés avec leur raison, et les cas à juger par la personne.",
+      "fichier": "03-selection.md",
+      "regle": "La semaine de chaque cible par agent-icp ; avant tout premier envoi, vingt lignes contrôlées par ciblage-b2b-qa. Les cas douteux partent en « à juger », jamais dans la séquence. Peu de comptes, bien choisis : la sélection de la semaine tient sur une page, chaque exclu a sa raison.",
+      "taches": [
+        {
+          "slug": "preparer-la-fiche-d-un-compte",
+          "titre": "Préparer la fiche d'un compte",
+          "competences": [
+            {
+              "nom": "sales:account-research",
+              "pourquoi": "Recherche d'abord dans le CRM, actualité, priorités, ajustement et accroches sourcées."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "slug": "bon-contact",
+      "titre": "Trouver le bon contact",
+      "rend": "Dans chaque compte retenu, le décideur du bon rôle, son profil LinkedIn, son email et son téléphone, avec la source et la confiance. Pour chaque compte retenu, par code : le rôle du contact, la source, la date de vérification, la confiance et le canal. Le nom et les coordonnées restent dans l'outil de la personne.",
+      "fichier": "04-bon-contact.md",
+      "regle": "Le rôle du comité d'achat que la cible désigne : le rôle de la personne qui décide, pas le premier nom venu. L'enrichissement (e-mail, téléphone) ne se fait que pour la personne retenue.",
+      "manque": "aucune compétence publique pour ce geste : il se fait à la main, avec la règle de l'étape."
+    },
+    {
+      "n": 5,
+      "slug": "message",
+      "titre": "Écrire le message",
+      "rend": "Un message tiré du signal du compte, contrôlé (preuve, angle, ton, longueur) avant de partir. Un message par contact, tiré de son signal, puis la séquence (au plus deux relances) et la règle d'arrêt. La personne valide le lot : c'est son feu vert d'envoi.",
+      "fichier": "05-message.md",
+      "regle": "Un message par contact, tiré de son signal ; aucun texte libre ne part, seul le texte contrôlé et validé. Un message par contact, tiré de son signal. Aucun texte libre ne part : seul le texte relu et marqué « validé » par la personne qui vend. Tant que la personne n'a pas validé le lot, l'étape est en attente.",
+      "taches": [
+        {
+          "slug": "rediger-le-message",
+          "titre": "Écrire le message",
+          "competences": [
+            {
+              "nom": "sales:draft-outreach",
+              "pourquoi": "Un message ou une courte séquence de prospection personnalisés, créés en brouillon à relire."
+            },
+            {
+              "nom": "small-business:outreach-composer",
+              "pourquoi": "Messages de prospection et relances dans la voix de la personne, appuyés sur un fait précis du prospect."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "slug": "sequence",
+      "titre": "Envoyer la séquence",
+      "rend": "La liste du jour par compte LinkedIn : invitation, message et relances dans les limites du compte, les meilleurs prospects d'abord. La liste du jour par canal (relances échues d'abord), puis les envois que la personne confirme (code, canal, date, étape de la séquence, date de la prochaine relance), dans les limites du compte, les meilleurs comptes d'abord.",
+      "fichier": "06-sequence.md",
+      "regle": "L'envoi se fait depuis le compte du client, à la main avec la liste du jour, ou par son outil d'envoi sur un feu vert écrit. L'email et l'appel suivent les mêmes plafonds. Une réponse ou une opposition arrête la séquence du contact. Le workflow prépare la liste, la personne envoie : l'étape reste en attente tant que les envois ne sont pas confirmés, et une liste préparée n'est pas une liste envoyée. Seuls partent les messages validés à l'étape 5, depuis le compte de la personne qui vend. Les plafonds et les règles de chaque canal se respectent, et la liste d'exclusion du registre se consulte avant chaque envoi.",
+      "taches": [
+        {
+          "slug": "envoyer-par-email",
+          "titre": "Envoyer par email",
+          "competences": [],
+          "manque": "À créer : l'infrastructure d'envoi, la chauffe des boîtes et la délivrabilité, avant toute rédaction."
+        },
+        {
+          "slug": "appeler",
+          "titre": "Appeler",
+          "competences": [
+            {
+              "nom": "small-business:call-list",
+              "pourquoi": "Préparer la liste des 5 prospects à appeler aujourd'hui."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "slug": "reponses",
+      "titre": "Tenir la conversation jusqu'au rendez-vous",
+      "rend": "Chaque réponse classée dans une catégorie, un brouillon de réponse relu par la personne avant d'être envoyé, les objections traitées avec des preuves, et le rendez-vous posé dans l'agenda.",
+      "fichier": "07-reponses.md",
+      "regle": "Rien ne part sans le feu vert de la personne qui vend. Chaque semaine, la mesure par signal, angle et canal décide : continuer, corriger ou arrêter. Chaque réponse écrite à un prospect est relue par la personne qui vend avant d'être envoyée. Une réponse arrête la séquence de ce contact. Le workflow n'invente aucune réponse : sans réponse apportée par la personne, l'étape reste en attente.",
+      "taches": [
+        {
+          "slug": "tenir-la-bibliotheque-de-ressources",
+          "titre": "Tenir la bibliothèque de ressources",
+          "competences": [],
+          "manque": "À créer : la bibliothèque de ressources du client, comment les choisir et quand les rafraîchir."
+        }
+      ]
+    },
+    {
+      "n": 8,
+      "slug": "suivi",
+      "titre": "Tenir le fichier maître et le CRM",
+      "rend": "Une seule fiche par contact, à jour, et le CRM du client écrit sans doublon. Une note courte : l'outil de suivi utilisé et, pour la semaine, le nombre de fiches ajoutées, mises à jour et fusionnées.",
+      "fichier": "08-suivi.md",
+      "regle": "La compétence par défaut de chaque tâche d'abord ; les autres selon le cas qu'elles disent. Une seule fiche par contact. Le CRM s'écrit sans doublon et sans effacer ce qui y est déjà.",
+      "manque": "aucune compétence publique pour ce geste : il se fait à la main, avec la règle de l'étape."
+    },
+    {
+      "n": 9,
+      "slug": "mesure",
+      "titre": "Mesurer et ajuster",
+      "rend": "Les chiffres de la semaine par levier, la revue qui dit quoi remplacer, ralentir ou continuer, et ce qu'un client apprend au suivant. Les chiffres de la semaine par canal et par signal, une décision (continuer, corriger ou arrêter) pour chacun, et le changement choisi pour la semaine suivante.",
+      "fichier": "09-mesure.md",
+      "regle": "La compétence par défaut de chaque tâche d'abord ; les autres selon le cas qu'elles disent. Chaque semaine, les chiffres par canal et par signal décident : continuer, corriger ou arrêter.",
+      "taches": [
+        {
+          "slug": "memoire-d-un-client-a-l-autre",
+          "titre": "Mémoire d'un client à l'autre",
+          "competences": [],
+          "manque": "À créer après un deuxième client : ce qu'un client apprend au suivant, sans aucune donnée client."
+        }
+      ]
+    }
+  ]
+}

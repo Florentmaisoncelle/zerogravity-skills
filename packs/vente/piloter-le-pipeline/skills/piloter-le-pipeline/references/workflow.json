@@ -1,0 +1,217 @@
+{
+  "format": "workflow-v1",
+  "slug": "piloter-le-pipeline",
+  "titre": "Piloter son pipeline et développer ses clients",
+  "resume": "La revue commerciale de la semaine : un CRM propre, le pipeline revu, les affaires débloquées ou relancées, la prévision chiffrée, les leçons des affaires gagnées et perdues, et les extensions chez les clients en place.",
+  "metiers": [
+    "vente"
+  ],
+  "commande": "/piloter-le-pipeline:piloter-le-pipeline",
+  "dossier_etat": "pipeline/AAAA-Sww/",
+  "etapes": [
+    {
+      "n": 1,
+      "slug": "crm",
+      "titre": "Remettre le CRM au propre",
+      "rend": "Les doublons, les affaires sans prochaine étape et les champs manquants, corrigés avant/après côte à côte, élément par élément ; rien n'est supprimé.",
+      "fichier": "01-crm.md",
+      "regle": "crm-autopilot pour les doublons et les trous ; crm-hygiene-check pour les règles des affaires ; update-opportunity applique ce qui a été validé. Une fusion ou une suppression se soumet, jamais ne s'exécute seule.",
+      "competences": [
+        {
+          "nom": "small-business:crm-autopilot",
+          "role": "par défaut",
+          "pourquoi": "La seule qui traite aussi les doublons de contacts et d'entreprises, montre l'avant et l'après, fait valider chaque correction et refuse de supprimer : une fusion reste une décision."
+        },
+        {
+          "nom": "sales:crm-hygiene-check",
+          "role": "les règles de l'affaire",
+          "pourquoi": "Contrôle en lecture seule chaque affaire (montant, date, prochaine étape, rôles, preuve de l'étape) et rend la liste des corrections."
+        },
+        {
+          "nom": "sales:update-opportunity",
+          "role": "appliquer une correction",
+          "pourquoi": "Écrit seulement ce qui a été validé, montre l'avant et l'après, puis relit pour vérifier."
+        },
+        {
+          "nom": "consultant-ia:auditer-crm",
+          "role": "l'audit complet",
+          "pourquoi": "Audite le CRM en lecture seule sur quatre volets, de ses automatisations à ses tableaux de bord, quand le remettre au propre ne suffit plus ; elle vit à l'étape du diagnostic du workflow « Implémenter l'IA en entreprise »."
+        }
+      ],
+      "taches": [
+        {
+          "slug": "cloturer-sa-journee",
+          "titre": "Clôturer sa journée commerciale",
+          "competences": [
+            {
+              "nom": "sales:end-of-day",
+              "pourquoi": "Finir la journée : appels traités et CRM à jour."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "slug": "revue",
+      "titre": "Revoir le pipeline",
+      "rend": "La santé du pipeline étape par étape : volume, ancienneté, affaires à risque, couverture de l'objectif et conversions réelles.",
+      "fichier": "02-revue.md",
+      "regle": "La revue une fois par semaine ; la veille de deal-signals entre deux revues, avec des seuils réglés sur la durée du cycle de vente.",
+      "competences": [
+        {
+          "nom": "sales:pipeline-review",
+          "role": "par défaut",
+          "pourquoi": "Montre ses calculs (couverture, ancienneté, conversions sur deux trimestres) et ne marche que sur les données du CRM, sans rien inventer."
+        },
+        {
+          "nom": "sales:deal-signals",
+          "role": "la veille entre deux revues",
+          "pourquoi": "Une alerte courte : affaires silencieuses, dates qui glissent, interlocuteur parti, concurrent cité."
+        }
+      ],
+      "taches": [
+        {
+          "slug": "point-du-jour-et-de-la-semaine",
+          "titre": "Faire le point du jour et de la semaine",
+          "competences": [
+            {
+              "nom": "sales:daily-briefing",
+              "pourquoi": "Ouvrir la journée avec rendez-vous, affaires à relancer et priorités."
+            },
+            {
+              "nom": "sales:weekly-wrap",
+              "pourquoi": "Résumer la semaine : gagné, avancé, glissé, à faire."
+            }
+          ]
+        },
+        {
+          "slug": "pipeline-d-equipe",
+          "titre": "Voir le pipeline de l'équipe",
+          "competences": [
+            {
+              "nom": "sales:team-pipeline",
+              "pourquoi": "Voir le pipeline de toute l'équipe par commercial et par étape."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "slug": "debloquer",
+      "titre": "Débloquer les affaires qui stagnent",
+      "rend": "Pour chaque affaire bloquée : ce qui manque pour passer l'étape et signer, qui fait quoi et quand, et la date de signature crédible.",
+      "fichier": "03-blocages.md",
+      "regle": "deal-advance-gap sur chaque affaire signalée par la revue ; stakeholder-map quand le blocage est un décideur absent. Les actions et les engagements se font valider par le responsable commercial.",
+      "competences": [
+        {
+          "nom": "sales:deal-advance-gap",
+          "role": "par défaut",
+          "pourquoi": "La seule tournée vers l'avant : les critères de sortie de l'étape, les manques avec leur responsable et le chemin le plus court jusqu'à la signature."
+        },
+        {
+          "nom": "sales:stakeholder-map",
+          "role": "un décideur manque",
+          "pourquoi": "La carte des personnes de l'affaire : rôle, influence, position, rôles absents et chemin pour les atteindre."
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "slug": "relancer",
+      "titre": "Relancer les affaires endormies",
+      "rend": "Pour chaque affaire sans activité : un nouvel angle, un prochain contact rédigé, un propriétaire et une date ; chaque envoi validé et journalisé.",
+      "fichier": "04-relances.md",
+      "regle": "La partie relance de l'étape 1 : les affaires sans activité depuis quatorze jours ou à échéance dépassée, un message dans la voix du vendeur. Les oppositions, la fréquence et le consentement se vérifient avant chaque envoi.",
+      "manque": "pas de compétence propre à cette étape : la partie relance de small-business:crm-autopilot (étape 1) peut la porter, et le contrôle des oppositions et de la fréquence se fait à la main avant chaque envoi."
+    },
+    {
+      "n": 5,
+      "slug": "prevision",
+      "titre": "Prévoir le chiffre",
+      "rend": "La prévision par affaire : la probabilité corrigée par les signaux, l'effet d'une affaire qui glisse, et le récit engagé, meilleur cas et pipeline, à faire valider.",
+      "fichier": "05-prevision.md",
+      "regle": "Dans l'ordre : deal-review qualifie les hypothèses, deal-slip-scenario chiffre les scénarios, forecast écrit le récit. L'arbitrage reste au responsable commercial.",
+      "competences": [
+        {
+          "nom": "sales:deal-review",
+          "role": "les hypothèses",
+          "pourquoi": "Corrige la probabilité de chaque affaire par ses signaux, calcul montré, et dit l'écart entre l'étape du CRM et la réalité."
+        },
+        {
+          "nom": "sales:deal-slip-scenario",
+          "role": "les scénarios",
+          "pourquoi": "L'effet sur l'objectif si une affaire glisse, diminue ou meurt, et le pipeline de remplacement nécessaire."
+        },
+        {
+          "nom": "sales:forecast",
+          "role": "par défaut",
+          "pourquoi": "Le récit de la prévision : ce qui se signe, ce qui est à risque, ce qui a changé depuis la dernière fois."
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "slug": "gains-pertes",
+      "titre": "Comprendre pourquoi on gagne et on perd",
+      "rend": "Les motifs réels de gain et de perte, chacun avec sa source, ce qui est déclaré séparé de ce qui est déduit, et les actions qui en découlent.",
+      "fichier": "06-gains-pertes.md",
+      "regle": "win-loss-review pour les chiffres ; les entretiens par customer-research ; l'analyse des motifs par la partie gains et pertes de sales-enablement. Les conclusions se soumettent à la direction commerciale.",
+      "competences": [
+        {
+          "nom": "sales:win-loss-review",
+          "role": "par défaut",
+          "pourquoi": "La passe chiffrée sur les affaires closes : taux, étape de la perte, et les plus gros dossiers relus en détail."
+        },
+        {
+          "nom": "marketing-skills:sales-enablement",
+          "role": "l'analyse des motifs",
+          "pourquoi": "Sa partie gains et pertes : un motif principal par affaire avec sa source, des comptes plutôt que des pourcentages, les biais de chaque source."
+        },
+        {
+          "nom": "marketing-skills:customer-research",
+          "role": "les entretiens",
+          "pourquoi": "Des questions d'entretien qui n'orientent pas la réponse, et une garde contre le biais de confirmation."
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "slug": "extension",
+      "titre": "Développer les clients en place",
+      "rend": "Pour chaque client : ce qu'il a et ce qu'il pourrait avoir, une preuve par piste, les renouvellements à venir, et les opportunités à ouvrir après accord.",
+      "fichier": "07-extension.md",
+      "regle": "sales:customer-health et sales:renewal-radar disent quand ; sales:expansion-whitespace dit quoi. Seules les offres déjà approuvées se proposent ; le responsable du compte confirme, le client décide.",
+      "competences": [
+        {
+          "nom": "sales:expansion-whitespace",
+          "role": "par défaut",
+          "pourquoi": "Une piste d'extension exige au moins une preuve ; elle ne chiffre qu'avec les tailles de contrat habituelles de l'entreprise et range les pistes sans preuve à part."
+        },
+        {
+          "nom": "sales:customer-health",
+          "role": "le signal",
+          "pourquoi": "La santé du compte : usage, échanges, risques, avant de proposer quoi que ce soit."
+        },
+        {
+          "nom": "sales:renewal-radar",
+          "role": "les renouvellements",
+          "pourquoi": "Les renouvellements à venir, leur risque et leur marge de hausse."
+        }
+      ],
+      "taches": [
+        {
+          "slug": "plan-de-compte",
+          "titre": "Écrire le plan d'un compte stratégique",
+          "competences": [
+            {
+              "nom": "sales:account-plan",
+              "pourquoi": "Faire le plan d'un compte stratégique : objectifs, contacts, opportunités."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

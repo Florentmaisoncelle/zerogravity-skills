@@ -1,0 +1,87 @@
+{
+  "format": "workflow-v1",
+  "slug": "publicite-payante",
+  "titre": "Faire de la publicité payante : la créa, la pub vidéo, les campagnes",
+  "resume": "La publicité de bout en bout : les visuels et les textes de la pub, la pub vidéo, puis les campagnes lancées et pilotées sur Meta et Google.",
+  "metiers": [
+    "marketing"
+  ],
+  "commande": "/publicite-payante:publicite-payante",
+  "dossier_etat": "publicite/",
+  "etapes": [
+    {
+      "n": 1,
+      "slug": "crea",
+      "titre": "Faire la créa",
+      "rend": "Les visuels et les textes de la pub.",
+      "fichier": "01-crea.md",
+      "regle": "Les variantes se font avec ad-creative, par angle (une raison différente de cliquer) et dans les limites de caractères de la plateforme ; chaque visuel et chaque promesse se valident avant le lancement.",
+      "taches": [
+        {
+          "slug": "crea",
+          "titre": "Écrire et dessiner la pub",
+          "competences": [
+            {
+              "nom": "marketing-skills:ad-creative",
+              "pourquoi": "Titres, visuels et accroches par plateforme, et une page de revue pour les faire valider."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "slug": "pub-video",
+      "titre": "Faire une pub vidéo",
+      "rend": "La pub vidéo prête à diffuser. Le script validé de la pub vidéo, puis la vidéo prête à diffuser.",
+      "fichier": "02-pub-video.md",
+      "regle": "La pub vidéo part d'un script validé ; chaque dépense et chaque paramètre se valident avant le lancement. marketing-skills:ad-creative choisit le format et écrit le script et l'accroche ; marketing-skills:video choisit comment la fabriquer (code, génération, avatar, montage) ; le tournage, le montage et la publication se déroulent dans /faire-une-video:faire-une-video.",
+      "taches": [
+        {
+          "slug": "fabriquer-la-video",
+          "titre": "Choisir comment fabriquer la vidéo",
+          "competences": [
+            {
+              "nom": "marketing-skills:video",
+              "pourquoi": "Compare les approches (vidéo programmée, génération par IA, avatar, montage de prises) et donne la marche à suivre pour une démonstration produit ou un explicatif."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "slug": "campagnes",
+      "titre": "Lancer et piloter les campagnes",
+      "rend": "Les campagnes en ligne et leurs réglages suivis.",
+      "fichier": "03-campagnes.md",
+      "regle": "ads pour piloter, ad-creative pour les variantes ; ad-manager quand le dirigeant demande « dois-je couper cette campagne ? ». Avant la première dépense, conversion-tracking vérifie qu'une conversion test arrive bien. Chaque dépense et chaque paramètre se valident avant le lancement : rien ne dépense avant ce oui.",
+      "taches": [
+        {
+          "slug": "suivi-des-conversions",
+          "titre": "Vérifier le suivi des conversions",
+          "competences": [
+            {
+              "nom": "marketing-skills:conversion-tracking",
+              "pourquoi": "Pose et vérifie le suivi d'une conversion (formulaire, rendez-vous, achat) jusqu'à Google Ads, Meta ou LinkedIn. Le travail n'est fini qu'à l'arrivée d'une conversion test, sinon ce qui reste à vérifier est dit."
+            }
+          ]
+        },
+        {
+          "slug": "piloter",
+          "titre": "Lancer et piloter les campagnes",
+          "competences": [
+            {
+              "nom": "marketing-skills:ads",
+              "pourquoi": "Stratégie, structure, ciblage et enchères sur LinkedIn, Google et Meta, un cadre pour la vente entre entreprises (cycles longs, règles d'arrêt, qualité des leads) et un contrôle hebdomadaire qui finit sur un seul verdict."
+            },
+            {
+              "nom": "small-business:ad-manager",
+              "pourquoi": "Lit les résultats, chiffre chaque recommandation en euros et n'applique un changement qu'après un oui."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

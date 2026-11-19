@@ -1,0 +1,16 @@
+{
+  "name": "poser-sa-strategie-marketing",
+  "description": "Avant de produire quoi que ce soit : le marché et les publics étudiés, les concurrents surveillés, le positionnement et les messages écrits, l'offre et le prix, le parcours client, puis le plan marketing présenté pour décision.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Zero Gravity AI"
+  },
+  "homepage": "https://zerogravity.builders",
+  "repository": "",
+  "license": "MIT",
+  "keywords": [
+    "marketing",
+    "workflow",
+    "claude-code"
+  ]
+}

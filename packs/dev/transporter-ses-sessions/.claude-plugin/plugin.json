@@ -1,0 +1,16 @@
+{
+  "name": "transporter-ses-sessions",
+  "description": "Retrouve et relance une session Claude Code perdue (autre compte, sidebar vide, session morte) sans jamais devoir ré-exporter au préalable, transporte des sessions entre deux PC via un bundle exportable (un zip par session, avec son prompt de reprise), ou par git pour un petit dépôt. Un seul skill, trois gestes. Zéro compte actif requis, zéro token consommé : tout est déjà en local sur le disque, ce plugin sait juste où chercher.",
+  "version": "0.2.0",
+  "author": {
+    "name": "Zero Gravity AI"
+  },
+  "homepage": "https://zerogravity.builders",
+  "repository": "",
+  "license": "MIT",
+  "keywords": [
+    "development",
+    "workflow",
+    "claude-code"
+  ]
+}

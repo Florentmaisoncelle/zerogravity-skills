@@ -1,0 +1,16 @@
+{
+  "name": "superviser-ses-sessions",
+  "description": "Deux skills pour travailler à plusieurs sessions et en autonomie. (1) Supervise un parc de sessions Claude Code au lieu de les suivre une par une : lit leurs transcripts pour savoir où elles en sont sans les déranger, relance celles qui sont à l'arrêt avec du travail restant, et rend un seul compte-rendu. Pensé pour le moment où le goulot d'étranglement n'est plus la machine mais ton attention — une session qui attend ta réponse ne redémarre jamais toute seule. (2) Conçoit, lance et relance des boucles `/loop` qui avancent jusqu'à un objectif mesurable, s'arrêtent au bon moment et ne tournent jamais dans le vide.",
+  "version": "0.2.0",
+  "author": {
+    "name": "Zero Gravity AI"
+  },
+  "homepage": "https://zerogravity.builders",
+  "repository": "",
+  "license": "MIT",
+  "keywords": [
+    "development",
+    "workflow",
+    "claude-code"
+  ]
+}

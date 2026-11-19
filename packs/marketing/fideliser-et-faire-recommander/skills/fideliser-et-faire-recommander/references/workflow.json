@@ -1,0 +1,93 @@
+{
+  "format": "workflow-v1",
+  "slug": "fideliser-et-faire-recommander",
+  "titre": "Fidéliser et faire recommander : parrainage, témoignages, rétention",
+  "resume": "Faire travailler les clients satisfaits : un programme de recommandation avec ses règles et sa mesure, des témoignages autorisés, les clients qui partent retenus, et un programme de fidélité quand il se justifie.",
+  "metiers": [
+    "marketing"
+  ],
+  "commande": "/fideliser-et-faire-recommander:fideliser-et-faire-recommander",
+  "dossier_etat": "fidelisation/AAAA-MM/",
+  "etapes": [
+    {
+      "n": 1,
+      "slug": "recommandations",
+      "titre": "Lancer un programme de recommandation",
+      "rend": "Le programme : qui recommande, la récompense et son plafond, les règles d'attribution, la prévention de la fraude, les invitations et la mesure.",
+      "fichier": "01-recommandations.md",
+      "regle": "Les règles d'attribution et la récompense s'écrivent avant la première invitation ; la récompense ne dépasse pas ce que coûte un client acquis autrement. Le droit à la récompense et le consentement se valident par une personne. Décision à trois mois : on garde le programme s'il a amené des clients à un coût inférieur à celui des autres canaux.",
+      "taches": [
+        {
+          "slug": "recommandations",
+          "titre": "Lancer le programme de recommandation",
+          "competences": [
+            {
+              "nom": "marketing-skills:referrals",
+              "role": "par défaut",
+              "pourquoi": "Parrainage ou affiliation, conception, fraude, mesure et plan de lancement ; la récompense est plafonnée par ce que coûte un client acquis."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "slug": "temoignages",
+      "titre": "Recueillir des témoignages autorisés",
+      "rend": "La demande de témoignage ou d'avis validée, le retour du client et sa source, les affirmations contrôlées, l'autorisation pour chaque usage, la preuve du consentement conservée, puis les réponses aux avis reçus.",
+      "fichier": "02-temoignages.md",
+      "regle": "La citation exacte et sa source gardées, la permission obtenue, jamais deux personnes fusionnées en une phrase, les coupures marquées. marketing-skills:referrals pour demander des avis et des témoignages et les réutiliser avec permission ; small-business:review-reputation pour répondre aux avis publics. Une demande d'avis est la même pour tous les clients concernés, satisfaits ou non, et ne promet rien en échange.",
+      "taches": [
+        {
+          "slug": "temoignages",
+          "titre": "Recueillir les témoignages",
+          "competences": [
+            {
+              "nom": "small-business:review-reputation",
+              "role": "répondre aux avis",
+              "pourquoi": "Lit les avis publics et privés et prépare les réponses ; elle ne traite pas le droit de réutiliser un avis."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "slug": "retention",
+      "titre": "Retenir les clients qui partent",
+      "rend": "Pour une activité à abonnement : le parcours de départ, les offres de rétention, la relance des paiements échoués. Pour les autres : la liste des clients devenus silencieux et un message de reprise de contact. Dans les deux cas, ce qui se mesure.",
+      "fichier": "03-retention.md",
+      "regle": "Une offre de rétention reste honnête : partir doit rester simple. marketing-skills:churn-prevention vise surtout les abonnements (parcours d'annulation, paiements échoués) ; pour une activité sans abonnement, small-business:review-reputation repère les clients dont le rythme d'achat s'est arrêté. Un message de reprise de contact s'appuie sur quelque chose de réel dans l'histoire du client.",
+      "taches": [
+        {
+          "slug": "retention",
+          "titre": "Retenir les clients qui partent",
+          "competences": [
+            {
+              "nom": "marketing-skills:churn-prevention",
+              "role": "par défaut",
+              "pourquoi": "Le parcours d'annulation, les offres de rétention et la relance des paiements échoués, avec leur mesure."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "slug": "fidelite",
+      "titre": "Opérer un programme de fidélité",
+      "optionnelle": "quand un programme de fidélité se justifie",
+      "rend": "Les droits et leurs limites, le catalogue des récompenses, l'émission et l'échange documentés, les contrôles de fraude et de taxes, puis le suivi des coûts.",
+      "fichier": "04-fidelite.md",
+      "regle": "Avant de lancer, vérifier que le programme rapporte plus qu'il ne coûte : il n'a de sens que si les clients achètent plusieurs fois. Les règles se valident avant la première émission, avec le comptable pour les effets de TVA et de comptabilité (à vérifier selon le pays). Décision à trois mois : on arrête si les clients inscrits ne rachètent pas plus que les autres.",
+      "taches": [
+        {
+          "slug": "fidelite",
+          "titre": "Opérer le programme de fidélité",
+          "competences": [],
+          "manque": "aucune compétence publique n'opère un programme de fidélité : la récompense et la fraude se reprennent de l'étape 1, le reste se construit à la main."
+        }
+      ]
+    }
+  ]
+}

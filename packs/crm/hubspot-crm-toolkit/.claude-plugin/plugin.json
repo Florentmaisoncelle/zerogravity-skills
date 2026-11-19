@@ -1,0 +1,16 @@
+{
+  "name": "hubspot-crm-toolkit",
+  "description": "Boîte à outils HubSpot CRM : auditer, diagnostiquer et piloter un portail HubSpot au moindre coût de jetons, en déléguant d'abord au cerveau le moins cher (Breeze, l'IA native de HubSpot) avant de tout faire soi-même.",
+  "version": "0.4.0",
+  "author": {
+    "name": "Zero Gravity AI"
+  },
+  "homepage": "https://zerogravity.builders",
+  "repository": "",
+  "license": "MIT",
+  "keywords": [
+    "sales",
+    "workflow",
+    "claude-code"
+  ]
+}

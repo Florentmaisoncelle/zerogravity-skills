@@ -1,0 +1,16 @@
+{
+  "name": "piloter-le-pipeline",
+  "description": "La revue commerciale de la semaine : un CRM propre, le pipeline revu, les affaires débloquées ou relancées, la prévision chiffrée, les leçons des affaires gagnées et perdues, et les extensions chez les clients en place.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Zero Gravity AI"
+  },
+  "homepage": "https://zerogravity.builders",
+  "repository": "",
+  "license": "MIT",
+  "keywords": [
+    "sales",
+    "workflow",
+    "claude-code"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "accueillir-un-nouveau-client",
+  "description": "Quatre étapes dans l'ordre : définir la première réussite du client et la checklist d'accueil, ouvrir le parcours et préparer les accès, écrire le message de bienvenue, contrôler l'activation à une semaine et à un mois. La meilleure compétence à chaque étape ; les accès et la mise en service se font à la main.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Zero Gravity AI"
+  },
+  "homepage": "https://zerogravity.builders",
+  "repository": "",
+  "license": "MIT",
+  "keywords": [
+    "customer-success",
+    "workflow",
+    "claude-code"
+  ]
+}

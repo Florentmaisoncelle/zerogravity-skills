@@ -1,0 +1,68 @@
+{
+  "format": "workflow-v1",
+  "slug": "accueillir-un-nouveau-client",
+  "titre": "Accueillir un nouveau client, de la signature à sa première réussite",
+  "resume": "Quatre étapes dans l'ordre : définir la première réussite du client et la checklist d'accueil, ouvrir le parcours et préparer les accès, écrire le message de bienvenue, contrôler l'activation à une semaine et à un mois. La meilleure compétence à chaque étape ; les accès et la mise en service se font à la main.",
+  "metiers": [
+    "relation-client"
+  ],
+  "commande": "/accueillir-un-nouveau-client:accueillir-un-nouveau-client",
+  "dossier_etat": "accueil/",
+  "etapes": [
+    {
+      "n": 1,
+      "slug": "reussite",
+      "titre": "Définir la première réussite et la checklist d'accueil",
+      "rend": "La première réussite du client en une phrase (ce qui prouve qu'il a obtenu de la valeur), le chemin le plus court pour l'atteindre, la checklist d'accueil (accès, ressources, tâches, un responsable par ligne) et les dates de contrôle à sept et à trente jours.",
+      "fichier": "01-reussite.md",
+      "regle": "Définir la première réussite avant d'ouvrir quoi que ce soit : tout ce qui n'y mène pas attend. Une réussite à la fois, pas dix. Si le parcours du client manipule des données sensibles (santé, données personnelles à protéger), cartographier d'abord ses données et ses consentements par /ameliorer-le-parcours-client:ameliorer-le-parcours-client (étape 5). C'est ici que tombe l'unique validation du workflow : la personne valide la première réussite et la checklist avant l'étape 2. On écrit en tête du fichier le code du client, sa date de signature, la première réussite en une phrase et les dates de contrôle à sept et à trente jours.",
+      "competences": [
+        {
+          "nom": "marketing-skills:onboarding",
+          "role": "par défaut",
+          "pourquoi": "La seule qui part de la première réussite et non de la liste des tâches : elle fait définir le moment où le client « comprend », le chemin minimal pour y arriver, la checklist d'accueil, les mesures d'activation et la détection de ceux qui calent. Trois références (chemin minimal vers la valeur, modèles d'activation, expériences). Écrite pour l'accueil d'un utilisateur de logiciel : pour un service rendu à un client, la « valeur » est le premier livrable ou le premier résultat constaté. Du dépôt marketingskills de Corey Haines, reconnu."
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "slug": "ouvrir",
+      "titre": "Ouvrir le parcours et préparer les accès",
+      "rend": "Le parcours ouvert dans l'outil du dirigeant : accès créés avec les bons droits, ressources prêtes, tâches affectées à une personne chacune, responsable de l'accueil nommé.",
+      "fichier": "02-ouvrir.md",
+      "regle": "La checklist de l'étape 1 devient une procédure avec un responsable par ligne. Les accès se créent au plus juste et se vérifient la veille du premier contact. Les exceptions d'accès et la mise en service restent à une personne.",
+      "manque": "créer les comptes, les droits et les espaces partagés dans les outils du dirigeant : aucune compétence publique ne le fait à sa place, et c'est préférable pour des accès. Le fichier de l'étape dit ce qui est prêt et ce qui attend la personne.",
+      "competences": [
+        {
+          "nom": "operations:process-doc",
+          "role": "la procédure et le tableau des responsabilités",
+          "pourquoi": "Écrit la procédure d'accueil pas à pas et le tableau « qui fait quoi » de chaque ligne de la checklist, pour qu'un autre que le dirigeant puisse la rejouer. Courte (2 Ko) : elle documente, elle ne crée aucun accès."
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "slug": "bienvenue",
+      "titre": "Écrire le message de bienvenue",
+      "rend": "Le message de bienvenue (ce qui se passe cette semaine, qui contacter, les ressources utiles), prêt à envoyer après validation et, si l'accueil dure, la courte séquence de messages des premières semaines.",
+      "fichier": "03-bienvenue.md",
+      "regle": "Un seul message à la fois au début ; la séquence seulement si le client en a besoin sur plusieurs semaines. Le message est relu et validé avant l'envoi. Le consentement du client à recevoir des messages se vérifie avant toute séquence automatique. Un message qui sert l'exécution du contrat (accès, premier rendez-vous) n'est pas de la prospection ; une séquence de messages commerciaux suit les règles de l'e-mail de prospection (dans l'UE : consentement préalable d'un particulier, intérêt légitime pour un professionnel si le message touche à sa fonction, identité de l'expéditeur et moyen simple de refuser les envois suivants ; hors UE, à vérifier).",
+      "competences": [
+        {
+          "nom": "marketing-skills:emails",
+          "role": "le message et la séquence",
+          "pourquoi": "Couvre expressément les messages d'accueil et la séquence de bienvenue, avec leur rythme et leurs déclencheurs ; le message d'un seul client en est le premier courrier."
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "slug": "activation",
+      "titre": "Contrôler l'activation et passer la main",
+      "rend": "Le contrôle à sept et à trente jours : première réussite atteinte ou non, cause du blocage, relance décidée, puis passage du client au suivi régulier.",
+      "fichier": "04-activation.md",
+      "regle": "Les mesures d'activation et la détection de ceux qui calent sont celles de l'étape 1 ; à sept et à trente jours on lit si la première réussite est atteinte, sinon on cherche la cause avant de relancer. Un client qui n'a rien fait au bout d'une semaine se signale à son responsable : ce n'est pas un envoi automatique de plus. L'accueil terminé, le client entre dans le suivi régulier : /traiter-les-demandes-clients:traiter-les-demandes-clients pour ses demandes, /ameliorer-le-parcours-client:ameliorer-le-parcours-client pour sa satisfaction. Deux contrôles écrits dans le fichier de l'étape, à sept et à trente jours : la première réussite de l'étape 1 est-elle atteinte (oui, non, en partie), sur quelle mesure, et sinon quelle est la cause et quelle action est confiée à qui avant toute relance. La ligne « fait » du journal n'est écrite qu'après le contrôle à trente jours.",
+      "manque": "aucune compétence publique pour ce geste : il se fait à la main, avec la règle de l'étape."
+    }
+  ]
+}

@@ -1,0 +1,290 @@
+{
+  "format": "workflow-v1",
+  "slug": "poser-sa-strategie-marketing",
+  "titre": "Poser sa stratégie marketing : marché, concurrents, positionnement, plan",
+  "resume": "Avant de produire quoi que ce soit : le marché et les publics étudiés, les concurrents surveillés, le positionnement et les messages écrits, l'offre et le prix, le parcours client, puis le plan marketing présenté pour décision.",
+  "metiers": [
+    "marketing"
+  ],
+  "commande": "/poser-sa-strategie-marketing:poser-sa-strategie-marketing",
+  "dossier_etat": "strategie-marketing/",
+  "etapes": [
+    {
+      "n": 1,
+      "slug": "marche-et-publics",
+      "titre": "Étudier le marché et les publics",
+      "rend": "L'étude du marché, citée et datée, et les publics : leurs problèmes, leurs mots, leurs alternatives, avec ce qui reste incertain.",
+      "fichier": "01-marche-et-publics.md",
+      "regle": "Les publics par marketing-skills:customer-research ; le marché par bmad-market-research, ou à la main ; deep-research quand l'étude demande beaucoup de sources croisées. Chaque chiffre a sa source et sa date ; une source ancienne ou biaisée se signale.",
+      "taches": [
+        {
+          "slug": "valider-le-marche",
+          "titre": "Valider le marché et parler aux utilisateurs",
+          "competences": [
+            {
+              "nom": "marketing-skills:customer-research",
+              "role": "les publics",
+              "pourquoi": "Trois façons de recueillir (documents existants, forums et avis, entretiens et enquêtes), des questions qui n'orientent pas la réponse et une garde contre le biais de confirmation."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "slug": "concurrents",
+      "titre": "Surveiller les concurrents",
+      "rend": "Un dossier par concurrent, puis chaque semaine ce qui a vraiment changé (prix, pages, offres, publicités), vérifié à la source, et la réponse recommandée.",
+      "fichier": "02-concurrents.md",
+      "regle": "Le premier relevé par competitor-profiling, puis la veille hebdomadaire par marketing-loops, diffusée au dirigeant par marketing-monday. Les publicités des concurrents passent par la veille de ads. Chaque changement se vérifie à sa source avant d'être diffusé.",
+      "taches": [
+        {
+          "slug": "dossier-d-un-concurrent",
+          "titre": "Faire le dossier d'un concurrent",
+          "competences": [
+            {
+              "nom": "marketing-skills:competitor-profiling",
+              "role": "le premier relevé",
+              "pourquoi": "Le dossier d'un concurrent depuis son adresse, données brutes gardées ; il sépare l'observé de l'inféré et ne conclut pas qu'une chose est absente parce qu'elle n'a pas été vue."
+            },
+            {
+              "nom": "marketing-skills:reverse-engineer-marketing",
+              "role": "comment il a grandi",
+              "pourquoi": "Quand la question n'est plus ce qu'il est aujourd'hui mais comment il a grandi : l'historique daté de ses actions face à sa courbe de trafic, puis ce qui se transpose chez vous. Toute inscription ou tout achat chez lui se fait seulement avec l'accord de la personne qui lance l'analyse."
+            }
+          ],
+          "reserve": [
+            "marketing:competitive-brief",
+            "product-management:competitive-brief"
+          ]
+        },
+        {
+          "slug": "veille-de-la-semaine",
+          "titre": "Tenir la veille de la semaine",
+          "competences": [
+            {
+              "nom": "marketing-skills:marketing-loops",
+              "role": "la veille de la semaine",
+              "pourquoi": "Sa boucle de veille concurrentielle compare chaque semaine au relevé précédent, sépare le changement réel du cosmétique et ne signale pas deux fois la même chose."
+            },
+            {
+              "nom": "small-business:marketing-monday",
+              "role": "le brief du dirigeant",
+              "pourquoi": "Une page le lundi : ce que les concurrents ont changé, daté, faits et déductions séparés, et trois actions."
+            },
+            {
+              "nom": "marketing-skills:ads",
+              "role": "les publicités des concurrents",
+              "pourquoi": "Sa veille de la semaine relève les publicités des concurrents dans les bibliothèques de Meta, Google et LinkedIn et signale ce qui change. La durée d'une publicité reste un indice, pas une preuve."
+            }
+          ]
+        },
+        {
+          "slug": "videos-qui-sortent-du-lot",
+          "titre": "Repérer les vidéos qui sortent du lot",
+          "competences": [
+            {
+              "nom": "poser-sa-strategie-marketing:video-qui-sortent-du-lot",
+              "pourquoi": "Montre ce qui a vraiment dépassé la normale chez des chaînes voisines et en tire une promesse, sans copier de titre."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "slug": "positionnement",
+      "titre": "Se positionner et écrire ses messages",
+      "rend": "Le positionnement (alternatives, différence, valeur, pour qui) et les messages par public, chacun avec sa preuve, dans un fichier de contexte que toutes les autres compétences relisent.",
+      "fichier": "03-positionnement.md",
+      "regle": "product-marketing recueille et tient les faits ; marketing-council formule le positionnement et le conteste. Faits et allégations se séparent ; la personne qui vend valide chaque allégation avant qu'elle serve.",
+      "taches": [
+        {
+          "slug": "tenir-le-contexte",
+          "titre": "Tenir le dossier de contexte marketing",
+          "competences": [
+            {
+              "nom": "marketing-skills:product-marketing",
+              "role": "par défaut",
+              "pourquoi": "Tient un document de contexte versionné (publics, concurrents, différence, objections, mots des clients, voix, preuves) que les autres compétences marketing relisent avant d'écrire."
+            }
+          ]
+        },
+        {
+          "slug": "formuler-le-positionnement",
+          "titre": "Formuler et contester le positionnement",
+          "competences": [
+            {
+              "nom": "marketing-skills:marketing-council",
+              "role": "formuler et contester",
+              "pourquoi": "Applique la méthode de positionnement d'April Dunford (alternatives, attributs, valeur, publics, catégorie), en simulation déclarée, sans citation inventée. Réunit des conseillers simulés, dont une spécialiste du positionnement (alternatives réelles du client, différence, valeur, publics, catégorie) ; la simulation est déclarée et aucune citation n'est inventée."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "slug": "offre-et-prix",
+      "titre": "Choisir l'offre et le prix",
+      "optionnelle": "quand l'offre ou le prix est à revoir",
+      "rend": "Plusieurs scénarios d'offre et de prix chiffrés, leurs hypothèses et leurs risques, prêts pour l'arbitrage.",
+      "fichier": "04-offre-et-prix.md",
+      "regle": "pricing pour un produit, offers pour un service ; chaque scénario chiffré dans un tableur. Aucune décision de prix ici : elle revient au dirigeant, avec la finance.",
+      "taches": [
+        {
+          "slug": "construire-l-offre",
+          "titre": "Construire l'offre et ses prix",
+          "competences": [
+            {
+              "nom": "marketing-skills:pricing",
+              "role": "le prix",
+              "pourquoi": "Mesure de la valeur, paliers, méthodes d'enquête de prix et page de tarifs."
+            },
+            {
+              "nom": "marketing-skills:offers",
+              "role": "un forfait de service",
+              "pourquoi": "L'offre élément par élément quand on vend un service plutôt qu'un logiciel."
+            }
+          ]
+        },
+        {
+          "slug": "chiffrer",
+          "titre": "Chiffrer l'offre dans un tableur",
+          "competences": [
+            {
+              "nom": "document-skills:xlsx",
+              "role": "les scénarios chiffrés",
+              "pourquoi": "Le tableur des scénarios : coûts, hypothèses et formules qui se relisent."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "slug": "parcours-client",
+      "titre": "Cartographier le parcours client",
+      "rend": "La carte des points de contact, du premier signe à la fidélité, les frictions et leurs causes, et les améliorations classées.",
+      "fichier": "05-parcours-client.md",
+      "regle": "Les retours viennent du recueil de l'étape 1 (entretiens, avis, forums) ; les frictions chiffrées viennent de la mesure du site. La personne qui reçoit les clients valide la carte et sa mesure, avec le marketing et le produit.",
+      "taches": [
+        {
+          "slug": "parcours-client",
+          "titre": "Cartographier le parcours client",
+          "competences": [
+            {
+              "nom": "operations:process-doc",
+              "role": "dessiner la carte",
+              "pourquoi": "Le diagramme des étapes et des responsabilités, faute de compétence de parcours dédiée."
+            }
+          ],
+          "manque": "aucune compétence publique ne cartographie un parcours client : la carte se dessine à la main, avec la procédure."
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "slug": "plan",
+      "titre": "Écrire le plan marketing et le faire décider",
+      "rend": "Le plan marketing à quatre-vingt-dix jours ou à l'année, la taille du marché, puis la présentation qui mène à une décision.",
+      "fichier": "06-plan.md",
+      "regle": "Le plan par marketing-plan ; la présentation dit la décision attendue en premier ; un arbitrage difficile passe par le workflow de décision. Le porteur du sujet valide chiffres, citations et diffusion.",
+      "taches": [
+        {
+          "slug": "ecrire-le-plan",
+          "titre": "Écrire le plan marketing",
+          "competences": [
+            {
+              "nom": "marketing-skills:marketing-plan",
+              "role": "par défaut",
+              "pourquoi": "Un plan complet en treize sections, de l'acquisition à la fidélité, avec le dimensionnement du marché par plusieurs méthodes et leur niveau de confiance."
+            }
+          ]
+        },
+        {
+          "slug": "faire-decider",
+          "titre": "Présenter le plan et faire trancher",
+          "competences": [
+            {
+              "nom": "decider-une-strategie",
+              "workflow": true,
+              "role": "workflow frère",
+              "pourquoi": "Quand le plan bute sur un arbitrage : nommer la décision, peser de vraies options, rendre la recommandation d'abord."
+            },
+            {
+              "nom": "document-skills:pptx",
+              "role": "la présentation",
+              "pourquoi": "La présentation révisable : thème, graphiques, notes de l'orateur, fichier contrôlé."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "slug": "mesure",
+      "titre": "Mesurer les résultats et décider la suite",
+      "rend": "Le suivi audité, les chiffres contradictoires réconciliés, l'attribution lue honnêtement, puis le rapport qui dit quoi garder, corriger ou arrêter.",
+      "fichier": "07-mesure.md",
+      "regle": "Le suivi d'abord (analytics), puis attribution ; performance-report pour l'équipe, growth-pulse pour le dirigeant. Un modèle d'attribution reste imparfait : le rapport le dit.",
+      "taches": [
+        {
+          "slug": "verifier-le-suivi",
+          "titre": "Vérifier le suivi",
+          "competences": [
+            {
+              "nom": "marketing-skills:analytics",
+              "role": "le suivi",
+              "pourquoi": "Pose le suivi et lit les chiffres sans les déformer ; elle vit à l'étape mesure du workflow « Créer un site web » (`/creer-un-site-web:creer-un-site-web`), qui sert aussi à mesurer un site en cours de construction."
+            }
+          ]
+        },
+        {
+          "slug": "relier-aux-revenus",
+          "titre": "Relier les campagnes aux revenus",
+          "competences": [
+            {
+              "nom": "marketing-skills:attribution",
+              "pourquoi": "Choisit et lit un modèle d'attribution, réconcilie les chiffres qui se contredisent et sépare les conversions réelles des crédits qui se recouvrent."
+            },
+            {
+              "nom": "poser-sa-strategie-marketing:marketing-relier-le-contenu-aux-contrats",
+              "pourquoi": "Quand il faut un calcul et pas seulement une méthode : attribue le revenu aux contenus en trois modèles, le modèle fixé avant de regarder, sans donnée personnelle dans le rapport."
+            }
+          ]
+        },
+        {
+          "slug": "faire-le-rapport",
+          "titre": "Faire le rapport",
+          "competences": [
+            {
+              "nom": "marketing:performance-report",
+              "pourquoi": "Le rapport de la semaine, du mois ou du trimestre : tableau de bord, tendances, ce qui a marché, recommandations."
+            },
+            {
+              "nom": "small-business:growth-pulse",
+              "pourquoi": "« La croissance marche-t-elle ? » en une page : ventes par canal, retour des campagnes, trois actions."
+            }
+          ],
+          "reserve": [
+            "small-business:business-pulse",
+            "small-business:report-pack",
+            "small-business:monday-brief",
+            "small-business:report-builder"
+          ]
+        },
+        {
+          "slug": "relire-un-changement",
+          "titre": "Relire le résultat d'un changement",
+          "competences": [
+            {
+              "nom": "poser-sa-strategie-marketing:marketing-relire-un-changement",
+              "pourquoi": "Fixe la métrique et la date avant de publier, puis tranche entre promouvoir, continuer, annuler ou non prouvé."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "referencer-son-site",
+  "description": "Le référencement qui tourne : l'audit et les priorités, les requêtes qui achètent, la technique et l'indexation, les pages optimisées, les articles qui se classent, le maillage, les liens, la visibilité dans les réponses des IA, et le suivi qui dit quoi faire ensuite. Méthode d'Éric Djavid (32 agents SEO) adaptée aux outils gratuits.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Zero Gravity AI"
+  },
+  "homepage": "https://zerogravity.builders",
+  "repository": "",
+  "license": "MIT",
+  "keywords": [
+    "marketing",
+    "workflow",
+    "claude-code"
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "format": "workflow-v1",
+  "slug": "faire-evoluer-une-app",
+  "titre": "Faire évoluer une app : une fonctionnalité de plus ou un défaut corrigé",
+  "resume": "Six étapes pour une app qui existe déjà, à deux entrées : partir de la demande (la fonctionnalité écrite, ou le défaut reproduit et sa cause prouvée), comprendre le code qui l'accueille, construire test d'abord, tester, mettre en ligne, documenter.",
+  "metiers": [
+    "dev"
+  ],
+  "commande": "/faire-evoluer-une-app:faire-evoluer-une-app",
+  "dossier_etat": "evolutions/<evolution>/",
+  "etapes": [
+    {
+      "n": 1,
+      "slug": "partir",
+      "titre": "Partir de la demande",
+      "rend": "Pour une fonctionnalité : la fonctionnalité écrite dans le document produit (pour qui, quel parcours, les critères d'acceptation, ce qui n'en est pas). Pour un défaut : le défaut reproduit, sa cause prouvée par une mesure, et le geste de l'utilisateur qui doit remarcher. Le fichier commence par le type (fonctionnalité ou défaut), puis le geste en ses mots pour un défaut.",
+      "fichier": "01-demande.md",
+      "regle": "Pour une fonctionnalité : le document produit existant se met à jour ; sans document, bmad-prd en écrit un court, centré sur la fonctionnalité. Pour un défaut : superpowers:systematic-debugging par défaut ; dès que le défaut est déjà revenu une fois ou touche plusieurs endroits, aucune compétence publique : on creuse à la main, du symptôme à la cause structurelle, prouvée par des journaux frais. Le correctif doit faire remarcher le geste décrit par l'utilisateur, avec ses mots ; un meilleur message d'erreur n'est pas une correction.",
+      "competences": [
+        {
+          "nom": "bmad-prd",
+          "role": "une fonctionnalité",
+          "pourquoi": "Son mode « mettre à jour » ajoute la fonctionnalité au document produit existant, avec des numéros stables et la relecture par plusieurs relecteurs."
+        },
+        {
+          "nom": "superpowers:systematic-debugging",
+          "role": "un défaut",
+          "pourquoi": "Quatre phases (cause, motif, hypothèse, correction) ; aucune correction avant que la cause soit prouvée. Même auteur que la boucle de construction."
+        }
+      ],
+      "taches": [
+        {
+          "slug": "trouver-la-cause-d-un-defaut",
+          "titre": "Trouver la cause d'un défaut",
+          "competences": [
+            {
+              "nom": "caveman:investigate-first",
+              "pourquoi": "Trouver la cause d'un défaut flou avant de modifier quoi que ce soit."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "slug": "comprendre",
+      "titre": "Comprendre le code qui l'accueille",
+      "optionnelle": "pour une fonctionnalité",
+      "rend": "La carte du code touché (chemins d'exécution, motifs, dépendances), les questions tranchées et l'architecture de la fonctionnalité.",
+      "fichier": "02-code-existant.md",
+      "regle": "feature-dev jusqu'à l'architecture de la fonctionnalité (découverte, exploration, questions, architecture) ; la construction passe ensuite par la brique Construire, pour garder une seule boucle.",
+      "competences": [
+        {
+          "nom": "feature-dev:feature-dev",
+          "role": "par défaut",
+          "pourquoi": "Plugin officiel d'Anthropic : des sous-agents tracent le code existant, puis la méthode pose les questions et propose l'architecture de la fonctionnalité."
+        }
+      ],
+      "taches": [
+        {
+          "slug": "explorer-le-code",
+          "titre": "Explorer le code qui accueille le changement",
+          "competences": [
+            {
+              "nom": "caveman:caveman-explore",
+              "pourquoi": "Quand on découvre un dépôt et qu'il faut localiser le code concerné."
+            }
+          ]
+        },
+        {
+          "slug": "repertorier-la-dette-technique",
+          "titre": "Répertorier la dette technique",
+          "competences": [
+            {
+              "nom": "engineering:tech-debt",
+              "pourquoi": "Lister et classer ce qui ralentit le code avant de le faire évoluer."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "slug": "construire",
+      "titre": "Construire",
+      "rend": "La fonctionnalité construite tâche par tâche, test d'abord. Pour un défaut : un test qui reproduit le défaut et échoue, puis la correction qui le fait passer. La note dit où vit le dossier de la construction (construction/).",
+      "fichier": "03-construction.md",
+      "regle": "Par /construire:construire, sur la fonctionnalité de l'étape 1 et l'architecture de l'étape 2. Pour un défaut, le test qui le reproduit s'écrit d'abord et doit échouer pour la bonne raison.",
+      "competences": [
+        {
+          "nom": "construire",
+          "workflow": true,
+          "role": "workflow frère",
+          "pourquoi": "La boucle de construction : plan de tâches, test d'abord, relecture entre deux tâches, preuve avant d'annoncer. Pour un défaut, elle se réduit à une tâche : le test qui reproduit le défaut d'abord, la correction ensuite."
+        }
+      ],
+      "taches": [
+        {
+          "slug": "retirer-ou-migrer-un-ancien-systeme",
+          "titre": "Retirer ou migrer un ancien système",
+          "competences": [
+            {
+              "nom": "agent-skills:deprecation-and-migration",
+              "pourquoi": "Quand un vieux système ou une fonction doit être retiré proprement."
+            }
+          ]
+        },
+        {
+          "slug": "migrer-sans-casser",
+          "titre": "Migrer sans casser",
+          "competences": [
+            {
+              "nom": "caveman:migration",
+              "pourquoi": "Changer de base, d'API ou de réglage avec retour arrière possible."
+            }
+          ]
+        },
+        {
+          "slug": "restructurer-le-code",
+          "titre": "Restructurer le code",
+          "competences": [
+            {
+              "nom": "caveman:safe-refactor",
+              "pourquoi": "Remettre le code en ordre sans changer ce qu'il fait."
+            }
+          ]
+        },
+        {
+          "slug": "corriger-un-defaut",
+          "titre": "Corriger un défaut",
+          "competences": [
+            {
+              "nom": "caveman:surgical-patch",
+              "pourquoi": "Corriger un défaut au plus juste, sans toucher au reste."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "slug": "tester",
+      "titre": "Tester et sécuriser",
+      "rend": "Le diff relu, la sécurité vérifiée, l'app parcourue jusqu'au verdict. Pour un défaut : la correction relue, sans effet de bord. La note donne le verdict et dit où vit le dossier des tests (tests/).",
+      "fichier": "04-tests.md",
+      "regle": "Par /tester-et-securiser:tester-et-securiser ; claude-security seulement si la fonctionnalité touche la connexion, le paiement ou les données d'un client. Pour un défaut, sur le diff de la correction et le parcours qui était cassé. Avec le verdict « on ne met pas en ligne », on corrige (retour à l'étape 3) ou on range l'évolution sans la sortir.",
+      "competences": [
+        {
+          "nom": "tester-et-securiser",
+          "workflow": true,
+          "role": "workflow frère",
+          "pourquoi": "La relecture du diff, la sécurité et le parcours dans le navigateur, jusqu'au verdict."
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "slug": "mettre-en-ligne",
+      "titre": "Mettre en ligne",
+      "rend": "La fonctionnalité en ligne, vérifiée, avec son retour arrière. Pour un défaut : la correction en ligne, vérifiée sur le geste qui était cassé. La note dit où vit le dossier de la mise en ligne (mise-en-ligne/).",
+      "fichier": "05-mise-en-ligne.md",
+      "regle": "Par /mettre-en-ligne:mettre-en-ligne ; une fonctionnalité risquée sort derrière un interrupteur. Pour un défaut, la vérification en ligne rejoue le geste décrit par l'utilisateur.",
+      "competences": [
+        {
+          "nom": "mettre-en-ligne",
+          "workflow": true,
+          "role": "workflow frère",
+          "pourquoi": "La sortie préparée, le déploiement et la vérification en ligne."
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "slug": "documenter",
+      "titre": "Documenter",
+      "optionnelle": "pour une fonctionnalité",
+      "rend": "Les décisions écrites, la documentation et le README à jour avec le code livré.",
+      "fichier": "06-documentation.md",
+      "regle": "La documentation part avec le code, dans le même lot ; une décision qui a coûté un débat s'écrit en décision d'architecture.",
+      "competences": [
+        {
+          "nom": "agent-skills:documentation-and-adrs",
+          "role": "par défaut",
+          "pourquoi": "Addy Osmani : les décisions d'architecture et leur raison, l'API et le README mis à jour avec le code (297 lignes)."
+        }
+      ]
+    }
+  ]
+}

@@ -40,6 +40,11 @@
       "regle": "Le type se choisit d'abord, par trois questions : qu'est-ce qui le réveille, qui s'en sert et à quelle heure, quelle part demande du jugement. Le local tourne sur un poste allumé, avec l'abonnement de son propriétaire. Dès qu'un client, un visiteur ou un outil doit le réveiller à toute heure, il passe en cloud. Un chemin connu d'avance reste un scénario avec une étape IA, souvent sur n8n ou Make, plutôt qu'un agent. Un agent qui échange avec des personnes dans l'Union européenne leur dit dès le premier message qu'il est une IA, sauf si c'est évident : article 50 du règlement (UE) 2024/1689, applicable depuis le 2 août 2026 (vérifié le 06/11/2026, détail dans `references/types-d-agents.md`). Le kit de la compétence de système suffit pour un système ordinaire, et `agent-skills:context-engineering` dit ce que chaque agent lit à chaque tour. Pour un choix dur : `/reflechir-a-fond:reflechir-a-fond` ou `bmad-architecture`. Pour un client : concevoir-solution et rediger-cahier-des-charges (spécification), avec `/implementer-l-ia-en-entreprise:implementer-l-ia-en-entreprise`. Pour un système qui existe : entretenir-son-systeme:optimise-systeme (trouver, arbitrer, concevoir). Un agent chef qui lance d'autres agents ne tourne qu'en tête de session : une sous-tâche ne peut pas en lancer une autre. Il doit avoir l'outil de lancement (nommé Agent) dans sa liste d'outils, et Claude Code limite par défaut l'imbrication à trois niveaux de sous-agents (vérifié le 06/11/2026, https://code.claude.com/docs/en/sub-agents). Il écrit d'abord son plan de travail dans un fichier, ce qui permet de reprendre si on le lance ailleurs.",
       "competences": [
         {
+          "nom": "creer-un-agent-ia:systeme-ia",
+          "role": "le kit d'un système",
+          "pourquoi": "Elle dit ce qu'un système doit avoir (son dossier, sa carte et ses priorités, sa compétence opératrice, ses routines, son cockpit), appelle les compétences qui font chaque pièce et tient le registre des systèmes : le workflow d'agents lui confie l'architecture et la construction plutôt que de les récrire."
+        },
+        {
           "nom": "agent-skills:context-engineering",
           "role": "la mémoire et le contexte",
           "pourquoi": "Elle range ce que chaque agent lit, du plus stable au plus passager : les règles toujours chargées, les spécifications de la session, les fichiers de la tâche, puis la conversation qu'on résume. Elle dit aussi ce qu'une session laisse écrit pour que la suivante reprenne sans rien deviner."
@@ -54,6 +59,18 @@
           "nom": "bmad-architecture",
           "role": "un choix dur, en alternative",
           "pourquoi": "Une colonne vertébrale d'invariants que tout ce qui est construit ensuite respecte."
+        }
+      ],
+      "taches": [
+        {
+          "slug": "agent-ou-automatisation",
+          "titre": "Trancher : un agent ou une automatisation",
+          "competences": [
+            {
+              "nom": "creer-un-agent-ia:choisir-agent-ou-automatisation",
+              "pourquoi": "Pose la part déterministe (une règle écrite) et la part humaine (une validation) avant de choisir : une règle écrite n'a pas besoin d'un agent."
+            }
+          ]
         }
       ]
     },
@@ -118,12 +135,26 @@
           ]
         },
         {
+          "slug": "agent-cloud-en-code",
+          "titre": "Agent cloud en code : assistant ou déclenché par un événement",
+          "competences": [
+            {
+              "nom": "creer-un-agent-ia:agents-cloud",
+              "pourquoi": "Quand il tourne chez ZEROGRAVITY : modèles, budget, traces et déploiement."
+            }
+          ]
+        },
+        {
           "slug": "agent-sur-n8n",
           "titre": "Agent sur n8n : assistant, planifié ou déclenché",
           "competences": [
             {
               "nom": "n8n-skills:n8n-workflow-lifecycle-official",
               "pourquoi": "Quand l'instance n8n est récente et ses accès ouverts : la compétence officielle de n8n pour planifier, câbler, valider, tester et livrer un flux, celui d'un agent compris. Elle suppose une instance n8n dont le serveur MCP est activé (version minimale lue dans le dépôt n8n-io/skills le 06/11/2026 : 2.2.0)."
+            },
+            {
+              "nom": "creer-un-agent-ia:n8n-workflow-builder",
+              "pourquoi": "Pour générer un scénario n8n prêt à importer ou à déployer."
             }
           ],
           "manque": "le dépôt n8n-io/skills contient d'autres compétences, dont une pour les agents n8n, que ce workflow ne liste pas. Le nœud AI Agent de n8n peut aussi se construire à la main."
@@ -279,6 +310,17 @@
       "regle": "D'abord ce que « marcher » veut dire, en deux à quatre questions. Puis l'agent instrumenté pour y répondre, l'usage et le coût compris. Le tableau de bord affiche le chiffre du but et son point de départ ; le système lui-même se mesure avec entretenir-son-systeme:optimise-systeme. Pour un client : mesurer-gains, qui juge le gain observé et non les traces de l'outil. Pour un système qui existe : la re-mesure sans perte de entretenir-son-systeme:optimise-systeme.",
       "taches": [
         {
+          "slug": "page-du-hub-interne",
+          "titre": "Publier une page du hub interne",
+          "competences": [
+            {
+              "nom": "creer-un-agent-ia:dashboards-hub-master",
+              "role": "le cockpit",
+              "pourquoi": "Elle crée, publie et déploie les tableaux de bord du hub interne : le cockpit du système y affiche le chiffre du but et son point de départ, avec son lien rendu."
+            }
+          ]
+        },
+        {
           "slug": "mesurer",
           "titre": "Mesurer",
           "competences": [
@@ -301,8 +343,13 @@
       "slug": "entretenir-son-systeme:capitaliser",
       "titre": "Capitaliser : le flywheel",
       "rend": "Un système plus fort au passage suivant : le résultat, l'état (ce qui est décidé, ce qui reste, la prochaine action), la leçon et l'amélioration candidate, rangés chez leur propriétaire.",
-      "regle": "Même un passage sans correction le dit en une ligne. Une correction propre à la tâche reste avec elle, une réutilisable entre dans la méthode, une vérifiable devient un contrôle. On promeut avec prudence : une fois une observation, deux fois un motif, répétée une règle candidate, confirmée une règle, une compétence, un test ou de la mémoire. La même erreur corrigée deux fois change la méthode, pas seulement la sortie. Chaque échec instructif garde sa tâche, sa mauvaise sortie et l'attendu, rejoués à chaque changement du système. Pour un client : le journal de mission du pack, puis router-capitalisation. La mesure du flywheel (acceptation du premier coup, erreurs qui reviennent, temps de relecture, coût par résultat accepté) n'est pas encore faite : il faut une trentaine de passages.",
+      "regle": "Même un passage sans correction le dit en une ligne. Une correction propre à la tâche reste avec elle, une réutilisable entre dans la méthode, une vérifiable devient un contrôle. On promeut avec prudence : une fois une observation, deux fois un motif, répétée une règle candidate, confirmée une règle, une compétence, un test ou de la mémoire. La même erreur corrigée deux fois change la méthode, pas seulement la sortie. Chaque échec instructif garde sa tâche, sa mauvaise sortie et l'attendu, rejoués à chaque changement du système. Pour un client : le journal de mission du pack, puis creer-un-agent-ia:router-capitalisation. La mesure du flywheel (acceptation du premier coup, erreurs qui reviennent, temps de relecture, coût par résultat accepté) n'est pas encore faite : il faut une trentaine de passages.",
       "competences": [
+        {
+          "nom": "creer-un-agent-ia:router-capitalisation",
+          "role": "le tri du flywheel",
+          "pourquoi": "Elle dit ce qui vient de devenir faux ailleurs, corrige la ligne qui ment et route le reste vers son propriétaire (règle, compétence, document, contrôle, mémoire) : c'est déjà le tri dont le flywheel a besoin, donc pas de compétence « flywheel » à part."
+        },
         {
           "nom": "entretenir-son-systeme:capitaliser",
           "role": "une compétence",

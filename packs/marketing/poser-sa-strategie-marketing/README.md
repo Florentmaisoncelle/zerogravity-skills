@@ -18,9 +18,11 @@ Dans Claude Code : `/poser-sa-strategie-marketing:poser-sa-strategie-marketing`,
 Ce workflow s'appuie sur des compétences publiques, installées à part. Aucune n'est indispensable : si l'une manque, le workflow le dit et fait l'étape à la main. Faire l'étape à la main veut dire suivre sa règle de choix, écrire ce qu'elle doit rendre (dans le fichier de l'étape, ou dans la réponse quand le workflow n'a pas de dossier) et dire ce qui reste à la charge de la personne.
 
 ```text
+/plugin marketplace add addyosmani/agent-skills
 /plugin marketplace add anthropics/knowledge-work-plugins
 /plugin marketplace add anthropics/skills
 /plugin marketplace add coreyhaines31/marketingskills
+/plugin install agent-skills@addy-agent-skills
 /plugin install document-skills@anthropic-agent-skills
 /plugin install marketing-skills@marketingskills
 /plugin install marketing@knowledge-work-plugins

@@ -88,6 +88,16 @@
               "pourquoi": "Gérer une panne en ligne : alerter, réparer, écrire le bilan."
             }
           ]
+        },
+        {
+          "slug": "auditer-le-site-public",
+          "titre": "Auditer le site en ligne",
+          "competences": [
+            {
+              "nom": "web-quality-skills:web-quality-audit",
+              "pourquoi": "L'audit complet d'un site en ligne (performance, accessibilité, bonnes pratiques, référencement) avec les corrections classées."
+            }
+          ]
         }
       ],
       "manque": "aucune compétence ne parcourt le site en ligne à votre place : la console et le réseau se lisent avec agent-skills:browser-testing-with-devtools si le serveur MCP Chrome DevTools est branché, le reste se fait à la main (méthode dans le SKILL.md, section « Vérifier en ligne »)."

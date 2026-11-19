@@ -18,15 +18,34 @@
       "regle": "La préparation d'abord, une fois par installation ; elle appelle la cible stricte pour chaque type de client. Les réglages se montrent au dirigeant, qui les corrige : c'est la validation du cadrage. La cible avant la liste : un type de client à la fois, avec ses exclusions écrites. Une liste de contacts se nettoie avant d'être utilisée.",
       "taches": [
         {
+          "slug": "remplir-les-reglages",
+          "titre": "Remplir les réglages et écrire les cibles",
+          "competences": [
+            {
+              "nom": "marketing-skills:product-marketing",
+              "pourquoi": "Le contexte de l'offre écrit une fois (cible, positionnement, vocabulaire du client) depuis son site : la base des réglages."
+            }
+          ]
+        },
+        {
           "slug": "nettoyer-exclusions-et-doublons",
           "titre": "Nettoyer exclusions et doublons",
           "competences": [
             {
               "nom": "leadlint:leadlint",
-              "pourquoi": "Pour nettoyer et requalifier une liste de contacts avant de l'utiliser."
+              "pourquoi": "Comble un vide : aucune compétence publique ne nettoie une liste de prospects (clients actuels, concurrents, doublons, exclusions) avant tout envoi ; les exclusions s'écrivent avec la cible."
             }
-          ],
-          "manque": "pas encore de compétence dédiée : les exclusions s'écrivent avec la cible, à la tâche « Définir la cible »."
+          ]
+        },
+        {
+          "slug": "construire-sa-base",
+          "titre": "Construire sa base de prospects",
+          "competences": [
+            {
+              "nom": "small-business:lead-finder",
+              "pourquoi": "Part des clients actuels pour trouver les entreprises qui leur ressemblent, avec le bon contact (dépôt anthropics/knowledge-work-plugins, 36 500 étoiles, github.com/anthropics/knowledge-work-plugins)."
+            }
+          ]
         }
       ]
     },
@@ -44,7 +63,7 @@
           "competences": [
             {
               "nom": "sales:account-tiering",
-              "pourquoi": "noter séparément l'ajustement à la cible et l'engagement pour prioriser"
+              "pourquoi": "noter séparément l'ajustement à la cible et l'engagement pour prioriser (dépôt anthropics/knowledge-work-plugins, 36 500 étoiles, github.com/anthropics/knowledge-work-plugins)."
             }
           ]
         },
@@ -54,12 +73,11 @@
           "competences": [
             {
               "nom": "marketing-skills:prospecting",
-              "pourquoi": "la découverte multi-source (SaaS, B2B, local) et la validation croisée"
+              "pourquoi": "la découverte multi-source (SaaS, B2B, local) et la validation croisée (dépôt coreyhaines31/marketingskills, 61 300 étoiles, github.com/coreyhaines31/marketingskills)."
             }
           ],
           "reserve": [
-            "small-business:grow-pipeline",
-            "small-business:lead-finder"
+            "small-business:grow-pipeline"
           ]
         }
       ]
@@ -73,12 +91,22 @@
       "regle": "La semaine de chaque cible par agent-icp ; avant tout premier envoi, vingt lignes contrôlées par ciblage-b2b-qa. Les cas douteux partent en « à juger », jamais dans la séquence. Peu de comptes, bien choisis : la sélection de la semaine tient sur une page, chaque exclu a sa raison.",
       "taches": [
         {
+          "slug": "classer-les-comptes",
+          "titre": "Classer les comptes de la semaine",
+          "competences": [
+            {
+              "nom": "sales:lead-triage",
+              "pourquoi": "Note et classe une liste de comptes selon la cible et les signaux, avec la priorité et le prochain geste."
+            }
+          ]
+        },
+        {
           "slug": "preparer-la-fiche-d-un-compte",
           "titre": "Préparer la fiche d'un compte",
           "competences": [
             {
               "nom": "sales:account-research",
-              "pourquoi": "Recherche d'abord dans le CRM, actualité, priorités, ajustement et accroches sourcées."
+              "pourquoi": "Recherche d'abord dans le CRM, actualité, priorités, ajustement et accroches sourcées (dépôt anthropics/knowledge-work-plugins, 36 500 étoiles, github.com/anthropics/knowledge-work-plugins)."
             }
           ]
         }
@@ -114,6 +142,19 @@
               "pourquoi": "Messages de prospection et relances dans la voix de la personne, appuyés sur un fait précis du prospect."
             }
           ]
+        },
+        {
+          "slug": "ecrire-le-message",
+          "titre": "Écrire le message",
+          "competences": [
+            {
+              "nom": "sales:draft-outreach",
+              "pourquoi": "Écrit un courriel ou une suite de relances personnalisés et le dépose en brouillon pour relecture (dépôt anthropics/knowledge-work-plugins, 36 500 étoiles, github.com/anthropics/knowledge-work-plugins)."
+            }
+          ],
+          "reserve": [
+            "small-business:outreach-composer"
+          ]
         }
       ]
     },
@@ -126,18 +167,12 @@
       "regle": "L'envoi se fait depuis le compte du client, à la main avec la liste du jour, ou par son outil d'envoi sur un feu vert écrit. L'email et l'appel suivent les mêmes plafonds. Une réponse ou une opposition arrête la séquence du contact. Le workflow prépare la liste, la personne envoie : l'étape reste en attente tant que les envois ne sont pas confirmés, et une liste préparée n'est pas une liste envoyée. Seuls partent les messages validés à l'étape 5, depuis le compte de la personne qui vend. Les plafonds et les règles de chaque canal se respectent, et la liste d'exclusion du registre se consulte avant chaque envoi.",
       "taches": [
         {
-          "slug": "envoyer-par-email",
-          "titre": "Envoyer par email",
-          "competences": [],
-          "manque": "À créer : l'infrastructure d'envoi, la chauffe des boîtes et la délivrabilité, avant toute rédaction."
-        },
-        {
           "slug": "appeler",
           "titre": "Appeler",
           "competences": [
             {
               "nom": "small-business:call-list",
-              "pourquoi": "Préparer la liste des 5 prospects à appeler aujourd'hui."
+              "pourquoi": "Préparer la liste des 5 prospects à appeler aujourd'hui (dépôt anthropics/knowledge-work-plugins, 36 500 étoiles, github.com/anthropics/knowledge-work-plugins)."
             }
           ]
         }
@@ -152,10 +187,38 @@
       "regle": "Rien ne part sans le feu vert de la personne qui vend. Chaque semaine, la mesure par signal, angle et canal décide : continuer, corriger ou arrêter. Chaque réponse écrite à un prospect est relue par la personne qui vend avant d'être envoyée. Une réponse arrête la séquence de ce contact. Le workflow n'invente aucune réponse : sans réponse apportée par la personne, l'étape reste en attente.",
       "taches": [
         {
+          "slug": "tenir-jusqu-au-rendez-vous",
+          "titre": "Tenir jusqu'au rendez-vous",
+          "competences": [
+            {
+              "nom": "sales:handle-objection",
+              "pourquoi": "Quand le prospect objecte ou compare : la réponse qui a déjà marché, avec les preuves."
+            }
+          ]
+        },
+        {
+          "slug": "prendre-le-rendez-vous",
+          "titre": "Prendre le rendez-vous",
+          "competences": [
+            {
+              "nom": "sales:schedule-meeting",
+              "pourquoi": "Trouve un créneau, rédige l'invitation et réserve le rendez-vous sur le calendrier, puis le note dans le CRM."
+            }
+          ]
+        },
+        {
           "slug": "tenir-la-bibliotheque-de-ressources",
           "titre": "Tenir la bibliothèque de ressources",
-          "competences": [],
-          "manque": "À créer : la bibliothèque de ressources du client, comment les choisir et quand les rafraîchir."
+          "competences": [
+            {
+              "nom": "marketing-skills:sales-enablement",
+              "pourquoi": "Les ressources qui aident à conclure (fiches de comparaison, preuves, réponses aux objections) : quoi y mettre, comment les choisir."
+            },
+            {
+              "nom": "sales:create-an-asset",
+              "pourquoi": "Fabrique une ressource sur mesure pour un prospect (page, support, aperçu)."
+            }
+          ]
         }
       ]
     },
@@ -166,7 +229,28 @@
       "rend": "Une seule fiche par contact, à jour, et le CRM du client écrit sans doublon. Une note courte : l'outil de suivi utilisé et, pour la semaine, le nombre de fiches ajoutées, mises à jour et fusionnées.",
       "fichier": "08-suivi.md",
       "regle": "La compétence par défaut de chaque tâche d'abord ; les autres selon le cas qu'elles disent. Une seule fiche par contact. Le CRM s'écrit sans doublon et sans effacer ce qui y est déjà.",
-      "manque": "aucune compétence publique pour ce geste : il se fait à la main, avec la règle de l'étape."
+      "taches": [
+        {
+          "slug": "tenir-le-fichier-maitre",
+          "titre": "Tenir le fichier maître",
+          "competences": [
+            {
+              "nom": "small-business:crm-autopilot",
+              "pourquoi": "Tient à jour contacts et affaires depuis les courriels, le calendrier et les appels, sans ouvrir l'outil."
+            }
+          ]
+        },
+        {
+          "slug": "ecrire-dans-le-crm",
+          "titre": "Écrire dans le CRM",
+          "competences": [
+            {
+              "nom": "sales:log-activity",
+              "pourquoi": "Écrit un appel, un rendez-vous ou un courriel dans le CRM, sur le bon compte, avec ses sources."
+            }
+          ]
+        }
+      ]
     },
     {
       "n": 9,
@@ -177,10 +261,34 @@
       "regle": "La compétence par défaut de chaque tâche d'abord ; les autres selon le cas qu'elles disent. Chaque semaine, les chiffres par canal et par signal décident : continuer, corriger ou arrêter.",
       "taches": [
         {
+          "slug": "mesurer",
+          "titre": "Mesurer",
+          "competences": [
+            {
+              "nom": "marketing:performance-report",
+              "pourquoi": "Rapport de résultats : ce qui a marché, ce qui a coûté, quoi changer."
+            }
+          ]
+        },
+        {
+          "slug": "revue-hebdomadaire-des-leviers",
+          "titre": "Revue hebdomadaire des leviers",
+          "competences": [
+            {
+              "nom": "sales:weekly-wrap",
+              "pourquoi": "Le bilan de la semaine : ce qui avance, ce qui bloque, la suite."
+            }
+          ]
+        },
+        {
           "slug": "memoire-d-un-client-a-l-autre",
           "titre": "Mémoire d'un client à l'autre",
-          "competences": [],
-          "manque": "À créer après un deuxième client : ce qu'un client apprend au suivant, sans aucune donnée client."
+          "competences": [
+            {
+              "nom": "sales:win-loss-review",
+              "pourquoi": "Ce qui fait gagner ou perdre, dégagé sur l'ensemble des affaires."
+            }
+          ]
         }
       ]
     }

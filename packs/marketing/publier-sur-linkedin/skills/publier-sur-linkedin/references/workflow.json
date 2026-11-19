@@ -18,6 +18,17 @@
       "regle": "On note chaque idée de la banque, puis on prend les meilleures plutôt que d'en inventer : une idée par post, court par défaut. Sans ligne éditoriale, small-business:content-strategy en pose une. La personne valide les posts retenus : c'est la première des deux validations du workflow. Seul un texte validé par un humain part : sa validation déclenche la publication programmée.",
       "taches": [
         {
+          "slug": "choisir-les-posts",
+          "titre": "Choisir les posts de la semaine",
+          "competences": [
+            {
+              "nom": "small-business:content-strategy",
+              "pourquoi": "Pose une ligne éditoriale et choisit les sujets quand on part de zéro : le dépôt d'Anthropic passe en premier.",
+              "role": "par défaut"
+            }
+          ]
+        },
+        {
           "slug": "trouver-la-matiere",
           "titre": "Trouver la matière du post",
           "competences": [
@@ -25,17 +36,8 @@
               "nom": "marketing-skills:content-strategy",
               "pourquoi": "Des sources d'idées concrètes (appels clients, questions reçues, forums, concurrents) et une grille pour noter chaque idée."
             }
-          ]
-        },
-        {
-          "slug": "choisir-les-posts",
-          "titre": "Choisir les posts de la semaine",
-          "competences": [
-            {
-              "nom": "small-business:content-strategy",
-              "pourquoi": "Poser une ligne éditoriale quand on part de zéro."
-            }
-          ]
+          ],
+          "manque": "aucune compétence publique installée ne repère les sujets qui montent sur LinkedIn. Cherché sur skills.sh : outlier-post-finder (scrapecreators/social-media-research-skills, 6 700 étoiles) cible d'autres réseaux et n'est pas installé."
         }
       ]
     },
@@ -46,7 +48,14 @@
       "rend": "Chaque post écrit avec son accroche, relu, en une section par post.",
       "fichier": "02-ecrire.md",
       "regle": "Une idée par post, court par défaut, une section par post dans le fichier ; seul un texte validé par un humain part, et sa validation déclenche la publication programmée. marketing-skills:social écrit le post : accroches, modèles de post, carrousels (posts en plusieurs pages à faire défiler) et liste des tics d'écriture qui font « texte généré ». La personne valide le texte de chaque post avant toute programmation : c'est la deuxième validation du workflow.",
-      "manque": "aucune compétence publique pour ce geste : il se fait à la main, avec la règle de l'étape."
+      "taches": [
+        {
+          "slug": "ecrire-l-accroche",
+          "titre": "Écrire l'accroche",
+          "competences": [],
+          "manque": "les accroches publiques trouvées (viral-hook-creator, 700 étoiles) sont peu suivies et pas installées ; marketing-skills:social, qui en écrit aussi, est déjà logée à l'étape 6."
+        }
+      ]
     },
     {
       "n": 3,
@@ -62,11 +71,8 @@
           "competences": [
             {
               "nom": "marketing-skills:image",
-              "pourquoi": "Les images de marque, de la bannière au visuel de réseau, par génération ou outil de design, puis optimisées."
-            },
-            {
-              "nom": "small-business:canva-creator",
-              "pourquoi": "Fabriquer le visuel dans Canva."
+              "pourquoi": "Les images de marque, de la bannière au visuel de réseau, par génération ou outil de design, puis optimisées.",
+              "role": "par défaut"
             }
           ]
         },
@@ -76,9 +82,16 @@
           "competences": [
             {
               "nom": "small-business:brand-style",
-              "pourquoi": "Capte la marque depuis le site ou quelques mots et la range pour que tout ce qui suit la respecte."
+              "pourquoi": "Capte la marque depuis le site ou quelques mots et la range pour que tout ce qui suit la respecte.",
+              "role": "par défaut"
             }
           ]
+        },
+        {
+          "slug": "ajouter-un-sondage",
+          "titre": "Ajouter un sondage",
+          "competences": [],
+          "manque": "aucune compétence publique ne juge si un post LinkedIn gagne à devenir un sondage."
         }
       ]
     },
@@ -88,8 +101,21 @@
       "titre": "Programmer le post",
       "rend": "Chaque post prêt et programmé (ou placé en brouillon) au bon créneau.",
       "fichier": "04-programmer.md",
-      "regle": "Une idée par post, court par défaut ; seul un texte validé par un humain est programmé, et sa validation déclenche la publication programmée. marketing-skills:social dit quoi programmer et quoi poster en direct, garde une file de une à deux semaines et crée les posts en brouillon d'abord ; elle ne publie jamais sans accord.",
-      "manque": "aucune compétence ne programme seule : il faut un outil de programmation (celui de LinkedIn, à vérifier sur votre compte, ou un outil tiers avec une API ou un serveur MCP). Le workflow prépare le texte, le visuel et le créneau."
+      "regle": "Une idée par post, court par défaut ; seul un texte validé par un humain est programmé, et sa validation déclenche la publication programmée. small-business:social-content-engine tient le calendrier et la file de une à deux semaines et crée les posts en brouillon d'abord ; elle ne publie jamais sans accord.",
+      "manque": "aucune compétence ne programme seule : il faut un outil de programmation (celui de LinkedIn, à vérifier sur votre compte, ou un outil tiers avec une API ou un serveur MCP). Le workflow prépare le texte, le visuel et le créneau.",
+      "taches": [
+        {
+          "slug": "preparer-la-publication",
+          "titre": "Préparer et programmer la publication",
+          "competences": [
+            {
+              "nom": "small-business:social-content-engine",
+              "role": "par défaut",
+              "pourquoi": "Calendrier, légendes, mise en file des posts, sans jamais publier seul : le plugin d'Anthropic passe en premier."
+            }
+          ]
+        }
+      ]
     },
     {
       "n": 5,
@@ -115,7 +141,7 @@
       "optionnelle": "quand l'entreprise publie ailleurs que sur LinkedIn",
       "rend": "Les idées extraites d'un contenu source, adaptées à chaque réseau, un calendrier de la semaine et la file de programmation.",
       "fichier": "06-decliner.md",
-      "regle": "social par défaut ; social-content-engine quand l'entreprise travaille déjà dans Canva et HubSpot. La source d'origine se cite ; la publication reste validée. Instagram, TikTok, X et Reddit n'ont pas encore de méthode propre. marketing-skills:social par défaut : elle détaille LinkedIn, X, Instagram, TikTok, Facebook et Telegram (format, rythme, ce qui marche) ; pour Reddit elle ne couvre que le repérage de conversations.",
+      "regle": "marketing-skills:social décline vers les autres réseaux ; le calendrier et la file passent par small-business:social-content-engine à l'étape précédente. La source d'origine se cite ; la publication reste validée. Instagram, TikTok, X et Reddit n'ont pas encore de méthode propre. marketing-skills:social par défaut : elle détaille LinkedIn, X, Instagram, TikTok, Facebook et Telegram (format, rythme, ce qui marche) ; pour Reddit elle ne couvre que le repérage de conversations.",
       "taches": [
         {
           "slug": "decliner",
@@ -123,11 +149,8 @@
           "competences": [
             {
               "nom": "marketing-skills:social",
-              "pourquoi": "Part de toute source (article, podcast, webinaire, lettre d'information), en tire cinq à dix idées, les adapte par réseau et tient le calendrier."
-            },
-            {
-              "nom": "small-business:social-content-engine",
-              "pourquoi": "Calendrier, légendes dans la voix du dirigeant, visuels Canva et mise en file, sans jamais publier seul."
+              "pourquoi": "Part de toute source (article, podcast, webinaire, lettre d'information), en tire cinq à dix idées, les adapte par réseau et tient le calendrier.",
+              "role": "par défaut"
             }
           ]
         }
@@ -147,7 +170,8 @@
           "competences": [
             {
               "nom": "marketing-skills:community-marketing",
-              "pourquoi": "Les plans de communauté, le choix de la plateforme, les programmes d'ambassadeurs et les indicateurs de santé."
+              "pourquoi": "Les plans de communauté, le choix de la plateforme, les programmes d'ambassadeurs et les indicateurs de santé.",
+              "role": "par défaut"
             }
           ]
         }
@@ -167,13 +191,19 @@
           "slug": "soigner-le-profil",
           "titre": "Écrire et auditer son profil",
           "competences": [],
-          "manque": "pas encore de compétence publique pour écrire un profil. Aucune compétence ne rédige un profil : on écrit à la main le titre et le résumé, d'après l'offre et le positionnement du moment."
+          "manque": "aucune compétence publique installée n'écrit un profil : linkedin-profile-optimizer (paramchoudhary/resumeskills, 3 300 étoiles) existe mais n'est pas installée. Le titre et le résumé s'écrivent d'après l'offre du moment."
         },
         {
           "slug": "banniere",
           "titre": "Faire la bannière du profil",
-          "competences": [],
-          "manque": "pas encore de compétence publique dédiée ; celle des visuels de l'étape 3 fait aussi les bannières."
+          "competences": [
+            {
+              "nom": "small-business:canva-creator",
+              "role": "par défaut",
+              "pourquoi": "Fabriquer la bannière dans Canva aux bonnes dimensions : le plugin d'Anthropic passe en premier."
+            }
+          ],
+          "manque": "aucune compétence publique dédiée à la bannière LinkedIn : small-business:canva-creator la fabrique, la compétence maison apporte les dimensions et l'export."
         }
       ]
     }

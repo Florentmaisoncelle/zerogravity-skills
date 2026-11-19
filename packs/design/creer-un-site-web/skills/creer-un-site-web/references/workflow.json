@@ -49,7 +49,8 @@
           "competences": [
             {
               "nom": "marketing-skills:copywriting",
-              "pourquoi": "une page hors site public (pub, landing ponctuelle). Le texte d'une page de vente ou d'accueil, à partir de ce que vit le lecteur."
+              "pourquoi": "Le texte d'une page de vente ou d'accueil, à partir de ce que vit le lecteur.",
+              "role": "écrire"
             },
             {
               "nom": "marketing-skills:copy-editing",
@@ -72,28 +73,39 @@
       "regle": "impeccable:impeccable : d'abord sa commande shape (le plan de l'expérience avant tout code), puis la construction des écrans, puis critique et polish, et animate pour les transitions ; le contrat DESIGN.md vaut pour toutes les pages.",
       "taches": [
         {
+          "slug": "comparer-les-versions",
+          "titre": "Comparer des versions visuelles",
+          "competences": [
+            {
+              "nom": "design:design-critique",
+              "role": "par défaut",
+              "pourquoi": "Anthropic (anthropics/knowledge-work-plugins, 36 500 étoiles) : un retour structuré sur chaque version (hiérarchie, cohérence, utilisabilité), donc la grille commune pour les comparer."
+            }
+          ]
+        },
+        {
           "slug": "charte-et-design",
           "titre": "Tenir la charte et le design",
           "competences": [
             {
               "nom": "design:design-system",
-              "pourquoi": "la charte et le design du produit"
+              "pourquoi": "Anthropic (anthropics/knowledge-work-plugins, 36 500 étoiles) : bâtir et tenir le système de design (jetons, composants, règles) que toutes les pages du site réutilisent.",
+              "role": "par défaut"
             },
             {
               "nom": "impeccable:impeccable",
-              "role": "par défaut",
-              "pourquoi": "Paul Bakaus : 24 commandes (shape, craft, critique, audit, polish, animate), 61 règles de détection sans modèle, DESIGN.md et PRODUCT.md comme contrat."
+              "role": "critique et finitions",
+              "pourquoi": "Paul Bakaus (pbakaus/impeccable:impeccable, 113 000 étoiles) : plus profond que le précédent, 24 commandes (shape, craft, critique, audit, polish, animate), 61 règles de détection sans modèle, DESIGN.md et PRODUCT.md comme contrat."
             },
             {
               "nom": "frontend-design:frontend-design",
-              "pourquoi": "créer un écran neuf qui sort du lot"
+              "pourquoi": "Anthropic (anthropics/skills, 197 000 étoiles) : créer un écran neuf qui sort du lot, au ton tranché, avant la critique.",
+              "role": "créer un écran neuf"
             }
           ],
           "reserve": [
-            "design:design-critique",
-            "design:design-system",
             "design:design-handoff",
-            "design:accessibility-review"
+            "design:design-system"
           ]
         }
       ]
@@ -189,6 +201,11 @@
           "nom": "web-design-guidelines",
           "role": "la revue du code",
           "pourquoi": "Vercel : plus de cent règles d'interface vérifiées dans le code (accessibilité, focus, formulaires, contrastes)."
+        },
+        {
+          "nom": "design:accessibility-review",
+          "role": "l'audit de design",
+          "pourquoi": "Anthropic (anthropics/knowledge-work-plugins, 36 500 étoiles) : audit d'accessibilité d'un design ou d'une page (contrastes, focus, structure, cibles tactiles) avant le code."
         }
       ]
     },
@@ -237,11 +254,8 @@
           "competences": [
             {
               "nom": "web-quality-skills:best-practices",
-              "pourquoi": "Appliquer les bonnes pratiques de sécurité et de qualité du code web."
+              "pourquoi": "Addy Osmani (addyosmani/web-quality-skills, 3 100 étoiles) : les bonnes pratiques de sécurité et de qualité du code web à chaque passe."
             }
-          ],
-          "reserve": [
-            "web-quality-skills:web-quality-audit"
           ]
         }
       ],

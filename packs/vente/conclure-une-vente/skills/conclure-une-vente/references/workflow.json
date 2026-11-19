@@ -85,6 +85,34 @@
           "role": "l'écriture dans le CRM",
           "pourquoi": "Enregistre l'échange dans le CRM, à sa vraie date, après accord."
         }
+      ],
+      "taches": [
+        {
+          "slug": "mettre-a-jour-le-crm",
+          "titre": "Mettre à jour l'opportunité dans le CRM",
+          "competences": [
+            {
+              "nom": "sales:update-opportunity",
+              "role": "par défaut",
+              "pourquoi": "Montre l'avant, écrit ce que le vendeur demande ou accepte (étape, date de clôture, prochaines étapes, montant) et vérifie avec le lien de la fiche. Dépôt anthropics/knowledge-work-plugins, 36 500 étoiles, github.com/anthropics/knowledge-work-plugins."
+            },
+            {
+              "nom": "sales:deal-advance-gap",
+              "pourquoi": "Quand il faut dire ce qui manque pour passer l'affaire à l'étape suivante, qui fait quoi et pour quand."
+            }
+          ]
+        },
+        {
+          "slug": "relever-les-mots-du-client",
+          "titre": "Relever les mots et les objections du client",
+          "competences": [
+            {
+              "nom": "sales:customer-voice",
+              "role": "par défaut",
+              "pourquoi": "Sort du transcript les citations exactes du client, attribuées, sur un sujet ou une objection, pour que la suite les reprenne telles quelles. Dépôt anthropics/knowledge-work-plugins, 36 500 étoiles, github.com/anthropics/knowledge-work-plugins."
+            }
+          ]
+        }
       ]
     },
     {
@@ -95,7 +123,20 @@
       "rend": "La solution recommandée, comparée aux autres sur les critères du prospect, avec ses contraintes et sa justification.",
       "fichier": "04-recommandation.md",
       "regle": "Les critères viennent du compte rendu ; un produit sensible ou un engagement commercial se fait valider avant d'être proposé.",
-      "manque": "aucune compétence publique ne confronte les critères d'un prospect à un catalogue de produits ou de formules pour justifier un choix : à fabriquer. En attendant, la comparaison se fait à la main depuis le compte rendu de l'étape 3."
+      "manque": "aucune compétence publique ne confronte les critères d'un prospect à un catalogue de formules pour justifier un choix ; la tâche ci-dessous emprunte une trame de comparaison d'options. Le choix se justifie depuis le compte rendu de l'étape 3.",
+      "taches": [
+        {
+          "slug": "comparer-les-formules",
+          "titre": "Comparer les formules aux critères du prospect",
+          "competences": [
+            {
+              "nom": "operations:vendor-review",
+              "role": "par défaut",
+              "pourquoi": "Compare des options côte à côte sur le coût, le risque et la recommandation, avec les points à négocier ; écrite du côté de l'acheteur, elle sert ici de trame pour confronter les formules aux critères du prospect. Dépôt anthropics/knowledge-work-plugins, 36 500 étoiles, github.com/anthropics/knowledge-work-plugins."
+            }
+          ]
+        }
+      ]
     },
     {
       "n": 5,
@@ -115,6 +156,19 @@
           "role": "le prix",
           "pourquoi": "Les paliers et la mesure de la valeur, quand le prix lui-même se pose."
         }
+      ],
+      "taches": [
+        {
+          "slug": "poser-son-offre",
+          "titre": "Poser son offre",
+          "competences": [
+            {
+              "nom": "marketing-skills:product-marketing",
+              "role": "par défaut",
+              "pourquoi": "Pose le positionnement et la promesse d'où l'offre se construit : à qui elle s'adresse, ce qu'elle change, en quoi elle diffère ; l'offre elle-même se bâtit avec l'outil de l'étape. Dépôt marketingskills, 61 400 étoiles, github.com/coreyhaines31/marketingskills."
+            }
+          ]
+        }
       ]
     },
     {
@@ -123,20 +177,33 @@
       "titre": "Écrire la proposition ou le devis",
       "rend": "La proposition chiffrée au gabarit de l'entreprise (ce qui est inclus et ce qui ne l'est pas), en Word et en PDF, et un support propre au compte si besoin.",
       "fichier": "06-proposition.md",
-      "regle": "propale-redaction monte la proposition depuis le transcript du rendez-vous et le modèle de l'entreprise ; proposal-builder fixe le prix d'après les prix réellement pratiqués, un blanc plutôt qu'un tarif inventé ; create-an-asset seulement quand le client attend un support à faire circuler. Sans transcript, pas de proposition : la fiche et les questions pour l'appel. Les mentions légales françaises (SIRET, TVA, pénalités de retard) vivent dans le gabarit de l'entreprise. Envoyer reste le geste de la personne qui vend. La proposition se monte à la main depuis le compte rendu de l'étape 3 et le modèle de l'entreprise : contexte du client, besoin exprimé, solution, ce qui est inclus et ce qui ne l'est pas, délais, conditions, prix. small-business:proposal-builder fixe le prix d'après les prix réellement pratiqués, un blanc plutôt qu'un tarif inventé ; sales:create-an-asset seulement quand le client attend un support à faire circuler. Les mentions à prévoir (délai de paiement, pénalités de retard, indemnité de recouvrement de 40 € pour un client professionnel, mention de franchise de TVA le cas échéant) sont listées dans « Les règles à connaître » du SKILL.md.",
+      "regle": "proposal-builder monte la proposition chiffrée depuis ce qui est sorti du rendez-vous, d'après les prix réellement pratiqués, un blanc plutôt qu'un tarif inventé ; propale-redaction quand l'entreprise a son modèle à remplir, avec une source par champ ; create-an-asset seulement quand le client attend un support à faire circuler. Sans transcript, pas de proposition : la fiche et les questions pour l'appel. Les mentions légales françaises (SIRET, TVA, pénalités de retard) vivent dans le gabarit de l'entreprise. Envoyer reste le geste de la personne qui vend. La proposition se monte à la main depuis le compte rendu de l'étape 3 et le modèle de l'entreprise : contexte du client, besoin exprimé, solution, ce qui est inclus et ce qui ne l'est pas, délais, conditions, prix. Les mentions à prévoir (délai de paiement, pénalités de retard, indemnité de recouvrement de 40 € pour un client professionnel, mention de franchise de TVA le cas échéant) sont listées dans « Les règles à connaître » du SKILL.md.",
       "competences": [
         {
           "nom": "small-business:proposal-builder",
-          "role": "le prix",
-          "pourquoi": "La seule qui chiffre d'après les prix réellement pratiqués (grille, devis passés), laisse un blanc plutôt qu'un tarif inventé, exige une section « non inclus » et garde les marges hors du document du client."
+          "role": "par défaut",
+          "pourquoi": "Part de ce qui est sorti du rendez-vous (transcript, note vocale, notes) et monte la proposition chiffrée d'après les prix réellement pratiqués (grille, devis passés) ; laisse un blanc plutôt qu'un tarif inventé, exige une section « non inclus » et garde les marges hors du document du client. Dépôt anthropics/knowledge-work-plugins, 36 500 étoiles."
         },
         {
           "nom": "sales:create-an-asset",
           "role": "un support pour le compte",
-          "pourquoi": "Une présentation ou une page laissée au client, chaque affirmation tracée jusqu'à sa source, « non vérifié » sinon."
+          "pourquoi": "Une présentation ou une page laissée au client, chaque affirmation tracée jusqu'à sa source, « non vérifié » sinon. Dépôt anthropics/knowledge-work-plugins, 36 500 étoiles."
         }
       ],
-      "manque": "aucune compétence publique ne monte le document complet à partir du rendez-vous et du modèle de l'entreprise : on l'assemble à la main, avec la règle ci-dessus."
+      "manque": "aucune compétence publique ne monte le document complet à partir du rendez-vous et du modèle de l'entreprise : on l'assemble à la main, avec la règle ci-dessus.",
+      "taches": [
+        {
+          "slug": "proposition-depuis-rendez-vous",
+          "titre": "Rédiger la proposition depuis l'enregistrement du rendez-vous",
+          "competences": [
+            {
+              "nom": "marketing-skills:customer-research",
+              "role": "par défaut",
+              "pourquoi": "Relit l'enregistrement comme une interview : en tire le besoin, les mots du client et ses objections, que la proposition reprend telles quelles ; l'écriture se fait avec les compétences de l'étape. Dépôt marketingskills, 61 400 étoiles, github.com/coreyhaines31/marketingskills."
+            }
+          ]
+        }
+      ]
     },
     {
       "n": 7,
@@ -196,12 +263,17 @@
         {
           "slug": "relire-le-contrat",
           "titre": "Relire un contrat avant de signer",
-          "competences": [],
-          "reserve": [
-            "legal:review-contract",
-            "legal:triage-nda"
-          ],
-          "manque": "aucune compétence par défaut encore : voir la réserve. Pas de compétence par défaut en plus de la relecture de contrat : la revue juridique et le tri des accords de confidentialité restent en réserve pour un contrat ou un accord de confidentialité."
+          "competences": [
+            {
+              "nom": "legal:review-contract",
+              "role": "par défaut",
+              "pourquoi": "Relit le contrat contre la grille de négociation de l'entreprise : repère les écarts, propose les corrections et dit quoi négocier. Dépôt anthropics/knowledge-work-plugins, 36 500 étoiles, github.com/anthropics/knowledge-work-plugins."
+            },
+            {
+              "nom": "legal:triage-nda",
+              "pourquoi": "Quand le contrat est un accord de confidentialité reçu : le classe vert (on signe), jaune (un juriste relit) ou rouge (on refuse ou on renégocie)."
+            }
+          ]
         },
         {
           "slug": "faire-signer",
@@ -209,7 +281,7 @@
           "competences": [
             {
               "nom": "legal:signature-request",
-              "pourquoi": "Préparer et envoyer un document à signer, dans le bon ordre."
+              "pourquoi": "Prépare et envoie un document à signer, dans le bon ordre : contrôle avant signature, ordre des signataires, envoi. Dépôt anthropics/knowledge-work-plugins, 36 500 étoiles, github.com/anthropics/knowledge-work-plugins."
             }
           ]
         }
@@ -224,7 +296,20 @@
       "rend": "Le récapitulatif à confirmer (références, quantités, disponibilités, conditions), puis la commande confirmée et sa référence.",
       "fichier": "09-commande.md",
       "regle": "Rien n'est engagé avant la confirmation écrite du client.",
-      "manque": "aucune compétence publique ne transforme une demande en récapitulatif à confirmer avec sa référence de commande : à fabriquer."
+      "manque": "aucune compétence publique ne transforme une demande en récapitulatif à confirmer avec sa référence de commande : à fabriquer.",
+      "taches": [
+        {
+          "slug": "facturer-la-commande",
+          "titre": "Facturer la commande",
+          "competences": [
+            {
+              "nom": "small-business:invoice-chase",
+              "pourquoi": "Pour relancer la facture impayée, ton adapté à l'historique de paiement du client."
+            }
+          ],
+          "manque": "aucune compétence publique ne crée une facture dans l'outil de facturation du vendeur (Shine, Pennylane, Qonto) : la facture se crée dans cet outil, et la compétence maison le fait pour Shine seulement ; l'état d'un abonnement Stripe se lit avec customer-billing-ops du dépôt ECC, quand elle sera rapatriée."
+        }
+      ]
     }
   ]
 }

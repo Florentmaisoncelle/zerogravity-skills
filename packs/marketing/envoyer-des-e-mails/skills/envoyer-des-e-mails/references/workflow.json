@@ -22,12 +22,13 @@
           "titre": "Écrire les parcours automatiques",
           "competences": [
             {
+              "nom": "marketing:email-sequence",
+              "pourquoi": "Plugin marketing d'Anthropic (knowledge-work-plugins, 36 500 étoiles, https://github.com/anthropics/knowledge-work-plugins) : conçoit la séquence e-mail (bienvenue, nurturing, relance) avec ses délais, ses objets et ses sorties."
+            },
+            {
               "nom": "marketing-skills:emails",
-              "pourquoi": "Décide quelles séquences construire et écrit les messages : longueur, délais, objets, segments et conditions de sortie."
+              "pourquoi": "marketingskills de Corey Haines (61 000 étoiles, https://github.com/coreyhaines31/marketingskills) : décide quelles séquences construire et écrit les messages : longueur, délais, objets, segments et conditions de sortie."
             }
-          ],
-          "reserve": [
-            "marketing:email-sequence"
           ]
         }
       ]
@@ -44,13 +45,13 @@
           "slug": "newsletter",
           "titre": "Écrire la newsletter",
           "competences": [],
-          "manque": "pas encore de méthode publique pour la newsletter. Pas de compétence publique : la méthode est dans le SKILL.md (promesse, rythme, format fixe, mesure sur quatre numéros)."
+          "manque": "les publiques de rédaction d'une newsletter (marketing:content-creation et marketing:draft-content, plugin marketing d'Anthropic, 36 500 étoiles) sont une seule compétence, déjà rangée dans « Référencer son site » ; la méthode (promesse, rythme, format fixe, mesure sur quatre numéros) reste dans le SKILL.md du workflow."
         },
         {
           "slug": "consentement",
           "titre": "Recueillir le consentement",
           "competences": [],
-          "manque": "pas encore de méthode pour le consentement des e-mails."
+          "manque": "aucune compétence publique installée ne porte le consentement des e-mails (RGPD, double adhésion, désinscription) : operations:compliance-tracking sert déjà ailleurs, la bonne publique (gdpr-data-handling du dépôt wshobson/agents, 42 700 étoiles, https://github.com/wshobson/agents) n'est pas installée, donc en réserve ; la règle de l'étape pose la base légale."
         }
       ]
     },
@@ -66,7 +67,7 @@
           "slug": "delivrabilite",
           "titre": "Tester les objets et nettoyer la liste",
           "competences": [],
-          "manque": "pas encore de compétence publique pour la délivrabilité."
+          "manque": "aucune compétence publique installée ne porte la délivrabilité (SPF, DKIM, DMARC, montée en volume) ; les publiques trouvées sont peu suivies (cold-email-deliverability : dépôt à 3 étoiles ; Twilio : 41 étoiles), donc pas par défaut. La règle de l'étape pose les contrôles, et le test d'objet passe par l'outil d'essais déjà logé dans « Convertir les visiteurs »."
         }
       ]
     },
@@ -85,7 +86,7 @@
           "competences": [
             {
               "nom": "marketing-skills:sms",
-              "pourquoi": "Écrit les messages SMS de relance et d'annonce, avec consentement, et les parcours qui les relient (panier, après achat, retour d'un client), et compare le SMS à l'e-mail."
+              "pourquoi": "marketingskills de Corey Haines (61 000 étoiles, https://github.com/coreyhaines31/marketingskills) : écrit les messages SMS de relance et d'annonce, avec consentement, et les parcours qui les relient (panier, après achat, retour d'un client), et compare le SMS à l'e-mail."
             }
           ]
         }

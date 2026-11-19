@@ -20,7 +20,10 @@ Ce workflow s'appuie sur des compétences publiques, installées à part. Aucune
 ```text
 /plugin marketplace add anthropics/knowledge-work-plugins
 /plugin marketplace add coreyhaines31/marketingskills
+/plugin marketplace add heygen-com/hyperframes
+/plugin install hyperframes@hyperframes
 /plugin install marketing-skills@marketingskills
+/plugin install marketing@knowledge-work-plugins
 /plugin install small-business@knowledge-work-plugins
 ```
 

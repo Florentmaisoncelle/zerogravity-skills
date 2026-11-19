@@ -182,7 +182,7 @@
             {
               "nom": "router-decider-une-strategie",
               "role": "autre choix",
-              "pourquoi": "Comble un vide : aucune compétence publique ne cadre une décision de stratégie (question nette, structure sans recouvrement, hypothèses explicites). Le groupe vit dans le pack décider une stratégie : on le cite, on ne le recopie pas.",
+              "pourquoi": "Comble un vide : aucune compétence publique ne cadre une décision de stratégie (question nette, structure sans recouvrement, hypothèses explicites). Le groupe est rangé dans le pack décider une stratégie : on le cite, on ne le recopie pas.",
               "maison": "cadrer-un-chantier"
             },
             {
@@ -255,9 +255,21 @@
           "titre": "Chercher les causes qui comptent",
           "competences": [
             {
-              "nom": "data:statistical-analysis",
+              "nom": "data:analyze",
               "role": "par défaut",
-              "pourquoi": "Tests d'hypothèse, corrélations et valeurs aberrantes, avec les pièges (une corrélation n'est pas une cause) : pour chercher ce qui explique vraiment un écart sur les relevés.",
+              "pourquoi": "Cherche ce qui explique une tendance ou une baisse, compare des segments, puis valide avant de présenter : pour lire les relevés du processus.",
+              "source": "Anthropic, anthropics/knowledge-work-plugins"
+            },
+            {
+              "nom": "data:statistical-analysis",
+              "role": "autre choix",
+              "pourquoi": "Tests d'hypothèse, corrélations et valeurs aberrantes, avec les pièges (une corrélation n'est pas une cause).",
+              "source": "Anthropic, anthropics/knowledge-work-plugins"
+            },
+            {
+              "nom": "data:explore-data",
+              "role": "autre choix",
+              "pourquoi": "Pour profiler un jeu de relevés avant de l'analyser : qualité, doublons, distributions, valeurs suspectes.",
               "source": "Anthropic, anthropics/knowledge-work-plugins"
             },
             {
@@ -265,15 +277,11 @@
               "role": "autre choix",
               "pourquoi": "Pour lire les relevés sans se fier aux corrélations : partir d'une hypothèse, vérifier le pourquoi avant d'agir sur ce que les données montrent. En anglais, avec exemples.",
               "source": "MichaelRochonnn, MichaelRochonnn/mckinsey-bcg-consulting"
-            },
-            {
-              "nom": "mckinsey-bcg-consulting:key-driver-analysis",
-              "role": "autre choix",
-              "pourquoi": "Quand les facteurs possibles sont trop nombreux : garder les quelques facteurs qui pèsent vraiment et n'analyser que ceux-là. Écrite en chinois.",
-              "source": "MichaelRochonnn, MichaelRochonnn/mckinsey-bcg-consulting"
             }
           ],
-          "reserve": []
+          "reserve": [
+            "mckinsey-bcg-consulting:key-driver-analysis"
+          ]
         }
       ],
       "departement": "Comprendre"
@@ -517,6 +525,12 @@
               "maison": "creer-un-agent-ia"
             },
             {
+              "nom": "data:validate-data",
+              "role": "autre choix",
+              "pourquoi": "Contrôle la méthode, l'exactitude et les biais d'une analyse avant de la partager.",
+              "source": "Anthropic, anthropics/knowledge-work-plugins"
+            },
+            {
               "nom": "strategy-skills-for-claude:assumption-audit",
               "role": "autre choix",
               "pourquoi": "Pour repérer les hypothèses qui portent le gain, noter la solidité de la preuve de chacune et transformer les plus fragiles en vérifications. Courte.",
@@ -529,6 +543,18 @@
           "slug": "montrer-le-gain-en-cascade",
           "titre": "Montrer le gain en cascade",
           "competences": [
+            {
+              "nom": "data:create-viz",
+              "role": "par défaut",
+              "pourquoi": "Crée un graphique de qualité publication et choisit le bon type (la cascade comprise) à partir d'un tableau de chiffres.",
+              "source": "Anthropic, anthropics/knowledge-work-plugins"
+            },
+            {
+              "nom": "data:data-visualization",
+              "role": "autre choix",
+              "pourquoi": "Principes de visualisation (accessibilité, couleurs) avec Python, pour un graphique de gain lisible.",
+              "source": "Anthropic, anthropics/knowledge-work-plugins"
+            },
             {
               "nom": "mckinsey-bcg-consulting:waterfall-chart-visualization",
               "role": "autre choix",
@@ -724,6 +750,12 @@
               "role": "autre choix",
               "pourquoi": "Quand l'agent est suivi par Logfire : lit erreurs, coûts, durées et tendances (éditeur officiel).",
               "source": "Pydantic, pydantic/skills"
+            },
+            {
+              "nom": "data:sql-queries",
+              "role": "autre choix",
+              "pourquoi": "Pour des relevés depuis un entrepôt ou une base : du SQL correct et performant.",
+              "source": "Anthropic, anthropics/knowledge-work-plugins"
             }
           ],
           "reserve": []

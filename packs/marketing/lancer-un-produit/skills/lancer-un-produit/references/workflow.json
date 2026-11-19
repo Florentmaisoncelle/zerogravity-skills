@@ -23,11 +23,13 @@
           "competences": [
             {
               "nom": "marketing:campaign-plan",
-              "pourquoi": "Le seul brief de campagne qui tient le calendrier semaine par semaine avec ses dépendances, les pièces à produire et le budget."
+              "pourquoi": "Le brief de campagne : objectifs, public, messages, canaux, calendrier semaine par semaine avec ses dépendances, pièces à produire, budget et indicateurs.",
+              "role": "par défaut"
             },
             {
               "nom": "marketing-skills:marketing-ideas",
-              "pourquoi": "Une liste d'idées de canaux quand on cherche par où commencer."
+              "pourquoi": "Une liste d'idées de canaux et de tactiques quand on cherche par où commencer.",
+              "role": "des idées de canaux"
             }
           ]
         }
@@ -47,15 +49,37 @@
           "competences": [
             {
               "nom": "marketing-skills:launch",
-              "pourquoi": "Le plan de lancement en cinq phases, canal par canal, avec une porte de préparation et l'après-lancement. Une porte de préparation avant de lancer, le plan en cinq phases (interne, alpha, bêta, accès anticipé, ouverture) canal par canal, l'après-lancement, et un contrôle qualité si le lancement comprend un nouveau site."
+              "pourquoi": "Une porte de préparation avant de lancer, le plan en cinq phases (interne, alpha, bêta, accès anticipé, ouverture) canal par canal, l'après-lancement, et un contrôle qualité si le lancement comprend un nouveau site.",
+              "role": "par défaut"
+            },
+            {
+              "nom": "agent-skills:shipping-and-launch",
+              "role": "la liste de contrôle technique avant l'ouverture",
+              "pourquoi": "La liste de contrôle de mise en production et de lancement : le produit tient-il avant d'être annoncé ?"
+            },
+            {
+              "nom": "marketing:performance-report",
+              "role": "la mesure après le lancement",
+              "pourquoi": "Le rapport de résultats de l'après-lancement : ce qui a marché, ce qui reste à corriger."
             }
           ]
         },
         {
           "slug": "product-hunt",
           "titre": "Lancer sur Product Hunt",
-          "competences": [],
-          "manque": "pas de compétence Product Hunt ; le plan de lancement de la tâche d'avant sert en attendant."
+          "competences": [
+            {
+              "nom": "marketing-skills:launch",
+              "role": "la stratégie Product Hunt",
+              "pourquoi": "Donne la stratégie de lancement sur Product Hunt dans son plan par phases."
+            },
+            {
+              "nom": "marketing-skills:directory-submissions",
+              "role": "la préparation sur trois semaines",
+              "pourquoi": "Détaille la préparation de Product Hunt sur trois semaines, le jour J et l'après."
+            }
+          ],
+          "manque": "aucune compétence dédiée à Product Hunt n'est installée : les deux ci-dessus la couvrent. La meilleure dédiée, product-hunt-launch de kostja94/marketing-skills (1 100 étoiles, https://github.com/kostja94/marketing-skills), est trop peu suivie pour être le choix par défaut."
         }
       ]
     },
@@ -73,7 +97,13 @@
           "competences": [
             {
               "nom": "marketing:brand-review",
-              "pourquoi": "Relit les textes du visuel contre la voix et les allégations de la marque."
+              "pourquoi": "Relit chaque texte contre la voix de la marque et ses allégations : superlatifs sans preuve, mentions manquantes, comparaisons attaquables, classés par gravité.",
+              "role": "par défaut"
+            },
+            {
+              "nom": "marketing-skills:copy-editing",
+              "role": "relire le texte lui-même",
+              "pourquoi": "Une relecture méthodique du texte en plusieurs passes (clarté, preuves, ton) une fois les allégations contrôlées."
             }
           ]
         }
@@ -93,15 +123,26 @@
           "competences": [
             {
               "nom": "marketing-skills:directory-submissions",
-              "pourquoi": "La seule dédiée : un catalogue d'annuaires dont les adresses mortes connues ont été retirées, trois règles à respecter avant de soumettre, une vérification avant chaque soumission et un tableur de suivi."
+              "pourquoi": "Un catalogue d'annuaires dont les adresses mortes connues ont été retirées, trois règles à respecter avant de soumettre, une vérification avant chaque soumission et un tableur de suivi.",
+              "role": "par défaut"
             }
           ]
         },
         {
           "slug": "fiches-produit",
           "titre": "Remettre les fiches produit au propre",
-          "competences": [],
-          "manque": "aucune compétence pour tenir les fiches à jour d'un annuaire à l'autre : on garde une fiche de référence unique (voir la méthode du SKILL.md) et on la recopie à la main, après accord pour chaque soumission."
+          "competences": [
+            {
+              "nom": "marketing-skills:directory-submissions",
+              "role": "par défaut : la fiche de référence et ses variantes",
+              "pourquoi": "Une fiche de positionnement de référence déclinée en variantes par annuaire, et un tableur de suivi des soumissions."
+            },
+            {
+              "nom": "marketing-skills:product-marketing",
+              "role": "le positionnement qui nourrit la fiche",
+              "pourquoi": "Pose le positionnement, la promesse et les messages dont toutes les fiches dérivent."
+            }
+          ]
         }
       ]
     },
@@ -120,7 +161,8 @@
           "competences": [
             {
               "nom": "marketing-skills:aso",
-              "pourquoi": "La seule dédiée sans service payant : elle relève la fiche, note chaque dimension selon les limites d'Apple et de Google et compare aux concurrents."
+              "pourquoi": "Relève la fiche, note chaque dimension selon les limites d'Apple et de Google et compare aux concurrents ; sans service payant.",
+              "role": "par défaut"
             }
           ]
         }
@@ -138,8 +180,14 @@
         {
           "slug": "traduire",
           "titre": "Traduire le site et les contenus",
-          "competences": [],
-          "manque": "aucune compétence publique pour traduire : l'inventaire des textes, la traduction et la vérification se font à la main, avec la méthode du SKILL.md."
+          "competences": [
+            {
+              "nom": "marketing-skills:copy-editing",
+              "role": "relire le texte traduit",
+              "pourquoi": "Relit le texte traduit en plusieurs passes (clarté, ton, preuves) avant diffusion."
+            }
+          ],
+          "manque": "aucune compétence publique installée pour traduire. Les meilleures : claude-blog:blog-translate et blog-localize (AgriciDaniel/claude-blog, 2 800 étoiles, https://github.com/AgriciDaniel/claude-blog) et translation de kostja94/marketing-skills (1 100 étoiles) ; non installées, elles ne sont pas par défaut. La traduction et la vérification se font avec la méthode du SKILL.md."
         }
       ]
     },
@@ -158,7 +206,13 @@
           "competences": [
             {
               "nom": "marketing-skills:public-relations",
-              "pourquoi": "Quand la presse vaut la peine, la page presse, les accroches, les communiqués, et la communication de crise."
+              "pourquoi": "Quand la presse vaut la peine : la page presse, les accroches, les communiqués et la communication de crise.",
+              "role": "par défaut"
+            },
+            {
+              "nom": "bmad-prfaq",
+              "role": "le communiqué écrit à l'envers",
+              "pourquoi": "Écrit le communiqué de presse du produit fini avant de le construire, puis les questions difficiles : un test de la promesse avant l'annonce."
             }
           ]
         },
@@ -168,7 +222,8 @@
           "competences": [
             {
               "nom": "marketing-skills:co-marketing",
-              "pourquoi": "Trouver et noter des partenaires, les types de campagnes conjointes, l'approche et le plan d'accord."
+              "pourquoi": "Trouver et noter des partenaires, les types de campagnes conjointes, l'approche et le plan d'accord.",
+              "role": "par défaut"
             }
           ]
         },
@@ -178,7 +233,13 @@
           "competences": [
             {
               "nom": "marketing-skills:influencer-marketing",
-              "pourquoi": "Choisir, contracter et mesurer des créateurs et des ambassadeurs."
+              "pourquoi": "Choisir, contracter et mesurer des créateurs et des ambassadeurs.",
+              "role": "par défaut"
+            },
+            {
+              "nom": "marketing-skills:community-marketing",
+              "role": "animer ceux qui suivent",
+              "pourquoi": "Faire naître et animer une communauté autour du produit une fois les premiers relais trouvés."
             }
           ]
         }
@@ -199,7 +260,13 @@
           "competences": [
             {
               "nom": "marketing-skills:events",
-              "pourquoi": "La seule dédiée : organiser, parrainer, intervenir ; vingt pour cent pour l'événement, quatre-vingts pour l'avant et l'après ; la relance hiérarchisée et la mesure. Organiser, parrainer ou intervenir dans un événement : vingt pour cent de l'effort pour l'événement, quatre-vingts pour l'avant et l'après, une relance hiérarchisée dans les quarante-huit heures et la mesure de ce qu'il rapporte."
+              "pourquoi": "Organiser, parrainer ou intervenir dans un événement : vingt pour cent de l'effort pour l'événement, quatre-vingts pour l'avant et l'après, une relance hiérarchisée dans les quarante-huit heures et la mesure de ce qu'il rapporte.",
+              "role": "par défaut"
+            },
+            {
+              "nom": "marketing:email-sequence",
+              "role": "les rappels et la relance",
+              "pourquoi": "La suite d'e-mails d'invitation, de rappel et de relance des participants."
             }
           ]
         }

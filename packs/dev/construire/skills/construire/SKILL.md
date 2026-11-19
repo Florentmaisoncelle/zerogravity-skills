@@ -63,7 +63,10 @@ Ce workflow s'appuie sur des compétences publiques, installées à part. Aucune
 /plugin install entretenir-son-systeme@zerogravity
 /plugin install product-management@knowledge-work-plugins
 /plugin install superpowers@claude-plugins-official
+npx skills add bmad-code-org/BMAD-METHOD --skill bmad-review -a claude-code
 ```
+
+La commande `npx skills add` (CLI Vercel `skills`) demande Node.js 22.20 ou plus (vérifié le 06/11/2026, https://github.com/vercel-labs/skills). Claude Code installé avec l'installeur natif n'en a pas besoin.
 
 Les workflows cités ici sont dans le même dépôt (le dépôt s'ajoute une fois : `/plugin marketplace add Florentmaisoncelle/zerogravity-skills`) :
 
@@ -145,7 +148,7 @@ dans le fichier de l'étape sa sortie, inscrire `fait` au journal, puis passer �
 |---|---|---|---|
 | 1 | Découper en tâches | `superpowers:writing-plans` · Planifier un sprint : `product-management:sprint-planning` | writing-plans sur la spécification et l'architecture déjà écrites. Le plan s'écrit dans le dossier du projet, dans `construction/construction-plan.md`, une case à cocher par tâche. Une tâche qui ne se vérifie pas seule se redécoupe. |
 | 2 | Construire chaque tâche, test d'abord | `superpowers:subagent-driven-development` · `superpowers:test-driven-development` · `superpowers:executing-plans` · Coder une tâche : `agent-skills:source-driven-development` · Construire une tâche en restant dans le cadre : `caveman:lean-build` · Lancer plusieurs tâches en parallèle : `superpowers:dispatching-parallel-agents` | Une tâche à la fois, par un sous-agent, test d'abord ; elle n'est cochée que si son test passe. executing-plans seulement là où les sous-agents manquent. Jamais d'arbre de travail ni de branche nouvelle. Si une compétence propose de créer une branche ou une copie de travail du dépôt, on suit le choix posé à la personne au début. |
-| 3 | Relire entre deux tâches | `superpowers:requesting-code-review` · `superpowers:receiving-code-review` · Simplifier le code sans changer son comportement : `agent-skills:code-simplification` | Une relecture par lot, pendant la construction, avant la tâche suivante. La relecture du diff entier se fait ensuite, dans la brique Tester et sécuriser. |
+| 3 | Relire entre deux tâches | `superpowers:requesting-code-review` · `superpowers:receiving-code-review` · Relire le code : `bmad-review` · Simplifier le code sans changer son comportement : `agent-skills:code-simplification` | Une relecture par lot, pendant la construction, avant la tâche suivante. La relecture du diff entier se fait ensuite, dans la brique Tester et sécuriser. |
 | 4 | Prouver avant de dire fini | `superpowers:verification-before-completion` · Vérifier avant de dire fini : `agent-skills:constraint-driven-development` · Prouver que c'est fini : `caveman:verify-and-stop` | Rien n'est annoncé fait sans la sortie de sa vérification ; un échec s'écrit tel quel, avec la sortie. |
 <!-- etapes:fin -->
 

@@ -20,6 +20,7 @@ Ce workflow s'appuie sur des compétences publiques, installées à part. Aucune
 ```text
 /plugin marketplace add anthropics/knowledge-work-plugins
 /plugin marketplace add coreyhaines31/marketingskills
+/plugin install data@knowledge-work-plugins
 /plugin install design@knowledge-work-plugins
 /plugin install marketing-skills@marketingskills
 ```

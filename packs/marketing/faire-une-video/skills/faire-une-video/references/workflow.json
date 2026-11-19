@@ -23,7 +23,8 @@
           "competences": [
             {
               "nom": "marketing-skills:video",
-              "pourquoi": "Compare les approches (code, génération, montage) pour une démonstration, un explicatif ou une série de clips. Compare les approches (vidéo programmée, génération par IA, avatar, montage de prises) et dit quand un avatar convient ou non, par exemple pour du contenu récurrent ou en plusieurs langues, mais pas pour un témoignage de fondateur."
+              "pourquoi": "Compare les approches (code, génération, montage) pour une démonstration, un explicatif ou une série de clips. Compare les approches (vidéo programmée, génération par IA, avatar, montage de prises) et dit quand un avatar convient ou non, par exemple pour du contenu récurrent ou en plusieurs langues, mais pas pour un témoignage de fondateur.",
+              "role": "par défaut"
             }
           ]
         }
@@ -42,8 +43,14 @@
           "titre": "Trouver l'idée du short",
           "competences": [
             {
+              "nom": "poser-sa-strategie-marketing:video-qui-sortent-du-lot",
+              "role": "ce qui marche chez les autres",
+              "pourquoi": "Pour nourrir l'idée : ce qui explose chez des chaînes voisines, relevé avant de choisir un sujet."
+            },
+            {
               "nom": "faire-une-video:video-idee-de-short",
-              "pourquoi": "Part du travail réel du créateur et classe les idées selon la preuve qu'il peut montrer, plutôt que d'après une inspiration du moment."
+              "pourquoi": "Comble un vide : aucune compétence publique ne classe les idées de short selon la preuve que le créateur peut montrer de son travail réel, plutôt que d'après l'inspiration du moment.",
+              "role": "comble un vide"
             }
           ]
         },
@@ -53,7 +60,18 @@
           "competences": [
             {
               "nom": "marketing-skills:social",
-              "pourquoi": "Pour une vidéo courte : l'accroche de trois secondes (image, parole et texte à l'écran ensemble), des structures prêtes (problème et solution, liste, tutoriel) et des formules d'accroche."
+              "pourquoi": "Les structures d'un contenu vidéo court et l'accroche, par le dépôt le plus suivi du marketing.",
+              "role": "par défaut"
+            },
+            {
+              "nom": "marketing-skills:copywriting",
+              "role": "le texte qui convainc",
+              "pourquoi": "Écrire un texte qui convainc avant de l'écrire pour l'oral : promesse, preuve et appel à l'action."
+            },
+            {
+              "nom": "hyperframes:hyperframes-creative",
+              "role": "la narration",
+              "pourquoi": "La narration et le découpage en temps forts d'une vidéo, quand le script sert à des plans animés."
             }
           ]
         }
@@ -74,7 +92,18 @@
           "competences": [
             {
               "nom": "hyperframes:hyperframes",
-              "pourquoi": "Des plans animés écrits en HTML, rendus en vidéo."
+              "pourquoi": "Le point d'entrée de HeyGen pour toute vidéo codée : des plans animés écrits en HTML, rendus en vidéo.",
+              "role": "par défaut"
+            },
+            {
+              "nom": "hyperframes:motion-graphics",
+              "role": "la motion",
+              "pourquoi": "Une courte animation où le mouvement porte le message : texte animé, chiffres qui montent, graphique, logo."
+            },
+            {
+              "nom": "hyperframes:faceless-explainer",
+              "role": "l'explicatif",
+              "pourquoi": "Un explicatif sans visage à partir d'un texte ou de notes : les visuels sont inventés scène par scène."
             }
           ],
           "reserve": [
@@ -83,18 +112,15 @@
             "hyperframes:hyperframes-studio",
             "hyperframes:hyperframes-animation",
             "hyperframes:hyperframes-keyframes",
-            "hyperframes:hyperframes-creative",
             "hyperframes:hyperframes-audio",
             "hyperframes:hyperframes-registry",
             "hyperframes:media-use",
             "hyperframes:figma",
             "hyperframes:general-video",
-            "hyperframes:faceless-explainer",
             "hyperframes:music-to-video",
             "hyperframes:pr-to-video",
             "hyperframes:remotion-to-hyperframes",
-            "hyperframes:slideshow",
-            "hyperframes:motion-graphics"
+            "hyperframes:slideshow"
           ]
         },
         {
@@ -103,7 +129,8 @@
           "competences": [
             {
               "nom": "hyperframes:product-launch-video",
-              "pourquoi": "Un film de lancement plus long, à partir de l'adresse du site du produit ou d'un script collé, avec une voix off et une musique générées, ou sans voix si on le demande."
+              "pourquoi": "Un film de lancement plus long, à partir de l'adresse du site du produit ou d'un script collé, avec une voix off et une musique générées, ou sans voix si on le demande.",
+              "role": "par défaut"
             }
           ]
         }
@@ -124,7 +151,8 @@
           "competences": [
             {
               "nom": "hyperframes:talking-head-recut",
-              "pourquoi": "Recouper une vidéo face caméra."
+              "pourquoi": "Recoupe une vidéo face caméra ou un podcast et pose dessus des cartes graphiques synchronisées sur la transcription : titres, citations, chiffres.",
+              "role": "par défaut"
             }
           ]
         },
@@ -134,7 +162,8 @@
           "competences": [
             {
               "nom": "hyperframes:embedded-captions",
-              "pourquoi": "Les sous-titres incrustés dans une prise face caméra, simples ou animés, sans toucher à l'image."
+              "pourquoi": "Les sous-titres incrustés dans une prise face caméra, simples ou animés, sans toucher à l'image.",
+              "role": "par défaut"
             }
           ]
         },
@@ -143,8 +172,14 @@
           "titre": "Tester trois ouvertures",
           "competences": [
             {
+              "nom": "marketing-skills:ad-creative",
+              "role": "par défaut",
+              "pourquoi": "Son système d'accroches génère et compare des ouvertures par hypothèse falsifiable (métrique, comparaison, sens attendu)."
+            },
+            {
               "nom": "faire-une-video:video-tester-trois-ouvertures",
-              "pourquoi": "Choisit l'entrée d'un short sur trois cartes comparables avant de tout monter, puis relit le short sur une liste de défauts connus."
+              "pourquoi": "Comble un vide : aucune compétence publique ne tranche l'entrée d'un short sur trois cartes comparables avant de monter, puis ne relit le short sur une liste de défauts connus.",
+              "role": "comble un vide"
             }
           ]
         }
@@ -164,8 +199,14 @@
           "titre": "Faire le titre et la miniature",
           "competences": [
             {
+              "nom": "marketing-skills:image",
+              "role": "le visuel",
+              "pourquoi": "La miniature comme visuel : génération et direction d'image par le dépôt le plus suivi du marketing."
+            },
+            {
               "nom": "faire-une-video:video-titre-et-miniature",
-              "pourquoi": "Le titre et la miniature promettent chacun autre chose (verdict, preuve, utilité) sans dépasser ce que la vidéo tient, avec des marges contrôlées par script et le choix laissé au créateur."
+              "pourquoi": "Comble un vide : aucune publique ne fait promettre un titre et une miniature chacun autre chose (verdict, preuve, utilité) sans dépasser ce que la vidéo tient, avec des marges contrôlées par script.",
+              "role": "comble un vide"
             }
           ]
         },
@@ -174,8 +215,14 @@
           "titre": "Inventorier les moments",
           "competences": [
             {
+              "nom": "small-business:social-content-engine",
+              "role": "par défaut",
+              "pourquoi": "Le plugin d'Anthropic qui décline un contenu en publications pour chaque réseau."
+            },
+            {
               "nom": "faire-une-video:video-declinaison-des-moments",
-              "pourquoi": "Une fois la vidéo sortie : tire d'une vidéo tournée les contenus qui se justifient, sans quota, et vérifie qu'aucune coupe ne tombe au milieu d'une idée."
+              "pourquoi": "Comble un vide : aucune publique n'inventorie les moments d'une vidéo tournée qui se justifient, sans quota, ni ne vérifie qu'aucune coupe ne tombe au milieu d'une idée.",
+              "role": "comble un vide"
             }
           ]
         },

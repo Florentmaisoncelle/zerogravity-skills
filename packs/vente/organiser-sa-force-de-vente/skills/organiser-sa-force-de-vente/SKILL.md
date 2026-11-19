@@ -27,13 +27,16 @@ Organiser une équipe commerciale demande cinq gestes dans l'ordre, et les comp�
 Ce workflow s'appuie sur des compétences publiques, installées à part. Aucune n'est indispensable : si l'une manque, le workflow le dit et fait l'étape à la main. Faire l'étape à la main veut dire suivre sa règle de choix, écrire ce qu'elle doit rendre (dans le fichier de l'étape, ou dans la réponse quand le workflow n'a pas de dossier) et dire ce qui reste à la charge de la personne.
 
 ```text
+/plugin marketplace add Florentmaisoncelle/zerogravity-skills
 /plugin marketplace add anthropics/knowledge-work-plugins
 /plugin marketplace add coreyhaines31/marketingskills
+/plugin install consultant-ia@zerogravity
 /plugin install human-resources@knowledge-work-plugins
 /plugin install marketing-skills@marketingskills
 /plugin install operations@knowledge-work-plugins
 /plugin install product-management@knowledge-work-plugins
 /plugin install sales@knowledge-work-plugins
+/plugin install small-business@knowledge-work-plugins
 ```
 
 Les workflows cités ici sont dans le même dépôt (le dépôt s'ajoute une fois : `/plugin marketplace add Florentmaisoncelle/zerogravity-skills`) :
@@ -78,11 +81,11 @@ Lire l'étape dans la table, appliquer sa règle de choix, invoquer la compéten
 <!-- etapes:debut -->
 | # | Étape | Compétences | Règle de choix |
 |---|---|---|---|
-| 1 | Fixer l'objectif de revenu et la capacité | `operations:capacity-plan` · `sales:pipeline-review` | Partir du terrain (les conversions réelles), puis des objectifs du dirigeant ; comparer les scénarios avec la direction commerciale et la finance (la personne qui suit les ventes et celle qui tient les comptes), et versionner le plan approuvé. operations:capacity-plan donne la capacité, sales:pipeline-review la couverture. Manque : aucune compétence ne construit un plan de revenus par quota, montée en puissance et territoire : à fabriquer. En attendant, la capacité et la couverture se calculent séparément. |
-| 2 | Répartir les rôles de l'équipe | `operations:process-doc` · `human-resources:org-planning` · `operations:status-report` · Préparer un point individuel avec un commercial : `sales:rep-context` | process-doc pour les rôles et les escalades ; org-planning quand plusieurs organisations se comparent ; status-report pour le point récurrent. La direction arbitre. Le dirigeant arbitre. |
-| 3 | Écrire le plan d'incitation | à la main | Des règles simples à vérifier, simulées sur les cas limites avant d'être annoncées. Le plan se valide avec les ressources humaines, la paie et un juriste avant toute annonce. Manque : aucune compétence publique ne conçoit des règles de commission, ne simule les cas limites ni ne suit les exceptions ; aucune compétence de la liste ne couvre le droit du travail ni la paie en France : à faire à la main, avec un juriste et la personne qui tient la paie, en attendant de fabriquer cette compétence. |
-| 4 | Trouver les partenaires qui apportent des affaires | `marketing-skills:co-marketing` · `marketing-skills:referrals` | co-marketing pour choisir et cadrer ; referrals pour la rémunération d'un apporteur. L'accord et le partage de données se valident par une personne. |
-| 5 | Faire adopter le nouveau fonctionnement | `operations:change-request` · Tenir les parties prenantes informées : `product-management:stakeholder-update` | Un pilote avant la généralisation ; la mesure des usages décide de la suite, avec les responsables et les vendeurs concernés. operations:change-request cadre le changement, product-management:stakeholder-update tient les personnes concernées informées. |
+| 1 | Fixer l'objectif de revenu et la capacité | `operations:capacity-plan` · `sales:pipeline-review` · Chiffrer l'objectif en scénarios : `sales:forecast` ; `sales:deal-slip-scenario` · Lire la couverture du pipeline par commercial : `sales:team-pipeline` | Partir du terrain (les conversions réelles), puis des objectifs du dirigeant ; comparer les scénarios avec la direction commerciale et la finance (la personne qui suit les ventes et celle qui tient les comptes), et versionner le plan approuvé. operations:capacity-plan donne la capacité, sales:pipeline-review la couverture. Manque : aucune compétence ne construit un plan de revenus par quota, montée en puissance et territoire : à fabriquer. En attendant, la capacité et la couverture se calculent séparément. |
+| 2 | Répartir les rôles de l'équipe | `operations:process-doc` · `human-resources:org-planning` · `operations:status-report` · Écrire la fiche de poste d'un rôle commercial : `small-business:job-post-builder` · Accueillir un nouveau commercial : `human-resources:onboarding` · Préparer un point individuel avec un commercial : `sales:rep-context` | process-doc pour les rôles et les escalades ; org-planning quand plusieurs organisations se comparent ; status-report pour le point récurrent. La direction arbitre. Le dirigeant arbitre. |
+| 3 | Écrire le plan d'incitation | Comparer la rémunération aux repères du marché : `human-resources:comp-analysis` | Des règles simples à vérifier, simulées sur les cas limites avant d'être annoncées. Le plan se valide avec les ressources humaines, la paie et un juriste avant toute annonce. Manque : aucune compétence publique ne conçoit les règles de commission ni ne simule les cas limites (comp-analysis ne fait que comparer aux repères) ; aucune ne couvre le droit du travail ni la paie en France : à faire à la main, avec un juriste et la personne qui tient la paie. |
+| 4 | Trouver les partenaires qui apportent des affaires | `marketing-skills:co-marketing` · `marketing-skills:referrals` · Repérer les partenaires possibles : `sales:account-research` ; `marketing-skills:prospecting` · Évaluer un partenaire : `operations:vendor-review` · Cadrer l'accord et la rémunération : `small-business:contract-review` · Mesurer ce que les partenaires apportent : `marketing-skills:attribution` | co-marketing pour choisir et cadrer ; referrals pour la rémunération d'un apporteur. L'accord et le partage de données se valident par une personne. |
+| 5 | Faire adopter le nouveau fonctionnement | `operations:change-request` · Former l'équipe au nouveau fonctionnement : `marketing-skills:sales-enablement` ; `consultant-ia:piloter-mise-en-service` · Recueillir les résistances et les retours : `product-management:synthesize-research` · Tenir les parties prenantes informées : `product-management:stakeholder-update` | Un pilote avant la généralisation ; la mesure des usages décide de la suite, avec les responsables et les vendeurs concernés. operations:change-request cadre le changement, product-management:stakeholder-update tient les personnes concernées informées. |
 <!-- etapes:fin -->
 
 ### 2. Clore un passage

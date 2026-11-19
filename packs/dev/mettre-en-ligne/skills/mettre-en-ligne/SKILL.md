@@ -59,10 +59,12 @@ Ce workflow s'appuie sur des compétences publiques, installées à part. Aucune
 
 ```text
 /plugin marketplace add addyosmani/agent-skills
+/plugin marketplace add addyosmani/web-quality-skills
 /plugin marketplace add anthropics/knowledge-work-plugins
 /plugin install agent-skills@addy-agent-skills
 /plugin install engineering@knowledge-work-plugins
 /plugin install stripe@claude-plugins-official
+/plugin install web-quality-skills@addy-web-quality-skills
 npx skills add vercel-labs/agent-skills --skill deploy-to-vercel -a claude-code
 ```
 
@@ -140,7 +142,7 @@ le fichier de l'étape sa sortie, inscrire `fait` au journal (ou `en attente`, v
 |---|---|---|---|
 | 1 | Préparer la sortie | `agent-skills:shipping-and-launch` | Le plan de retour arrière s'écrit avant de déployer, pas après la panne. Si l'app collecte des données personnelles, les mentions légales et la politique de confidentialité s'écrivent aussi avant la sortie, à la main. |
 | 2 | Déployer | `deploy-to-vercel` · Automatiser la mise en ligne : `agent-skills:ci-cd-and-automation` · Ouvrir les services dont l'app a besoin : `stripe:stripe-projects` | Toujours le projet existant, jamais un nouveau sans qu'on le demande ; le brouillon d'abord. Jamais la voie de secours sans connexion de `deploy-to-vercel` (vercel deploy --temporary) : elle envoie le projet vers un projet temporaire anonyme chez Vercel, hors de tous les comptes de la personne. Quand le dépôt a déjà sa voie de mise en ligne (tâche planifiée, intégration continue), c'est elle qui déploie. Pour l'app d'un client, l'ouverture au public est son geste : si l'app est faite pour un tiers, c'est lui qui décide de l'ouvrir. |
-| 3 | Vérifier en ligne | Lire la console et le réseau du site en ligne : `agent-skills:browser-testing-with-devtools` · Gérer un incident : `engineering:incident-response` | L'adresse officielle, pas l'adresse technique du déploiement. Dans une fenêtre privée, on rejoue le parcours principal sur ordinateur puis sur téléphone, on lit la console et le réseau, on contrôle ce qui ne se voit pas en développement (adresses de retour de la connexion, variables de production, e-mails) et les seuils du plan. Un écart déclenche le retour arrière de l'étape 1. Manque : aucune compétence ne parcourt le site en ligne à votre place : la console et le réseau se lisent avec agent-skills:browser-testing-with-devtools si le serveur MCP Chrome DevTools est branché, le reste se fait à la main (méthode dans le SKILL.md, section « Vérifier en ligne »). |
+| 3 | Vérifier en ligne | Lire la console et le réseau du site en ligne : `agent-skills:browser-testing-with-devtools` · Gérer un incident : `engineering:incident-response` · Auditer le site en ligne : `web-quality-skills:web-quality-audit` | L'adresse officielle, pas l'adresse technique du déploiement. Dans une fenêtre privée, on rejoue le parcours principal sur ordinateur puis sur téléphone, on lit la console et le réseau, on contrôle ce qui ne se voit pas en développement (adresses de retour de la connexion, variables de production, e-mails) et les seuils du plan. Un écart déclenche le retour arrière de l'étape 1. Manque : aucune compétence ne parcourt le site en ligne à votre place : la console et le réseau se lisent avec agent-skills:browser-testing-with-devtools si le serveur MCP Chrome DevTools est branché, le reste se fait à la main (méthode dans le SKILL.md, section « Vérifier en ligne »). |
 <!-- etapes:fin -->
 
 ### Vérifier en ligne : la méthode

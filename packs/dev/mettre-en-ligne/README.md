@@ -19,10 +19,12 @@ Ce workflow s'appuie sur des compétences publiques, installées à part. Aucune
 
 ```text
 /plugin marketplace add addyosmani/agent-skills
+/plugin marketplace add addyosmani/web-quality-skills
 /plugin marketplace add anthropics/knowledge-work-plugins
 /plugin install agent-skills@addy-agent-skills
 /plugin install engineering@knowledge-work-plugins
 /plugin install stripe@claude-plugins-official
+/plugin install web-quality-skills@addy-web-quality-skills
 npx skills add vercel-labs/agent-skills --skill deploy-to-vercel -a claude-code
 ```
 

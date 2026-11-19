@@ -8,7 +8,7 @@ Ce dépôt est sous licence MIT (voir [LICENSE](LICENSE)). Cette liste est gén�
 
 ## poser-sa-strategie-marketing
 
-- `packs/marketing/poser-sa-strategie-marketing/README.md` ligne 48 (mention de droits) : - `marketing-relier-le-contenu-aux-contrats` : retravaillée depuis https://github.com/ericosiu/ai-marketing-skills, Copyright (c) 2026 Single Grain, l
+- `packs/marketing/poser-sa-strategie-marketing/README.md` ligne 50 (mention de droits) : - `marketing-relier-le-contenu-aux-contrats` : retravaillée depuis https://github.com/ericosiu/ai-marketing-skills, Copyright (c) 2026 Single Grain, l
 - `packs/marketing/poser-sa-strategie-marketing/skills/marketing-relier-le-contenu-aux-contrats/LICENSE-single-grain.txt` ligne 3 (mention de droits) : Copyright (c) 2026 Single Grain
 - `packs/marketing/poser-sa-strategie-marketing/skills/marketing-relier-le-contenu-aux-contrats/SKILL.md` ligne 70 (retravaillé depuis un tiers) : Retravaillé depuis revenue-intelligence d'AI Marketing Skills (Single Grain, MIT), https://github.com/ericosiu/ai-marketing-skills (revenue_attributio
 - `packs/marketing/poser-sa-strategie-marketing/skills/marketing-relire-un-changement/LICENSE-single-grain.txt` ligne 3 (mention de droits) : Copyright (c) 2026 Single Grain
@@ -18,13 +18,13 @@ Ce dépôt est sous licence MIT (voir [LICENSE](LICENSE)). Cette liste est gén�
 
 ## convertir-les-visiteurs
 
-- `packs/marketing/convertir-les-visiteurs/README.md` ligne 42 (mention de droits) : - `marketing-mesurer-un-test` : retravaillée depuis https://github.com/ericosiu/ai-marketing-skills, Copyright (c) 2026 Single Grain, licence MIT, tex
+- `packs/marketing/convertir-les-visiteurs/README.md` ligne 43 (mention de droits) : - `marketing-mesurer-un-test` : retravaillée depuis https://github.com/ericosiu/ai-marketing-skills, Copyright (c) 2026 Single Grain, licence MIT, tex
 - `packs/marketing/convertir-les-visiteurs/skills/marketing-mesurer-un-test/LICENSE-single-grain.txt` ligne 3 (mention de droits) : Copyright (c) 2026 Single Grain
 - `packs/marketing/convertir-les-visiteurs/skills/marketing-mesurer-un-test/SKILL.md` ligne 65 (retravaillé depuis un tiers) : Retravaillé depuis growth-engine d'AI Marketing Skills (Single Grain, MIT), https://github.com/ericosiu/ai-marketing-skills ; ce qu'on a changé : text
 
 ## faire-une-video
 
-- `packs/marketing/faire-une-video/README.md` ligne 41 (mention de droits) : - `video-declinaison-des-moments` : retravaillée depuis https://github.com/ericosiu/ai-marketing-skills, Copyright (c) 2026 Single Grain, licence MIT,
+- `packs/marketing/faire-une-video/README.md` ligne 43 (mention de droits) : - `video-declinaison-des-moments` : retravaillée depuis https://github.com/ericosiu/ai-marketing-skills, Copyright (c) 2026 Single Grain, licence MIT,
 - `packs/marketing/faire-une-video/skills/video-declinaison-des-moments/LICENSE-single-grain.txt` ligne 3 (mention de droits) : Copyright (c) 2026 Single Grain
 - `packs/marketing/faire-une-video/skills/video-declinaison-des-moments/SKILL.md` ligne 104 (retravaillé depuis un tiers) : Retravaillé depuis video-content-engine (avec la liste des types d'atomes et le dédoublonnage de podcast-ops) d'AI
 - `packs/marketing/faire-une-video/skills/video-idee-de-short/LICENSE-single-grain.txt` ligne 3 (mention de droits) : Copyright (c) 2026 Single Grain

@@ -27,7 +27,10 @@ Ce workflow s'appuie sur des compétences publiques, installées à part. Aucune
 /plugin install entretenir-son-systeme@zerogravity
 /plugin install product-management@knowledge-work-plugins
 /plugin install superpowers@claude-plugins-official
+npx skills add bmad-code-org/BMAD-METHOD --skill bmad-review -a claude-code
 ```
+
+La commande `npx skills add` (CLI Vercel `skills`) demande Node.js 22.20 ou plus (vérifié le 06/11/2026, https://github.com/vercel-labs/skills). Claude Code installé avec l'installeur natif n'en a pas besoin.
 
 Les workflows cités ici sont dans le même dépôt (le dépôt s'ajoute une fois : `/plugin marketplace add Florentmaisoncelle/zerogravity-skills`) :
 

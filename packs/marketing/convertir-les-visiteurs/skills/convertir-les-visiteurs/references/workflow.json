@@ -23,15 +23,19 @@
           "competences": [
             {
               "nom": "marketing-skills:cro",
-              "pourquoi": "Les pages et les formulaires qui perdent des visiteurs, et les expériences à tenter."
+              "pourquoi": "Les pages et les formulaires qui perdent des visiteurs, et les expériences à tenter. Dépôt de Corey Haines, 61 000 étoiles (https://github.com/coreyhaines31/marketingskills), relevé le 19/11/2026.",
+              "role": "par défaut"
             },
             {
               "nom": "marketing-skills:marketing-psychology",
-              "pourquoi": "Utiliser les réflexes d'achat pour qu'une page convainque davantage."
+              "pourquoi": "Utiliser les réflexes d'achat (preuve sociale, rareté, ancrage) pour qu'une page convainque davantage. Dépôt de Corey Haines, 61 000 étoiles.",
+              "role": "les réflexes d'achat"
+            },
+            {
+              "nom": "design:ux-copy",
+              "role": "les mots de la page",
+              "pourquoi": "Relit les mots de la page : boutons, messages d'erreur, textes vides, appels à l'action. Dépôt d'Anthropic, 36 500 étoiles (https://github.com/anthropics/knowledge-work-plugins), relevé le 19/11/2026."
             }
-          ],
-          "reserve": [
-            "design:ux-copy"
           ]
         }
       ]
@@ -50,7 +54,13 @@
           "competences": [
             {
               "nom": "marketing-skills:ab-testing",
-              "pourquoi": "Conçoit le test et dit quand il a assez de visiteurs pour conclure."
+              "pourquoi": "Conçoit le test et dit quand il a assez de visiteurs pour conclure. Dépôt de Corey Haines, 61 000 étoiles (https://github.com/coreyhaines31/marketingskills), relevé le 19/11/2026.",
+              "role": "par défaut"
+            },
+            {
+              "nom": "marketing-skills:analytics",
+              "role": "la mesure en place",
+              "pourquoi": "Vérifie avant le lancement que les événements du test arrivent bien (GA4, balises, UTM). Dépôt de Corey Haines, 61 000 étoiles."
             }
           ]
         },
@@ -59,8 +69,14 @@
           "titre": "Mesurer un test avec peu de volume",
           "competences": [
             {
+              "nom": "data:statistical-analysis",
+              "role": "par défaut",
+              "pourquoi": "Les tests statistiques du plugin data d'Anthropic : dit si un écart est réel ou du bruit quand il y a peu de visiteurs. Dépôt d'Anthropic, 36 500 étoiles (https://github.com/anthropics/knowledge-work-plugins), relevé le 19/11/2026."
+            },
+            {
               "nom": "convertir-les-visiteurs:marketing-mesurer-un-test",
-              "pourquoi": "Dit honnêtement si une variante gagne vraiment, sans conclure trop tôt ni promouvoir seul le gagnant."
+              "pourquoi": "Comble un vide : aucune compétence publique ne tranche un test à faible volume (comparer quatre semaines avant et après, ne pas conclure trop tôt, ne pas promouvoir seul le gagnant).",
+              "role": "comble un vide"
             }
           ]
         }
@@ -80,7 +96,13 @@
           "competences": [
             {
               "nom": "marketing-skills:popups",
-              "pourquoi": "Fenêtres, bannières et messages par source de trafic, avec une règle de consentement claire, sans case pré-cochée."
+              "pourquoi": "Fenêtres, bannières et messages par source de trafic, avec une règle de consentement claire, sans case pré-cochée. Dépôt de Corey Haines, 61 000 étoiles.",
+              "role": "par défaut"
+            },
+            {
+              "nom": "marketing-skills:copywriting",
+              "role": "le texte",
+              "pourquoi": "Écrit le texte de la fenêtre : promesse, appel à l'action, bouton. Dépôt de Corey Haines, 61 000 étoiles."
             }
           ]
         },
@@ -90,7 +112,8 @@
           "competences": [
             {
               "nom": "marketing-skills:signup",
-              "pourquoi": "Le parcours d'inscription, champ par champ."
+              "pourquoi": "Le parcours d'inscription, champ par champ. Dépôt de Corey Haines, 61 000 étoiles.",
+              "role": "par défaut"
             }
           ]
         },
@@ -98,7 +121,7 @@
           "slug": "identifier-les-entreprises-visiteuses",
           "titre": "Identifier les entreprises qui visitent le site",
           "competences": [],
-          "manque": "aucune compétence : GojiBerry le fait par son signal « visiteurs du site » (guide Román, GojiBerry). À retenir : une visite désigne une entreprise, jamais la personne ; script de suivi relu pour la vie privée et le consentement ; plafond mensuel d'entreprises ; jamais « j'ai vu que vous avez visité notre site » en ouverture. La suite (messages LinkedIn, séquence) relève du système d'acquisition."
+          "manque": "aucune compétence : GojiBerry le fait par son signal « visiteurs du site » (guide Román, GojiBerry). À retenir : une visite désigne une entreprise, jamais la personne ; script de suivi relu pour la vie privée et le consentement ; plafond mensuel d'entreprises ; jamais « j'ai vu que vous avez visité notre site » en ouverture. La suite (messages LinkedIn, séquence) relève du système d'acquisition. Une compétence publique existe (visitor-identification, dépôt hubspot/agent-cli-skills de HubSpot, 29 étoiles, relevé le 19/11/2026) mais n'est pas installée ici : elle reste hors du pack tant qu'elle ne se charge pas partout."
         }
       ]
     },
@@ -116,7 +139,8 @@
           "competences": [
             {
               "nom": "marketing-skills:lead-magnets",
-              "pourquoi": "Le type de ressource par étape d'achat, ce qu'on demande en échange, la page, la livraison, la promotion et la mesure."
+              "pourquoi": "Le type de ressource par étape d'achat, ce qu'on demande en échange, la page, la livraison, la promotion et la mesure. Dépôt de Corey Haines, 61 000 étoiles.",
+              "role": "par défaut"
             }
           ]
         },
@@ -126,7 +150,8 @@
           "competences": [
             {
               "nom": "marketing-skills:free-tools",
-              "pourquoi": "Quand la ressource est un calculateur ou un évaluateur, qui attire aussi par la recherche."
+              "pourquoi": "Quand la ressource est un calculateur ou un évaluateur, qui attire aussi par la recherche. Dépôt de Corey Haines, 61 000 étoiles.",
+              "role": "par défaut"
             }
           ]
         }

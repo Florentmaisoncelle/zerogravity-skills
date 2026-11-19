@@ -23,7 +23,7 @@
           "competences": [
             {
               "nom": "marketing-skills:customer-research",
-              "role": "les publics",
+              "role": "par défaut : les publics",
               "pourquoi": "Trois façons de recueillir (documents existants, forums et avis, entretiens et enquêtes), des questions qui n'orientent pas la réponse et une garde contre le biais de confirmation."
             }
           ]
@@ -44,8 +44,13 @@
           "competences": [
             {
               "nom": "marketing-skills:competitor-profiling",
-              "role": "le premier relevé",
+              "role": "par défaut : le premier relevé",
               "pourquoi": "Le dossier d'un concurrent depuis son adresse, données brutes gardées ; il sépare l'observé de l'inféré et ne conclut pas qu'une chose est absente parce qu'elle n'a pas été vue."
+            },
+            {
+              "nom": "marketing:competitive-brief",
+              "role": "le comparatif de positionnement",
+              "pourquoi": "Quand le dossier doit aboutir à un comparatif de messages : les angles que les concurrents n'ont pas pris, les menaces et les occasions."
             },
             {
               "nom": "marketing-skills:reverse-engineer-marketing",
@@ -54,7 +59,6 @@
             }
           ],
           "reserve": [
-            "marketing:competitive-brief",
             "product-management:competitive-brief"
           ]
         },
@@ -85,7 +89,8 @@
           "competences": [
             {
               "nom": "poser-sa-strategie-marketing:video-qui-sortent-du-lot",
-              "pourquoi": "Montre ce qui a vraiment dépassé la normale chez des chaînes voisines et en tire une promesse, sans copier de titre."
+              "pourquoi": "Comble un vide : aucune compétence publique installée ne repère ce qui a dépassé la normale chez des chaînes voisines et n'en tire une promesse, sans copier de titre.",
+              "role": "comble un vide"
             }
           ]
         }
@@ -118,6 +123,28 @@
               "nom": "marketing-skills:marketing-council",
               "role": "formuler et contester",
               "pourquoi": "Applique la méthode de positionnement d'April Dunford (alternatives, attributs, valeur, publics, catégorie), en simulation déclarée, sans citation inventée. Réunit des conseillers simulés, dont une spécialiste du positionnement (alternatives réelles du client, différence, valeur, publics, catégorie) ; la simulation est déclarée et aucune citation n'est inventée."
+            }
+          ]
+        },
+        {
+          "slug": "argument-d-une-fonctionnalite",
+          "titre": "Trouver l'argument d'une fonctionnalité",
+          "competences": [
+            {
+              "nom": "product-management:brainstorm",
+              "role": "par défaut",
+              "pourquoi": "Un partenaire de réflexion qui éprouve l'idée d'une fonctionnalité : le problème de l'utilisateur, les hypothèses, les angles possibles avant de converger."
+            }
+          ]
+        },
+        {
+          "slug": "doc-de-reference",
+          "titre": "Garder la doc de référence vraie",
+          "competences": [
+            {
+              "nom": "agent-skills:documentation-and-adrs",
+              "role": "par défaut",
+              "pourquoi": "Documenter le pourquoi des décisions et garder les documents vrais à chaque changement."
             }
           ]
         }
@@ -207,10 +234,15 @@
           "titre": "Présenter le plan et faire trancher",
           "competences": [
             {
+              "nom": "product-management:stakeholder-update",
+              "role": "la note pour décider",
+              "pourquoi": "Adapte le même plan à son lecteur (note de direction, détail technique) et nomme la décision attendue."
+            },
+            {
               "nom": "decider-une-strategie",
               "workflow": true,
-              "role": "workflow frère",
-              "pourquoi": "Quand le plan bute sur un arbitrage : nommer la décision, peser de vraies options, rendre la recommandation d'abord."
+              "role": "workflow frère : comble un vide",
+              "pourquoi": "Comble un vide : aucune compétence publique ne fait trancher un arbitrage. Quand le plan bute, elle nomme la décision, pèse de vraies options et rend la recommandation d'abord."
             },
             {
               "nom": "document-skills:pptx",
@@ -279,8 +311,14 @@
           "titre": "Relire le résultat d'un changement",
           "competences": [
             {
+              "nom": "marketing-skills:ab-testing",
+              "role": "par défaut",
+              "pourquoi": "Conçoit et lit un test : hypothèse, taille d'échantillon, durée, et ce qu'on peut conclure ou non d'un écart."
+            },
+            {
               "nom": "poser-sa-strategie-marketing:marketing-relire-un-changement",
-              "pourquoi": "Fixe la métrique et la date avant de publier, puis tranche entre promouvoir, continuer, annuler ou non prouvé."
+              "pourquoi": "Comble un vide : aucune compétence publique ne fixe la métrique et la date avant de publier puis ne tranche entre promouvoir, continuer, annuler ou non prouvé.",
+              "role": "comble un vide"
             }
           ]
         }

@@ -45,7 +45,7 @@
           "competences": [
             {
               "nom": "sales:end-of-day",
-              "pourquoi": "Finir la journée : appels traités et CRM à jour."
+              "pourquoi": "Finir la journée : appels traités et CRM à jour (dépôt anthropics/knowledge-work-plugins, 36 555 étoiles, github.com/anthropics/knowledge-work-plugins)."
             }
           ]
         }
@@ -77,11 +77,11 @@
           "competences": [
             {
               "nom": "sales:daily-briefing",
-              "pourquoi": "Ouvrir la journée avec rendez-vous, affaires à relancer et priorités."
+              "pourquoi": "Ouvrir la journée avec rendez-vous, affaires à relancer et priorités (dépôt anthropics/knowledge-work-plugins, 36 555 étoiles, github.com/anthropics/knowledge-work-plugins)."
             },
             {
               "nom": "sales:weekly-wrap",
-              "pourquoi": "Résumer la semaine : gagné, avancé, glissé, à faire."
+              "pourquoi": "Résumer la semaine : gagné, avancé, glissé, à faire"
             }
           ]
         },
@@ -91,7 +91,7 @@
           "competences": [
             {
               "nom": "sales:team-pipeline",
-              "pourquoi": "Voir le pipeline de toute l'équipe par commercial et par étape."
+              "pourquoi": "Voir le pipeline de toute l'équipe par commercial et par étape (dépôt anthropics/knowledge-work-plugins, 36 555 étoiles, github.com/anthropics/knowledge-work-plugins)."
             }
           ]
         }
@@ -115,6 +115,42 @@
           "role": "un décideur manque",
           "pourquoi": "La carte des personnes de l'affaire : rôle, influence, position, rôles absents et chemin pour les atteindre."
         }
+      ],
+      "taches": [
+        {
+          "slug": "preparer-l-appel-de-deblocage",
+          "titre": "Préparer l'appel qui débloque l'affaire",
+          "competences": [
+            {
+              "nom": "sales:call-prep",
+              "pourquoi": "Préparer l'appel : contexte du compte, personnes en face, objectif et questions (dépôt anthropics/knowledge-work-plugins, 36 555 étoiles, github.com/anthropics/knowledge-work-plugins)."
+            }
+          ]
+        },
+        {
+          "slug": "lever-l-objection",
+          "titre": "Lever l'objection qui bloque",
+          "competences": [
+            {
+              "nom": "sales:handle-objection",
+              "pourquoi": "Répondre à l'objection du décideur avec des arguments et des preuves (dépôt anthropics/knowledge-work-plugins, 36 555 étoiles, github.com/anthropics/knowledge-work-plugins)."
+            },
+            {
+              "nom": "sales:competitive-intelligence",
+              "pourquoi": "Quand le blocage vient d'un concurrent : le comparer et préparer la riposte"
+            }
+          ]
+        },
+        {
+          "slug": "plan-de-signature",
+          "titre": "Écrire le plan de signature partagé avec le client",
+          "competences": [
+            {
+              "nom": "sales:close-plan",
+              "pourquoi": "Un plan daté, étape par étape, jusqu'à la signature, avec le responsable de chaque action (dépôt anthropics/knowledge-work-plugins, 36 555 étoiles, github.com/anthropics/knowledge-work-plugins)."
+            }
+          ]
+        }
       ]
     },
     {
@@ -124,7 +160,39 @@
       "rend": "Pour chaque affaire sans activité : un nouvel angle, un prochain contact rédigé, un propriétaire et une date ; chaque envoi validé et journalisé.",
       "fichier": "04-relances.md",
       "regle": "La partie relance de l'étape 1 : les affaires sans activité depuis quatorze jours ou à échéance dépassée, un message dans la voix du vendeur. Les oppositions, la fréquence et le consentement se vérifient avant chaque envoi.",
-      "manque": "pas de compétence propre à cette étape : la partie relance de small-business:crm-autopilot (étape 1) peut la porter, et le contrôle des oppositions et de la fréquence se fait à la main avant chaque envoi."
+      "manque": "pas de compétence propre à cette étape : la partie relance de small-business:crm-autopilot (étape 1) peut la porter, et le contrôle des oppositions et de la fréquence se fait à la main avant chaque envoi.",
+      "taches": [
+        {
+          "slug": "reveiller-les-affaires-endormies",
+          "titre": "Réveiller les affaires et les clients endormis",
+          "competences": [
+            {
+              "nom": "small-business:reactivate",
+              "pourquoi": "Retrouver les anciens contacts et affaires sans activité et préparer leur réveil (dépôt anthropics/knowledge-work-plugins, 36 555 étoiles, github.com/anthropics/knowledge-work-plugins)."
+            }
+          ]
+        },
+        {
+          "slug": "ecrire-la-relance",
+          "titre": "Écrire la relance dans la voix du vendeur",
+          "competences": [
+            {
+              "nom": "marketing-skills:emails",
+              "pourquoi": "Écrire un e-mail de relance clair, avec un seul appel à l'action (dépôt coreyhaines31/marketingskills, 61 385 étoiles, github.com/coreyhaines31/marketingskills)."
+            }
+          ]
+        },
+        {
+          "slug": "journaliser-la-relance",
+          "titre": "Journaliser la relance dans le CRM",
+          "competences": [
+            {
+              "nom": "sales:log-activity",
+              "pourquoi": "Enregistrer la relance et sa suite dans le CRM (dépôt anthropics/knowledge-work-plugins, 36 555 étoiles, github.com/anthropics/knowledge-work-plugins)."
+            }
+          ]
+        }
+      ]
     },
     {
       "n": 5,
@@ -148,6 +216,18 @@
           "nom": "sales:forecast",
           "role": "par défaut",
           "pourquoi": "Le récit de la prévision : ce qui se signe, ce qui est à risque, ce qui a changé depuis la dernière fois."
+        }
+      ],
+      "taches": [
+        {
+          "slug": "sortir-le-rapport-de-prevision",
+          "titre": "Sortir le rapport de prévision",
+          "competences": [
+            {
+              "nom": "small-business:report-builder",
+              "pourquoi": "Mettre la prévision en rapport clair pour la direction (dépôt anthropics/knowledge-work-plugins, 36 555 étoiles, github.com/anthropics/knowledge-work-plugins)."
+            }
+          ]
         }
       ]
     },
@@ -173,6 +253,32 @@
           "nom": "marketing-skills:customer-research",
           "role": "les entretiens",
           "pourquoi": "Des questions d'entretien qui n'orientent pas la réponse, et une garde contre le biais de confirmation."
+        }
+      ],
+      "taches": [
+        {
+          "slug": "ecouter-la-voix-du-client",
+          "titre": "Écouter ce que disent les clients gagnés et perdus",
+          "competences": [
+            {
+              "nom": "sales:customer-voice",
+              "pourquoi": "Rassembler et classer ce que les clients disent, par motif (dépôt anthropics/knowledge-work-plugins, 36 555 étoiles, github.com/anthropics/knowledge-work-plugins)."
+            }
+          ]
+        },
+        {
+          "slug": "mettre-a-jour-la-riposte",
+          "titre": "Mettre à jour l'argumentaire et la riposte concurrence",
+          "competences": [
+            {
+              "nom": "sales:competitive-intelligence",
+              "pourquoi": "Mettre à jour la fiche concurrent à partir des affaires perdues (dépôt anthropics/knowledge-work-plugins, 36 555 étoiles, github.com/anthropics/knowledge-work-plugins)."
+            },
+            {
+              "nom": "sales:create-an-asset",
+              "pourquoi": "Fabriquer l'outil de vente que les motifs réclament"
+            }
+          ]
         }
       ]
     },
@@ -207,7 +313,27 @@
           "competences": [
             {
               "nom": "sales:account-plan",
-              "pourquoi": "Faire le plan d'un compte stratégique : objectifs, contacts, opportunités."
+              "pourquoi": "Faire le plan d'un compte stratégique : objectifs, contacts, opportunités (dépôt anthropics/knowledge-work-plugins, 36 555 étoiles, github.com/anthropics/knowledge-work-plugins)."
+            }
+          ]
+        },
+        {
+          "slug": "proposition-d-extension",
+          "titre": "Préparer la proposition d'extension",
+          "competences": [
+            {
+              "nom": "small-business:proposal-builder",
+              "pourquoi": "Écrire la proposition de l'extension chez un client en place (dépôt anthropics/knowledge-work-plugins, 36 555 étoiles, github.com/anthropics/knowledge-work-plugins)."
+            }
+          ]
+        },
+        {
+          "slug": "demander-une-recommandation",
+          "titre": "Demander un avis ou une recommandation",
+          "competences": [
+            {
+              "nom": "small-business:review-reputation",
+              "pourquoi": "Demander un avis aux clients satisfaits et répondre aux avis (dépôt anthropics/knowledge-work-plugins, 36 555 étoiles, github.com/anthropics/knowledge-work-plugins)."
             }
           ]
         }

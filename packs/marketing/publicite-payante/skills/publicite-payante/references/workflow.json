@@ -23,7 +23,23 @@
           "competences": [
             {
               "nom": "marketing-skills:ad-creative",
-              "pourquoi": "Titres, visuels et accroches par plateforme, et une page de revue pour les faire valider."
+              "pourquoi": "Titres, visuels et accroches par plateforme, et une page de revue pour les faire valider. Dépôt de Corey Haines, 61 000 étoiles (https://github.com/coreyhaines31/marketingskills), relevé le 19/11/2026.",
+              "role": "par défaut"
+            },
+            {
+              "nom": "marketing-skills:image",
+              "role": "les visuels",
+              "pourquoi": "Fabrique les visuels de la pub (bannières, maquettes, images d'annonce). Dépôt de Corey Haines, 61 000 étoiles."
+            },
+            {
+              "nom": "marketing-skills:copywriting",
+              "role": "les textes",
+              "pourquoi": "Écrit et resserre les textes de l'annonce et de sa page d'arrivée. Dépôt de Corey Haines, 61 000 étoiles."
+            },
+            {
+              "nom": "marketing:brand-review",
+              "role": "valider avant le lancement",
+              "pourquoi": "Relit la pub contre la voix de la marque et signale les promesses non étayées avant tout lancement. Dépôt d'Anthropic, 36 500 étoiles (https://github.com/anthropics/knowledge-work-plugins), relevé le 19/11/2026."
             }
           ]
         }
@@ -37,6 +53,22 @@
       "fichier": "02-pub-video.md",
       "regle": "La pub vidéo part d'un script validé ; chaque dépense et chaque paramètre se valident avant le lancement. marketing-skills:ad-creative choisit le format et écrit le script et l'accroche ; marketing-skills:video choisit comment la fabriquer (code, génération, avatar, montage) ; le tournage, le montage et la publication se déroulent dans /faire-une-video:faire-une-video.",
       "taches": [
+        {
+          "slug": "pub-video",
+          "titre": "Faire une pub vidéo",
+          "competences": [
+            {
+              "nom": "marketing-skills:video",
+              "role": "par défaut",
+              "pourquoi": "Choisit comment fabriquer la pub vidéo (code, génération, avatar, montage). Dépôt de Corey Haines, 61 000 étoiles (https://github.com/coreyhaines31/marketingskills), relevé le 19/11/2026."
+            },
+            {
+              "nom": "hyperframes:product-launch-video",
+              "role": "la vidéo de produit",
+              "pourquoi": "Transforme une adresse de produit, un script ou un brief en vidéo de promotion. Dépôt HyperFrames de HeyGen, 86 800 étoiles (https://github.com/heygen-com/hyperframes), relevé le 19/11/2026."
+            }
+          ]
+        },
         {
           "slug": "fabriquer-la-video",
           "titre": "Choisir comment fabriquer la vidéo",
@@ -63,7 +95,18 @@
           "competences": [
             {
               "nom": "marketing-skills:conversion-tracking",
-              "pourquoi": "Pose et vérifie le suivi d'une conversion (formulaire, rendez-vous, achat) jusqu'à Google Ads, Meta ou LinkedIn. Le travail n'est fini qu'à l'arrivée d'une conversion test, sinon ce qui reste à vérifier est dit."
+              "pourquoi": "Pose et vérifie le suivi d'une conversion (formulaire, rendez-vous, achat) jusqu'à Google Ads, Meta ou LinkedIn. Le travail n'est fini qu'à l'arrivée d'une conversion test, sinon ce qui reste à vérifier est dit. Dépôt de Corey Haines, 61 000 étoiles (https://github.com/coreyhaines31/marketingskills), relevé le 19/11/2026.",
+              "role": "par défaut"
+            },
+            {
+              "nom": "marketing-skills:analytics",
+              "role": "le plan de mesure",
+              "pourquoi": "Le plan de mesure complet : GA4, événements, UTM, balises. Dépôt de Corey Haines, 61 000 étoiles."
+            },
+            {
+              "nom": "marketing-skills:attribution",
+              "role": "quel canal rapporte",
+              "pourquoi": "Choisit le modèle d'attribution et rapproche les chiffres contradictoires entre Google, Meta et le CRM. Dépôt de Corey Haines, 61 000 étoiles."
             }
           ]
         },
@@ -73,11 +116,23 @@
           "competences": [
             {
               "nom": "marketing-skills:ads",
-              "pourquoi": "Stratégie, structure, ciblage et enchères sur LinkedIn, Google et Meta, un cadre pour la vente entre entreprises (cycles longs, règles d'arrêt, qualité des leads) et un contrôle hebdomadaire qui finit sur un seul verdict."
+              "pourquoi": "Stratégie, structure, ciblage et enchères sur LinkedIn, Google et Meta, un cadre pour la vente entre entreprises (cycles longs, règles d'arrêt, qualité des leads) et un contrôle hebdomadaire qui finit sur un seul verdict. Dépôt de Corey Haines, 61 000 étoiles.",
+              "role": "par défaut"
             },
             {
               "nom": "small-business:ad-manager",
-              "pourquoi": "Lit les résultats, chiffre chaque recommandation en euros et n'applique un changement qu'après un oui."
+              "pourquoi": "Lit les résultats, chiffre chaque recommandation en euros et n'applique un changement qu'après un oui.",
+              "role": "le dirigeant demande : dois-je couper ?"
+            },
+            {
+              "nom": "marketing:performance-report",
+              "role": "le bilan",
+              "pourquoi": "Le bilan de campagne : chiffres clés, tendances, ce qui marche, ce qui échoue, et les optimisations à faire d'abord. Dépôt d'Anthropic, 36 500 étoiles (https://github.com/anthropics/knowledge-work-plugins), relevé le 19/11/2026."
+            },
+            {
+              "nom": "marketing:campaign-plan",
+              "role": "le plan avant lancement",
+              "pourquoi": "Le plan de campagne avant la première dépense : objectifs, public, canaux, calendrier, mesures de succès. Dépôt d'Anthropic, 36 500 étoiles (https://github.com/anthropics/knowledge-work-plugins), relevé le 19/11/2026."
             }
           ]
         }

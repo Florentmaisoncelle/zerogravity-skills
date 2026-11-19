@@ -28,6 +28,32 @@
           "role": "la couverture",
           "pourquoi": "La couverture de l'objectif et les conversions réelles des deux derniers trimestres."
         }
+      ],
+      "taches": [
+        {
+          "slug": "chiffrer-l-objectif-en-scenarios",
+          "titre": "Chiffrer l'objectif en scénarios",
+          "competences": [
+            {
+              "nom": "sales:forecast",
+              "pourquoi": "Partir des conversions réelles et chiffrer l'objectif : ce qui se signe, ce qui est à risque (dépôt anthropics/knowledge-work-plugins, 36 555 étoiles, github.com/anthropics/knowledge-work-plugins)."
+            },
+            {
+              "nom": "sales:deal-slip-scenario",
+              "pourquoi": "Mesurer l'effet sur l'objectif si des affaires glissent et le pipeline de remplacement nécessaire"
+            }
+          ]
+        },
+        {
+          "slug": "lire-la-couverture-par-commercial",
+          "titre": "Lire la couverture du pipeline par commercial",
+          "competences": [
+            {
+              "nom": "sales:team-pipeline",
+              "pourquoi": "Voir le pipeline de toute l'équipe par commercial et par étape, pour poser la couverture (dépôt anthropics/knowledge-work-plugins, 36 555 étoiles, github.com/anthropics/knowledge-work-plugins)."
+            }
+          ]
+        }
       ]
     },
     {
@@ -56,12 +82,32 @@
       ],
       "taches": [
         {
+          "slug": "ecrire-la-fiche-de-poste",
+          "titre": "Écrire la fiche de poste d'un rôle commercial",
+          "competences": [
+            {
+              "nom": "small-business:job-post-builder",
+              "pourquoi": "La fiche de poste d'un rôle, prête à publier (dépôt anthropics/knowledge-work-plugins, 36 555 étoiles, github.com/anthropics/knowledge-work-plugins)."
+            }
+          ]
+        },
+        {
+          "slug": "accueillir-un-nouveau-commercial",
+          "titre": "Accueillir un nouveau commercial",
+          "competences": [
+            {
+              "nom": "human-resources:onboarding",
+              "pourquoi": "Le plan des premiers jours et des premières semaines d'un nouvel arrivant (dépôt anthropics/knowledge-work-plugins, 36 555 étoiles, github.com/anthropics/knowledge-work-plugins)."
+            }
+          ]
+        },
+        {
           "slug": "preparer-un-point-individuel",
           "titre": "Préparer un point individuel avec un commercial",
           "competences": [
             {
               "nom": "sales:rep-context",
-              "pourquoi": "Préparer un point avec un commercial : pipeline, activité, blocages."
+              "pourquoi": "Préparer un point avec un commercial : pipeline, activité, blocages (dépôt anthropics/knowledge-work-plugins, 36 555 étoiles, github.com/anthropics/knowledge-work-plugins)."
             }
           ]
         }
@@ -74,7 +120,19 @@
       "rend": "Les comportements récompensés, les règles de calcul, les cas limites simulés et le suivi des exceptions.",
       "fichier": "03-incitation.md",
       "regle": "Des règles simples à vérifier, simulées sur les cas limites avant d'être annoncées. Le plan se valide avec les ressources humaines, la paie et un juriste avant toute annonce.",
-      "manque": "aucune compétence publique ne conçoit des règles de commission, ne simule les cas limites ni ne suit les exceptions ; aucune compétence de la liste ne couvre le droit du travail ni la paie en France : à faire à la main, avec un juriste et la personne qui tient la paie, en attendant de fabriquer cette compétence."
+      "manque": "aucune compétence publique ne conçoit les règles de commission ni ne simule les cas limites (comp-analysis ne fait que comparer aux repères) ; aucune ne couvre le droit du travail ni la paie en France : à faire à la main, avec un juriste et la personne qui tient la paie.",
+      "taches": [
+        {
+          "slug": "benchmarker-la-remuneration",
+          "titre": "Comparer la rémunération aux repères du marché",
+          "competences": [
+            {
+              "nom": "human-resources:comp-analysis",
+              "pourquoi": "Comparer les niveaux de rémunération et la part variable aux repères du marché (dépôt anthropics/knowledge-work-plugins, 36 555 étoiles, github.com/anthropics/knowledge-work-plugins)."
+            }
+          ]
+        }
+      ]
     },
     {
       "n": 4,
@@ -94,6 +152,52 @@
           "role": "rémunérer un apporteur",
           "pourquoi": "Le programme d'apport d'affaires : l'incitation, sa mesure, le lancement."
         }
+      ],
+      "taches": [
+        {
+          "slug": "reperer-les-partenaires",
+          "titre": "Repérer les partenaires possibles",
+          "competences": [
+            {
+              "nom": "sales:account-research",
+              "pourquoi": "Une fiche sur l'entreprise partenaire : activité, clients, intérêt à s'associer (dépôt anthropics/knowledge-work-plugins, 36 555 étoiles, github.com/anthropics/knowledge-work-plugins)."
+            },
+            {
+              "nom": "marketing-skills:prospecting",
+              "pourquoi": "Trouver des partenaires dont les clients sont les vôtres"
+            }
+          ]
+        },
+        {
+          "slug": "evaluer-un-partenaire",
+          "titre": "Évaluer un partenaire",
+          "competences": [
+            {
+              "nom": "operations:vendor-review",
+              "pourquoi": "Comparer et évaluer un partenaire : coût, risques, fiabilité (dépôt anthropics/knowledge-work-plugins, 36 555 étoiles, github.com/anthropics/knowledge-work-plugins)."
+            }
+          ]
+        },
+        {
+          "slug": "cadrer-l-accord",
+          "titre": "Cadrer l'accord et la rémunération",
+          "competences": [
+            {
+              "nom": "small-business:contract-review",
+              "pourquoi": "Relire l'accord : partage des affaires, rémunération, durée, sortie (dépôt anthropics/knowledge-work-plugins, 36 555 étoiles, github.com/anthropics/knowledge-work-plugins)."
+            }
+          ]
+        },
+        {
+          "slug": "mesurer-les-apports",
+          "titre": "Mesurer ce que les partenaires apportent",
+          "competences": [
+            {
+              "nom": "marketing-skills:attribution",
+              "pourquoi": "Attribuer les affaires à chaque partenaire et en suivre le rendement (dépôt coreyhaines31/marketingskills, 61 385 étoiles, github.com/coreyhaines31/marketingskills)."
+            }
+          ]
+        }
       ]
     },
     {
@@ -112,12 +216,36 @@
       ],
       "taches": [
         {
+          "slug": "former-l-equipe",
+          "titre": "Former l'équipe au nouveau fonctionnement",
+          "competences": [
+            {
+              "nom": "marketing-skills:sales-enablement",
+              "pourquoi": "Le support de formation et d'aide à la vente pour les commerciaux (dépôt coreyhaines31/marketingskills, 61 385 étoiles, github.com/coreyhaines31/marketingskills)."
+            },
+            {
+              "nom": "consultant-ia:piloter-mise-en-service",
+              "pourquoi": "Comble le vide : piloter le pilote puis la généralisation, avec mesure des usages"
+            }
+          ]
+        },
+        {
+          "slug": "recueillir-les-resistances",
+          "titre": "Recueillir les résistances et les retours",
+          "competences": [
+            {
+              "nom": "product-management:synthesize-research",
+              "pourquoi": "Synthétiser les retours des vendeurs en thèmes et en actions (dépôt anthropics/knowledge-work-plugins, 36 555 étoiles, github.com/anthropics/knowledge-work-plugins)."
+            }
+          ]
+        },
+        {
           "slug": "tenir-les-parties-prenantes-informees",
           "titre": "Tenir les parties prenantes informées",
           "competences": [
             {
               "nom": "product-management:stakeholder-update",
-              "pourquoi": "Écrire un point d'avancement adapté à chaque destinataire."
+              "pourquoi": "Écrire un point d'avancement adapté à chaque destinataire (dépôt anthropics/knowledge-work-plugins, 36 555 étoiles, github.com/anthropics/knowledge-work-plugins)."
             }
           ]
         }

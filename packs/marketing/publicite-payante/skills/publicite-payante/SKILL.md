@@ -47,7 +47,10 @@ Ce workflow s'appuie sur des compétences publiques, installées à part. Aucune
 ```text
 /plugin marketplace add anthropics/knowledge-work-plugins
 /plugin marketplace add coreyhaines31/marketingskills
+/plugin marketplace add heygen-com/hyperframes
+/plugin install hyperframes@hyperframes
 /plugin install marketing-skills@marketingskills
+/plugin install marketing@knowledge-work-plugins
 /plugin install small-business@knowledge-work-plugins
 ```
 
@@ -132,9 +135,9 @@ suivi des conversions. Ensuite seulement, après la validation du budget et des 
 <!-- etapes:debut -->
 | # | Étape | Compétences | Règle de choix |
 |---|---|---|---|
-| 1 | Faire la créa | Écrire et dessiner la pub : `marketing-skills:ad-creative` | Les variantes se font avec ad-creative, par angle (une raison différente de cliquer) et dans les limites de caractères de la plateforme ; chaque visuel et chaque promesse se valident avant le lancement. |
-| 2 | Faire une pub vidéo | Choisir comment fabriquer la vidéo : `marketing-skills:video` | La pub vidéo part d'un script validé ; chaque dépense et chaque paramètre se valident avant le lancement. marketing-skills:ad-creative choisit le format et écrit le script et l'accroche ; marketing-skills:video choisit comment la fabriquer (code, génération, avatar, montage) ; le tournage, le montage et la publication se déroulent dans /faire-une-video:faire-une-video. |
-| 3 | Lancer et piloter les campagnes | Vérifier le suivi des conversions : `marketing-skills:conversion-tracking` · Lancer et piloter les campagnes : `marketing-skills:ads` ; `small-business:ad-manager` | ads pour piloter, ad-creative pour les variantes ; ad-manager quand le dirigeant demande « dois-je couper cette campagne ? ». Avant la première dépense, conversion-tracking vérifie qu'une conversion test arrive bien. Chaque dépense et chaque paramètre se valident avant le lancement : rien ne dépense avant ce oui. |
+| 1 | Faire la créa | Écrire et dessiner la pub : `marketing-skills:ad-creative` ; `marketing-skills:image` ; `marketing-skills:copywriting` ; `marketing:brand-review` | Les variantes se font avec ad-creative, par angle (une raison différente de cliquer) et dans les limites de caractères de la plateforme ; chaque visuel et chaque promesse se valident avant le lancement. |
+| 2 | Faire une pub vidéo | Faire une pub vidéo : `marketing-skills:video` ; `hyperframes:product-launch-video` · Choisir comment fabriquer la vidéo : `marketing-skills:video` | La pub vidéo part d'un script validé ; chaque dépense et chaque paramètre se valident avant le lancement. marketing-skills:ad-creative choisit le format et écrit le script et l'accroche ; marketing-skills:video choisit comment la fabriquer (code, génération, avatar, montage) ; le tournage, le montage et la publication se déroulent dans /faire-une-video:faire-une-video. |
+| 3 | Lancer et piloter les campagnes | Vérifier le suivi des conversions : `marketing-skills:conversion-tracking` ; `marketing-skills:analytics` ; `marketing-skills:attribution` · Lancer et piloter les campagnes : `marketing-skills:ads` ; `small-business:ad-manager` ; `marketing:performance-report` ; `marketing:campaign-plan` | ads pour piloter, ad-creative pour les variantes ; ad-manager quand le dirigeant demande « dois-je couper cette campagne ? ». Avant la première dépense, conversion-tracking vérifie qu'une conversion test arrive bien. Chaque dépense et chaque paramètre se valident avant le lancement : rien ne dépense avant ce oui. |
 <!-- etapes:fin -->
 
 ### 2. Clore un passage

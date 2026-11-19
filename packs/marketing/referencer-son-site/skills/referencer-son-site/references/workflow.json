@@ -22,12 +22,12 @@
           "titre": "Auditer le référencement du site",
           "competences": [
             {
-              "nom": "marketing-skills:seo-audit",
-              "pourquoi": "L'audit technique et éditorial complet, pour un spécialiste."
+              "nom": "marketing:seo-audit",
+              "pourquoi": "L'audit complet en une passe (mots-clés, page par page, contenus manquants, technique, concurrents) rendu en plan d'action priorisé ; plugin marketing d'Anthropic (dépôt anthropics/knowledge-work-plugins, 36 500 étoiles le 19/11/2026)."
             },
             {
-              "nom": "marketing:seo-audit",
-              "pourquoi": "L'audit complet en une passe : mots-clés, page par page, contenus manquants, technique et comparaison aux concurrents, rendu en plan d'action priorisé ; l'éditeur est Anthropic."
+              "nom": "marketing-skills:seo-audit",
+              "pourquoi": "L'audit technique et éditorial en profondeur (18 Ko, 7 références) pour un spécialiste, dans marketingskills de Corey Haines (61 000 étoiles le 19/11/2026, https://github.com/coreyhaines31/marketingskills)."
             }
           ]
         },
@@ -77,7 +77,7 @@
           "competences": [
             {
               "nom": "web-quality-skills:seo",
-              "pourquoi": "La technique du référencement sur le code du site : balises, sitemap, robots, données structurées."
+              "pourquoi": "La technique du référencement sur le code du site (balises, sitemap, robots, données structurées), dans web-quality-skills d'Addy Osmani (3 100 étoiles le 19/11/2026, https://github.com/addyosmani/web-quality-skills), le seul dépôt suivi qui la porte."
             }
           ]
         },
@@ -105,8 +105,18 @@
         {
           "slug": "optimiser-une-page",
           "titre": "Optimiser une page en page 2",
-          "competences": [],
-          "manque": "pas encore de compétence publique dédiée. Pas de compétence publique dédiée : on le fait à la main, page par page, avec la règle de l'étape et ce que l'étape doit rendre."
+          "competences": [
+            {
+              "nom": "marketing-skills:copywriting",
+              "role": "titre et description",
+              "pourquoi": "Réécrit le titre et la description qui font cliquer ; elle vit à l'étape des textes du workflow « Créer un site web » (marketingskills, 61 000 étoiles)."
+            },
+            {
+              "nom": "marketing-skills:cro",
+              "role": "chemin vers la conversion",
+              "pourquoi": "Relie la page au geste attendu ; elle est rangée dans le workflow « Convertir les visiteurs » (marketingskills, 61 000 étoiles)."
+            }
+          ]
         },
         {
           "slug": "donnees-structurees",
@@ -145,6 +155,17 @@
             {
               "nom": "marketing-skills:competitors",
               "pourquoi": "Les pages « alternative à » et « l'un contre l'autre », chaque affirmation revérifiée et datée."
+            }
+          ]
+        },
+        {
+          "slug": "article-verifiable",
+          "titre": "Écrire un article original et vérifiable",
+          "competences": [
+            {
+              "nom": "marketing-skills:copy-editing",
+              "role": "par défaut",
+              "pourquoi": "Relit, resserre et fait sonner humain le texte avant de le montrer ; marketingskills de Corey Haines (61 000 étoiles le 19/11/2026) ; elle vit à l'étape des textes du workflow « Créer un site web »."
             }
           ]
         }
@@ -239,7 +260,7 @@
           "competences": [
             {
               "nom": "referencer-son-site:seo-search-console",
-              "pourquoi": "Lit Search Console en lecture seule : les requêtes en position 4 à 20 et les pages qui perdent du trafic, avec un jeton local jamais commité."
+              "pourquoi": "Comble un vide : aucune compétence publique ne lit Search Console en lecture seule (requêtes en position 4 à 20, pages qui perdent du trafic), avec un jeton local jamais commité ; la nôtre, notée 5 sur 5."
             }
           ]
         }

@@ -117,6 +117,16 @@
       ],
       "taches": [
         {
+          "slug": "relire-le-code",
+          "titre": "Relire le code",
+          "competences": [
+            {
+              "nom": "bmad-review",
+              "pourquoi": "Quand un code, une spec ou un document demande une relecture sous plusieurs angles."
+            }
+          ]
+        },
+        {
           "slug": "simplifier-le-code",
           "titre": "Simplifier le code sans changer son comportement",
           "competences": [

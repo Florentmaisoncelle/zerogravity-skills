@@ -23,6 +23,7 @@ Ce workflow s'appuie sur des compétences publiques, installées à part. Aucune
 /plugin marketplace add coreyhaines31/marketingskills
 /plugin install leadlint@zerogravity
 /plugin install marketing-skills@marketingskills
+/plugin install marketing@knowledge-work-plugins
 /plugin install sales@knowledge-work-plugins
 /plugin install small-business@knowledge-work-plugins
 ```

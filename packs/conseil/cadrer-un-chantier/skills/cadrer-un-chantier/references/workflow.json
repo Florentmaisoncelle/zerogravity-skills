@@ -23,7 +23,8 @@
           "competences": [
             {
               "nom": "agent-skills:interview-me",
-              "pourquoi": "Quand il faut faire dire ce que la personne veut vraiment : un entretien d'une question à la fois, avant tout plan."
+              "pourquoi": "Quand il faut faire dire ce que la personne veut vraiment : un entretien d'une question à la fois, avant tout plan.",
+              "role": "par défaut"
             }
           ]
         }
@@ -74,7 +75,13 @@
           "competences": [
             {
               "nom": "agent-skills:idea-refine",
-              "pourquoi": "Quand une idée brute doit devenir un concept net et actionnable."
+              "pourquoi": "Quand une idée brute doit devenir un concept net et actionnable.",
+              "role": "idée brute en concept net"
+            },
+            {
+              "nom": "product-management:brainstorm",
+              "role": "partenaire de réflexion",
+              "pourquoi": "Partenaire de réflexion qui challenge et ouvre des pistes réellement différentes quand une seule idée occupe la table."
             }
           ]
         }
@@ -108,6 +115,17 @@
               "pourquoi": "Tirer des enseignements d'entretiens, d'avis, de questionnaires ou de messages de clients."
             }
           ]
+        },
+        {
+          "slug": "comparer-les-concurrents-et-le-marche",
+          "titre": "Comparer les concurrents et lire le marché",
+          "competences": [
+            {
+              "nom": "product-management:synthesize-research",
+              "role": "par défaut",
+              "pourquoi": "Synthétise entretiens, enquêtes et retours en thèmes classés par fréquence et par impact."
+            }
+          ]
         }
       ],
       "manque": "aucune compétence publique ne chiffre la taille du marché ni ses tendances : cette partie se fait à la main, avec des sources ouvertes et datées."
@@ -119,7 +137,30 @@
       "fichier": "cadrage/05-methode-et-plan.md",
       "rend": "La méthode, étape par étape (déclencheur, exécutant, contrôle, mesure), puis le plan d'exécution en trois à six étapes vérifiables. Pour un objectif confié en quelques lignes, les sept sorties du mode « objectif vers système », une par fichier dans cadrage/sorties/.",
       "regle": "Seulement quand la stratégie et la méthode sont claires. Pour un objectif confié en quelques lignes, la méthode rend les sept sorties du mode « objectif → système ».",
-      "manque": "aucune compétence publique pour ce geste : il se fait à la main, avec la règle de l'étape."
+      "taches": [
+        {
+          "slug": "ecrire-la-methode-etape-par-etape",
+          "titre": "Écrire la méthode, étape par étape",
+          "competences": [
+            {
+              "nom": "agent-skills:spec-driven-development",
+              "role": "par défaut",
+              "pourquoi": "Écrit la spécification avant de la dérouler (quoi, pourquoi, comment on saura que c'est fini), avec une relecture humaine à chaque porte."
+            }
+          ]
+        },
+        {
+          "slug": "decouper-le-plan-en-etapes-verifiables",
+          "titre": "Découper le plan en étapes vérifiables",
+          "competences": [
+            {
+              "nom": "superpowers:writing-plans",
+              "role": "plan détaillé avant d'exécuter",
+              "pourquoi": "Écrit un plan détaillé pour un travail à plusieurs étapes, à relire avant de toucher quoi que ce soit."
+            }
+          ]
+        }
+      ]
     },
     {
       "n": 6,
@@ -134,6 +175,24 @@
           "role": "relecteur au contexte neuf",
           "pourquoi": "Fait relire une décision non triviale par un relecteur au contexte neuf, chargé de la réfuter. Écrit pour du code, mais la méthode vaut pour toute décision ; sans lui, l'attaque se fait à la main."
         }
+      ],
+      "taches": [
+        {
+          "slug": "attaquer-le-plan-avant-de-l-engager",
+          "titre": "Attaquer le plan avant de l'engager",
+          "competences": [
+            {
+              "nom": "agent-skills:doubt-driven-development",
+              "role": "par défaut",
+              "pourquoi": "Fait relire le plan par un lecteur au contexte neuf qui cherche ce qui peut échouer, avant qu'on s'y engage."
+            },
+            {
+              "nom": "operations:risk-assessment",
+              "role": "risques et mitigations",
+              "pourquoi": "Dresse le registre des risques du plan avec leur gravité et leur mitigation, pour trier ce qui bloque, ce qui se mitige et ce qu'on écarte."
+            }
+          ]
+        }
       ]
     },
     {
@@ -143,7 +202,30 @@
       "fichier": "cadrage/07-fiche-de-cadrage.md",
       "rend": "Une fiche d'un écran, sept cases remplies, validée une fois.",
       "regle": "Rien ne se lance tant que les sept cases ne sont pas remplies et validées. C'est ici que tombe la seule validation obligatoire du workflow.",
-      "manque": "aucune compétence publique pour ce geste : il se fait à la main, avec la règle de l'étape."
+      "taches": [
+        {
+          "slug": "ecrire-la-fiche-d-un-ecran",
+          "titre": "Écrire la fiche d'un écran",
+          "competences": [
+            {
+              "nom": "product-management:write-spec",
+              "role": "par défaut",
+              "pourquoi": "Écrit un document avec objectifs, ce qu'on ne fait pas, mesures de succès et critères d'acceptation à partir d'un énoncé de problème."
+            }
+          ]
+        },
+        {
+          "slug": "faire-valider-la-fiche-une-fois",
+          "titre": "Faire valider la fiche une seule fois",
+          "competences": [
+            {
+              "nom": "superpowers:brainstorming",
+              "role": "par défaut",
+              "pourquoi": "Présente les approches, écrit le document court, obtient l'accord de la personne puis seulement enchaîne sur le plan : une validation, pas une par lot."
+            }
+          ]
+        }
+      ]
     },
     {
       "n": 8,
@@ -157,6 +239,24 @@
           "nom": "superviser-ses-sessions:loop-creator",
           "role": "la cadence et la continuité",
           "pourquoi": "Arme et répare la boucle d'une tâche longue à partir du contrat complet, sans boucle qui tourne à vide ; pilote aussi une mission de bout en bout (mesure, révise la stratégie, relance l'exécution dans le mandat). Conçoit, lance et relance une tâche répétée avec la commande loop : objectif mesurable, conditions d'arrêt, cadence, reprise d'une boucle arrêtée. Une boucle expire après 7 jours et ne vit que tant que la session reste ouverte."
+        }
+      ],
+      "taches": [
+        {
+          "slug": "lancer-l-execution-du-plan",
+          "titre": "Lancer l'exécution du plan",
+          "competences": [
+            {
+              "nom": "superpowers:executing-plans",
+              "role": "par défaut",
+              "pourquoi": "Déroule un plan écrit étape par étape dans la session, avec des points d'arrêt, une fois le plan validé."
+            },
+            {
+              "nom": "superpowers:subagent-driven-development",
+              "role": "tâches indépendantes en sous-agents",
+              "pourquoi": "Exécute un plan dont les tâches sont indépendantes en confiant chacune à un sous-agent, avec relecture entre les tâches."
+            }
+          ]
         }
       ]
     }

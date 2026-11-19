@@ -45,6 +45,7 @@ Ce workflow s'appuie sur des compétences publiques, installées à part. Aucune
 /plugin install skill-creator@claude-plugins-official
 /plugin install small-business@knowledge-work-plugins
 /plugin install superpowers@claude-plugins-official
+npx skills add PostHog/skills --skill exploring-ai-failures -a claude-code
 npx skills add bmad-code-org/BMAD-METHOD --skill bmad-architecture -a claude-code
 npx skills add ericrisco/rsc-harness --skill automation-strategy -a claude-code
 ```

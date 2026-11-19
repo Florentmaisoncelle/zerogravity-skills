@@ -20,10 +20,14 @@ Ce workflow s'appuie sur des compétences publiques, installées à part. Aucune
 ```text
 /plugin marketplace add Florentmaisoncelle/zerogravity-skills
 /plugin marketplace add addyosmani/agent-skills
+/plugin marketplace add anthropics/knowledge-work-plugins
 /plugin marketplace add coreyhaines31/marketingskills
 /plugin install agent-skills@addy-agent-skills
 /plugin install superviser-ses-sessions@zerogravity
 /plugin install marketing-skills@marketingskills
+/plugin install operations@knowledge-work-plugins
+/plugin install product-management@knowledge-work-plugins
+/plugin install superpowers@claude-plugins-official
 npx skills add bmad-code-org/BMAD-METHOD --skill bmad-brainstorming -a claude-code
 ```
 

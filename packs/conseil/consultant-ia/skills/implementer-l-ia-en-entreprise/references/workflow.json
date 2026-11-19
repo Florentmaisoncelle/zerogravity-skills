@@ -22,6 +22,51 @@
           "role": "workflow : le conseil",
           "pourquoi": "C'est la porte du pack consultant IA : elle tient l'état de la mission, tranche la porte d'entrée (besoin connu ou découverte), lance chaque étape de conseil et tient le journal des décisions."
         }
+      ],
+      "taches": [
+        {
+          "slug": "ecrire-la-specification",
+          "titre": "Écrire la spécification de la solution",
+          "competences": [
+            {
+              "nom": "product-management:write-spec",
+              "role": "par défaut",
+              "pourquoi": "Transforme le cas cadré en spécification : objectifs, hors-périmètre, critères d'acceptation et seuils de réussite, que la construction et la recette liront."
+            },
+            {
+              "nom": "agent-skills:spec-driven-development",
+              "role": "spec avant le code",
+              "pourquoi": "Pose la spécification avant toute construction et la fait valider, pour que la recette ait un critère écrit à vérifier."
+            }
+          ]
+        },
+        {
+          "slug": "evaluer-les-risques-avant-de-construire",
+          "titre": "Évaluer les risques avant de construire",
+          "competences": [
+            {
+              "nom": "operations:risk-assessment",
+              "role": "par défaut",
+              "pourquoi": "Liste ce qui peut mal tourner (données, conformité, adoption, dépendance à un outil), les note et propose une parade pour chacun avant d'ouvrir la construction."
+            }
+          ]
+        },
+        {
+          "slug": "mettre-le-processus-a-plat",
+          "titre": "Mettre le processus à plat avant d'automatiser",
+          "competences": [
+            {
+              "nom": "operations:process-doc",
+              "role": "par défaut",
+              "pourquoi": "Écrit le processus tel qu'il se passe vraiment (étapes, qui fait quoi, exceptions), la base sur laquelle on décide quoi automatiser."
+            },
+            {
+              "nom": "operations:process-optimization",
+              "role": "repérer les pertes",
+              "pourquoi": "Repère les étapes lentes ou inutiles du processus pour ne pas automatiser un mauvais processus."
+            }
+          ]
+        }
       ]
     },
     {
@@ -31,13 +76,6 @@
       "rend": "La solution construite par tranches contrôlables, sur des données fictives ou anonymisées, en version gelée, avec ses écarts à la spécification tracés et sa fiche d'exploitation.",
       "fichier": "80-construction.md",
       "regle": "La construction se fait par le workflow « Créer un agent IA » (étape Construire), qui lit 60-specification.md et 70-plan.md et écrit 80-construction.md dans le même dossier de mission. Rien ne touche un outil réel à cette étape, et elle ne s'ouvre que si le plan (70-plan.md) est validé au journal. Le tronc est commun à toutes les plateformes ; l'outil retenu à la stratégie d'automatisation décide de l'adaptateur. Pour un agent écrit en code : `/creer-un-agent-ia:creer-un-agent-ia`. Construire un scénario Make lui-même se fait à la main dans Make (le dépôt integromat/make-skills propose d'autres compétences pour cela, que ce workflow ne liste pas). Sans objet quand la stratégie retient de ne rien construire.",
-      "competences": [
-        {
-          "nom": "consultant-ia:construire-solution",
-          "role": "par défaut",
-          "pourquoi": "Elle cherche d'abord un modèle existant, construit par tranches avec les garde-fous de la spécification dès la première tranche qui agit (simulation des envois, dédoublonnage, journal, reprise, secrets), et rend une version gelée. Elle vit à l'étape Construire du workflow « Créer un agent IA », avec les outils n8n, Make et agent codé."
-        }
-      ],
       "taches": [
         {
           "slug": "construire-un-workflow-n8n",
@@ -58,6 +96,32 @@
               "pourquoi": "La compétence officielle de Make pour appeler les applications d'un compte sans construire de scénario : elle découvre les actions, vérifie les droits et relit après écriture. Les Endpoints sont en bêta fermée (lu dans le dépôt integromat/make-skills le 06/11/2026) : sans accès à la bêta, elle ne sert pas."
             }
           ]
+        },
+        {
+          "slug": "construire-par-tranches",
+          "titre": "Construire par tranches contrôlables",
+          "competences": [
+            {
+              "nom": "agent-skills:incremental-implementation",
+              "role": "par défaut",
+              "pourquoi": "Livre la solution par petites tranches testées une à une, au lieu d'un bloc construit d'un coup, ce qui garde chaque écart visible."
+            },
+            {
+              "nom": "agent-skills:source-driven-development",
+              "role": "docs officielles d'abord",
+              "pourquoi": "Fait vérifier chaque choix d'outil (n8n, Make, API) dans la documentation officielle avant de l'écrire, pour éviter les fonctions périmées."
+            },
+            {
+              "nom": "agent-skills:documentation-and-adrs",
+              "role": "tracer les écarts",
+              "pourquoi": "Consigne chaque écart à la spécification et sa raison dans une note de décision courte, ce que la fiche de sortie exige."
+            },
+            {
+              "nom": "consultant-ia:construire-solution",
+              "role": "méthode du pack",
+              "pourquoi": "Elle cherche d'abord un modèle existant, construit par tranches avec les garde-fous de la spécification dès la première tranche qui agit (simulation des envois, dédoublonnage, journal, reprise, secrets), et rend une version gelée. Elle vit à l'étape Construire du workflow « Créer un agent IA », avec les outils n8n, Make et agent codé."
+            }
+          ]
         }
       ]
     },
@@ -70,11 +134,6 @@
       "regle": "La recette se fait par le workflow « Créer un agent IA » (étape Tester), qui écrit 85-recette.md dans le même dossier. Une recette réussie ne prouve pas que l'IA est bonne, et l'inverse : les deux se jugent séparément, avec les seuils de la spécification. Elle ne s'ouvre que si la construction est déclarée prête pour la recette au journal. Sans objet quand la stratégie retient de ne rien construire.",
       "competences": [
         {
-          "nom": "consultant-ia:tester-solution",
-          "role": "par défaut",
-          "pourquoi": "Elle sépare la recette (déterministe, critère par critère, sabotage des tests qui comptent) de l'évaluation de l'IA (cas courants, difficiles, injections, abstentions) et dit dans quel environnement chaque résultat a été obtenu. Elle vit à l'étape Tester du workflow « Créer un agent IA », avec l'évaluation de la partie IA et la recherche de cause n8n."
-        },
-        {
           "nom": "skill-creator:skill-creator",
           "role": "évaluer une compétence ou un agent",
           "pourquoi": "Pose des évaluations et mesure une compétence avec ses variantes ; utile quand la solution est elle-même une compétence ou un agent à noter sur un jeu d'essais."
@@ -82,12 +141,13 @@
       ],
       "taches": [
         {
-          "slug": "evaluer-la-partie-ia",
-          "titre": "Évaluer la partie IA",
+          "slug": "ecrire-le-plan-de-recette",
+          "titre": "Écrire le plan de recette",
           "competences": [
             {
-              "nom": "logfire:logfire-evals",
-              "pourquoi": "Jeux d'évaluation versionnés et juges calibrés : outille l'évaluation de la partie IA de la recette."
+              "nom": "engineering:testing-strategy",
+              "role": "par défaut",
+              "pourquoi": "Décide quoi tester, à quel niveau et avec quels critères de réussite, avant de lancer la moindre vérification."
             }
           ]
         },
@@ -100,6 +160,38 @@
               "pourquoi": "Quand la plateforme retenue est n8n : cherche la cause d'un échec dans les exécutions pendant la recette."
             }
           ]
+        },
+        {
+          "slug": "passer-la-recette-et-rendre-le-verdict",
+          "titre": "Passer la recette et rendre le verdict",
+          "competences": [
+            {
+              "nom": "superpowers:verification-before-completion",
+              "role": "par défaut",
+              "pourquoi": "Interdit de dire « c'est bon » sans avoir lancé la vérification et lu son résultat : chaque critère reçoit sa preuve."
+            },
+            {
+              "nom": "superpowers:systematic-debugging",
+              "role": "cause d'un défaut",
+              "pourquoi": "Quand un critère échoue, remonte à la cause avant de corriger, au lieu d'empiler des correctifs."
+            },
+            {
+              "nom": "consultant-ia:tester-solution",
+              "role": "méthode du pack",
+              "pourquoi": "Elle sépare la recette (déterministe, critère par critère, sabotage des tests qui comptent) de l'évaluation de l'IA (cas courants, difficiles, injections, abstentions) et dit dans quel environnement chaque résultat a été obtenu. Elle vit à l'étape Tester du workflow « Créer un agent IA », avec l'évaluation de la partie IA et la recherche de cause n8n."
+            }
+          ]
+        },
+        {
+          "slug": "evaluer-la-partie-ia",
+          "titre": "Évaluer la partie IA sur un jeu étiqueté",
+          "competences": [
+            {
+              "nom": "logfire:logfire-evals",
+              "pourquoi": "Pour un agent écrit en Python ou Node : lance des évaluations sur un jeu de cas avec des juges IA et les relit dans Logfire.",
+              "role": "évaluations en code"
+            }
+          ]
         }
       ]
     },
@@ -109,23 +201,6 @@
       "titre": "Mettre en service et faire adopter",
       "rend": "Chaque action sur un outil réel proposée avec son retour arrière, le pilote, la décision écrite de bascule, l'adoption (impact par rôle, formation, communication) et le transfert à un exploitant nommé.",
       "regle": "La mise en service se fait par le workflow « Créer un agent IA » (étape Mettre en service), qui lit 85-recette.md et écrit 90-mise-en-service.md dans le même dossier de mission ; validée au journal, la mesure (95) revient ici avec mesurer-gains. Elle ne s'ouvre que si le verdict de la recette est « prêt » ou « prêt avec réserves », validé au journal. Quand rien n'est construit (construction et recette sans objet), il n'y a pas de recette : elle s'ouvre sur le plan (70-plan.md) validé au journal. Le retour arrière existe avant l'action, et la bascule se décide par écrit. L'adoption fait partie de la mise en service : une solution que personne n'utilise n'est pas en service.",
-      "competences": [
-        {
-          "nom": "consultant-ia:piloter-mise-en-service",
-          "role": "par défaut",
-          "pourquoi": "Elle ne fait une action sur un outil réel qu'après la validation de cette action précise, conduit le pilote sous surveillance renforcée et transfère à un exploitant. Elle vit à l'étape Mettre en service du workflow « Créer un agent IA », avec le mode opératoire."
-        },
-        {
-          "nom": "operations:runbook",
-          "role": "le mode opératoire",
-          "pourquoi": "Écrit le mode opératoire d'exploitation, commande par commande, avec le dépannage : ce que l'exploitant suivra seul."
-        },
-        {
-          "nom": "operations:change-request",
-          "role": "la demande de changement",
-          "pourquoi": "Prépare la demande de changement avec ses impacts, ses approbations et son retour arrière, pour une entreprise qui a déjà un processus de gestion des changements ; elle vit à l'étape d'adoption du workflow « Organiser sa force de vente » (`/organiser-sa-force-de-vente:organiser-sa-force-de-vente`)."
-        }
-      ],
       "taches": [
         {
           "slug": "deployer-un-assistant-ia",
@@ -134,6 +209,54 @@
             {
               "nom": "consultant-ia:deployer-assistant-ia",
               "pourquoi": "Pour une équipe à équiper sans processus à automatiser : l'usage déjà là, le plan sur des faits relus le jour même, une charte d'une page, le dossier de conformité préparé, les réglages, le pilote et le rendez-vous de pilotage."
+            }
+          ]
+        },
+        {
+          "slug": "preparer-la-bascule-et-le-retour-arriere",
+          "titre": "Préparer la bascule et le retour arrière",
+          "competences": [
+            {
+              "nom": "engineering:deploy-checklist",
+              "role": "par défaut",
+              "pourquoi": "Vérifie avant de basculer que tout est prêt (recette, accès, sauvegarde) et écrit à l'avance ce qui déclenche un retour arrière."
+            },
+            {
+              "nom": "agent-skills:shipping-and-launch",
+              "role": "lancement par paliers",
+              "pourquoi": "Prépare le lancement : liste de contrôle, supervision et déploiement progressif avec retour arrière prévu."
+            },
+            {
+              "nom": "operations:change-request",
+              "role": "demande de changement",
+              "pourquoi": "Prépare la demande de changement avec ses impacts, ses approbations et son retour arrière, pour une entreprise qui a déjà un processus de gestion des changements ; elle vit à l'étape d'adoption du workflow « Organiser sa force de vente » (`/organiser-sa-force-de-vente:organiser-sa-force-de-vente`)."
+            },
+            {
+              "nom": "consultant-ia:piloter-mise-en-service",
+              "role": "méthode du pack",
+              "pourquoi": "Elle ne fait une action sur un outil réel qu'après la validation de cette action précise, conduit le pilote sous surveillance renforcée et transfère à un exploitant. Elle vit à l'étape Mettre en service du workflow « Créer un agent IA », avec le mode opératoire."
+            }
+          ]
+        },
+        {
+          "slug": "annoncer-le-changement-a-l-equipe",
+          "titre": "Annoncer le changement à l'équipe",
+          "competences": [
+            {
+              "nom": "product-management:stakeholder-update",
+              "role": "par défaut",
+              "pourquoi": "Écrit l'annonce de la mise en service adaptée à chaque public (direction, utilisateurs, équipe technique)."
+            }
+          ]
+        },
+        {
+          "slug": "transferer-a-un-exploitant-nomme",
+          "titre": "Transférer à un exploitant nommé",
+          "competences": [
+            {
+              "nom": "operations:runbook",
+              "role": "par défaut",
+              "pourquoi": "Écrit le mode opératoire d'exploitation, commande par commande, avec le dépannage : ce que l'exploitant suivra seul."
             }
           ]
         }
@@ -152,6 +275,46 @@
           "nom": "consultant-ia:router-conseiller-une-mission-ia",
           "role": "workflow : la mesure",
           "pourquoi": "C'est la porte du pack consultant IA : une fois la solution en service, elle rouvre le cas pour mesurer le gain, tient le journal des décisions et lance la compétence de mesure."
+        }
+      ],
+      "taches": [
+        {
+          "slug": "relever-le-gain-et-les-couts",
+          "titre": "Relever le gain réel et les coûts sur relevés",
+          "competences": [
+            {
+              "nom": "consultant-ia:mesurer-gains",
+              "role": "comble un vide",
+              "pourquoi": "Comble un vide : aucune compétence publique ne compare des relevés réels à la mesure de départ et au business case ; elle dit aussi ce qui n'est pas encore observé."
+            }
+          ]
+        },
+        {
+          "slug": "rendre-compte-au-client",
+          "titre": "Rendre compte du gain et des risques au client",
+          "competences": [
+            {
+              "nom": "operations:status-report",
+              "role": "par défaut",
+              "pourquoi": "Écrit le rapport périodique au client : indicateurs, risques, décisions attendues, en vert, orange ou rouge."
+            }
+          ]
+        },
+        {
+          "slug": "maintenir-et-traiter-les-incidents",
+          "titre": "Maintenir la solution et traiter les incidents",
+          "competences": [
+            {
+              "nom": "engineering:incident-response",
+              "role": "par défaut",
+              "pourquoi": "Trie un incident par gravité, prévient les bonnes personnes et écrit le bilan sans chercher de coupable une fois résolu."
+            },
+            {
+              "nom": "agent-skills:observability-and-instrumentation",
+              "role": "voir ce qui tourne",
+              "pourquoi": "Installe les journaux et les alertes qui montrent si la solution marche en vrai, source des relevés du gain et des incidents."
+            }
+          ]
         }
       ]
     }

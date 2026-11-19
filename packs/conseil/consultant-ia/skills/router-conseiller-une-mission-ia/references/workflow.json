@@ -10,7 +10,7 @@
   ],
   "moment": "demarrer",
   "dossier_etat": "mission/",
-  "mis_a_jour": "2026-11-10",
+  "mis_a_jour": "2026-11-19",
   "methode": {
     "titre": "Pack consultant IA",
     "auteur": "Zero Gravity AI",
@@ -29,7 +29,7 @@
         {
           "nom": "consultant-ia:decouvrir-cas-usage",
           "role": "par défaut",
-          "pourquoi": "C'est l'étape propriétaire de la porte découverte du pack : elle part du travail réel des équipes et rend un portefeuille classé, pas une liste d'idées d'IA."
+          "pourquoi": "Comble un vide : aucune compétence publique ne cartographie les tâches réelles d'une équipe, ne les trie en cinq issues (éliminer, simplifier d'abord, automatiser, déléguer à l'IA, garder) ni ne rend un portefeuille de cas d'usage IA classés ; les compétences de brainstorming cherchent des idées sans partir du travail existant. C'est l'étape propriétaire de la porte découverte du pack."
         }
       ],
       "regle": "Deux portes d'entrée, un seul test : si le processus se nomme en une phrase, on saute cette étape (elle s'inscrit « sans objet » au journal) et chaque besoin entre par le cadrage ; sinon on découvre d'abord, puis chaque cas retenu repart par le cadrage. En cas de doute, la découverte commence court et rend la main dès qu'un cas clair apparaît. Le fichier de l'étape est 02-portefeuille.md, écrit après 00-contexte.md et 01-cartographie-taches.md. Sur proposition, deux fichiers facultatifs le suivent : 03-chiffrage.md, l'ordre de grandeur des seuls cas à creuser (compétence de l'étape 7), et 04-feuille-de-route.md, la feuille de route du portefeuille (compétence de l'étape 8). Sans consultant dans la conversation, la découverte finit par dix cas au plus, classés par rentabilité, ceux qu'un workflow existant couvre déjà et ceux qui sont propres à l'entreprise, puis trois propositions : la personne en choisit un, et ce cas ne commence qu'une fois l'accès ouvert.",
@@ -43,8 +43,16 @@
           "competences": [
             {
               "nom": "hunting-automation-resources",
-              "pourquoi": "Pour chercher de bons modèles d'automatisations et de consignes dans des sources sûres.",
+              "role": "par défaut",
+              "pourquoi": "Comble un vide : aucune compétence publique ne cherche des modèles d'automatisations et de consignes dans des sources sûres. Compétence de projet, pensée pour NotebookLM et de qualité modeste : elle reste privée, hors pack public.",
               "projet": "marketplace"
+            },
+            {
+              "nom": "anthropic-skills:deep-research",
+              "role": "autre choix",
+              "pourquoi": "Recherche à plusieurs sources avec rapport cité : pour trouver et comparer des modèles d'automatisations et de consignes sur des sources fiables. Intégrée à l'application Claude, sans dépôt public à installer.",
+              "source": "Anthropic (compétence intégrée à Claude)",
+              "maison": "poser-sa-strategie-marketing"
             }
           ],
           "reserve": []
@@ -53,6 +61,13 @@
           "slug": "comprendre-l-entreprise-vite",
           "titre": "Comprendre l'entreprise avant de cartographier",
           "competences": [
+            {
+              "nom": "bmad-market-research",
+              "role": "par défaut",
+              "pourquoi": "Recherche web citée sur le marché, le domaine et les concurrents : donne le contexte de l'entreprise et les pratiques de son secteur avant de cartographier ses tâches.",
+              "source": "BMAD, bmad-code-org/BMAD-METHOD",
+              "maison": "cadrer-un-chantier"
+            },
             {
               "nom": "mckinsey-bcg-consulting:mckinsey-research-methodology",
               "role": "autre choix",
@@ -68,9 +83,23 @@
           "competences": [
             {
               "nom": "bmad-brainstorming",
-              "role": "autre choix",
-              "pourquoi": "Des techniques de créativité menées en séance, pour faire sortir des cas d'usage auxquels l'équipe n'aurait pas pensé.",
+              "role": "par défaut",
+              "pourquoi": "Des techniques de créativité animées en séance, pour faire sortir des cas d'usage auxquels l'équipe n'aurait pas pensé (huit références).",
+              "source": "BMAD, bmad-code-org/BMAD-METHOD",
               "maison": "cadrer-un-chantier"
+            },
+            {
+              "nom": "product-management:product-brainstorming",
+              "role": "autre choix",
+              "pourquoi": "Un partenaire de réflexion d'Anthropic pour explorer le problème et mettre les hypothèses à l'épreuve (comment pourrait-on, tâches à accomplir) avant de retenir un cas.",
+              "source": "Anthropic, anthropics/knowledge-work-plugins"
+            },
+            {
+              "nom": "product-management:roadmap-update",
+              "role": "autre choix",
+              "pourquoi": "Pour ordonner les cas retenus : valeur contre effort, RICE ou ICE, puis maintenant, ensuite, plus tard.",
+              "source": "Anthropic, anthropics/knowledge-work-plugins",
+              "maison": "ameliorer-le-parcours-client"
             },
             {
               "nom": "mckinsey-bcg-consulting:impact-speed-prioritization-matrix",
@@ -92,9 +121,23 @@
       "fichier": "10-besoin.md",
       "competences": [
         {
-          "nom": "consultant-ia:cadrer-besoin",
+          "nom": "agent-skills:interview-me",
           "role": "par défaut",
-          "pourquoi": "Elle reformule une demande qui arrive en solution (« on veut un chatbot ») en problème, vérifie que c'est le bon, et fixe le nom unique du dossier que toutes les étapes suivantes reprennent."
+          "pourquoi": "Elle mène l'interview une question à la fois jusqu'à environ 95 % de confiance sur le besoin réel : elle reformule « on veut un chatbot » en problème avant toute solution.",
+          "source": "Addy Osmani, addyosmani/agent-skills",
+          "maison": "cadrer-un-chantier"
+        },
+        {
+          "nom": "bmad-product-brief",
+          "role": "autre choix",
+          "pourquoi": "Quand le besoin devient un produit logiciel suivi : la note de cadrage du produit (pour qui, quel enjeu), relue avant de la figer.",
+          "source": "BMAD, bmad-code-org/BMAD-METHOD",
+          "maison": "creer-une-app"
+        },
+        {
+          "nom": "consultant-ia:cadrer-besoin",
+          "role": "autre choix",
+          "pourquoi": "Produit le fichier d'état numéroté de la mission (10-besoin.md) : la fiche courte validée (décision, périmètre, contraintes, critères de succès) et le nom unique du dossier du cas que toutes les étapes suivantes reprennent ; aucune compétence publique ne rend cette fiche."
         }
       ],
       "regle": "On ne cherche pas de solution avant que le demandeur ait validé la fiche. Un cas porte un seul nom, fixé ici une fois (le dossier `mission/cas-<nom>/`). Les questions sortent de la base du pack : on lit d'abord ce qui existe, on ne pose que ce qui manque, et le consultant y range ensuite ce qui manquait. Un objectif qui relève d'un sujet de la base se prépare avec les questions de ce seul sujet.",
@@ -106,7 +149,15 @@
           "competences": [
             {
               "nom": "consultant-ia:mener-entretien-ia",
-              "pourquoi": "Quand la personne répond seule : une IA mène l'entretien par écrit, avec les questions de la base, et rend une note au format du pack, que le consultant relit."
+              "role": "par défaut",
+              "pourquoi": "Comble un vide : aucune compétence publique ne mène un entretien écrit à distance en l'absence du consultant (ou par l'agent en ligne du site), avec la base de questions par sujet, et ne rend une note contrôlée à verser au dossier ; interview-me interroge la personne en direct dans la session."
+            },
+            {
+              "nom": "product-management:synthesize-research",
+              "role": "autre choix",
+              "pourquoi": "Pour exploiter les comptes rendus d'entretien : thèmes, citations, classement par fréquence et par impact.",
+              "source": "Anthropic, anthropics/knowledge-work-plugins",
+              "maison": "ameliorer-le-parcours-client"
             },
             {
               "nom": "mckinsey-bcg-consulting:expert-interviewing-mckinsey",
@@ -122,16 +173,29 @@
           "titre": "Structurer le problème",
           "competences": [
             {
-              "nom": "mckinsey-bcg-consulting:mckinsey-problem-solving-methodology",
+              "nom": "agent-skills:idea-refine",
+              "role": "par défaut",
+              "pourquoi": "Elle affine une idée floue par pensée divergente puis convergente et met ses hypothèses à l'épreuve : sert à valider ou redéfinir le problème avant d'agir.",
+              "source": "Addy Osmani, addyosmani/agent-skills",
+              "maison": "cadrer-un-chantier"
+            },
+            {
+              "nom": "router-decider-une-strategie",
               "role": "autre choix",
-              "pourquoi": "Quand la demande est floue ou que le client s'est déjà fait son diagnostic : suspendre l'action, valider ou redéfinir le problème, partir des faits plutôt que d'une conviction. Écrite en chinois.",
-              "source": "MichaelRochonnn, MichaelRochonnn/mckinsey-bcg-consulting"
+              "pourquoi": "Comble un vide : aucune compétence publique ne cadre une décision de stratégie (question nette, structure sans recouvrement, hypothèses explicites). Le groupe vit dans le pack décider une stratégie : on le cite, on ne le recopie pas.",
+              "maison": "cadrer-un-chantier"
             },
             {
               "nom": "management-consulting",
               "role": "autre choix",
               "pourquoi": "Quand le besoin est plus stratégique que d'un seul processus : trois niveaux d'effort (réfléchir à voix haute, cas complet, livrable pour un comité), quarante-deux cadres et la règle de ne pas en appliquer un par réflexe.",
               "source": "gcamilo, gcamilo/management-consulting"
+            },
+            {
+              "nom": "mckinsey-bcg-consulting:mckinsey-problem-solving-methodology",
+              "role": "autre choix",
+              "pourquoi": "Quand la demande est floue ou que le client s'est déjà fait son diagnostic : suspendre l'action, valider ou redéfinir le problème, partir des faits plutôt que d'une conviction. Écrite en chinois.",
+              "source": "MichaelRochonnn, MichaelRochonnn/mckinsey-bcg-consulting"
             }
           ],
           "reserve": []
@@ -148,19 +212,27 @@
       "competences": [
         {
           "nom": "consultant-ia:auditer-processus",
-          "role": "par défaut",
-          "pourquoi": "Elle décrit comment le travail se fait vraiment, le mesure, trie chaque étape (éliminer, simplifier d'abord, automatiser, déléguer à l'IA, garder) et empêche d'automatiser une mauvaise habitude."
-        },
-        {
-          "nom": "consultant-ia:rediger-cahier-des-charges",
-          "role": "les exigences",
-          "pourquoi": "Une fois le diagnostic validé, elle écrit les exigences sans nommer de solution, pour comparer les options sur un même énoncé (son mode exigences). La même compétence écrit plus loin, à l'étape 8, la spécification de l'option retenue."
+          "role": "par défaut : le diagnostic",
+          "pourquoi": "Comble un vide : aucune compétence publique ne mesure un processus, ne trie chacune de ses étapes en cinq issues (éliminer, simplifier d'abord, automatiser, déléguer à l'IA, garder) ni ne teste sa stabilité avant d'automatiser ; process-doc décrit et process-optimization améliore, sans cette mesure. Elle produit 20-diagnostic.md et empêche d'automatiser une mauvaise habitude."
         },
         {
           "nom": "operations:process-doc",
-          "role": "le mode opératoire",
-          "pourquoi": "Rédige le processus cible avec ses rôles, ses exceptions et ses variantes une fois l'audit fait ; elle vit à l'étape d'arrivée et de procédures du workflow « Recruter un collaborateur ».",
+          "role": "par défaut : décrire le processus actuel",
+          "pourquoi": "Décrit un processus tel qu'il se fait vraiment : rôles (RACI), étapes, exceptions et cas limites ; elle sert la première moitié du diagnostic. Elle vit à l'étape des procédures du workflow « Recruter un collaborateur ».",
+          "source": "Anthropic, anthropics/knowledge-work-plugins",
           "maison": "recruter"
+        },
+        {
+          "nom": "product-management:write-spec",
+          "role": "par défaut : les exigences",
+          "pourquoi": "Écrit les besoins depuis un énoncé de problème : objectifs, hors-périmètre, critères de succès et d'acceptation, sans imposer de solution.",
+          "source": "Anthropic, anthropics/knowledge-work-plugins",
+          "maison": "creer-une-app"
+        },
+        {
+          "nom": "consultant-ia:rediger-cahier-des-charges",
+          "role": "autre choix",
+          "pourquoi": "Produit les fichiers d'état numérotés des exigences (30-exigences.md) puis de la spécification (60-specification.md), dans le modèle d'exigences du pack, et reçoit les annexes d'un audit CRM : aucune compétence publique ne tient ces deux modes du pack."
         }
       ],
       "regle": "On mesure avant de décrire la cible, et un processus instable se stabilise avant de s'automatiser. Si le processus passe par un outil lisible, on lit d'abord ses traces, en lecture seule et sur une période nommée : l'entretien confirme ce qu'elles montrent et cherche le reste. Sans consultant dans la conversation, l'agent ne se connecte à aucun outil : il lit les documents que la personne joint. Le diagnostic validé, les exigences s'écrivent dans 30-exigences.md, sans nommer de solution avant de comparer des options : c'est le mode exigences de la compétence de rédaction, dont le mode spécification est repris à l'étape 8. L'étape n'est faite que quand les deux fichiers existent.",
@@ -172,7 +244,8 @@
           "competences": [
             {
               "nom": "consultant-ia:auditer-crm",
-              "pourquoi": "Quand le cas touche à un CRM : un audit en lecture seule sur quatre volets, un bilan priorisé en annexe du diagnostic, puis les annexes du cahier des charges pour une mise en place ou une refonte."
+              "role": "par défaut",
+              "pourquoi": "Comble un vide : aucune compétence publique n'audite un CRM sur quatre volets (automatisations et intégrations, données, ventes, tableaux de bord) pour rendre, en lecture seule, un bilan priorisé en annexe du diagnostic, puis les annexes du cahier des charges d'une mise en place ou d'une refonte."
             }
           ],
           "reserve": []
@@ -181,6 +254,12 @@
           "slug": "chercher-les-causes-qui-comptent",
           "titre": "Chercher les causes qui comptent",
           "competences": [
+            {
+              "nom": "data:statistical-analysis",
+              "role": "par défaut",
+              "pourquoi": "Tests d'hypothèse, corrélations et valeurs aberrantes, avec les pièges (une corrélation n'est pas une cause) : pour chercher ce qui explique vraiment un écart sur les relevés.",
+              "source": "Anthropic, anthropics/knowledge-work-plugins"
+            },
             {
               "nom": "mckinsey-bcg-consulting:hypothesis-driven-data-analysis",
               "role": "autre choix",
@@ -210,7 +289,8 @@
           "nom": "operations:process-optimization",
           "role": "par défaut",
           "pourquoi": "Elle part du processus décrit à l'étape 3, repère les pertes (attentes, reprises, étapes sans valeur, tâches manuelles), dessine l'état cible et chiffre le gain par cycle : on automatise le processus simplifié, pas une mauvaise habitude. Très courte (1 Ko, sans références) : le gros du tri est déjà fait par l'audit de l'étape 3.",
-          "maison": "ameliorer-le-parcours-client"
+          "maison": "ameliorer-le-parcours-client",
+          "source": "Anthropic, anthropics/knowledge-work-plugins"
         }
       ],
       "regle": "On optimise avant de spécifier : supprimer ce qui ne sert à rien, regrouper, standardiser, et seulement ensuite choisir ce qu'on automatise. On part du diagnostic et des relevés de l'étape 3 ; un gain chiffré dit s'il est relevé ou estimé. Si l'optimisation change le processus, les exigences de 30-exigences.md se relisent avant de comparer des options. Le résultat s'écrit dans 35-optimisation.md et sert de base aux options de l'étape 6.",
@@ -221,6 +301,13 @@
           "slug": "reperer-les-pertes-et-standardiser",
           "titre": "Repérer les pertes et standardiser",
           "competences": [
+            {
+              "nom": "operations:runbook",
+              "role": "par défaut",
+              "pourquoi": "Transforme le savoir-faire d'une personne en pas-à-pas exacts, avec dépannage et retour arrière : écrire pour que d'autres, ou un agent, puissent le faire, avant d'automatiser ou de déléguer.",
+              "source": "Anthropic, anthropics/knowledge-work-plugins",
+              "maison": "creer-un-agent-ia"
+            },
             {
               "nom": "mckinsey-bcg-consulting:process-standardization-for-leverage",
               "role": "autre choix",
@@ -242,7 +329,7 @@
         {
           "nom": "consultant-ia:concevoir-solution",
           "role": "par défaut",
-          "pourquoi": "Elle pose d'abord la stratégie d'automatisation (faire ou non, quel type de solution, sur quelle plateforme) avant de comparer des options, et recommande avec le contre-argument, la condition d'arrêt et un repli."
+          "pourquoi": "Comble un vide : aucune compétence publique ne tranche « faut-il automatiser, quel type de solution, quelle plateforme » puis ne compare des options sur une matrice (dont ne rien construire et les outils déjà en place) en recommandant avec contre-argument, condition d'arrêt et repli."
         }
       ],
       "regle": "Ne rien construire est une option à part entière, et la plus simple qui tienne gagne. Une solution part de l'automatisation : les règles stables d'abord, l'IA là où il faut comprendre, classer ou rédiger. L'IA augmente l'automatisation et l'humain, et un geste à risque garde une validation humaine. Prix et capacités des plateformes se revérifient le jour même. Cette étape ne pose que les trois décisions de stratégie dans 40-strategie.md (faire ou non, type de solution, plateforme) ; l'étape 6 déroule le reste de la compétence et écrit 40-solutions.md, où la stratégie est reprise en tête.",
@@ -254,8 +341,16 @@
           "competences": [
             {
               "nom": "automation-strategy",
+              "role": "par défaut",
+              "pourquoi": "Comble un vide : aucun dépôt reconnu ne tranche d'automatiser ou non, d'acheter ou de construire, la plateforme, le compte Claude et la surface, ni le coût de maintien ; la plus proche est celle d'Eric Risco (non officielle), gardée par défaut faute de mieux. Capacités et prix se revérifient le jour même.",
+              "source": "Eric Risco, ericrisco/rsc-harness"
+            },
+            {
+              "nom": "claude-api",
               "role": "autre choix",
-              "pourquoi": "Pour approfondir le choix d'automatiser ou non, d'acheter ou de construire, la plateforme et le coût de maintien. Capacités et prix se revérifient le jour même."
+              "pourquoi": "Quand la plateforme retenue est l'API Claude : modèles, prix, agents, mise en cache ; capacités et prix à revérifier le jour même.",
+              "source": "Anthropic, anthropics/skills",
+              "maison": "creer-une-app"
             }
           ],
           "reserve": []
@@ -264,6 +359,13 @@
           "slug": "verifier-que-la-solution-est-a-portee",
           "titre": "Vérifier que la solution est à la portée du client",
           "competences": [
+            {
+              "nom": "operations:capacity-plan",
+              "role": "par défaut",
+              "pourquoi": "Mesure la charge et la capacité de l'équipe qui devra porter et maintenir la solution : dit si elle tient dans ses moyens.",
+              "source": "Anthropic, anthropics/knowledge-work-plugins",
+              "maison": "recruter"
+            },
             {
               "nom": "mckinsey-bcg-consulting:solution-feasibility-assessment",
               "role": "autre choix",
@@ -286,8 +388,9 @@
       "competences": [
         {
           "nom": "operations:vendor-review",
-          "role": "le fournisseur",
-          "pourquoi": "Compare des fournisseurs sur le coût complet, les risques, la continuité et la sortie : ce qu'il faut quand une option repose sur un logiciel du marché."
+          "role": "par défaut",
+          "pourquoi": "Compare des fournisseurs sur le coût complet, les risques, la continuité et la sortie : ce qu'il faut quand une option repose sur un logiciel du marché ; la comparaison des options elle-même reprend la compétence de l'étape 5.",
+          "source": "Anthropic, anthropics/knowledge-work-plugins"
         }
       ],
       "regle": "On reprend la compétence de l'étape 5 pour la partie options : au moins une option sans construction et les outils déjà en place. La revue du fournisseur ne s'ouvre que si une option en dépend. Le résultat s'écrit dans 40-solutions.md.",
@@ -313,14 +416,23 @@
           "competences": [
             {
               "nom": "bmad-architecture",
-              "role": "autre choix",
+              "role": "par défaut",
               "pourquoi": "Quand l'option est un système de plusieurs pièces : le court document des règles qui doivent rester vraies pour tout ce qu'on construira ensuite.",
-              "maison": "creer-une-app"
+              "maison": "creer-une-app",
+              "source": "BMAD, bmad-code-org/BMAD-METHOD"
+            },
+            {
+              "nom": "engineering:system-design",
+              "role": "autre choix",
+              "pourquoi": "Pour concevoir le système : services, frontières, modèle de données.",
+              "source": "Anthropic, anthropics/knowledge-work-plugins",
+              "maison": "ameliorer-un-systeme-ia"
             },
             {
               "nom": "engineering:architecture",
               "role": "autre choix",
               "pourquoi": "Quand un seul choix d'architecture se pose : une décision courte, écrite avec ses options et sa raison, à garder au journal de la mission.",
+              "source": "Anthropic, anthropics/knowledge-work-plugins",
               "maison": "creer-une-app"
             },
             {
@@ -336,6 +448,27 @@
           "slug": "presenter-la-recommandation",
           "titre": "Présenter la recommandation",
           "competences": [
+            {
+              "nom": "product-management:stakeholder-update",
+              "role": "par défaut",
+              "pourquoi": "Adapte le message à l'auditoire (synthèse pour dirigeants, détail, client) : convient à une recommandation en conclusion d'abord ou en histoire.",
+              "source": "Anthropic, anthropics/knowledge-work-plugins",
+              "maison": "organiser-sa-force-de-vente"
+            },
+            {
+              "nom": "anthropic-skills:pptx",
+              "role": "autre choix",
+              "pourquoi": "Pour produire le diaporama de la recommandation.",
+              "source": "Anthropic, anthropics/skills",
+              "maison": "poser-sa-strategie-marketing"
+            },
+            {
+              "nom": "small-business:proposal-builder",
+              "role": "autre choix",
+              "pourquoi": "Pour une proposition chiffrée tirée d'un échange de découverte.",
+              "source": "Anthropic, anthropics/knowledge-work-plugins",
+              "maison": "conclure-une-vente"
+            },
             {
               "nom": "mckinsey-bcg-consulting:consulting-proposal-structures",
               "role": "autre choix",
@@ -357,7 +490,7 @@
         {
           "nom": "consultant-ia:chiffrer-rentabilite",
           "role": "par défaut",
-          "pourquoi": "Elle chiffre avec des hypothèses visibles, maintenance comprise, selon le critère d'investissement de l'entreprise ; son ordre de grandeur sert aussi à classer un portefeuille."
+          "pourquoi": "Comble un vide : aucune compétence publique ne chiffre le gain attendu d'une automatisation en trois scénarios, hypothèses visibles, maintenance comprise, selon le critère d'investissement de l'entreprise ; les compétences de finance et de données analysent des chiffres déjà observés, pas un gain à venir. Son ordre de grandeur sert aussi à classer un portefeuille."
         }
       ],
       "regle": "Un gain ne se promet pas sans mesure de départ. Les hypothèses sont écrites et chaque chiffre dit s'il est estimé ou relevé. Sans consultant dans la conversation, un consultant relit ce chiffrage avant que la personne le valide.",
@@ -376,6 +509,13 @@
           "slug": "tester-les-hypotheses-du-gain",
           "titre": "Tester les hypothèses du gain",
           "competences": [
+            {
+              "nom": "agent-skills:doubt-driven-development",
+              "role": "par défaut",
+              "pourquoi": "Soumet chaque hypothèse non triviale à une contre-expertise à contexte neuf, orientée pour la réfuter : ce qu'il faut pour un gain promis.",
+              "source": "Addy Osmani, addyosmani/agent-skills",
+              "maison": "creer-un-agent-ia"
+            },
             {
               "nom": "strategy-skills-for-claude:assumption-audit",
               "role": "autre choix",
@@ -409,14 +549,22 @@
       "fichier": "60-specification.md",
       "competences": [
         {
+          "nom": "agent-skills:spec-driven-development",
+          "role": "par défaut : la spécification",
+          "pourquoi": "Rédige la spécification avant le code : objectifs, périmètre, critères ; sert la spécification de l'option retenue.",
+          "source": "Addy Osmani, addyosmani/agent-skills",
+          "maison": "creer-une-app"
+        },
+        {
           "nom": "consultant-ia:planifier-deploiement",
-          "role": "le plan",
-          "pourquoi": "Elle ordonne en lots courts avec porte, pilote, adoption et mesure, puis soumet le plan à un pré-mortem avant de s'engager ; en début de mission, elle ordonne aussi le portefeuille en feuille de route."
+          "role": "par défaut : le plan",
+          "pourquoi": "Comble un vide : aucune compétence publique ne rend un plan de déploiement d'une solution IA en lots courts avec porte, pilote, recette, adoption et mesure, ni une feuille de route de portefeuille ; planning-and-task-breakdown découpe du code et roadmap-update tient une feuille de route produit. Elle soumet le plan à un pré-mortem avant de s'engager."
         },
         {
           "nom": "bmad-prd",
-          "role": "la spécification produit",
+          "role": "autre choix",
           "pourquoi": "Quand la solution devient un produit logiciel suivi : un cahier des charges produit pensé avec le décideur (pour qui, quel enjeu), relu avant de le figer. Il vit à l'étape d'écriture du produit du workflow « Créer une app » (`/router-creer-une-app`).",
+          "source": "BMAD, bmad-code-org/BMAD-METHOD",
           "maison": "creer-une-app"
         }
       ],
@@ -432,7 +580,21 @@
             {
               "nom": "operations:risk-assessment",
               "role": "autre choix",
-              "pourquoi": "Repérer les risques d'un projet et prévoir comment les réduire."
+              "pourquoi": "Registre de risques priorisé avec mesures pour un projet ; très courte (1 Ko), à compléter par le pré-mortem et le suivi de conformité ci-après.",
+              "source": "Anthropic, anthropics/knowledge-work-plugins"
+            },
+            {
+              "nom": "operations:compliance-tracking",
+              "role": "autre choix",
+              "pourquoi": "Pour le volet conformité : suivre les exigences (RGPD, ISO 27001) et la préparation d'audit.",
+              "source": "Anthropic, anthropics/knowledge-work-plugins",
+              "maison": "organiser-sa-force-de-vente"
+            },
+            {
+              "nom": "challenge-premortem",
+              "role": "autre choix",
+              "pourquoi": "Comble un vide : aucune compétence publique ne rend le verdict d'un pré-mortem (méthode de Klein) avant de s'engager : pivoter, durcir ou engager. Maison, pas encore de version publique.",
+              "maison": "cadrer-un-chantier"
             }
           ],
           "reserve": []
@@ -443,9 +605,17 @@
           "competences": [
             {
               "nom": "operations:change-request",
-              "role": "autre choix",
-              "pourquoi": "Pour le volet adoption du plan : la demande de changement avec ses impacts, ses approbations, la formation et le retour arrière.",
+              "role": "par défaut",
+              "pourquoi": "Pour le volet adoption du plan : la demande de changement avec ses impacts, sa communication, ses approbations et le retour arrière.",
+              "source": "Anthropic, anthropics/knowledge-work-plugins",
               "maison": "organiser-sa-force-de-vente"
+            },
+            {
+              "nom": "champion-kit:climb",
+              "role": "autre choix",
+              "pourquoi": "Porte du kit des champions d'Anthropic : faire adopter l'outil par des relais dans les équipes ; il vit au workflow « Implémenter l'IA en entreprise » (étape 4).",
+              "source": "Anthropic, anthropics/claude-plugins-official",
+              "maison": "implementer-l-ia-en-entreprise"
             }
           ],
           "reserve": []
@@ -456,8 +626,30 @@
           "competences": [
             {
               "nom": "bmad-create-epics-and-stories",
-              "role": "autre choix",
+              "role": "par défaut",
               "pourquoi": "Quand la solution est un logiciel à écrire : découper les besoins en lots et en histoires prêtes à construire.",
+              "source": "BMAD, bmad-code-org/BMAD-METHOD",
+              "maison": "construire"
+            },
+            {
+              "nom": "agent-skills:planning-and-task-breakdown",
+              "role": "autre choix",
+              "pourquoi": "Découpe un travail en tâches ordonnées et vérifiables.",
+              "source": "Addy Osmani, addyosmani/agent-skills",
+              "maison": "cadrer-un-chantier"
+            },
+            {
+              "nom": "superpowers:writing-plans",
+              "role": "autre choix",
+              "pourquoi": "Écrit un plan d'exécution pas à pas depuis une spécification.",
+              "source": "Jesse Vincent, obra/superpowers",
+              "maison": "construire"
+            },
+            {
+              "nom": "product-management:sprint-planning",
+              "role": "autre choix",
+              "pourquoi": "Pour cadrer un lot : capacité, objectifs, priorités.",
+              "source": "Anthropic, anthropics/knowledge-work-plugins",
               "maison": "construire"
             }
           ],
@@ -476,7 +668,14 @@
         {
           "nom": "consultant-ia:mesurer-gains",
           "role": "par défaut",
-          "pourquoi": "C'est le seul endroit où un gain devient un fait : elle compare des relevés réels à la mesure de départ et au business case, lit de vrais cas (les échecs silencieux comptent) et dit ce qui n'est pas encore observé."
+          "pourquoi": "Comble un vide : aucune compétence publique ne compare des relevés réels à la mesure de départ et au business case, ne lit de vrais cas (les échecs silencieux comptent) ni ne refuse de déclarer un gain non relevé ; metrics-review revoit des indicateurs produit face à des cibles, sans cette discipline. C'est le seul endroit où un gain devient un fait."
+        },
+        {
+          "nom": "data:build-dashboard",
+          "role": "autre choix",
+          "pourquoi": "Un tableau de suivi interactif et partageable pour suivre le gain dans le temps.",
+          "source": "Anthropic, anthropics/knowledge-work-plugins",
+          "maison": "creer-un-agent-ia"
         }
       ],
       "humaine": "Le client dépose ses relevés et le décideur tranche entre continuer, corriger, étendre et arrêter ; la compétence propose, elle ne décide pas à sa place.",
@@ -487,6 +686,20 @@
           "slug": "choisir-les-indicateurs",
           "titre": "Compléter les indicateurs à suivre",
           "competences": [
+            {
+              "nom": "product-management:metrics-review",
+              "role": "par défaut",
+              "pourquoi": "Hiérarchie d'indicateurs, cibles et rythme de revue : complète les indicateurs de la spécification (60, rubrique 14) quand ils sont maigres.",
+              "source": "Anthropic, anthropics/knowledge-work-plugins",
+              "maison": "poser-sa-strategie-marketing"
+            },
+            {
+              "nom": "agent-skills:observability-and-instrumentation",
+              "role": "autre choix",
+              "pourquoi": "Instrumenter pour que le comportement soit visible : journaux, métriques, traces.",
+              "source": "Addy Osmani, addyosmani/agent-skills",
+              "maison": "creer-un-agent-ia"
+            },
             {
               "nom": "strategy-skills-for-claude:kpi-architect",
               "role": "autre choix",
@@ -502,11 +715,15 @@
           "competences": [
             {
               "nom": "querying-posthog-data",
-              "pourquoi": "Quand l'entreprise suit son produit dans PostHog : calcule usages et métriques pour les relevés de la mesure."
+              "role": "par défaut",
+              "pourquoi": "Quand l'entreprise suit son produit dans PostHog : calcule usages et métriques pour les relevés de la mesure (éditeur officiel).",
+              "source": "PostHog, PostHog/skills"
             },
             {
               "nom": "logfire-query",
-              "pourquoi": "Quand l'agent est suivi par Logfire : lit erreurs, coûts, durées et tendances."
+              "role": "autre choix",
+              "pourquoi": "Quand l'agent est suivi par Logfire : lit erreurs, coûts, durées et tendances (éditeur officiel).",
+              "source": "Pydantic, pydantic/skills"
             }
           ],
           "reserve": []
@@ -517,7 +734,9 @@
           "competences": [
             {
               "nom": "exploring-ai-failures",
-              "pourquoi": "Repère dans les traces de PostHog les réponses d'IA qui échouent sans déclencher d'alerte."
+              "role": "par défaut",
+              "pourquoi": "Repère dans les traces de PostHog les réponses d'IA qui échouent sans déclencher d'alerte (éditeur officiel).",
+              "source": "PostHog, PostHog/skills"
             }
           ],
           "reserve": []
@@ -526,6 +745,20 @@
           "slug": "faire-tenir-le-gain",
           "titre": "Faire tenir le gain dans la durée",
           "competences": [
+            {
+              "nom": "operations:status-report",
+              "role": "par défaut",
+              "pourquoi": "Rapport récurrent avec indicateurs, risques et actions : garde le gain visible auprès de la direction.",
+              "source": "Anthropic, anthropics/knowledge-work-plugins",
+              "maison": "organiser-sa-force-de-vente"
+            },
+            {
+              "nom": "small-business:report-builder",
+              "role": "autre choix",
+              "pourquoi": "Rapport récurrent reproductible depuis les sources branchées.",
+              "source": "Anthropic, anthropics/knowledge-work-plugins",
+              "maison": "faire-tourner-les-operations"
+            },
             {
               "nom": "strategy-skills-for-claude:value-realization",
               "role": "autre choix",

@@ -15,7 +15,19 @@
       "titre": "Verrouiller l'exécution",
       "rend": "Le mandat annoncé (réflexion seule, ou analyse puis exécution déléguée), la demande actuelle, les décisions déjà validées, le travail en cours et les exclusions.",
       "regle": "Une demande d'audit ou de réflexion seule ne change rien. Sous un mandat « analyse puis exécute » (par exemple un travail confié à loop-creator sur le même objectif), la revue d'un agent remplace les validations humaines de routine et on ne redemande pas d'accord une fois le plan écrit ; une décision produit réservée, un gel ou une action sensible non autorisée ne bloquent que leur seule branche. La profondeur se choisit tôt : ciblé (D1), structurel (D2) ou critique (D3) ; une invocation explicite vaut au moins D2, et une tâche triviale, réversible et déjà spécifiée n'appelle pas ce workflow. Sous « analyse puis exécution », que le demandeur a écrit expressément dans sa demande, la relecture par un autre agent remplace ses validations de routine et on ne redemande pas d'accord une fois le plan écrit ; une décision qu'il s'est réservée, un gel ou une action sensible non autorisée ne bloquent que leur seule branche.",
-      "manque": "aucune compétence publique pour ce geste : il se fait à la main, avec la règle de l'étape."
+      "taches": [
+        {
+          "slug": "relever-la-demande-et-le-deja-decide",
+          "titre": "Relever la demande et ce qui est déjà décidé",
+          "competences": [
+            {
+              "nom": "superpowers:brainstorming",
+              "role": "par défaut",
+              "pourquoi": "Lit d'abord ce que le demandeur a déjà dit, écrit ou décidé, ne rouvre pas ce qui est tranché, puis ne pose que la question qui change le résultat."
+            }
+          ]
+        }
+      ]
     },
     {
       "n": 2,
@@ -23,7 +35,19 @@
       "titre": "Poser le problème en entier",
       "rend": "La table des objets en jeu, confrontée aux sources et à une critique, puis cinq lignes : le symptôme, le résultat que cherche vraiment le demandeur, le système capable de le produire, la décision à prendre maintenant, ce qui prouverait que c'est mieux.",
       "regle": "Obligatoire. Si la cinquième ligne (la preuve que c'est mieux) ne s'écrit pas, le chantier n'est pas encore cadré. Sous mandat autonome (« analyse puis exécution »), le pilote tranche lui-même les ambiguïtés réversibles.",
-      "manque": "aucune compétence publique pour ce geste : il se fait à la main, avec la règle de l'étape."
+      "taches": [
+        {
+          "slug": "faire-dire-le-probleme",
+          "titre": "Faire dire le problème, une question à la fois",
+          "competences": [
+            {
+              "nom": "agent-skills:interview-me",
+              "role": "par défaut",
+              "pourquoi": "Mène un entretien d'une question à la fois jusqu'à savoir ce que le demandeur cherche vraiment, ce qui donne la ligne du résultat voulu avant de poser le reste."
+            }
+          ]
+        }
+      ]
     },
     {
       "n": 3,
@@ -55,6 +79,22 @@
             "enterprise-search:digest",
             "bmad-agent-analyst"
           ]
+        },
+        {
+          "slug": "prouver-avant-d-affirmer",
+          "titre": "Prouver chaque constat avant de l'affirmer",
+          "competences": [
+            {
+              "nom": "superpowers:verification-before-completion",
+              "role": "par défaut",
+              "pourquoi": "Impose de lancer la vérification et de lire sa sortie avant d'affirmer un constat : la discipline qui sépare le fait prouvé de l'hypothèse."
+            },
+            {
+              "nom": "agent-skills:source-driven-development",
+              "role": "sources officielles d'abord",
+              "pourquoi": "Ancre chaque décision dans la documentation officielle plutôt que dans la mémoire, pour les constats qui portent sur un outil ou une bibliothèque."
+            }
+          ]
         }
       ]
     },
@@ -64,7 +104,31 @@
       "titre": "Cartographier le système",
       "rend": "La chaîne de bout en bout (entrée, mécanismes, responsables, sources de vérité, exécution, preuve, décision), avec ses frontières, ses dépendances, ses boucles de rétroaction, ses états cachés et les endroits où l'information est copiée, perdue ou transformée.",
       "regle": "On travaille par tranche de capacité, pas par dossier ni par type de fichier.",
-      "manque": "aucune compétence ne trace cette carte : le workflow la dessine lui-même."
+      "manque": "aucune compétence ne trace cette carte : le workflow la dessine lui-même.",
+      "taches": [
+        {
+          "slug": "dessiner-la-chaine-de-bout-en-bout",
+          "titre": "Dessiner la chaîne de bout en bout",
+          "competences": [
+            {
+              "nom": "engineering:system-design",
+              "role": "par défaut",
+              "pourquoi": "Met à plat les composants, les flux de données et les frontières d'un système, avec les compromis explicites ; à adapter ici à un système existant."
+            }
+          ]
+        },
+        {
+          "slug": "dire-qui-possede-quoi",
+          "titre": "Dire qui possède quoi dans la chaîne",
+          "competences": [
+            {
+              "nom": "operations:process-doc",
+              "role": "par défaut",
+              "pourquoi": "Écrit un processus tel qu'il se déroule vraiment (schéma, qui fait quoi, exceptions), ce qui donne le responsable de chaque maillon de la chaîne."
+            }
+          ]
+        }
+      ]
     },
     {
       "n": 5,
@@ -79,7 +143,20 @@
           "pourquoi": "Pour l'ensemble de règles, de compétences, de documents et de cartes qui pilotent son propre Claude Code : elle mesure l'ensemble avant de le juger, fait agir les responsables, puis re-mesure sans perte, au lieu de corriger fichier par fichier. Elle ne sert pas à enquêter sur une entreprise, une application ou un processus."
         }
       ],
-      "manque": "aucune compétence publique ne traque la cause d'un défaut qui revient : on la cherche à la main."
+      "manque": "aucune compétence publique ne traque la cause d'un défaut qui revient : on la cherche à la main.",
+      "taches": [
+        {
+          "slug": "remonter-a-la-cause-d-un-defaut",
+          "titre": "Remonter à la cause d'un défaut qui revient",
+          "competences": [
+            {
+              "nom": "superpowers:systematic-debugging",
+              "role": "par défaut",
+              "pourquoi": "Interdit de corriger avant d'avoir trouvé la cause et pousse à remettre l'architecture en question après plusieurs correctifs ratés, ce qui mène à la cause structurelle."
+            }
+          ]
+        }
+      ]
     },
     {
       "n": 6,
@@ -93,6 +170,24 @@
           "role": "une seule idée sur la table",
           "pourquoi": "Un partenaire de réflexion qui ouvre des options réellement concurrentes quand on ne fait que raffiner la première idée, avant qu'on converge. Un partenaire de réflexion tenace, pensé pour les sujets de produit mais utilisable pour tout espace de solutions trop étroit : il challenge, apporte des angles inattendus et ouvre des options réellement concurrentes avant qu'on converge."
         }
+      ],
+      "taches": [
+        {
+          "slug": "elargir-les-options",
+          "titre": "Élargir les options avant de choisir",
+          "competences": [
+            {
+              "nom": "agent-skills:idea-refine",
+              "role": "par défaut",
+              "pourquoi": "Alterne pensée divergente et convergente pour élargir les options avant de converger, utile quand une seule idée occupe la table."
+            },
+            {
+              "nom": "bmad-brainstorming",
+              "role": "séance de créativité",
+              "pourquoi": "Mène une séance avec des techniques de créativité variées pour sortir du premier réflexe et obtenir plus d'options distinctes."
+            }
+          ]
+        }
       ]
     },
     {
@@ -101,7 +196,25 @@
       "titre": "Construire une thèse qui peut échouer",
       "rend": "Le plan recommandé sous la forme « en changeant X dans le système Y, nous obtiendrons Z, mesuré par M, sans perdre N », avec ses hypothèses, ses inconnues, ses préconditions, les consommateurs à recâbler, son retour arrière et ses critères PASS/ABORT.",
       "regle": "Un plan qui ne peut pas échouer dans sa formulation n'est pas testable.",
-      "manque": "aucune compétence n'écrit cette thèse : le workflow la formule lui-même."
+      "manque": "aucune compétence n'écrit cette thèse : le workflow la formule lui-même.",
+      "taches": [
+        {
+          "slug": "formuler-la-these-et-ses-criteres",
+          "titre": "Formuler la thèse et ses critères PASS et ABORT",
+          "competences": [
+            {
+              "nom": "product-management:write-spec",
+              "role": "par défaut",
+              "pourquoi": "Transforme une idée floue en document avec objectifs, ce qu'on ne fait pas, mesures de succès et critères d'acceptation, la matière d'une thèse mesurable."
+            },
+            {
+              "nom": "agent-skills:spec-driven-development",
+              "role": "spécification avec relecture",
+              "pourquoi": "Écrit la spécification avant d'agir, avec des relectures humaines à chaque porte, utile quand la thèse touche plusieurs modules."
+            }
+          ]
+        }
+      ]
     },
     {
       "n": 8,
@@ -114,6 +227,24 @@
           "nom": "agent-skills:doubt-driven-development",
           "role": "relecteur au contexte neuf",
           "pourquoi": "Fait relire une décision non triviale par un relecteur au contexte neuf, chargé de la réfuter. Écrit pour du code, mais la méthode vaut pour toute décision ; sans lui, la réfutation se fait à la main."
+        }
+      ],
+      "taches": [
+        {
+          "slug": "attaquer-la-these-avec-un-regard-neuf",
+          "titre": "Attaquer la thèse avec un regard neuf",
+          "competences": [
+            {
+              "nom": "agent-skills:doubt-driven-development",
+              "role": "par défaut",
+              "pourquoi": "Fait relire chaque décision non triviale par un lecteur au contexte neuf qui cherche à la réfuter, avant qu'elle soit engagée."
+            },
+            {
+              "nom": "operations:risk-assessment",
+              "role": "risques et mitigations",
+              "pourquoi": "Dresse le registre des risques d'une décision avec leur gravité et leur mitigation, ce qui nourrit les bloquants et les mitigations à ajouter au plan."
+            }
+          ]
         }
       ]
     },
@@ -131,6 +262,22 @@
             {
               "nom": "code-review:code-review",
               "pourquoi": "Relit une pull request GitHub avec plusieurs agents spécialisés. Elle ne s'applique qu'à du code remis par pull request ; hors code, la relecture se fait à la main."
+            }
+          ]
+        },
+        {
+          "slug": "ecrire-le-dossier-de-decision",
+          "titre": "Écrire le dossier de décision",
+          "competences": [
+            {
+              "nom": "agent-skills:documentation-and-adrs",
+              "role": "par défaut",
+              "pourquoi": "Enregistre la décision et le raisonnement derrière, pour qu'une autre session puisse la comprendre sans la conversation."
+            },
+            {
+              "nom": "engineering:architecture",
+              "role": "décision avec compromis",
+              "pourquoi": "Rédige une fiche de décision d'architecture avec options, compromis et conséquences."
             }
           ]
         }

@@ -34,10 +34,14 @@ Ce workflow s'appuie sur des compétences publiques, installées à part. Aucune
 ```text
 /plugin marketplace add Florentmaisoncelle/zerogravity-skills
 /plugin marketplace add addyosmani/agent-skills
+/plugin marketplace add anthropics/knowledge-work-plugins
 /plugin marketplace add coreyhaines31/marketingskills
 /plugin install agent-skills@addy-agent-skills
 /plugin install superviser-ses-sessions@zerogravity
 /plugin install marketing-skills@marketingskills
+/plugin install operations@knowledge-work-plugins
+/plugin install product-management@knowledge-work-plugins
+/plugin install superpowers@claude-plugins-official
 npx skills add bmad-code-org/BMAD-METHOD --skill bmad-brainstorming -a claude-code
 ```
 
@@ -81,12 +85,12 @@ Les données personnelles (noms, coordonnées de clients ou de candidats) n'entr
 |---|---|---|---|
 | 1 | Poser le problème | Faire dire ce que l'on veut vraiment : `agent-skills:interview-me` | Toujours d'abord, sauf pour un travail simple d'un seul objet. Manque : aucune compétence publique ne dresse la carte du problème (objets en jeu, ce que chacun ne fait pas, ce qui est tranché et mesuré, critère réel) : on la dresse à la main. |
 | 2 | Choisir la méthode de réflexion | `decider-une-strategie` · `reflechir-a-fond` | Une décision d'affaires par /decider-une-strategie:decider-une-strategie ; un système ou une cause par /reflechir-a-fond:reflechir-a-fond ; une façon de faire étape par étape par l'étape 5 ; un produit de zéro par les étapes 3 et 4 ; un outil ou une compétence à trouver en cherchant d'abord ce qui est déjà installé, puis dans les annuaires publics. |
-| 3 | Élargir les idées (pour un produit de zéro) | `bmad-brainstorming` · Durcir une idée avant de s'y engager : `agent-skills:idea-refine` | Élargir avant de choisir ; on garde les trois pistes dans la fiche, la retenue et pourquoi. |
-| 4 | Étudier le marché (pour un produit de zéro) | Profiler les concurrents : `marketing-skills:competitor-profiling` · Comprendre les clients : `marketing-skills:customer-research` | Avant la fiche produit ; une étude qui ne cite pas ses sources ne compte pas. Manque : aucune compétence publique ne chiffre la taille du marché ni ses tendances : cette partie se fait à la main, avec des sources ouvertes et datées. |
-| 5 | Écrire la méthode et le plan | à la main | Seulement quand la stratégie et la méthode sont claires. Pour un objectif confié en quelques lignes, la méthode rend les sept sorties du mode « objectif → système ». Manque : aucune compétence publique pour ce geste : il se fait à la main, avec la règle de l'étape. |
-| 6 | Attaquer le plan | `agent-skills:doubt-driven-development` | Toujours avant la fiche ; un seul bloquant réel fait pivoter. L'attaque suit la méthode du pré-mortem : on suppose que le plan a échoué et on cherche pourquoi. |
-| 7 | Faire valider la fiche de cadrage | à la main | Rien ne se lance tant que les sept cases ne sont pas remplies et validées. C'est ici que tombe la seule validation obligatoire du workflow. Manque : aucune compétence publique pour ce geste : il se fait à la main, avec la règle de l'étape. |
-| 8 | Lancer | `superviser-ses-sessions:loop-creator` | Une tâche longue ou répétée, ou une mission de bout en bout, se règle avec superviser-ses-sessions:loop-creator ; un travail court s'exécute tout de suite. |
+| 3 | Élargir les idées (pour un produit de zéro) | `bmad-brainstorming` · Durcir une idée avant de s'y engager : `agent-skills:idea-refine` ; `product-management:brainstorm` | Élargir avant de choisir ; on garde les trois pistes dans la fiche, la retenue et pourquoi. |
+| 4 | Étudier le marché (pour un produit de zéro) | Profiler les concurrents : `marketing-skills:competitor-profiling` · Comprendre les clients : `marketing-skills:customer-research` · Comparer les concurrents et lire le marché : `product-management:synthesize-research` | Avant la fiche produit ; une étude qui ne cite pas ses sources ne compte pas. Manque : aucune compétence publique ne chiffre la taille du marché ni ses tendances : cette partie se fait à la main, avec des sources ouvertes et datées. |
+| 5 | Écrire la méthode et le plan | Écrire la méthode, étape par étape : `agent-skills:spec-driven-development` · Découper le plan en étapes vérifiables : `superpowers:writing-plans` | Seulement quand la stratégie et la méthode sont claires. Pour un objectif confié en quelques lignes, la méthode rend les sept sorties du mode « objectif → système ». |
+| 6 | Attaquer le plan | `agent-skills:doubt-driven-development` · Attaquer le plan avant de l'engager : `agent-skills:doubt-driven-development` ; `operations:risk-assessment` | Toujours avant la fiche ; un seul bloquant réel fait pivoter. L'attaque suit la méthode du pré-mortem : on suppose que le plan a échoué et on cherche pourquoi. |
+| 7 | Faire valider la fiche de cadrage | Écrire la fiche d'un écran : `product-management:write-spec` · Faire valider la fiche une seule fois : `superpowers:brainstorming` | Rien ne se lance tant que les sept cases ne sont pas remplies et validées. C'est ici que tombe la seule validation obligatoire du workflow. |
+| 8 | Lancer | `superviser-ses-sessions:loop-creator` · Lancer l'exécution du plan : `superpowers:executing-plans` ; `superpowers:subagent-driven-development` | Une tâche longue ou répétée, ou une mission de bout en bout, se règle avec superviser-ses-sessions:loop-creator ; un travail court s'exécute tout de suite. |
 <!-- etapes:fin -->
 
 ## Le détail de chaque étape

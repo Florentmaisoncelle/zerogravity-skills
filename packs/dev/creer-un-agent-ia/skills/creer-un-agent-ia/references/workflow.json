@@ -192,6 +192,17 @@
           ]
         },
         {
+          "slug": "agent-local-planifie",
+          "titre": "Agent local : une tâche qui revient",
+          "competences": [
+            {
+              "nom": "superviser-ses-sessions:loop-creator",
+              "role": "comble un vide",
+              "pourquoi": "Comble un vide : l'objectif écrit, la reprise après arrêt et le bon moment pour s'arrêter d'une boucle longue, que la commande loop seule ne porte pas."
+            }
+          ]
+        },
+        {
           "slug": "agent-cloud-en-code",
           "titre": "Agent cloud en code : assistant ou déclenché par un événement",
           "competences": [
@@ -227,12 +238,6 @@
             }
           ],
           "manque": "aucune compétence retenue ici. Les agents de Make se construisent dans Make ; le dépôt officiel integromat/make-skills propose d'autres compétences pour construire des scénarios, que ce workflow ne liste pas."
-        },
-        {
-          "slug": "agent-sur-whatsapp",
-          "titre": "Agent sur WhatsApp : service client ou qualification",
-          "competences": [],
-          "manque": "aucune compétence publique pour ce geste. Il se bâtit comme un agent déclenché par un événement, avec une file d'attente qui ne perd aucun message. La politique de WhatsApp Business demande l'accord préalable de la personne, un modèle de message approuvé pour ouvrir une conversation (et passé 24 heures), une voie claire vers un humain pour une conversation automatisée (https://whatsappbusiness.com/fr/policy/, vérifié le 06/11/2026) ; détail dans `references/agent-sur-whatsapp.md`."
         },
         {
           "slug": "construire-un-serveur-mcp",
@@ -388,7 +393,7 @@
           "competences": [
             {
               "nom": "project-artifact:project-artifact",
-              "role": "par défaut",
+              "role": "la page de projet partagée",
               "pourquoi": "Elle publie une page de projet partageable, tenue à jour au fil du travail."
             },
             {
@@ -411,6 +416,17 @@
               "nom": "entretenir-son-systeme:optimise-systeme",
               "role": "le système lui-même",
               "pourquoi": "Elle mesure d'abord, fait agir les responsables, puis re-mesure sans perte : la boucle qui dit si un système fait de règles, de compétences et de documents sert son but, sans l'estimer à l'œil."
+            }
+          ]
+        },
+        {
+          "slug": "evaluer-l-agent-sur-des-cas-reels",
+          "titre": "Évaluer l'agent sur des cas réels",
+          "competences": [
+            {
+              "nom": "exploring-ai-failures",
+              "role": "les échecs réels",
+              "pourquoi": "Part des vraies traces de l'agent en service pour repérer ses échecs récurrents (mauvaises réponses, consignes ignorées, mauvais usage des outils) et dire quoi corriger d'abord."
             }
           ]
         }

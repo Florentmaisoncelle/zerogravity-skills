@@ -139,6 +139,8 @@ Chaque ligne se calcule à la lecture :
 | | au pack Créer un agent IA : mettre en service | 90-mise-en-service |
 | | `mesurer-gains` | 95-mesure |
 
+**Compagnons du workflow** (compétences d'un dépôt reconnu, affichées par défaut sur la page du pack ; elles viennent en renfort, et seules les compétences du pack écrivent les fichiers d'état numérotés) : `agent-skills:interview-me` et `bmad-product-brief` pour cadrer le besoin (10), `product-management:write-spec` pour les exigences (30), `agent-skills:spec-driven-development` pour la spécification (60), `data:build-dashboard` pour le tableau de suivi du gain (95). Le fichier d'état de l'étape reste celui de `cadrer-besoin`, `rediger-cahier-des-charges` ou `mesurer-gains`.
+
 **Après 70, la main passe** (`references/passage-de-main.md`) : la porte affiche « au pack Créer un agent IA », ne lance pas 80, 85 ni 90 et dit comment l'appeler :
 https://zerogravity.builders/marketplace/workflow/creer-un-agent-ia (plugin creer-un-agent-ia), ou, pour une application,
 https://zerogravity.builders/marketplace/workflow/creer-une-app. `60` et `70` sont son entrée ; il écrit 80, 85 et 90 dans le même dossier du cas, aux mêmes noms.

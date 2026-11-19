@@ -129,7 +129,7 @@ au lieu de trois, et le transport le dit.
   jointe au pack. À éprouver chez toi avant de t'y fier.
 - **`gemini` n'est pas câblé** et **`hubspot` demande un autre pack**. Ce pack HubSpot embarque sa propre
   copie, plus mince, du chapeau `claude-ia-delegation` : si tu installes les deux, elles coexistent sous
-  leurs noms qualifiés par plugin (`claude-gpt-bridge:claude-ia-delegation`) ; garde celle-ci pour tous les
+  leurs noms qualifiés par plugin (`deleguer-entre-ia:claude-ia-delegation`) ; garde celle-ci pour tous les
   modes.
 - **Les registres de cibles** (fils ChatGPT, sessions, travaux Codex) sont des gabarits vides **dans les
   compétences installées** : une mise à jour du plugin les remet à zéro. Copie-les dans un fichier de ton

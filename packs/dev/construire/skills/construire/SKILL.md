@@ -153,7 +153,7 @@ dans le fichier de l'étape sa sortie, inscrire `fait` au journal, puis passer �
 
 À la fin de chaque séance : l'état (fait, reste, prochaine action) au journal. Une compétence qui a déçu à une
 étape se note aussi, pour rouvrir le choix. Pour ranger ce qu'on a appris dans des compétences Claude Code,
-`claude-code-system-pack:capitaliser` est l'option publique ; sans elle, on note la leçon au journal.
+`entretenir-son-systeme:capitaliser` est l'option publique ; sans elle, on note la leçon au journal.
 
 ## Frontières
 

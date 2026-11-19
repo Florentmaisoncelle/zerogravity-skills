@@ -151,10 +151,10 @@
       "titre": "Lancer",
       "fichier": "cadrage/08-lancement.md",
       "rend": "Le travail qui démarre, avec sa cadence et sa reprise, noté dans le dossier.",
-      "regle": "Une tâche longue ou répétée, ou une mission de bout en bout, se règle avec claude-session-supervisor:loop-creator ; un travail court s'exécute tout de suite.",
+      "regle": "Une tâche longue ou répétée, ou une mission de bout en bout, se règle avec superviser-ses-sessions:loop-creator ; un travail court s'exécute tout de suite.",
       "competences": [
         {
-          "nom": "claude-session-supervisor:loop-creator",
+          "nom": "superviser-ses-sessions:loop-creator",
           "role": "la cadence et la continuité",
           "pourquoi": "Arme et répare la boucle d'une tâche longue à partir du contrat complet, sans boucle qui tourne à vide ; pilote aussi une mission de bout en bout (mesure, révise la stratégie, relance l'exécution dans le mandat). Conçoit, lance et relance une tâche répétée avec la commande loop : objectif mesurable, conditions d'arrêt, cadence, reprise d'une boucle arrêtée. Une boucle expire après 7 jours et ne vit que tant que la session reste ouverte."
         }

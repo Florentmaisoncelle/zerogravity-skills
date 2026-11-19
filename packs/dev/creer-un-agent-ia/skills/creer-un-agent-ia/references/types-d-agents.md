@@ -91,7 +91,7 @@ Contrôle : *le premier message de cet agent dit-il qu'il est une IA ?* Un cas d
 
 | Type | Compétences |
 |---|---|
-| Agent local | `plugin-dev:agent-development`, `skill-creator:skill-creator`, `claude-session-supervisor:loop-creator` pour une tâche longue |
+| Agent local | `plugin-dev:agent-development`, `skill-creator:skill-creator`, `superviser-ses-sessions:loop-creator` pour une tâche longue |
 | Agent cloud en code | `claude-api:claude-api` ; les outils : `outils-agent-cloud.md` |
 | n8n | `n8n-skills:n8n-workflow-lifecycle-official` pour le cycle d'un flux ; le nœud AI Agent à la main ; ou `/implementer-l-ia-en-entreprise:implementer-l-ia-en-entreprise` |
 | WhatsApp | aucune compétence ; avant tout : `agent-sur-whatsapp.md` |

@@ -181,7 +181,7 @@ précisions :
 ### 2. Clore un passage
 
 À la fin de chaque séance, on écrit l'état au journal : ce qui est fait, ce qui reste, la prochaine action, le verdict.
-Si `claude-code-system-pack:capitaliser` est installée (elle range ce qu'on a appris dans des compétences Claude
+Si `entretenir-son-systeme:capitaliser` est installée (elle range ce qu'on a appris dans des compétences Claude
 Code), elle s'en charge. Sinon, on note les décisions dans le journal. Une compétence qui a déçu à une étape se
 signale au journal, pour rouvrir le choix de cette étape.
 

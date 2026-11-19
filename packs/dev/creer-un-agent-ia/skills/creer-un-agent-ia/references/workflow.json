@@ -14,7 +14,7 @@
       "slug": "poser-le-probleme",
       "titre": "Poser le problème",
       "rend": "La carte du problème et le critère réel : pour qui, quel résultat continu, ce qui n'est pas le problème.",
-      "regle": "Avant la première étape, l'étape 0 tranche le chemin en une phrase (pour soi, pour un client, ou un système qui existe) et regarde ce qui existe déjà : le registre des systèmes, les compétences (par skill-finder), le centre « Créer des agents et des systèmes IA », les sessions qui ont déjà travaillé le sujet, les notes et documents déjà écrits sur le sujet. Le travail passé se reprend, il ne se refait pas. Pour soi : le cadrage d'un chantier, première étape (`/cadrer-un-chantier:cadrer-un-chantier`). Pour un client : la mission se mène avec `/implementer-l-ia-en-entreprise:implementer-l-ia-en-entreprise` (cadrer-besoin, decouvrir-cas-usage quand le besoin n'est pas connu, auditer son processus) ; ce workflow-ci garde les choix propres à l'agent. Pour un système qui existe : cette compétence, puis la passe de cible et de diagnostic de claude-code-system-pack:optimise-systeme, qui agit sur les règles, les compétences et les documents d'un dépôt Claude Code.",
+      "regle": "Avant la première étape, l'étape 0 tranche le chemin en une phrase (pour soi, pour un client, ou un système qui existe) et regarde ce qui existe déjà : le registre des systèmes, les compétences (par skill-finder), le centre « Créer des agents et des systèmes IA », les sessions qui ont déjà travaillé le sujet, les notes et documents déjà écrits sur le sujet. Le travail passé se reprend, il ne se refait pas. Pour soi : le cadrage d'un chantier, première étape (`/cadrer-un-chantier:cadrer-un-chantier`). Pour un client : la mission se mène avec `/implementer-l-ia-en-entreprise:implementer-l-ia-en-entreprise` (cadrer-besoin, decouvrir-cas-usage quand le besoin n'est pas connu, auditer son processus) ; ce workflow-ci garde les choix propres à l'agent. Pour un système qui existe : cette compétence, puis la passe de cible et de diagnostic de entretenir-son-systeme:optimise-systeme, qui agit sur les règles, les compétences et les documents d'un dépôt Claude Code.",
       "manque": "aucune compétence publique pour ce geste : il se fait à la main, avec la règle de l'étape."
     },
     {
@@ -22,7 +22,7 @@
       "slug": "questions-produit",
       "titre": "Les questions produit",
       "rend": "Les réponses aux huit questions produit sur une fiche d'un écran : pour qui et quel résultat continu, la mesure et son point de départ, le dernier clic humain, les sources et la mémoire unique, ce qui déclenche chaque action, ce que coûte une erreur et qui la voit, ce que coûte le fonctionnement, ce qui existe déjà.",
-      "regle": "Ne poser que ce que les sources ne disent pas. Tout ce qui est mécanique se tranche sans demander ; seuls le goût produit, l'irréversible et les comptes de la personne lui reviennent. Le raisonnement cher va là où l'ambiguïté compte, le contrôle mécanique reste en code. Pour un client : auditer-processus, rediger-cahier-des-charges (exigences) et chiffrer-rentabilite, avec `/implementer-l-ia-en-entreprise:implementer-l-ia-en-entreprise`. Pour un système qui existe : la mesure et la couverture de claude-code-system-pack:optimise-systeme.",
+      "regle": "Ne poser que ce que les sources ne disent pas. Tout ce qui est mécanique se tranche sans demander ; seuls le goût produit, l'irréversible et les comptes de la personne lui reviennent. Le raisonnement cher va là où l'ambiguïté compte, le contrôle mécanique reste en code. Pour un client : auditer-processus, rediger-cahier-des-charges (exigences) et chiffrer-rentabilite, avec `/implementer-l-ia-en-entreprise:implementer-l-ia-en-entreprise`. Pour un système qui existe : la mesure et la couverture de entretenir-son-systeme:optimise-systeme.",
       "competences": [
         {
           "nom": "cadrer-un-chantier",
@@ -37,7 +37,7 @@
       "slug": "architecture",
       "titre": "L'architecture",
       "rend": "Qui fait quoi : le type de chaque agent (assistant, planifié, déclenché par un événement, lecteur de documents, plusieurs agents, scénario avec une étape IA), où il tourne (local ou cloud) et sur quoi (code, n8n, Make), puis les routines, la mémoire, les outils, les contrôles et le dernier clic humain.",
-      "regle": "Le type se choisit d'abord, par trois questions : qu'est-ce qui le réveille, qui s'en sert et à quelle heure, quelle part demande du jugement. Le local tourne sur un poste allumé, avec l'abonnement de son propriétaire. Dès qu'un client, un visiteur ou un outil doit le réveiller à toute heure, il passe en cloud. Un chemin connu d'avance reste un scénario avec une étape IA, souvent sur n8n ou Make, plutôt qu'un agent. Un agent qui échange avec des personnes dans l'Union européenne leur dit dès le premier message qu'il est une IA, sauf si c'est évident : article 50 du règlement (UE) 2024/1689, applicable depuis le 2 août 2026 (vérifié le 06/11/2026, détail dans `references/types-d-agents.md`). Le kit de la compétence de système suffit pour un système ordinaire, et `agent-skills:context-engineering` dit ce que chaque agent lit à chaque tour. Pour un choix dur : `/reflechir-a-fond:reflechir-a-fond` ou `bmad-architecture`. Pour un client : concevoir-solution et rediger-cahier-des-charges (spécification), avec `/implementer-l-ia-en-entreprise:implementer-l-ia-en-entreprise`. Pour un système qui existe : claude-code-system-pack:optimise-systeme (trouver, arbitrer, concevoir). Un agent chef qui lance d'autres agents ne tourne qu'en tête de session : une sous-tâche ne peut pas en lancer une autre. Il doit avoir l'outil de lancement (nommé Agent) dans sa liste d'outils, et Claude Code limite par défaut l'imbrication à trois niveaux de sous-agents (vérifié le 06/11/2026, https://code.claude.com/docs/en/sub-agents). Il écrit d'abord son plan de travail dans un fichier, ce qui permet de reprendre si on le lance ailleurs.",
+      "regle": "Le type se choisit d'abord, par trois questions : qu'est-ce qui le réveille, qui s'en sert et à quelle heure, quelle part demande du jugement. Le local tourne sur un poste allumé, avec l'abonnement de son propriétaire. Dès qu'un client, un visiteur ou un outil doit le réveiller à toute heure, il passe en cloud. Un chemin connu d'avance reste un scénario avec une étape IA, souvent sur n8n ou Make, plutôt qu'un agent. Un agent qui échange avec des personnes dans l'Union européenne leur dit dès le premier message qu'il est une IA, sauf si c'est évident : article 50 du règlement (UE) 2024/1689, applicable depuis le 2 août 2026 (vérifié le 06/11/2026, détail dans `references/types-d-agents.md`). Le kit de la compétence de système suffit pour un système ordinaire, et `agent-skills:context-engineering` dit ce que chaque agent lit à chaque tour. Pour un choix dur : `/reflechir-a-fond:reflechir-a-fond` ou `bmad-architecture`. Pour un client : concevoir-solution et rediger-cahier-des-charges (spécification), avec `/implementer-l-ia-en-entreprise:implementer-l-ia-en-entreprise`. Pour un système qui existe : entretenir-son-systeme:optimise-systeme (trouver, arbitrer, concevoir). Un agent chef qui lance d'autres agents ne tourne qu'en tête de session : une sous-tâche ne peut pas en lancer une autre. Il doit avoir l'outil de lancement (nommé Agent) dans sa liste d'outils, et Claude Code limite par défaut l'imbrication à trois niveaux de sous-agents (vérifié le 06/11/2026, https://code.claude.com/docs/en/sub-agents). Il écrit d'abord son plan de travail dans un fichier, ce qui permet de reprendre si on le lance ailleurs.",
       "competences": [
         {
           "nom": "agent-skills:context-engineering",
@@ -62,7 +62,7 @@
       "slug": "construire",
       "titre": "Construire",
       "rend": "La maison du système et ses pièces : les compétences de l'agent, ses outils, ses routines, et son code ou son scénario n8n ou Make quand il tourne en cloud.",
-      "regle": "Le kit de l'étape 3 dit les pièces à bâtir, chacune par sa compétence. Les compétences de l'agent s'écrivent avec skill-creator et passent leur porte de qualité à l'étape 5. Ses outils viennent de mcp-builder quand il doit agir dans un service. Une tâche qui revient se planifie sur le poste (planificateur de l'ordinateur) ; les routines passent par routine ; une tâche longue qui doit se réveiller seule prend la cadence de `claude-session-supervisor:loop-creator`, logée au cadrage d'un chantier. Le code passe par claude-api:claude-api quand l'agent vit dans une app. Le tableau de bord se bâtit à l'étape 6, avec la mesure qu'il affiche. Pour un agent livré à un client : l'installation s'écrit pour un agent de code, avec ce qui reste à la personne et ce qu'il vérifie avant de continuer ; l'identité du client vient de l'appel entrant et les délais du code, jamais du modèle ; les pages légales sont servies depuis la configuration réelle. Pour un client, avec `/implementer-l-ia-en-entreprise:implementer-l-ia-en-entreprise` : après le plan de déploiement (planifier-deploiement), consultant-ia:construire-solution bâtit par tranches en environnement d'essai, sur des données fictives ou anonymisées, et écrit 80-construction dans le dossier de mission ; une solution qui est une app passe par le workflow Créer une app. Rien ne touche un outil réel à cette étape ; la mise en service reste à consultant-ia:piloter-mise-en-service. Pour un système qui existe : les compétences propriétaires des objets touchés.",
+      "regle": "Le kit de l'étape 3 dit les pièces à bâtir, chacune par sa compétence. Les compétences de l'agent s'écrivent avec skill-creator et passent leur porte de qualité à l'étape 5. Ses outils viennent de mcp-builder quand il doit agir dans un service. Une tâche qui revient se planifie sur le poste (planificateur de l'ordinateur) ; les routines passent par routine ; une tâche longue qui doit se réveiller seule prend la cadence de `superviser-ses-sessions:loop-creator`, logée au cadrage d'un chantier. Le code passe par claude-api:claude-api quand l'agent vit dans une app. Le tableau de bord se bâtit à l'étape 6, avec la mesure qu'il affiche. Pour un agent livré à un client : l'installation s'écrit pour un agent de code, avec ce qui reste à la personne et ce qu'il vérifie avant de continuer ; l'identité du client vient de l'appel entrant et les délais du code, jamais du modèle ; les pages légales sont servies depuis la configuration réelle. Pour un client, avec `/implementer-l-ia-en-entreprise:implementer-l-ia-en-entreprise` : après le plan de déploiement (planifier-deploiement), consultant-ia:construire-solution bâtit par tranches en environnement d'essai, sur des données fictives ou anonymisées, et écrit 80-construction dans le dossier de mission ; une solution qui est une app passe par le workflow Créer une app. Rien ne touche un outil réel à cette étape ; la mise en service reste à consultant-ia:piloter-mise-en-service. Pour un système qui existe : les compétences propriétaires des objets touchés.",
       "competences": [
         {
           "nom": "claude-api:claude-api",
@@ -211,7 +211,7 @@
       "slug": "tester",
       "titre": "Tester",
       "rend": "La preuve que l'agent fait ce qu'on dit, et pas seulement qu'il a l'air de marcher.",
-      "regle": "Quatre preuves, dans cet ordre. D'abord les cas de test et les évaluations écrits à l'étape 4 (ceux de skill-creator pour une compétence, ceux de mcp-builder pour un outil), puis la porte de qualité de chaque compétence. Ensuite les contrôles testés par sabotage : on casse exprès ce qu'ils gardent, et ils doivent signaler l'erreur. Puis un pré-mortem (on imagine que l'agent a échoué et on en cherche les causes) et un relecteur au contexte neuf, séparé de celui qui a produit, qui rend du vérifiable : l'affirmation, le verdict, la source, la correction à faire. Enfin un essai de bout en bout : l'agent fait sa tâche sur son modèle prévu, dans une conversation neuve et sur un faux environnement (jamais un vrai compte), car cet essai trouve ce que les tests ne voient pas. Pour un client, avec `/implementer-l-ia-en-entreprise:implementer-l-ia-en-entreprise` : consultant-ia:tester-solution fait la recette critère par critère, évalue la partie IA à part et rend un verdict (prêt, prêt avec réserves, pas prêt), écrit dans 85-recette, puis la mise en service se pilote. Une recette réussie ne prouve pas que l'IA est bonne, et l'inverse. Pour un système qui existe : la re-mesure de claude-code-system-pack:optimise-systeme.",
+      "regle": "Quatre preuves, dans cet ordre. D'abord les cas de test et les évaluations écrits à l'étape 4 (ceux de skill-creator pour une compétence, ceux de mcp-builder pour un outil), puis la porte de qualité de chaque compétence. Ensuite les contrôles testés par sabotage : on casse exprès ce qu'ils gardent, et ils doivent signaler l'erreur. Puis un pré-mortem (on imagine que l'agent a échoué et on en cherche les causes) et un relecteur au contexte neuf, séparé de celui qui a produit, qui rend du vérifiable : l'affirmation, le verdict, la source, la correction à faire. Enfin un essai de bout en bout : l'agent fait sa tâche sur son modèle prévu, dans une conversation neuve et sur un faux environnement (jamais un vrai compte), car cet essai trouve ce que les tests ne voient pas. Pour un client, avec `/implementer-l-ia-en-entreprise:implementer-l-ia-en-entreprise` : consultant-ia:tester-solution fait la recette critère par critère, évalue la partie IA à part et rend un verdict (prêt, prêt avec réserves, pas prêt), écrit dans 85-recette, puis la mise en service se pilote. Une recette réussie ne prouve pas que l'IA est bonne, et l'inverse. Pour un système qui existe : la re-mesure de entretenir-son-systeme:optimise-systeme.",
       "competences": [
         {
           "nom": "agent-skills:doubt-driven-development",
@@ -219,7 +219,7 @@
           "pourquoi": "Chaque affirmation qui compte passe devant un relecteur qui n'a pas vu le travail et cherche à la réfuter. Chaque objection est corrigée, acceptée par écrit ou écartée avec sa raison, et au bout de trois tours sans accord la décision revient à un humain."
         },
         {
-          "nom": "claude-code-system-pack:skill-quality-guard",
+          "nom": "entretenir-son-systeme:skill-quality-guard",
           "role": "la compétence prête",
           "pourquoi": "Avant de dire une compétence prête : sa structure, ses déclencheurs, sa porte d'entrée, ses tests et la resynchronisation de ses copies publiées. Elle passe après la création de la compétence."
         },
@@ -276,7 +276,7 @@
       "slug": "mesurer",
       "titre": "Mesurer",
       "rend": "Le chiffre qui juge le but, avec son point de départ.",
-      "regle": "D'abord ce que « marcher » veut dire, en deux à quatre questions. Puis l'agent instrumenté pour y répondre, l'usage et le coût compris. Le tableau de bord affiche le chiffre du but et son point de départ ; le système lui-même se mesure avec claude-code-system-pack:optimise-systeme. Pour un client : mesurer-gains, qui juge le gain observé et non les traces de l'outil. Pour un système qui existe : la re-mesure sans perte de claude-code-system-pack:optimise-systeme.",
+      "regle": "D'abord ce que « marcher » veut dire, en deux à quatre questions. Puis l'agent instrumenté pour y répondre, l'usage et le coût compris. Le tableau de bord affiche le chiffre du but et son point de départ ; le système lui-même se mesure avec entretenir-son-systeme:optimise-systeme. Pour un client : mesurer-gains, qui juge le gain observé et non les traces de l'outil. Pour un système qui existe : la re-mesure sans perte de entretenir-son-systeme:optimise-systeme.",
       "taches": [
         {
           "slug": "mesurer",
@@ -288,7 +288,7 @@
               "pourquoi": "Elle part des questions qu'on posera à l'agent en marche : combien de demandes aboutissent du premier coup, pourquoi les autres échouent, ce que coûte chaque résultat. L'agent n'émet ensuite que les journaux, métriques et alertes qui y répondent, et elle vérifie qu'ils remontent. Sans elle, le chiffre du but s'estime à l'œil."
             },
             {
-              "nom": "claude-code-system-pack:optimise-systeme",
+              "nom": "entretenir-son-systeme:optimise-systeme",
               "role": "le système lui-même",
               "pourquoi": "Elle mesure d'abord, fait agir les responsables, puis re-mesure sans perte : la boucle qui dit si un système fait de règles, de compétences et de documents sert son but, sans l'estimer à l'œil."
             }
@@ -298,18 +298,18 @@
     },
     {
       "n": 8,
-      "slug": "claude-code-system-pack:capitaliser",
+      "slug": "entretenir-son-systeme:capitaliser",
       "titre": "Capitaliser : le flywheel",
       "rend": "Un système plus fort au passage suivant : le résultat, l'état (ce qui est décidé, ce qui reste, la prochaine action), la leçon et l'amélioration candidate, rangés chez leur propriétaire.",
       "regle": "Même un passage sans correction le dit en une ligne. Une correction propre à la tâche reste avec elle, une réutilisable entre dans la méthode, une vérifiable devient un contrôle. On promeut avec prudence : une fois une observation, deux fois un motif, répétée une règle candidate, confirmée une règle, une compétence, un test ou de la mémoire. La même erreur corrigée deux fois change la méthode, pas seulement la sortie. Chaque échec instructif garde sa tâche, sa mauvaise sortie et l'attendu, rejoués à chaque changement du système. Pour un client : le journal de mission du pack, puis router-capitalisation. La mesure du flywheel (acceptation du premier coup, erreurs qui reviennent, temps de relecture, coût par résultat accepté) n'est pas encore faite : il faut une trentaine de passages.",
       "competences": [
         {
-          "nom": "claude-code-system-pack:capitaliser",
+          "nom": "entretenir-son-systeme:capitaliser",
           "role": "une compétence",
           "pourquoi": "Elle entretient une compétence comme unité de savoir durable : trouve son propriétaire, range faits, décisions, méthodes, pièges et preuves au bon niveau, et prouve que rien n'est perdu."
         },
         {
-          "nom": "claude-code-system-pack:clean-rules-cleanup",
+          "nom": "entretenir-son-systeme:clean-rules-cleanup",
           "role": "une règle",
           "pourquoi": "Elle crée ou modifie une règle avec son registre des motifs : pourquoi elle a été inscrite et si cette raison tient encore."
         }

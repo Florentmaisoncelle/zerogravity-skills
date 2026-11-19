@@ -86,7 +86,7 @@ Les données personnelles (noms, coordonnées de clients ou de candidats) n'entr
 | 5 | Écrire la méthode et le plan | à la main | Seulement quand la stratégie et la méthode sont claires. Pour un objectif confié en quelques lignes, la méthode rend les sept sorties du mode « objectif → système ». Manque : aucune compétence publique pour ce geste : il se fait à la main, avec la règle de l'étape. |
 | 6 | Attaquer le plan | `agent-skills:doubt-driven-development` | Toujours avant la fiche ; un seul bloquant réel fait pivoter. L'attaque suit la méthode du pré-mortem : on suppose que le plan a échoué et on cherche pourquoi. |
 | 7 | Faire valider la fiche de cadrage | à la main | Rien ne se lance tant que les sept cases ne sont pas remplies et validées. C'est ici que tombe la seule validation obligatoire du workflow. Manque : aucune compétence publique pour ce geste : il se fait à la main, avec la règle de l'étape. |
-| 8 | Lancer | `claude-session-supervisor:loop-creator` | Une tâche longue ou répétée, ou une mission de bout en bout, se règle avec claude-session-supervisor:loop-creator ; un travail court s'exécute tout de suite. |
+| 8 | Lancer | `superviser-ses-sessions:loop-creator` | Une tâche longue ou répétée, ou une mission de bout en bout, se règle avec superviser-ses-sessions:loop-creator ; un travail court s'exécute tout de suite. |
 <!-- etapes:fin -->
 
 ## Le détail de chaque étape
@@ -210,7 +210,7 @@ La personne valide sur une surface qu'elle lit : une page ou un plan court, jama
 
 ### Étape 8. Lancer
 
-Seulement sur PRÊT À LANCER, et on note le lancement dans `cadrage/08-lancement.md` (ce qui part, avec quelle cadence, où se trouve le suivi). Une tâche longue ou répétée est réglée avec `claude-session-supervisor:loop-creator` : objectif mesurable, conditions d'arrêt, cadence, reprise d'une boucle arrêtée. Une boucle de Claude Code (commande loop) ne vit que tant que la session reste ouverte et expire après 7 jours (https://code.claude.com/docs/en/scheduled-tasks, vérifié le 06/11/2026). Pour une tâche qui doit tourner sans session ouverte, la commande schedule crée une tâche planifiée dans le cloud d'Anthropic, avec un intervalle minimal d'une heure (https://code.claude.com/docs/en/routines, vérifié le 06/11/2026). Un travail court s'exécute tout de suite. Le plan validé ne se rouvre pas sans fait nouveau.
+Seulement sur PRÊT À LANCER, et on note le lancement dans `cadrage/08-lancement.md` (ce qui part, avec quelle cadence, où se trouve le suivi). Une tâche longue ou répétée est réglée avec `superviser-ses-sessions:loop-creator` : objectif mesurable, conditions d'arrêt, cadence, reprise d'une boucle arrêtée. Une boucle de Claude Code (commande loop) ne vit que tant que la session reste ouverte et expire après 7 jours (https://code.claude.com/docs/en/scheduled-tasks, vérifié le 06/11/2026). Pour une tâche qui doit tourner sans session ouverte, la commande schedule crée une tâche planifiée dans le cloud d'Anthropic, avec un intervalle minimal d'une heure (https://code.claude.com/docs/en/routines, vérifié le 06/11/2026). Un travail court s'exécute tout de suite. Le plan validé ne se rouvre pas sans fait nouveau.
 
 ## Ce qui fait échouer un cadrage
 
@@ -234,4 +234,4 @@ Aucune compétence publique ne couvre trois gestes de ce workflow : dresser la c
 | `/reflechir-a-fond:reflechir-a-fond` | un système, une cause, une architecture | appelé pour le volet système |
 | `/creer-une-app:creer-une-app` | une app de bout en bout, de l'idée aux premiers clients | il appelle ce cadrage pour sa première étape ; ce cadrage lui laisse la spécification et l'architecture |
 | `/creer-un-agent-ia:creer-un-agent-ia` | créer un agent ou un système IA de bout en bout | il appelle la carte du problème, le mode « objectif vers système » et la chaîne produit pour ses premières étapes |
-| `claude-session-supervisor:loop-creator` | régler la cadence et la reprise d'une tâche longue | reçoit le chantier une fois PRÊT À LANCER |
+| `superviser-ses-sessions:loop-creator` | régler la cadence et la reprise d'une tâche longue | reçoit le chantier une fois PRÊT À LANCER |

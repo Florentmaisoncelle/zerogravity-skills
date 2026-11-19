@@ -35,7 +35,7 @@ simple sauvegarde préventive. Jusqu'à la v0.1, c'étaient deux skills (`claude
 ## Installation
 
 ```
-/plugin marketplace add Gremelinn0/zerogravity-skills
+/plugin marketplace add Florentmaisoncelle/zerogravity-skills
 /plugin install claude-sessions-toolkit
 ```
 

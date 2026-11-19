@@ -36,7 +36,7 @@ Avec le chapeau installé, `/claude-ia-delegation hubspot` envoie directement ve
 Dans Claude Code :
 
 ```
-/plugin marketplace add Gremelinn0/zerogravity-skills
+/plugin marketplace add Florentmaisoncelle/zerogravity-skills
 /plugin install hubspot-crm-toolkit
 ```
 

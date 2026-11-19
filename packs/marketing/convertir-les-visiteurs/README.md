@@ -5,7 +5,7 @@ Transformer le trafic en inscrits : le diagnostic de la page, le test d'une vari
 ## Installer
 
 ```text
-/plugin marketplace add Gremelinn0/zerogravity-skills
+/plugin marketplace add Florentmaisoncelle/zerogravity-skills
 /plugin install convertir-les-visiteurs@zerogravity
 ```
 
@@ -24,7 +24,7 @@ Ce workflow s'appuie sur des compétences publiques, installées à part. Aucune
 /plugin install marketing-skills@marketingskills
 ```
 
-Les workflows cités ici sont dans le même dépôt (le dépôt s'ajoute une fois : `/plugin marketplace add Gremelinn0/zerogravity-skills`) :
+Les workflows cités ici sont dans le même dépôt (le dépôt s'ajoute une fois : `/plugin marketplace add Florentmaisoncelle/zerogravity-skills`) :
 
 ```text
 /plugin install creer-un-site-web@zerogravity

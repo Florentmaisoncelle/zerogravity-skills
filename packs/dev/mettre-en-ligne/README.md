@@ -5,7 +5,7 @@ Une sortie préparée (paliers, seuils, retour arrière écrit d'avance), le dé
 ## Installer
 
 ```text
-/plugin marketplace add Gremelinn0/zerogravity-skills
+/plugin marketplace add Florentmaisoncelle/zerogravity-skills
 /plugin install mettre-en-ligne@zerogravity
 ```
 
@@ -28,7 +28,7 @@ npx skills add vercel-labs/agent-skills --skill deploy-to-vercel -a claude-code
 
 La commande `npx skills add` (CLI Vercel `skills`) demande Node.js 22.20 ou plus (vérifié le 06/11/2026, https://github.com/vercel-labs/skills). Claude Code installé avec l'installeur natif n'en a pas besoin.
 
-Les workflows cités ici sont dans le même dépôt (le dépôt s'ajoute une fois : `/plugin marketplace add Gremelinn0/zerogravity-skills`) :
+Les workflows cités ici sont dans le même dépôt (le dépôt s'ajoute une fois : `/plugin marketplace add Florentmaisoncelle/zerogravity-skills`) :
 
 ```text
 /plugin install creer-une-app@zerogravity

@@ -41,7 +41,7 @@ quand tu tapes la commande).
 | `session` | une **autre session** locale, vivante | `ia-delegation-local-to-local` | une application qui expose des commandes natives de tâches ou de sessions (liste, lecture, envoi) |
 | `navigateur` | d'un onglet web à un autre | `ia-delegation-browser-to-browser` | une extension qui sait lister, lire, écrire **et** vérifier l'envoi — **expérimental** |
 | `desktop` | depuis Codex, une session **Claude Desktop** | `ia-delegation-codex-to-claude-desktop` | Windows, Codex local, Claude Desktop, l'outil Computer Use |
-| `hubspot` | **Breeze**, l'IA native de HubSpot | `claude-breeze` — **absente de ce pack** | le pack HubSpot public : <https://github.com/Gremelinn0/zerogravity-skills/tree/main/packs/crm/hubspot-crm-toolkit> |
+| `hubspot` | **Breeze**, l'IA native de HubSpot | `claude-breeze` — **absente de ce pack** | le pack HubSpot public : <https://github.com/Florentmaisoncelle/zerogravity-skills/tree/main/packs/crm/hubspot-crm-toolkit> |
 | `gemini` | Gemini | aucune : branche non câblée, le principe seulement | — |
 | `claude` | personne : Claude le fait lui-même | — | — |
 
@@ -64,7 +64,7 @@ Plus **une commande**, `/claude-gpt-bridge-setup` (voir « Installation »).
 ## Installation — deux commandes
 
 ```
-/plugin marketplace add Gremelinn0/zerogravity-skills
+/plugin marketplace add Florentmaisoncelle/zerogravity-skills
 /plugin install claude-gpt-bridge
 ```
 

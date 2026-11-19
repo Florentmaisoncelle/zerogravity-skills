@@ -5,7 +5,7 @@ Les e-mails qui accompagnent les inscrits : les parcours automatiques (accueil, 
 ## Installer
 
 ```text
-/plugin marketplace add Gremelinn0/zerogravity-skills
+/plugin marketplace add Florentmaisoncelle/zerogravity-skills
 /plugin install envoyer-des-e-mails@zerogravity
 ```
 
@@ -24,7 +24,7 @@ Ce workflow s'appuie sur des compétences publiques, installées à part. Aucune
 /plugin install marketing@knowledge-work-plugins
 ```
 
-Les workflows cités ici sont dans le même dépôt (le dépôt s'ajoute une fois : `/plugin marketplace add Gremelinn0/zerogravity-skills`) :
+Les workflows cités ici sont dans le même dépôt (le dépôt s'ajoute une fois : `/plugin marketplace add Florentmaisoncelle/zerogravity-skills`) :
 
 ```text
 /plugin install fideliser-et-faire-recommander@zerogravity

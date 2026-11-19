@@ -5,7 +5,7 @@ Le référencement qui tourne : l'audit et les priorités, les requêtes qui ach
 ## Installer
 
 ```text
-/plugin marketplace add Gremelinn0/zerogravity-skills
+/plugin marketplace add Florentmaisoncelle/zerogravity-skills
 /plugin install referencer-son-site@zerogravity
 ```
 
@@ -27,7 +27,7 @@ Ce workflow s'appuie sur des compétences publiques, installées à part. Aucune
 /plugin install web-quality-skills@addy-web-quality-skills
 ```
 
-Les workflows cités ici sont dans le même dépôt (le dépôt s'ajoute une fois : `/plugin marketplace add Gremelinn0/zerogravity-skills`) :
+Les workflows cités ici sont dans le même dépôt (le dépôt s'ajoute une fois : `/plugin marketplace add Florentmaisoncelle/zerogravity-skills`) :
 
 ```text
 /plugin install convertir-les-visiteurs@zerogravity

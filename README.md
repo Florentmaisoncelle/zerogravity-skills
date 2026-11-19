@@ -81,7 +81,7 @@ Chaque pack est un workflow de [zerogravity.builders](https://zerogravity.builde
 ## Démarrage rapide
 
 ```text
-/plugin marketplace add Gremelinn0/zerogravity-skills
+/plugin marketplace add Florentmaisoncelle/zerogravity-skills
 /plugin install recruter@zerogravity
 ```
 

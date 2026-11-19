@@ -85,7 +85,7 @@ tu peux réellement faire pour l'utilisateur, selon ce que la vérification a mo
   les compétences pilotent un projet existant, elles n'en fabriquent jamais un de leur propre initiative.
 - **Codex CLI absent ou non connecté** (`codex`) → dis-le, indique `codex login`, et laisse-le faire.
 - **Mode `hubspot` demandé, `claude-breeze` absente** → indique le pack HubSpot public
-  <https://github.com/Gremelinn0/zerogravity-skills/tree/main/packs/crm/hubspot-crm-toolkit>, ne l'installe pas à sa place.
+  <https://github.com/Florentmaisoncelle/zerogravity-skills/tree/main/packs/crm/hubspot-crm-toolkit>, ne l'installe pas à sa place.
 - **Tout est vert** → rien à faire, et dis-le franchement plutôt que d'inventer une étape.
 
 ## 3 — EXPLIQUER

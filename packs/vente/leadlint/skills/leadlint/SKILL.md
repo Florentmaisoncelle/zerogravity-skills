@@ -40,7 +40,7 @@ python scripts/leadlint.py personas      contacts.xlsx --json
 python scripts/leadlint.py fingerprints  --mission mission.json --exclusions exclusions.csv
 ```
 
-Installed anywhere, no account needed: `uvx --from "git+https://github.com/Gremelinn0/zerogravity-skills#subdirectory=packs/vente/leadlint" leadlint check export.csv --mission mission.json --exclusions exclusions.csv`.
+Installed anywhere, no account needed: `uvx --from "git+https://github.com/Florentmaisoncelle/zerogravity-skills#subdirectory=packs/vente/leadlint" leadlint check export.csv --mission mission.json --exclusions exclusions.csv`.
 
 Older names still work, as exact aliases (same result, same exit code), though `--help` no longer shows them: `b2b` = `check`, `prevol` = `preflight`, `empreintes` = `fingerprints`; `--moulinette` = `--mission`, `--blacklist` = `--exclusions`. Use the current names.
 

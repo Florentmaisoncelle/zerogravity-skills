@@ -5,7 +5,7 @@ La prospection B2B en sept étapes : la cible, les signaux, les comptes de la se
 ## Installer
 
 ```text
-/plugin marketplace add Gremelinn0/zerogravity-skills
+/plugin marketplace add Florentmaisoncelle/zerogravity-skills
 /plugin install trouver-ses-prochains-clients@zerogravity
 ```
 
@@ -18,7 +18,7 @@ Dans Claude Code : `/trouver-ses-prochains-clients:trouver-ses-prochains-clients
 Ce workflow s'appuie sur des compétences publiques, installées à part. Aucune n'est indispensable : si l'une manque, le workflow le dit et fait l'étape à la main. Faire l'étape à la main veut dire suivre sa règle de choix, écrire ce qu'elle doit rendre (dans le fichier de l'étape, ou dans la réponse quand le workflow n'a pas de dossier) et dire ce qui reste à la charge de la personne.
 
 ```text
-/plugin marketplace add Gremelinn0/zerogravity-skills
+/plugin marketplace add Florentmaisoncelle/zerogravity-skills
 /plugin marketplace add anthropics/knowledge-work-plugins
 /plugin marketplace add coreyhaines31/marketingskills
 /plugin install leadlint@zerogravity
@@ -27,7 +27,7 @@ Ce workflow s'appuie sur des compétences publiques, installées à part. Aucune
 /plugin install small-business@knowledge-work-plugins
 ```
 
-Les workflows cités ici sont dans le même dépôt (le dépôt s'ajoute une fois : `/plugin marketplace add Gremelinn0/zerogravity-skills`) :
+Les workflows cités ici sont dans le même dépôt (le dépôt s'ajoute une fois : `/plugin marketplace add Florentmaisoncelle/zerogravity-skills`) :
 
 ```text
 /plugin install conclure-une-vente@zerogravity

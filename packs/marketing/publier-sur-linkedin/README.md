@@ -5,7 +5,7 @@ Un post par jour, du choix de l'idée au commentaire : la matière trouvée, le 
 ## Installer
 
 ```text
-/plugin marketplace add Gremelinn0/zerogravity-skills
+/plugin marketplace add Florentmaisoncelle/zerogravity-skills
 /plugin install publier-sur-linkedin@zerogravity
 ```
 
@@ -24,7 +24,7 @@ Ce workflow s'appuie sur des compétences publiques, installées à part. Aucune
 /plugin install small-business@knowledge-work-plugins
 ```
 
-Les workflows cités ici sont dans le même dépôt (le dépôt s'ajoute une fois : `/plugin marketplace add Gremelinn0/zerogravity-skills`) :
+Les workflows cités ici sont dans le même dépôt (le dépôt s'ajoute une fois : `/plugin marketplace add Florentmaisoncelle/zerogravity-skills`) :
 
 ```text
 /plugin install faire-une-video@zerogravity

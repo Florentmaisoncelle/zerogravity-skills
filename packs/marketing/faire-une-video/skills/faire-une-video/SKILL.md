@@ -51,7 +51,7 @@ Ce workflow s'appuie sur des compétences publiques, installées à part. Aucune
 /plugin install marketing-skills@marketingskills
 ```
 
-Les workflows cités ici sont dans le même dépôt (le dépôt s'ajoute une fois : `/plugin marketplace add Gremelinn0/zerogravity-skills`) :
+Les workflows cités ici sont dans le même dépôt (le dépôt s'ajoute une fois : `/plugin marketplace add Florentmaisoncelle/zerogravity-skills`) :
 
 ```text
 /plugin install lancer-un-produit@zerogravity

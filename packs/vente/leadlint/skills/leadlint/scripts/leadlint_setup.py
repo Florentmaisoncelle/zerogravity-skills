@@ -61,7 +61,7 @@ except ImportError:  # lancé de façon isolée : le moteur est à côté de ce 
 ErreurEntree = leadlint.ErreurEntree
 
 VERSION = leadlint.VERSION
-DEPOT = "https://github.com/Gremelinn0/zerogravity-skills/tree/main/packs/vente/leadlint"
+DEPOT = "https://github.com/Florentmaisoncelle/zerogravity-skills/tree/main/packs/vente/leadlint"
 EXTENSIONS_TABLEAU = {".csv", ".xlsx", ".xlsm", ".txt", ".tsv"}
 CHAMPS_FINAUX = ("nomComplet", "entreprise", "poste", "linkedinProfil", "emailProfessionnel", "mobile")  # colonnes du fichier -conformes.xlsx du moteur
 CHAMPS_OBLIGATOIRES_DEFAUT = ["nomComplet", "entreprise", "poste"]

@@ -5,7 +5,7 @@ La publicité de bout en bout : les visuels et les textes de la pub, la pub vid�
 ## Installer
 
 ```text
-/plugin marketplace add Gremelinn0/zerogravity-skills
+/plugin marketplace add Florentmaisoncelle/zerogravity-skills
 /plugin install publicite-payante@zerogravity
 ```
 
@@ -24,7 +24,7 @@ Ce workflow s'appuie sur des compétences publiques, installées à part. Aucune
 /plugin install small-business@knowledge-work-plugins
 ```
 
-Les workflows cités ici sont dans le même dépôt (le dépôt s'ajoute une fois : `/plugin marketplace add Gremelinn0/zerogravity-skills`) :
+Les workflows cités ici sont dans le même dépôt (le dépôt s'ajoute une fois : `/plugin marketplace add Florentmaisoncelle/zerogravity-skills`) :
 
 ```text
 /plugin install envoyer-des-e-mails@zerogravity

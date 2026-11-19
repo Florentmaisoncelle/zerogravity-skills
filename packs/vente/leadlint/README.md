@@ -7,7 +7,7 @@ You give it an export (CSV or Excel) and a mission (a JSON file: your targeting 
 ## Start in 5 lines
 
 1. Install [Claude Code](https://claude.com/claude-code) and Python 3.9+.
-2. In Claude Code: `/plugin marketplace add Gremelinn0/zerogravity-skills`, then `/plugin install leadlint@zerogravity`.
+2. In Claude Code: `/plugin marketplace add Florentmaisoncelle/zerogravity-skills`, then `/plugin install leadlint@zerogravity`.
 3. Say: **« Set up leadlint for me »**. The agent asks about your targets and their job titles (for the contacts of a Sales Navigator search).
 4. Read your rules in `ma-moulinette/regles.html` and say yes.
 5. Double-click **« Ouvrir la moulinette »** in the `ma-moulinette` folder (on a Mac: `ouvrir-la-moulinette.command`), tick the filters you want (the job title filter is always on, the others are boxes, remembered), then drop your export on the page that opens: your cleaned contacts, with every column of your export, download from there. No agent and no terminal needed after step 4. The command line still works: `python ma-moulinette/moulinette.py my-export.csv`.
@@ -31,13 +31,13 @@ Claude Code, Codex, Cursor, or any agent that can run a shell command can do it.
 No account, nothing to configure. With [uv](https://docs.astral.sh/uv/):
 
 ```bash
-uvx --from "git+https://github.com/Gremelinn0/zerogravity-skills#subdirectory=packs/vente/leadlint" leadlint check export.csv --mission mission.json --exclusions exclusions.csv
+uvx --from "git+https://github.com/Florentmaisoncelle/zerogravity-skills#subdirectory=packs/vente/leadlint" leadlint check export.csv --mission mission.json --exclusions exclusions.csv
 ```
 
 In Claude Code, install it as a plugin so the agent also gets the skill that tells it when and how to run it:
 
 ```text
-/plugin marketplace add Gremelinn0/zerogravity-skills
+/plugin marketplace add Florentmaisoncelle/zerogravity-skills
 /plugin install leadlint@zerogravity
 ```
 

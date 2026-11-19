@@ -236,7 +236,7 @@ que la mission utilise, et n'autoriser un connecteur que source par source, en l
 ## Installation
 
 ```bash
-/plugin marketplace add Gremelinn0/zerogravity-skills
+/plugin marketplace add Florentmaisoncelle/zerogravity-skills
 /plugin install consultant-ia
 ```
 
@@ -244,7 +244,7 @@ Si la première commande répond « SSH authentication failed » (aucune clé SS
 donnez l'adresse complète :
 
 ```bash
-/plugin marketplace add Gremelinn0/zerogravity-skills
+/plugin marketplace add Florentmaisoncelle/zerogravity-skills
 /plugin install consultant-ia
 ```
 

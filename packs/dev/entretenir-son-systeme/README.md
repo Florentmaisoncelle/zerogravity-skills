@@ -68,7 +68,7 @@ Prises une par une, ce sont cinq outils. Prises ensemble, c'est un cycle de vie.
 ## Installation
 
 ```bash
-/plugin marketplace add Gremelinn0/zerogravity-skills
+/plugin marketplace add Florentmaisoncelle/zerogravity-skills
 ```
 
 ```bash

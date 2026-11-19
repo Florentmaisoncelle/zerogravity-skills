@@ -98,7 +98,7 @@ Edit `reponses.json` (never `mission.json`), run `create reponses.json -o ma-mou
 The same three commands everywhere: `create`, `validate`, `page` (rewrites `regles.html`).
 
 - **Claude Code plugin:** `python "${CLAUDE_PLUGIN_ROOT}/skills/leadlint/scripts/leadlint_setup.py" create reponses.json -o ma-moulinette`
-- **uv, nothing to install first:** `uvx --from "git+https://github.com/Gremelinn0/zerogravity-skills#subdirectory=packs/vente/leadlint" leadlint-setup create reponses.json -o ma-moulinette`
+- **uv, nothing to install first:** `uvx --from "git+https://github.com/Florentmaisoncelle/zerogravity-skills#subdirectory=packs/vente/leadlint" leadlint-setup create reponses.json -o ma-moulinette`
 - **Cloned repository:** `python skills/leadlint/scripts/leadlint_setup.py create reponses.json -o ma-moulinette`
 - **Once the folder exists, use its own copy**, from any mode: `python ma-moulinette/leadlint_setup.py validate ma-moulinette`.
 

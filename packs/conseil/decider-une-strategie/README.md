@@ -5,7 +5,7 @@ Huit étapes de conseil en stratégie pour une décision d'affaires floue (march
 ## Installer
 
 ```text
-/plugin marketplace add Gremelinn0/zerogravity-skills
+/plugin marketplace add Florentmaisoncelle/zerogravity-skills
 /plugin install decider-une-strategie@zerogravity
 ```
 
@@ -22,7 +22,7 @@ Ce workflow s'appuie sur des compétences publiques, installées à part. Aucune
 /plugin install agent-skills@addy-agent-skills
 ```
 
-Les workflows cités ici sont dans le même dépôt (le dépôt s'ajoute une fois : `/plugin marketplace add Gremelinn0/zerogravity-skills`) :
+Les workflows cités ici sont dans le même dépôt (le dépôt s'ajoute une fois : `/plugin marketplace add Florentmaisoncelle/zerogravity-skills`) :
 
 ```text
 /plugin install cadrer-un-chantier@zerogravity

@@ -23,7 +23,7 @@ argument-hint: "[gpt|codex|gemini|hubspot|session|navigateur|desktop|claude]"
 > | `gpt` | ChatGPT dans Chrome, mode Chat | `ia-delegation-local-to-gpt-chrome` | oui |
 > | `codex` | Codex, l'agent OpenAI local qui a le disque | `claude-codex` | oui |
 > | `gemini` | Gemini | branche non câblée : le principe du §2, aucune compétence | — |
-> | `hubspot` | Breeze, l'IA de HubSpot | `claude-breeze` | **non** : installe le pack HubSpot public <https://github.com/Gremelinn0/zerogravity-skills/tree/main/packs/crm/hubspot-crm-toolkit> pour ce mode |
+> | `hubspot` | Breeze, l'IA de HubSpot | `claude-breeze` | **non** : installe le pack HubSpot public <https://github.com/Florentmaisoncelle/zerogravity-skills/tree/main/packs/crm/hubspot-crm-toolkit> pour ce mode |
 > | `session` | une autre session Claude, vivante | `ia-delegation-local-to-local` | oui |
 > | `navigateur` | d'un onglet web à un autre | `ia-delegation-browser-to-browser` | oui, expérimental |
 > | `desktop` | depuis Codex, une session Claude Desktop | `ia-delegation-codex-to-claude-desktop` | oui |
@@ -224,7 +224,7 @@ le geste technique (§3).
 ## §2 Les branches (routage — le chapeau POINTE, il ne fait pas)
 
 - **HubSpot** → **`claude-breeze`**, **absente de ce pack** : pour ce mode, installe le pack HubSpot
-  public <https://github.com/Gremelinn0/zerogravity-skills/tree/main/packs/crm/hubspot-crm-toolkit>. Mode Breeze (IA native ; quota et coût à
+  public <https://github.com/Florentmaisoncelle/zerogravity-skills/tree/main/packs/crm/hubspot-crm-toolkit>. Mode Breeze (IA native ; quota et coût à
   vérifier dans le portail) pour un diagnostic, mode navigation écran-par-écran pour une fonctionnalité
   sans API. La méthode HubSpot vit là-bas, pas ici.
 - **Application locale → ChatGPT dans Chrome** → **`ia-delegation-local-to-gpt-chrome`** : pilote un
@@ -301,6 +301,6 @@ local avec disque) · `ia-delegation-local-to-local` (commandes natives entre t�
 `ia-delegation-browser-to-browser` (MVP par extension).
 
 Hors de ce pack : `claude-breeze` (mode `hubspot`), dans le pack HubSpot public
-<https://github.com/Gremelinn0/zerogravity-skills/tree/main/packs/crm/hubspot-crm-toolkit>. Le quota disponible de ton abonnement et ton
+<https://github.com/Florentmaisoncelle/zerogravity-skills/tree/main/packs/crm/hubspot-crm-toolkit>. Le quota disponible de ton abonnement et ton
 registre local des projets IA, s'il existe, sont propres à ton installation : ce chapeau ne suppose
 jamais leur présence.

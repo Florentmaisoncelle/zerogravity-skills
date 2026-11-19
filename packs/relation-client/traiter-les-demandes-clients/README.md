@@ -5,7 +5,7 @@ Six étapes dans l'ordre : trier et affecter chaque demande, répondre sur une c
 ## Installer
 
 ```text
-/plugin marketplace add Gremelinn0/zerogravity-skills
+/plugin marketplace add Florentmaisoncelle/zerogravity-skills
 /plugin install traiter-les-demandes-clients@zerogravity
 ```
 
@@ -24,7 +24,7 @@ Ce workflow s'appuie sur des compétences publiques, installées à part. Aucune
 /plugin install small-business@knowledge-work-plugins
 ```
 
-Les workflows cités ici sont dans le même dépôt (le dépôt s'ajoute une fois : `/plugin marketplace add Gremelinn0/zerogravity-skills`) :
+Les workflows cités ici sont dans le même dépôt (le dépôt s'ajoute une fois : `/plugin marketplace add Florentmaisoncelle/zerogravity-skills`) :
 
 ```text
 /plugin install accueillir-un-nouveau-client@zerogravity

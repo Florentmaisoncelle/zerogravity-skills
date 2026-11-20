@@ -37,7 +37,7 @@ Dans Claude Code :
 
 ```
 /plugin marketplace add Florentmaisoncelle/zerogravity-skills
-/plugin install hubspot-crm-toolkit
+/plugin install hubspot-crm-toolkit@zerogravity
 ```
 
 Puis redémarrer Claude Code. Les compétences deviennent invocables (ex : « audit Buyer Intent », « demande à Breeze pourquoi ce workflow n'enrôle plus », « agent ou workflow pour cette prospection »).

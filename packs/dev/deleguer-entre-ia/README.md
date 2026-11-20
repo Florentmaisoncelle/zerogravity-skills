@@ -65,7 +65,7 @@ Plus **une commande**, `/claude-gpt-bridge-setup` (voir « Installation »).
 
 ```
 /plugin marketplace add Florentmaisoncelle/zerogravity-skills
-/plugin install claude-gpt-bridge
+/plugin install deleguer-entre-ia@zerogravity
 ```
 
 Puis, une fois :

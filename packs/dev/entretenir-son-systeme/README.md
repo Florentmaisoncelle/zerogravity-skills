@@ -72,7 +72,7 @@ Prises une par une, ce sont cinq outils. Prises ensemble, c'est un cycle de vie.
 ```
 
 ```bash
-/plugin install claude-code-system-pack
+/plugin install entretenir-son-systeme@zerogravity
 ```
 
 Pour une demande transversale, commence par **`/router-entretenir-son-systeme`**. Les cinq propriétaires

@@ -43,7 +43,7 @@ l'action irréversible d'une autre session.
 
 ```
 /plugin marketplace add Florentmaisoncelle/zerogravity-skills
-/plugin install claude-session-supervisor
+/plugin install superviser-ses-sessions@zerogravity
 ```
 
 Les deux skills sont installés ensemble.

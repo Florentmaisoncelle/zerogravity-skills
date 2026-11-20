@@ -36,7 +36,7 @@ simple sauvegarde préventive. Jusqu'à la v0.1, c'étaient deux skills (`claude
 
 ```
 /plugin marketplace add Florentmaisoncelle/zerogravity-skills
-/plugin install claude-sessions-toolkit
+/plugin install transporter-ses-sessions@zerogravity
 ```
 
 ## 🌍 Portabilité — ce que tu dois savoir avant d'installer

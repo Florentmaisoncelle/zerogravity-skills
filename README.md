@@ -55,7 +55,7 @@ Chaque pack est un workflow de [zerogravity.builders](https://zerogravity.builde
 
 | Pack | Ce que ça fait | Compétences clés |
 |---|---|---|
-| [**recruter**](packs/rh/recruter) | Cinq étapes dans l'ordre : décider d'embaucher, écrire le paquet de recrutement, trier et répondre à tous les candidats, faire l'offre, préparer l'arrivée. La meilleure compétence à chaque étape, et ce qui manque dit franchement. [Le workflow sur le site](https://zerogravity.builders/marketplace/workflow/recruter). | `/recruter:recruter` en 5 étapes : besoin → paquet → trier → offre → arrivee |
+| [**recruter**](packs/rh/recruter) | Cinq étapes dans l'ordre : décider d'embaucher, écrire le paquet de recrutement, trier et répondre à tous les candidats, faire l'offre, préparer l'arrivée. [Le workflow sur le site](https://zerogravity.builders/marketplace/workflow/recruter). | `/recruter:recruter` en 5 étapes : besoin → paquet → trier → offre → arrivee |
 
 ### Design & sites web
 

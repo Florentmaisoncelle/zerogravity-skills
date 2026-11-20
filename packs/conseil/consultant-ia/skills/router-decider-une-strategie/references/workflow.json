@@ -1,159 +1,465 @@
 {
-  "format": "workflow-v1",
-  "slug": "decider-une-strategie",
-  "titre": "Décider d'une stratégie d'affaires, la recommandation d'abord",
-  "resume": "Huit étapes de conseil en stratégie pour une décision d'affaires floue (marché, offre, produit, investissement, priorités) : poser la décision, la structurer, séparer les faits des hypothèses, comparer de vraies options, éprouver le contre-cas, puis recommander d'abord. C'est une discipline de raisonnement : presque toutes les étapes sont menées par le routeur lui-même, et chaque étape sans compétence à appeler le dit.",
-  "commande": "/router-decider-une-strategie",
-  "routeur": "router-decider-une-strategie",
-  "metiers": [
-    "conseil"
-  ],
-  "moment": "demarrer",
-  "dossier_etat": "",
-  "mis_a_jour": "2026-11-09",
-  "etapes": [
+ "format": "workflow-v1",
+ "slug": "decider-une-strategie",
+ "titre": "Décider d'une stratégie d'affaires, la recommandation d'abord",
+ "resume": "Huit étapes de conseil en stratégie pour une décision d'affaires floue (marché, offre, produit, investissement, priorités) : poser la décision, la structurer, séparer les faits des hypothèses, comparer de vraies options, éprouver le contre-cas, puis recommander d'abord. C'est une discipline de raisonnement que le routeur tient lui-même ; à chaque étape, des compétences de dépôts reconnus outillent ses tâches.",
+ "commande": "/router-decider-une-strategie",
+ "routeur": "router-decider-une-strategie",
+ "metiers": [
+  "conseil"
+ ],
+ "moment": "demarrer",
+ "dossier_etat": "",
+ "mis_a_jour": "2026-11-20",
+ "etapes": [
+  {
+   "n": 1,
+   "slug": "nommer-la-decision",
+   "titre": "Nommer la décision",
+   "rend": "La décision écrite : ce qu'on doit trancher, qui tranche, le résultat voulu, les contraintes, l'horizon, ce qui est dans le périmètre et ce qui n'y est pas.",
+   "fichier": "",
+   "competences": [],
+   "manque": "Le routeur écrit lui-même la décision, depuis la question et ses faits ; les tâches ci-dessous l'aident à la faire dire et à la resserrer.",
+   "regle": "Si le contexte manque, on pose des hypothèses provisoires (H) et on continue : jamais une réponse faite seulement de questions.",
+   "cas": [],
+   "taches": [
     {
-      "n": 1,
-      "slug": "nommer-la-decision",
-      "titre": "Nommer la décision",
-      "rend": "La décision écrite : ce qu'on doit trancher, qui tranche, le résultat voulu, les contraintes, l'horizon, ce qui est dans le périmètre et ce qui n'y est pas.",
-      "fichier": "",
-      "competences": [],
-      "manque": "Aucune compétence ne pose la décision : le routeur l'écrit lui-même, depuis la question et ses faits.",
-      "regle": "Si le contexte manque, on pose des hypothèses provisoires (H) et on continue : jamais une réponse faite seulement de questions.",
-      "cas": []
+     "slug": "faire-dire-la-decision",
+     "titre": "Faire dire la décision à celui qui tranche",
+     "competences": [
+      {
+       "nom": "agent-skills:interview-me",
+       "role": "par défaut",
+       "pourquoi": "Pose une question à la fois jusqu'à ce que la décision, le résultat voulu et les contraintes soient dits sans ambiguïté.",
+       "source": "Addy Osmani, addyosmani/agent-skills (119 000 étoiles, https://github.com/addyosmani/agent-skills)",
+       "maison": "cadrer-un-chantier"
+      }
+     ],
+     "reserve": []
     },
     {
-      "n": 2,
-      "slug": "structurer",
-      "titre": "Structurer le problème",
-      "rend": "La plus petite structure sans recouvrement (MECE : mutuellement exclusives, collectivement exhaustives) qui couvre ce qui peut changer la décision, chaque branche pouvant se tester.",
-      "fichier": "",
-      "competences": [],
-      "manque": "Aucune compétence ne dessine cette structure : le routeur la construit lui-même.",
-      "regle": "Pas d'arbre géant pour une décision simple à deux issues : la structure s'arrête là où elle cesse de changer la décision.",
-      "cas": []
-    },
-    {
-      "n": 3,
-      "slug": "registre-des-preuves",
-      "titre": "Tenir le registre des preuves",
-      "rend": "Chaque affirmation qui porte la décision marquée F (fait), H (hypothèse) ou E (estimation calculée, calcul montré) ; pour chaque hypothèse lourde : son importance, la force de sa preuve, la confiance, le test qui l'invaliderait et l'action si elle tombe.",
-      "fichier": "",
-      "competences": [],
-      "manque": "Aucune compétence ne tient ce registre : le routeur marque lui-même chaque chiffre et chaque jugement.",
-      "regle": "Une valeur proposée par l'analyste puis acceptée par le décideur devient un fait, avec cette décision pour source. Un chiffre donné de mémoire reste une hypothèse, avec qui peut le confirmer. Un accord entre plusieurs modèles n'est pas une preuve.",
-      "cas": [
-        "transformer-des-signaux-documentes-en-arbitrages-strategiques"
-      ],
-      "taches": [
-        {
-          "slug": "garder-le-journal-des-decisions",
-          "titre": "Garder le journal des décisions",
-          "competences": [
-            {
-              "nom": "agent-skills:documentation-and-adrs",
-              "pourquoi": "Pour noter chaque décision, ses raisons et ses inconvénients acceptés, sous forme de fiche de décision (ADR).",
-              "maison": "faire-evoluer-une-app"
-            }
-          ],
-          "reserve": []
-        }
-      ]
-    },
-    {
-      "n": 4,
-      "slug": "options",
-      "titre": "Générer de vraies options",
-      "rend": "Un petit nombre de chemins vraiment différents, chacun avec son avantage, son compromis, sa faisabilité, son risque, son économie si elle compte, son adéquation stratégique et ce qui doit être vrai pour qu'il marche.",
-      "fichier": "",
-      "competences": [],
-      "manque": "Aucune compétence ne génère ces options : le routeur les établit lui-même.",
-      "regle": "Les options s'examinent à égalité : l'option préférée ne gagne pas par défaut parce que les autres n'ont pas été regardées. Quand les faits viennent déjà de router-reflechir-a-fond, on entre ici : ce routeur ne sert alors qu'aux options, à l'économie, aux priorités et à la recommandation.",
-      "cas": []
-    },
-    {
-      "n": 5,
-      "slug": "lentille",
-      "titre": "Choisir la bonne lentille",
-      "rend": "La lentille que la décision appelle, et seulement elle : état des lieux, audit des hypothèses, options stratégiques, dossier chiffré, priorités, jeu de rôle des concurrents, risques, feuille de route ou note de décision. La méthode classique que la décision appelle, et seulement elle : diagnostic de départ, liste d'hypothèses testées, matrice de décision, dossier chiffré, classement par impact et effort, analyse des concurrents, tableau des risques, feuille de route ou note de décision.",
-      "fichier": "",
-      "competences": [],
-      "ecartees": [
-        {
-          "nom": "situation-assessment",
-          "raison": "Pour un état actuel flou. Du dépôt aapersh/strategy-skills-for-claude, laissé non installé : il n'a pas de licence."
-        },
-        {
-          "nom": "assumption-audit",
-          "raison": "Pour des croyances fragiles. Même dépôt, sans licence : non installée."
-        },
-        {
-          "nom": "strategic-options",
-          "raison": "Pour choisir un chemin. Même dépôt, sans licence : non installée."
-        },
-        {
-          "nom": "business-case-builder",
-          "raison": "Pour un investissement ou un retour sur investissement. Même dépôt, sans licence : non installée."
-        },
-        {
-          "nom": "initiative-prioritizer",
-          "raison": "Pour trop d'initiatives à la fois. Même dépôt, sans licence : non installée."
-        },
-        {
-          "nom": "war-gaming",
-          "raison": "Pour les réactions des concurrents ou du marché. Même dépôt, sans licence : non installée."
-        },
-        {
-          "nom": "transformation-roadmap",
-          "raison": "Pour passer de la stratégie à l'exécution. Même dépôt, sans licence : non installée."
-        },
-        {
-          "nom": "decision-memo",
-          "raison": "Pour une décision écrite à un dirigeant. Même dépôt, sans licence : non installée."
-        }
-      ],
-      "manque": "Les huit lentilles de strategy-skills-for-claude, que ce routeur sait déléguer, ne sont pas installées : il applique lui-même la lentille choisie. Pour un risque stratégique majeur, la lentille « risques et parades » n'a de toute façon pas de compétence propre. Aucune compétence publique n'est appelée pour ces méthodes : le workflow applique lui-même celle qui est choisie.",
-      "regle": "Une seule lentille, celle que le problème choisit. Porter, SWOT, BCG, JTBD, RICE ou un arbre des profits sont des outils, jamais des défauts : une salade de cadres, ou un SWOT à la place de l'analyse, est une erreur.",
-      "cas": []
-    },
-    {
-      "n": 6,
-      "slug": "les-vingt-pour-cent",
-      "titre": "Analyser les 20 % qui peuvent renverser la décision",
-      "rend": "Les hypothèses qui pèsent le plus sur la recommandation, les plus mal prouvées d'entre elles, et les quelques données qui peuvent tuer une option, analysées ; pas le reste.",
-      "fichier": "",
-      "competences": [
-        {
-          "nom": "router-reflechir-a-fond",
-          "role": "routeur : une question technique bornée",
-          "pourquoi": "Quand un point technique ou système peut renverser la décision (est-ce faisable, est-ce vrai en production), il prend cette seule question et rend les faits, les contradictions et les inconnues : une cause prouvée plutôt qu'un avis, rapportée ensuite dans la décision d'affaires."
-        }
-      ],
-      "regle": "Une seule question technique bornée à la fois, formulée avant de passer la main, et son résultat revient dans la décision d'affaires. Pas de relais en cascade : un seul routeur tient la phase en cours. Le reste de l'étape est le travail du routeur : on n'analyse pas l'océan.",
-      "cas": []
-    },
-    {
-      "n": 7,
-      "slug": "contre-cas",
-      "titre": "Mettre la recommandation à l'épreuve",
-      "rend": "Le contre-argument le plus fort, l'hypothèse qui renverserait la décision, un scénario défavorable, la réaction probable des concurrents ou des clients, un signal d'alerte, une condition d'arrêt, et l'option de repli testée avec la même rigueur.",
-      "fichier": "",
-      "competences": [],
-      "manque": "Aucune compétence ne tient le contre-cas : le routeur le fait lui-même.",
-      "regle": "Si le contre-cas est plus fort que la recommandation, on change la recommandation.",
-      "cas": []
-    },
-    {
-      "n": 8,
-      "slug": "synthese",
-      "titre": "Rendre la réponse d'abord",
-      "rend": "La synthèse au format réponse d'abord : la décision, la recommandation, au plus trois raisons qui portent, les preuves, les hypothèses critiques, les options et leurs compromis, le contre-cas, les risques et leurs parades, les conditions d'arrêt, les prochains tests.",
-      "fichier": "",
-      "competences": [],
-      "manque": "Aucune compétence ne rédige cette synthèse : le routeur l'écrit lui-même.",
-      "regle": "La recommandation d'abord, puis ce qui la renverserait. Une recommandation sans responsable, sans test ni prochain geste, ou sans condition qui la renverserait, est à refaire.",
-      "cas": []
+     "slug": "ecrire-la-decision-et-son-perimetre",
+     "titre": "Écrire la décision et son périmètre",
+     "competences": [
+      {
+       "nom": "agent-skills:idea-refine",
+       "role": "par défaut",
+       "pourquoi": "Resserre une question floue en un énoncé net, par pensée divergente puis convergente, et met ses hypothèses de départ à l'épreuve.",
+       "source": "Addy Osmani, addyosmani/agent-skills (119 000 étoiles, https://github.com/addyosmani/agent-skills)",
+       "maison": "cadrer-un-chantier"
+      },
+      {
+       "nom": "bmad-product-brief",
+       "role": "autre choix",
+       "pourquoi": "Quand la décision porte sur un produit : le résumé d'une page (pour qui, quel problème, quel résultat) sert d'énoncé de départ.",
+       "source": "BMAD, bmad-code-org/BMAD-METHOD (55 000 étoiles, https://github.com/bmad-code-org/BMAD-METHOD)",
+       "maison": "creer-une-app"
+      }
+     ],
+     "reserve": []
     }
-  ]
+   ]
+  },
+  {
+   "n": 2,
+   "slug": "structurer",
+   "titre": "Structurer le problème",
+   "rend": "La plus petite structure sans recouvrement (MECE : mutuellement exclusives, collectivement exhaustives) qui couvre ce qui peut changer la décision, chaque branche pouvant se tester.",
+   "fichier": "",
+   "competences": [],
+   "manque": "Le routeur construit lui-même la structure sans recouvrement ; la tâche ci-dessous l'aide à en trouver les branches.",
+   "regle": "Pas d'arbre géant pour une décision simple à deux issues : la structure s'arrête là où elle cesse de changer la décision.",
+   "cas": [],
+   "taches": [
+    {
+     "slug": "decouper-le-probleme",
+     "titre": "Découper le problème en branches qui se testent",
+     "competences": [
+      {
+       "nom": "product-management:brainstorm",
+       "role": "par défaut",
+       "pourquoi": "Un partenaire de réflexion exigeant sur une question stratégique : il aide à trouver les branches du problème et conteste celles qui se recouvrent.",
+       "source": "Anthropic, anthropics/knowledge-work-plugins (36 000 étoiles, https://github.com/anthropics/knowledge-work-plugins)",
+       "maison": "reflechir-a-fond"
+      },
+      {
+       "nom": "bmad-brainstorming",
+       "role": "autre choix",
+       "pourquoi": "Pour ouvrir large avant de resserrer : plusieurs techniques d'idéation guidées, quand la structure ne vient pas.",
+       "source": "BMAD, bmad-code-org/BMAD-METHOD (55 000 étoiles, https://github.com/bmad-code-org/BMAD-METHOD)",
+       "maison": "cadrer-un-chantier"
+      }
+     ],
+     "reserve": []
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "slug": "registre-des-preuves",
+   "titre": "Tenir le registre des preuves",
+   "rend": "Chaque affirmation qui porte la décision marquée F (fait), H (hypothèse) ou E (estimation calculée, calcul montré) ; pour chaque hypothèse lourde : son importance, la force de sa preuve, la confiance, le test qui l'invaliderait et l'action si elle tombe.",
+   "fichier": "",
+   "competences": [],
+   "manque": "Le routeur marque lui-même chaque chiffre et chaque jugement ; les tâches ci-dessous vérifient ce qui peut l'être.",
+   "regle": "Une valeur proposée par l'analyste puis acceptée par le décideur devient un fait, avec cette décision pour source. Un chiffre donné de mémoire reste une hypothèse, avec qui peut le confirmer. Un accord entre plusieurs modèles n'est pas une preuve.",
+   "cas": [
+    "transformer-des-signaux-documentes-en-arbitrages-strategiques"
+   ],
+   "taches": [
+    {
+     "slug": "garder-le-journal-des-decisions",
+     "titre": "Garder le journal des décisions",
+     "competences": [
+      {
+       "nom": "agent-skills:documentation-and-adrs",
+       "pourquoi": "Pour noter chaque décision, ses raisons et ses inconvénients acceptés, sous forme de fiche de décision (ADR).",
+       "maison": "faire-evoluer-une-app"
+      }
+     ],
+     "reserve": []
+    },
+    {
+     "slug": "verifier-un-fait-dans-les-sources",
+     "titre": "Vérifier un fait dans les sources",
+     "competences": [
+      {
+       "nom": "anthropic-skills:deep-research",
+       "role": "par défaut",
+       "pourquoi": "Recherche à plusieurs sources avec un rapport cité : transforme une hypothèse de marché en fait sourcé, ou dit qu'elle ne tient pas.",
+       "source": "Anthropic (compétence intégrée à Claude)",
+       "maison": "poser-sa-strategie-marketing"
+      },
+      {
+       "nom": "bmad-market-research",
+       "role": "autre choix",
+       "pourquoi": "Pour une étude de marché complète (taille, concurrents, clients) quand plusieurs hypothèses lourdes portent sur le marché.",
+       "source": "BMAD, bmad-code-org/BMAD-METHOD (55 000 étoiles, https://github.com/bmad-code-org/BMAD-METHOD)",
+       "maison": "cadrer-un-chantier"
+      }
+     ],
+     "reserve": []
+    },
+    {
+     "slug": "verifier-un-chiffre-dans-les-donnees",
+     "titre": "Vérifier un chiffre dans les données",
+     "competences": [
+      {
+       "nom": "data:validate-data",
+       "role": "par défaut",
+       "pourquoi": "Relit une analyse avant de s'y fier : méthode, calculs, biais ; un chiffre qui passe devient une estimation au calcul montré.",
+       "source": "Anthropic, anthropics/knowledge-work-plugins (36 000 étoiles, https://github.com/anthropics/knowledge-work-plugins)",
+       "maison": "conseiller-une-mission-ia"
+      }
+     ],
+     "reserve": []
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "slug": "options",
+   "titre": "Générer de vraies options",
+   "rend": "Un petit nombre de chemins vraiment différents, chacun avec son avantage, son compromis, sa faisabilité, son risque, son économie si elle compte, son adéquation stratégique et ce qui doit être vrai pour qu'il marche.",
+   "fichier": "",
+   "competences": [],
+   "manque": "Le routeur établit lui-même la fiche de chaque option ; la tâche ci-dessous sert à en faire naître de vraiment différentes.",
+   "regle": "Les options s'examinent à égalité : l'option préférée ne gagne pas par défaut parce que les autres n'ont pas été regardées. Quand les faits viennent déjà de router-reflechir-a-fond, on entre ici : ce routeur ne sert alors qu'aux options, à l'économie, aux priorités et à la recommandation.",
+   "cas": [],
+   "taches": [
+    {
+     "slug": "faire-naitre-des-options-differentes",
+     "titre": "Faire naître des options vraiment différentes",
+     "competences": [
+      {
+       "nom": "superpowers:brainstorming",
+       "role": "par défaut",
+       "pourquoi": "Explore l'intention puis propose deux ou trois approches avec leurs compromis, avant tout choix : la base d'options examinées à égalité.",
+       "source": "Jesse Vincent, obra/superpowers (322 000 étoiles, https://github.com/obra/superpowers)",
+       "maison": "creer-un-agent-ia"
+      },
+      {
+       "nom": "product-management:product-brainstorming",
+       "role": "autre choix",
+       "pourquoi": "Quand les options sont des pistes de produit ou d'offre : cadres d'idéation et mise en doute des idées reçues.",
+       "source": "Anthropic, anthropics/knowledge-work-plugins (36 000 étoiles, https://github.com/anthropics/knowledge-work-plugins)",
+       "maison": "conseiller-une-mission-ia"
+      }
+     ],
+     "reserve": []
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "slug": "lentille",
+   "titre": "Choisir la bonne lentille",
+   "rend": "La lentille que la décision appelle, et seulement elle : état des lieux, audit des hypothèses, options stratégiques, dossier chiffré, priorités, jeu de rôle des concurrents, risques, feuille de route ou note de décision.",
+   "fichier": "",
+   "competences": [],
+   "ecartees": [
+    {
+     "nom": "situation-assessment",
+     "raison": "Pour un état actuel flou. Du dépôt aapersh/strategy-skills-for-claude, laissé non installé : il n'a pas de licence."
+    },
+    {
+     "nom": "assumption-audit",
+     "raison": "Pour des croyances fragiles. Même dépôt, sans licence : non installée."
+    },
+    {
+     "nom": "strategic-options",
+     "raison": "Pour choisir un chemin. Même dépôt, sans licence : non installée."
+    },
+    {
+     "nom": "business-case-builder",
+     "raison": "Pour un investissement ou un retour sur investissement. Même dépôt, sans licence : non installée."
+    },
+    {
+     "nom": "initiative-prioritizer",
+     "raison": "Pour trop d'initiatives à la fois. Même dépôt, sans licence : non installée."
+    },
+    {
+     "nom": "war-gaming",
+     "raison": "Pour les réactions des concurrents ou du marché. Même dépôt, sans licence : non installée."
+    },
+    {
+     "nom": "transformation-roadmap",
+     "raison": "Pour passer de la stratégie à l'exécution. Même dépôt, sans licence : non installée."
+    },
+    {
+     "nom": "decision-memo",
+     "raison": "Pour une décision écrite à un dirigeant. Même dépôt, sans licence : non installée."
+    }
+   ],
+   "manque": "État des lieux, audit des hypothèses, dossier chiffré et note de décision restent appliqués par le routeur : les compétences publiques qui les portent viennent d'un dépôt trop peu suivi pour être retenu. Les lentilles outillées sont les tâches ci-dessous.",
+   "regle": "Une seule lentille, celle que le problème choisit. Porter, SWOT, BCG, JTBD, RICE ou un arbre des profits sont des outils, jamais des défauts : une salade de cadres, ou un SWOT à la place de l'analyse, est une erreur.",
+   "cas": [],
+   "taches": [
+    {
+     "slug": "regarder-les-concurrents",
+     "titre": "Regarder les concurrents",
+     "competences": [
+      {
+       "nom": "product-management:competitive-brief",
+       "role": "par défaut",
+       "pourquoi": "Rend une note d'analyse d'un ou plusieurs concurrents (offre, positionnement, forces, angles d'attaque) pour une décision de marché.",
+       "source": "Anthropic, anthropics/knowledge-work-plugins (36 000 étoiles, https://github.com/anthropics/knowledge-work-plugins)"
+      },
+      {
+       "nom": "marketing-skills:competitor-profiling",
+       "role": "autre choix",
+       "pourquoi": "Pour un dossier détaillé par concurrent, à partir de leurs sites et de leurs prix.",
+       "source": "Corey Haines, coreyhaines31/marketingskills (61 000 étoiles, https://github.com/coreyhaines31/marketingskills)",
+       "maison": "poser-sa-strategie-marketing"
+      }
+     ],
+     "reserve": []
+    },
+    {
+     "slug": "comprendre-les-clients",
+     "titre": "Comprendre les clients",
+     "competences": [
+      {
+       "nom": "marketing-skills:customer-research",
+       "role": "par défaut",
+       "pourquoi": "Analyse des entretiens, des avis et des verbatims pour dire ce que les clients cherchent vraiment à faire.",
+       "source": "Corey Haines, coreyhaines31/marketingskills (61 000 étoiles, https://github.com/coreyhaines31/marketingskills)",
+       "maison": "poser-sa-strategie-marketing"
+      }
+     ],
+     "reserve": []
+    },
+    {
+     "slug": "fixer-un-prix-ou-une-offre",
+     "titre": "Fixer un prix ou une offre",
+     "competences": [
+      {
+       "nom": "marketing-skills:pricing",
+       "role": "par défaut",
+       "pourquoi": "Paliers, unité de valeur, disposition à payer : pour une décision de prix ou de formule.",
+       "source": "Corey Haines, coreyhaines31/marketingskills (61 000 étoiles, https://github.com/coreyhaines31/marketingskills)",
+       "maison": "creer-une-app"
+      }
+     ],
+     "reserve": []
+    },
+    {
+     "slug": "classer-les-initiatives",
+     "titre": "Classer les initiatives",
+     "competences": [
+      {
+       "nom": "product-management:roadmap-update",
+       "role": "par défaut",
+       "pourquoi": "Reclasse une feuille de route par priorité, avec ce qui sort et pourquoi : pour trop d'initiatives à la fois.",
+       "source": "Anthropic, anthropics/knowledge-work-plugins (36 000 étoiles, https://github.com/anthropics/knowledge-work-plugins)",
+       "maison": "ameliorer-le-parcours-client"
+      }
+     ],
+     "reserve": []
+    },
+    {
+     "slug": "peser-les-risques",
+     "titre": "Peser les risques",
+     "competences": [
+      {
+       "nom": "operations:risk-assessment",
+       "role": "par défaut",
+       "pourquoi": "Recense les risques, leur probabilité, leur gravité et leur parade dans un registre.",
+       "source": "Anthropic, anthropics/knowledge-work-plugins (36 000 étoiles, https://github.com/anthropics/knowledge-work-plugins)",
+       "maison": "conseiller-une-mission-ia"
+      }
+     ],
+     "reserve": []
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "slug": "les-vingt-pour-cent",
+   "titre": "Analyser les 20 % qui peuvent renverser la décision",
+   "rend": "Les hypothèses qui pèsent le plus sur la recommandation, les plus mal prouvées d'entre elles, et les quelques données qui peuvent tuer une option, analysées ; pas le reste.",
+   "fichier": "",
+   "competences": [
+    {
+     "nom": "router-reflechir-a-fond",
+     "role": "routeur : une question technique bornée",
+     "pourquoi": "Quand un point technique ou système peut renverser la décision (est-ce faisable, est-ce vrai en production), il prend cette seule question et rend les faits, les contradictions et les inconnues : une cause prouvée plutôt qu'un avis, rapportée ensuite dans la décision d'affaires."
+    }
+   ],
+   "regle": "Une seule question technique bornée à la fois, formulée avant de passer la main, et son résultat revient dans la décision d'affaires. Pas de relais en cascade : un seul routeur tient la phase en cours. Le reste de l'étape est le travail du routeur : on n'analyse pas l'océan.",
+   "cas": [],
+   "taches": [
+    {
+     "slug": "faire-parler-les-donnees",
+     "titre": "Faire parler les données qui peuvent tuer une option",
+     "competences": [
+      {
+       "nom": "data:analyze",
+       "role": "par défaut",
+       "pourquoi": "Répond à une question de données, d'un chiffre simple à une analyse complète, avec ses réserves.",
+       "source": "Anthropic, anthropics/knowledge-work-plugins (36 000 étoiles, https://github.com/anthropics/knowledge-work-plugins)",
+       "maison": "conseiller-une-mission-ia"
+      },
+      {
+       "nom": "data:statistical-analysis",
+       "role": "autre choix",
+       "pourquoi": "Quand il faut dire si un écart est réel : tests, corrélations, valeurs aberrantes.",
+       "source": "Anthropic, anthropics/knowledge-work-plugins (36 000 étoiles, https://github.com/anthropics/knowledge-work-plugins)",
+       "maison": "conseiller-une-mission-ia"
+      }
+     ],
+     "reserve": []
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "slug": "contre-cas",
+   "titre": "Mettre la recommandation à l'épreuve",
+   "rend": "Le contre-argument le plus fort, l'hypothèse qui renverserait la décision, un scénario défavorable, la réaction probable des concurrents ou des clients, un signal d'alerte, une condition d'arrêt, et l'option de repli testée avec la même rigueur.",
+   "fichier": "",
+   "competences": [],
+   "manque": "Le routeur tient lui-même le contre-cas et le compare à la recommandation ; la tâche ci-dessous le fait attaquer par un regard neuf.",
+   "regle": "Si le contre-cas est plus fort que la recommandation, on change la recommandation.",
+   "cas": [],
+   "taches": [
+    {
+     "slug": "chercher-ce-qui-ferait-echouer",
+     "titre": "Chercher ce qui ferait échouer la recommandation",
+     "competences": [
+      {
+       "nom": "agent-skills:doubt-driven-development",
+       "role": "par défaut",
+       "pourquoi": "Fait contester une décision qui engage par un relecteur neuf, sans le contexte de celui qui l'a prise, avant de la tenir pour acquise.",
+       "source": "Addy Osmani, addyosmani/agent-skills (119 000 étoiles, https://github.com/addyosmani/agent-skills)",
+       "maison": "creer-un-agent-ia"
+      },
+      {
+       "nom": "challenge-premortem",
+       "role": "autre choix",
+       "pourquoi": "Comble un vide : aucune compétence publique ne mène un pré-mortem à plusieurs angles (on suppose l'échec, on cherche ses causes) avec un verdict par objection.",
+       "maison": "cadrer-un-chantier"
+      }
+     ],
+     "reserve": []
+    },
+    {
+     "slug": "jouer-la-reaction-des-concurrents",
+     "titre": "Jouer la réaction des concurrents et des clients",
+     "competences": [],
+     "reserve": [],
+     "manque": "Aucune compétence d'un dépôt reconnu ne joue ces réactions : le routeur les écrit lui-même."
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "slug": "synthese",
+   "titre": "Rendre la réponse d'abord",
+   "rend": "La synthèse au format réponse d'abord : la décision, la recommandation, au plus trois raisons qui portent, les preuves, les hypothèses critiques, les options et leurs compromis, le contre-cas, les risques et leurs parades, les conditions d'arrêt, les prochains tests.",
+   "fichier": "",
+   "competences": [],
+   "manque": "Le routeur écrit lui-même la synthèse au format réponse d'abord ; les tâches ci-dessous la mettent en forme et la prolongent.",
+   "regle": "La recommandation d'abord, puis ce qui la renverserait. Une recommandation sans responsable, sans test ni prochain geste, ou sans condition qui la renverserait, est à refaire.",
+   "cas": [],
+   "taches": [
+    {
+     "slug": "ecrire-la-note-de-decision",
+     "titre": "Écrire la note de décision",
+     "competences": [
+      {
+       "nom": "product-management:stakeholder-update",
+       "role": "par défaut",
+       "pourquoi": "Rédige un point adapté à son lecteur (dirigeant, équipe, client) : la décision d'abord, puis ce qui la porte.",
+       "source": "Anthropic, anthropics/knowledge-work-plugins (36 000 étoiles, https://github.com/anthropics/knowledge-work-plugins)",
+       "maison": "organiser-sa-force-de-vente"
+      },
+      {
+       "nom": "anthropic-skills:docx",
+       "role": "autre choix",
+       "pourquoi": "Pour rendre la note en document Word mis en forme.",
+       "source": "Anthropic, anthropics/skills (197 000 étoiles, https://github.com/anthropics/skills)",
+       "maison": "conclure-une-vente"
+      }
+     ],
+     "reserve": []
+    },
+    {
+     "slug": "presenter-au-comite",
+     "titre": "Présenter au comité",
+     "competences": [
+      {
+       "nom": "anthropic-skills:pptx",
+       "role": "par défaut",
+       "pourquoi": "Monte la présentation de la décision, diapositive par diapositive.",
+       "source": "Anthropic, anthropics/skills (197 000 étoiles, https://github.com/anthropics/skills)",
+       "maison": "poser-sa-strategie-marketing"
+      }
+     ],
+     "reserve": []
+    },
+    {
+     "slug": "passer-de-la-decision-au-plan",
+     "titre": "Passer de la décision au plan",
+     "competences": [
+      {
+       "nom": "superpowers:writing-plans",
+       "role": "par défaut",
+       "pourquoi": "Transforme une décision arrêtée en plan d'exécution pas à pas.",
+       "source": "Jesse Vincent, obra/superpowers (322 000 étoiles, https://github.com/obra/superpowers)",
+       "maison": "construire"
+      },
+      {
+       "nom": "agent-skills:planning-and-task-breakdown",
+       "role": "autre choix",
+       "pourquoi": "Pour découper le plan en tâches ordonnées, chacune avec son critère de fin.",
+       "source": "Addy Osmani, addyosmani/agent-skills (119 000 étoiles, https://github.com/addyosmani/agent-skills)",
+       "maison": "cadrer-un-chantier"
+      }
+     ],
+     "reserve": []
+    }
+   ]
+  }
+ ]
 }

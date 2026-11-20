@@ -1,6 +1,6 @@
 # Recruter un collaborateur, de la fiche de poste à son arrivée
 
-Cinq étapes dans l'ordre : décider d'embaucher, écrire le paquet de recrutement, trier et répondre à tous les candidats, faire l'offre, préparer l'arrivée. La meilleure compétence à chaque étape, et ce qui manque dit franchement.
+Cinq étapes dans l'ordre : décider d'embaucher, écrire le paquet de recrutement, trier et répondre à tous les candidats, faire l'offre, préparer l'arrivée. Chaque étape est découpée en tâches au geste, avec la compétence d'un dépôt reconnu par défaut ; ce qui manque se dit franchement.
 
 ## Installer
 
@@ -18,9 +18,12 @@ Dans Claude Code : `/recruter:recruter`, ou décrire simplement le besoin.
 Ce workflow s'appuie sur des compétences publiques, installées à part. Aucune n'est indispensable : si l'une manque, le workflow le dit et fait l'étape à la main. Faire l'étape à la main veut dire suivre sa règle de choix, écrire ce qu'elle doit rendre (dans le fichier de l'étape, ou dans la réponse quand le workflow n'a pas de dossier) et dire ce qui reste à la charge de la personne.
 
 ```text
+/plugin marketplace add addyosmani/agent-skills
 /plugin marketplace add anthropics/knowledge-work-plugins
+/plugin install agent-skills@addy-agent-skills
 /plugin install human-resources@knowledge-work-plugins
 /plugin install operations@knowledge-work-plugins
+/plugin install sales@knowledge-work-plugins
 /plugin install small-business@knowledge-work-plugins
 ```
 

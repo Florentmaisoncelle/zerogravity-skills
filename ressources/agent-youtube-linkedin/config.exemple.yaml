@@ -1,0 +1,46 @@
+# Exemple public : remplacez les valeurs, ne mettez jamais de clé API ici.
+projet:
+  nom: "veille-youtube-linkedin"
+  langue: "fr"
+  audience: "praticiens, responsables métiers et dirigeants"
+  sujets:
+    - "agents IA"
+    - "automatisation des processus"
+
+youtube:
+  # Ajoutez seulement des chaînes que vous avez vérifiées.
+  # Récupérez leur channel_id réel : ne confondez pas @handle et channel_id.
+  chaines: []
+  # Exemple d'entrée (commentée) :
+  # - nom: "Chaîne de référence"
+  #   url: "https://www.youtube.com/@votre-chaine"
+  #   channel_id: "A_VERIFIER"
+  max_videos_par_jour: 4
+  jours_de_fraicheur: 14
+
+traitement:
+  pertinence_min_sur_10: 7
+  creer_un_post_par_sujet_distinct: true
+  verifier_sources_primaires: true
+  garder_timestamps: true
+  ignorer_sans_transcription: true
+  ne_pas_reutiliser_medias_sans_droits: true
+
+stockage:
+  # notion | supabase | airtable | google_sheets | autre
+  fournisseur: "notion"
+  destination: "A_RENSEIGNER"
+  # Séparez les secrets des fichiers versionnés.
+  variables_environnement: []
+
+publication:
+  # L'agent ne publie jamais ; il ne crée que des brouillons.
+  validation_humaine_obligatoire: true
+  publication_automatique: false
+  statut_par_defaut: "brouillon"
+
+routine:
+  fuseau: "Europe/Paris"
+  cron: "0 7 * * *"
+  active: false # activer seulement après vérification et approbation
+  mode_essai_par_defaut: true
